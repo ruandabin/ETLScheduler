@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8">
+<title>登录</title>
+<link rel="stylesheet" href="/static/layui/css/layui.css"></link>
+<style type="text/css">
+body{
+padding-top:15px;
+font-family: "Helvetica Neue", Helvetica, Arial, "PingFang SC", "Hiragino Sans GB", "Heiti SC", "Microsoft YaHei", "WenQuanYi Micro Hei", sans-serif;
+}
+.a{
+background-color: #e77358;
+}
+
+.layui-card-header p{
+font-weight: 550;
+}
+
+.test{
+	text-align:center;
+}
+.test i{
+	text-align:center;
+	font-size: 11px;
+}
+
+.etl-footer{
+	text-align:center;  
+}
+
+.etl-footer p{
+ 	padding:2%;  
+}
+.etl-footer a {
+	
+	font-weight: 300;
+	color: #333;
+	
+}
+
+.etl-footer a:hover {
+	color: #777;
+}
+
+ .fenge{
+padding:15px 1px 9px 1px;
+margin-left: 6px;
+border-left: 1px solid #3070b8;
+font-size: 0;
+
+}
+
+.c{
+	color:#3070b8;
+	font-weight: 300;
+	font-size: 16px;
+}
+</style>
+<script type="text/javascript">
+if (window != top)   
+	 top.location.href = location.href; 
+</script>
+</head>
+<body>
+
+	<div class="layui-row" style="height:50px">
+		<div style="padding-left:20px"><img style="width:100px" src="/static/images/login_logo.png" alt="卫宁健康"><span class="fenge"></span> 
+		<span class="c">Etl调度监控分析平台</span> 
+		</div>
+	</div>
+	<div class="layui-row a" style="height:470px">
+		<div  style="padding-top:9%;padding-left:55%;">
+			<div style="width:280px">
+						<div class="layui-card">
+						  <div class="layui-card-header"><p>系统管理登录</p></div>
+						  <div class="layui-card-body">
+						  	<form class="layui-form" id="login" lay-filter="formTest">
+						  		<div class="layui-form-item">
+								    <input type="text" name="userName" required  lay-verify="required" placeholder="用户名" autocomplete="off" class="layui-input">
+  								</div>
+  								<div class="layui-form-item">
+								    <input type="password" name="password" required  lay-verify="required" placeholder="密码" autocomplete="off" class="layui-input">
+  								</div>
+  								<div class="layui-form-item">
+  									<button id="ttt" class="layui-btn layui-btn-sm layui-btn-fluid" lay-submit lay-filter="formDemo" >登录</button>
+  								</div>
+  								 <p class="test" > <i class="layui-icon">&#xe702; <span id="login_tishi">请输入用户名和密码</span> </i></p>
+						  	</form>
+						  </div>
+						</div>
+			</div>
+			
+		</div>
+	</div>
+	<div class="layui-row">
+		<div class="etl-footer">
+				<p>
+					<a href="#">卫宁健康</a> 2019 &copy; <a href="#">BI研发出品</a>
+				</p>
+			</div>
+	</div>
+
+
+<script src="/static/layui/layui.js"></script>
+<script type="text/javascript">
+layui.use(['element','form','jquery'], function(){
+	  var element = layui.element; 
+	  form = layui.form;
+	  $=layui.jquery;
+	  
+	  form.on('submit(formDemo)',function(data){
+		 /*  $("#ttt").addClass("layui-btn-disabled");
+		  $("form").submit();
+		  return false; */
+		  $.post("/user/login",data.field,function(result){
+				if(result.success){
+					parent.location.href="/index";
+				}else{
+					$("#login_tishi").text("用户名或密码错误！")
+					
+				}
+			},"json"); 
+		  return false; 
+	  });
+	 
+});
+
+
+</script> 
+</body>
+</html>
