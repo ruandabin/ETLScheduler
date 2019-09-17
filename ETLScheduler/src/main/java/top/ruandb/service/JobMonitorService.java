@@ -18,4 +18,11 @@ public interface JobMonitorService {
 	public void deleteOne(Long id);
 	
 	public void updateMonitor(JobMonitor jobMonitor);
+	
+	public  List<JobMonitor> findAll() ;
+	
+	/**
+	 * 	初始化主键配置
+	 */
+	public void initPk();
 }

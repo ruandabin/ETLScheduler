@@ -1,100 +1,157 @@
 <!DOCTYPE html>
-<html xmlns:th="http://www.thymeleaf.org">
+<html xmlns:th="http://www.thymeleaf.org" class="x-admin-sm">
 <head>
-<meta charset="UTF-8"></meta>
-<title>调度监控分析平台</title>
-<link rel="stylesheet" href="/static/layui/css/layui.css"></link>
-<link rel="stylesheet" href="/static/css/css.css"></link>
-<link rel="stylesheet" href="/static/css/global.css"></link>
+<meta charset="UTF-8">
+<title>ETL调度监控分析</title>
+<meta name="renderer" content="webkit|ie-comp|ie-stand">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta name="viewport"
+	content="width=device-width,user-scalable=yes, minimum-scale=0.4, initial-scale=0.8,target-densitydpi=low-dpi" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+<link rel="stylesheet" href="/static/css/font.css">
+<link rel="stylesheet" href="/static/css/xadmin.css">
+<link rel="stylesheet" href="/static/css/theme239.min.css">
+<!-- <link rel="stylesheet" href="./css/theme5.css"> -->
+<script src="/static/layui/layui.js" charset="utf-8"></script>
+<script type="text/javascript" src="/static/js/xadmin.js"></script>
+<!-- 让IE8/9支持媒体查询，从而兼容栅格 -->
+<!--[if lt IE 9]>
+          <script src="https://cdn.staticfile.org/html5shiv/r29/html5.min.js"></script>
+          <script src="https://cdn.staticfile.org/respond.js/1.4.2/respond.min.js"></script>
+        <![endif]-->
+<script>
+	// 是否开启刷新记忆tab功能
+    var is_remember = false;
+</script>
 </head>
-<style>
- .fenge{
-padding:14px 1px 9px 1px;
-margin-left: 6px;
-border-left: 1px solid #fff;
-font-size: 0;
 
-}
-</style>
-<body class="bg">
-	<div class="layui-fluid">
-		
-		<div class="layui-row">
-			<div class="fly-header layui-bg-black">
-				
-				<a class="etl-logo" href="">&nbsp; &nbsp;&nbsp;<img src="/static/images/logo.png"
-					alt="ETL">
-				</a>
-				<div class="fly-user">
-					欢迎 <i class="layui-icon">&#xe612;</i> <span th:text="${session.currentUser}"> </span><span class="fenge"></span> &nbsp;<button class="layui-btn layui-btn-xs layui-btn-warm" onclick="javascript:logout()" >注销</button>
-				</div>
-			</div>
-		</div>
-		
-		<div class="layui-row  etl-marginTop">
-			<div class="layui-col-md1">
-			  <div>
-				 	<ul class="layui-nav layui-nav-tree elt-left-main"
-						lay-filter="etl_nav">
-						<li class="layui-nav-item" id="111"><a _href="/admin/default.html"> <i
-								class="layui-icon">&#xe68e;</i> <span>首页</span>
-						</a></li>
-						<li class="layui-nav-item" id="555"><a _href="/admin/jobmonitor.html"> <i
-								class="layui-icon">&#xe62e;</i> <span>调度监控</span>
-						</a></li>
-						<li class="layui-nav-item" id="333"><a _href="/admin/jobmanager.html"> <i
-								class="layui-icon">&#xe672;</i> <span>调度配置</span>
-						</a></li>
-						<li class="layui-nav-item" id="222"><a _href="/admin/logmanager.html"> <i
-								class="layui-icon">&#xe609;</i> <span>调度日志</span>
-						</a></li>
-						<li class="layui-nav-item" id="444"><a _href="/admin/jobanalysis.html"> <i
-								class="layui-icon">&#xe62c;</i> <span>调度分析</span>
-						</a></li>
-						<!-- <li class="layui-nav-item" id="666"><a _href="/admin/todo.html"> <i
-								class="layui-icon">&#xe6b2;</i> <span>数据校验</span>
-						</a></li> -->
-						
-					</ul> 
-				</div> 
-				
-			</div>
-			
-			<div class="layui-col-md11">
-				<!-- 		 		<iframe id="pageFrame" frameborder='0' scrolling='auto' style='width:100%;height:100%' src="/admin/default.html"></iframe> -->
-				<div class="elt-right-main">
-				 <div class="layui-tab layui-tab-card tab" lay-filter="etl_tab"
-					lay-allowclose="true" id="etl_tab_tip">
-					<ul class="layui-tab-title">
-						<li lay-id="111" class="layui-this">首页</li>
-					</ul>
-					<div class="layui-tab-content" style="height: 440px;">
-						<div class="layui-tab-item layui-show">
-							
- 						  <iframe id="pageFrame" frameborder='0' scrolling='auto'  style='width: 100%; height: 435px' src="/admin/default.html"></iframe>
-						</div>
-					</div>
-				</div> 
-			   </div>
-			</div>
-		</div>
-		
-		<div class="layui-row">
-			<div class="etl-footer">
-				<p>
-					<a href="#">卫宁健康</a> 2019 &copy; <a href="#">BI研发出品</a>
-				</p>
-			</div>
-		</div>
-	</div> 
-
-	<script src="/static/layui/layui.js"></script>
-	<script type="text/javascript">
-	layui.config({
-		  base: '/static/js/'
-		 ,version: '101100'
-		}).use('admin');
-
-	</script>
-</body>
+ <body class="index" >
+        <!-- 顶部开始 -->
+        <div class="container">
+            <div class="logo">
+                <a href="./index.html">ETL调度监控分析</a></div>
+            <div class="left_open">
+                <a><i title="展开左侧栏" class="iconfont">&#xe699;</i></a>
+            </div>
+            <ul class="layui-nav left fast-add" lay-filter="">
+                <!-- <li class="layui-nav-item">
+                    <a href="javascript:;">+新增</a>
+                    <dl class="layui-nav-child">
+                        二级菜单
+                        <dd>
+                            <a onclick="xadmin.open('最大化','http://www.baidu.com','','',true)">
+                                <i class="iconfont">&#xe6a2;</i>弹出最大化</a></dd>
+                        <dd>
+                            <a onclick="xadmin.open('弹出自动宽高','http://www.baidu.com')">
+                                <i class="iconfont">&#xe6a8;</i>弹出自动宽高</a></dd>
+                        <dd>
+                            <a onclick="xadmin.open('弹出指定宽高','http://www.baidu.com',500,300)">
+                                <i class="iconfont">&#xe6a8;</i>弹出指定宽高</a></dd>
+                        <dd>
+                            <a onclick="xadmin.add_tab('在tab打开','member-list.html')">
+                                <i class="iconfont">&#xe6b8;</i>在tab打开</a></dd>
+                        <dd>
+                            <a onclick="xadmin.add_tab('在tab打开刷新','member-del.html',true)">
+                                <i class="iconfont">&#xe6b8;</i>在tab打开刷新</a></dd>
+                    </dl>
+                </li> -->
+            </ul>
+            <ul class="layui-nav right" lay-filter="">
+                <li class="layui-nav-item">
+                    <a href="javascript:;"><span
+						th:text="${session.currentUser}"> </span><span class="fenge"></span></a>
+                    <dl class="layui-nav-child">
+                        <!-- 二级菜单 -->
+                        <dd>
+                            <a onclick="xadmin.open('个人信息','/admin/userinfo.html',300,400)">个人信息</a></dd>
+                        <dd>
+                            <a href="javascript:logout()">退出</a></dd>
+                    </dl>
+                </li>
+                 <li class="layui-nav-item to-index">
+                    &nbsp;</li>
+            </ul>
+        </div>
+        <!-- 顶部结束 -->
+        <!-- 中部开始 -->
+        <!-- 左侧菜单开始 -->
+        <div class="left-nav">
+            <div id="side-nav">
+                <ul id="nav">
+                    <li>
+                        <a href="javascript:;">
+                            <i class="iconfont left-nav-li" lay-tips="调度管理">&#xe6ce;</i>
+                            <cite>调度管理</cite>
+                            <i class="iconfont nav_right">&#xe697;</i></a>
+                        <ul class="sub-menu">
+                            <li>
+                                <a onclick="xadmin.add_tab('调度监控','/admin/jobmonitor.html')">
+                                    <i class="iconfont">&#xe6a7;</i>
+                                    <cite>调度监控</cite></a>
+                            </li>
+                            <li>
+                                <a onclick="xadmin.add_tab('调度配置','/admin/jobmanager.html')">
+                                    <i class="iconfont">&#xe6a7;</i>
+                                    <cite>调度配置</cite></a>
+                            </li>
+                            <li>
+                                <a onclick="xadmin.add_tab('调度日志','/admin/logmanager.html')">
+                                    <i class="iconfont">&#xe6a7;</i>
+                                    <cite>调度日志</cite></a>
+                            </li>
+                        </ul>
+                    </li>
+                   
+                   
+                    <li>
+                        <a href="javascript:;">
+                            <i class="iconfont left-nav-li" lay-tips="系统管理">&#xe6ae;</i>
+                            <cite>系统管理</cite>
+                            <i class="iconfont nav_right">&#xe697;</i></a>
+                        <ul class="sub-menu">
+                            <li>
+                                <a onclick="xadmin.add_tab('Cron生成器','/QuartzCronUtil-master/index.html')">
+                                    <i class="iconfont">&#xe6a7;</i>
+                                    <cite>Cron生成器</cite></a>
+                            </li>
+                             <li>
+                                <a id="downhelp" href="" onclick="getFile()">
+                                    <i class="iconfont">&#xe6a7;</i>
+                                    <cite>帮助文档</cite></a>
+                            </li>
+                            
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <!-- <div class="x-slide_left"></div> -->
+        <!-- 左侧菜单结束 -->
+        <!-- 右侧主体开始 -->
+        <div class="page-content">
+            <div class="layui-tab tab" lay-filter="xbs_tab" lay-allowclose="false">
+                <ul class="layui-tab-title">
+                    <li class="home">
+                        <i class="layui-icon">&#xe68e;</i>首页</li></ul>
+                <div class="layui-unselect layui-form-select layui-form-selected" id="tab_right">
+                    <dl>
+                        <dd data-type="this">关闭当前</dd>
+                        <dd data-type="other">关闭其它</dd>
+                        <dd data-type="all">关闭全部</dd></dl>
+                </div>
+                <div class="layui-tab-content">
+                    <div class="layui-tab-item layui-show">
+                        <iframe src='/admin/default.html' frameborder="0" scrolling="yes" class="x-iframe"></iframe>
+                    </div>
+                </div>
+                <div id="tab_show"></div>
+            </div>
+        </div>
+        <div class="page-content-bg"></div>
+        <style id="theme_style"></style>
+        <!-- 右侧主体结束 -->
+        <!-- 中部结束 -->
+       
+       
+    </body>
 </html>

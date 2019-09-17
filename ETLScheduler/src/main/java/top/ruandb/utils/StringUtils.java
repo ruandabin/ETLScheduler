@@ -50,13 +50,15 @@ public class StringUtils {
 	}
 	
 	/**
-	 * 计算增量开始时间
+	    *   计算增量开始时间
 	 * @return
 	 */
 	public static String getStartTime(String increaseTime) {
 		LocalDate nowDate = LocalDate.now();
 		LocalTime inTime = LocalTime.parse(increaseTime, DateTimeFormatter.ofPattern("HH:mm:ss"));
-		LocalDateTime localDateTime =  LocalDateTime.of(nowDate.minusDays(1), inTime);
+		//LocalDateTime localDateTime =  LocalDateTime.of(nowDate.minusDays(1), inTime); //往前推一天
+		//LocalDateTime localDateTime =  LocalDateTime.of(nowDate.minusMonths(1), inTime);
+		LocalDateTime localDateTime =  LocalDateTime.of(nowDate.minusWeeks(1), inTime); //往前退一周
 		return localDateTime.format(DateTimeFormatter.ofPattern("yyyy-MM-dd HH:mm:ss")) ;
 		//return "2019-01-30 13:00:00";
 	}
@@ -89,7 +91,28 @@ public class StringUtils {
 		return r+"";
 	}
 	
+	/**
+	 *       获取当前时间字符串
+	 * @return
+	 */
+	public static String getNow() {
+		LocalDateTime localDateTime = LocalDateTime.ofInstant(new Date().toInstant(), ZoneId.systemDefault());
+		return localDateTime.format(DateTimeFormatter.ofPattern("yyyy-MM-dd HH:mm:ss")) ;
+	}
+	
+	/**
+	 * 	时间返回1天,冗余1天,防止数据丢失
+	 * @return
+	 */
+	public static String redundant1s(String oldTime) {
+		 LocalDateTime dt = LocalDateTime.parse(oldTime,DateTimeFormatter.ofPattern("yyyy-MM-dd HH:mm:ss"));
+		 //LocalDateTime localDateTime = dt.minusSeconds(1);
+		 LocalDateTime localDateTime = dt.minusDays(1);
+		 return localDateTime.format(DateTimeFormatter.ofPattern("yyyy-MM-dd HH:mm:ss")) ;
+	}
+	
 	public static void main(String[] args) {
-		System.out.println(StringUtils.getStartTime("04:00:00") + "   "+StringUtils.getEndTime("04:00:00"));
+		//System.out.println(StringUtils.getStartTime("04:00:00") + "   "+StringUtils.getEndTime("04:00:00"));
+		System.out.println(StringUtils.redundant1s("2019-04-16 14:32:05"));
 	}
 }

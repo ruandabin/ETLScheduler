@@ -2,6 +2,7 @@ package top.ruandb.service;
 
 import java.util.List;
 
+import org.pentaho.di.core.exception.KettleException;
 import org.quartz.SchedulerException;
 import org.springframework.data.domain.Sort.Direction;
 
@@ -66,4 +67,43 @@ public interface TaskCronJobService {
 	 * @throws SchedulerException 
 	 */
 	public Boolean runJob(TaskCronJob taskCronJob) throws SchedulerException ;
+	
+	/**
+	 * 	批量手动执行
+	 * @param ids
+	 * @return
+	 */
+	public void batchRunJob (String ids) throws SchedulerException;
+	
+	/**
+	 * 	获取上次增量抽取的更新时间
+	 * @return
+	 */
+	public String getLastDate(TaskCronJob taskCronJob) ;
+	
+	/**
+	 * 	更新增量抽取更新时间
+	 * @param lastDate
+	 */
+	public void updateLastDate(TaskCronJob taskCronJob,String lastDate);
+	
+	/**
+	 * 	初始化调度配置
+	 * @throws SchedulerException 
+	 * @throws KettleException 
+	 * @throws ClassNotFoundException 
+	 */
+	public void csh() throws ClassNotFoundException, KettleException, SchedulerException;
+	
+	/**
+	 * 批量更新cron
+	 */
+	public void batchEditCron(String ids,String cron ) throws ClassNotFoundException, SchedulerException;
+	
+	/**
+	 * 批量更新param
+	 */
+	public void batchEditParam(String ids,String param ) throws ClassNotFoundException, SchedulerException;
+	
+
 }

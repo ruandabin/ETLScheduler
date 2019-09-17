@@ -1,5 +1,10 @@
 package top.ruandb.controller;
 
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.ResultSet;
+import java.sql.SQLException;
+import java.sql.Statement;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 
@@ -16,4 +21,6 @@ public class TestController {
 		return "admin/main";
 		//return "login";
 	}
+	
+	
 }

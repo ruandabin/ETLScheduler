@@ -39,4 +39,24 @@ public interface JobLogService {
 	 * @return
 	 */
 	public JobLog findOne(Long id);
+	
+	/**
+	 * 更新处理情况
+	 * @param id
+	 * @param idDeal
+	 */
+	public void updateIsDeal(Long id,String isDeal);
+	
+	/**
+	 * sql分页查找
+	 * @param jobLog
+	 * @param page
+	 * @param pageSize
+	 * @return
+	 */
+	public List<JobLog> findAll(JobLog jobLog, Integer page, Integer pageSize);
+	
+	
+	
+	
 }

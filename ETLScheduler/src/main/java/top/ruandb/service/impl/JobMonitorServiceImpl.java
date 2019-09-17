@@ -1,4 +1,9 @@
 package top.ruandb.service.impl;
+import java.time.Instant;
+import java.time.LocalDate;
+import java.time.LocalDateTime;
+import java.time.ZoneId;
+import java.time.format.DateTimeFormatter;
 import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
@@ -12,6 +17,8 @@ import org.quartz.Scheduler;
 import org.quartz.SchedulerException;
 import org.quartz.Trigger;
 import org.quartz.TriggerKey;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.data.domain.Page;
@@ -22,6 +29,7 @@ import org.springframework.data.jpa.domain.Specification;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 import top.ruandb.Job.BaseJob;
+import top.ruandb.Job.DailyInitJobStatusJob;
 import top.ruandb.entity.JobMonitor;
 import top.ruandb.entity.TaskCronJob;
 import top.ruandb.repository.JobMonitorRepository;
@@ -33,12 +41,17 @@ import top.ruandb.utils.TaskUtils;
 @Service("jobMonitor")
 public class JobMonitorServiceImpl implements JobMonitorService{
 
+	private final Logger logger = LoggerFactory.getLogger(getClass());
 	
 	@Resource
 	private JobMonitorRepository jobMonitorRepository;
 	
 	@Resource
 	private TaskCronJobService  taskCronJobService;
+	
+	
+	
+	
 	
 	@Autowired 
 	@Qualifier("Scheduler")
@@ -63,13 +76,16 @@ public class JobMonitorServiceImpl implements JobMonitorService{
 			JobMonitor jobMonitor = new JobMonitor();
 			jobMonitor.setId(job.getId());
 			jobMonitor.setJobName(job.getJobName());
+			jobMonitor.setNickName(job.getNickName());
 			jobMonitor.setStatus(BaseJob.JOB_DONE);
 			jobMonitor.setErrors(BaseJob.SUCCESS);
+			
 			jobKey = TaskUtils.getCronJobKey(job);
 			triggerKey = TaskUtils.getCronTriggerKey(job);
 			Trigger tigger = scheduler.getTrigger(triggerKey);
 			if(tigger != null ) {
-				jobMonitor.setPrviousDate(scheduler.getTrigger(triggerKey).getPreviousFireTime());
+				//jobMonitor.setPrviousDate(scheduler.getTrigger(triggerKey).getPreviousFireTime());
+				jobMonitor.setPrviousDate(getGdDate());
 				jobMonitor.setNextDate(scheduler.getTrigger(triggerKey).getNextFireTime());
 			}
 			jobMonitors.add(jobMonitor);
@@ -86,6 +102,7 @@ public class JobMonitorServiceImpl implements JobMonitorService{
 	 * 每次更新或修改作业同步监控表
 	 */
 	public void initPart(TaskCronJob taskCronJob) throws SchedulerException  {
+		
 		if(taskCronJob.isEnable()) {
 			JobMonitor jobMonitor;
 			Date nextDate = null ;
@@ -98,12 +115,14 @@ public class JobMonitorServiceImpl implements JobMonitorService{
 			    jobMonitor = new JobMonitor();
 				jobMonitor.setId(taskCronJob.getId());
 				jobMonitor.setJobName(taskCronJob.getJobName());
+				jobMonitor.setNickName(taskCronJob.getNickName());
 				jobMonitor.setStatus(BaseJob.JOB_DONE);
 				jobMonitor.setErrors(BaseJob.SUCCESS);
 				jobMonitor.setNextDate(nextDate);
 			}else {
 				jobMonitor = jobMonitorRepository.findById(taskCronJob.getId()).get();
 				jobMonitor.setJobName(taskCronJob.getJobName());
+				jobMonitor.setNickName(taskCronJob.getNickName());
 				jobMonitor.setNextDate(nextDate);
 			}
 			jobMonitorRepository.save(jobMonitor);
@@ -113,7 +132,10 @@ public class JobMonitorServiceImpl implements JobMonitorService{
 			}
 			
 		}
+		dailyInitScheduler() ;
 	}
+	
+	
 
 	/**
 	 * 根据调度情况更新监控表
@@ -123,6 +145,9 @@ public class JobMonitorServiceImpl implements JobMonitorService{
 		JobMonitor oldJobMonitor = jobMonitorRepository.findById(jobMonitor.getId()).get();
 		if(jobMonitor.getNextDate() == null ) {
 			jobMonitor.setNextDate(oldJobMonitor.getNextDate());
+		}
+		if(jobMonitor.getPrviousDate() == null ) {
+			jobMonitor.setPrviousDate(oldJobMonitor.getPrviousDate());
 		}
 		jobMonitorRepository.save(jobMonitor);
 	}
@@ -183,5 +208,65 @@ public class JobMonitorServiceImpl implements JobMonitorService{
 	@Transactional
 	public void deleteOne(Long id) {
 		jobMonitorRepository.deleteById(id);
+		dailyInitScheduler() ;
+	}
+
+	
+	/**
+	 * 无条件查询所有
+	 */
+	@Override
+	public List<JobMonitor> findAll() {
+		return jobMonitorRepository.findAll();
+	}
+
+	
+	/**
+	 * 初始化调度情况
+	 * 每天调度之前读取，后面依赖调度会根据这个内容
+	 */
+	private void dailyInitScheduler() {
+		BaseJob.jobMap.clear();
+		BaseJob.groupMap.clear();
+		List<String> groupA = new ArrayList<>();
+		List<String> groupB = new ArrayList<>();
+		List<String> groupC = new ArrayList<>();
+		List<String> groupD = new ArrayList<>();
+		List<TaskCronJob> taskCronJobs = taskCronJobService.findAll();
+		for(TaskCronJob t:taskCronJobs) {
+			if(!t.isEnable()) {
+				continue;
+			}
+			BaseJob.jobMap.put(t.getId().toString(), "PENDDING");
+			if(t.getJobGroup()!=null && !t.getJobGroup().equals("") && t.getJobGroup().equals(BaseJob.GROUP_1)) {
+				groupA.add(t.getId().toString());
+			}else if(t.getJobGroup()!=null && !t.getJobGroup().equals("") && t.getJobGroup().equals(BaseJob.GROUP_2)) {
+				groupB.add(t.getId().toString());
+			}else if(t.getJobGroup()!=null && !t.getJobGroup().equals("") && t.getJobGroup().equals(BaseJob.GROUP_3)){
+				groupC.add(t.getId().toString());
+			}else if(t.getJobGroup()!=null && !t.getJobGroup().equals("") && t.getJobGroup().equals(BaseJob.GROUP_4)) {
+				groupD.add(t.getId().toString());
+			}
+		}
+		BaseJob.groupMap.put(BaseJob.GROUP_1, groupA);
+		BaseJob.groupMap.put(BaseJob.GROUP_2, groupB);
+		BaseJob.groupMap.put(BaseJob.GROUP_3, groupC);
+		BaseJob.groupMap.put(BaseJob.GROUP_4, groupD);
+		logger.info("jobMap--->"+BaseJob.jobMap.toString());
+		logger.info("groupMap--->"+BaseJob.groupMap.toString());
+		logger.info("{},{}----------------------->初始化成功","jobMap","groupMap");
+	}
+	
+	
+	public void initPk() {
+		jobMonitorRepository.initTaskCronJobPk();
+		jobMonitorRepository.initJobLogPk();
+	}
+	
+	private Date getGdDate() {
+		LocalDateTime localDateTime = LocalDateTime.parse("1990-01-01 00:00:00",DateTimeFormatter.ofPattern("yyyy-MM-dd HH:mm:ss") );
+		ZoneId zone = ZoneId.systemDefault();
+		Instant instant = localDateTime.atZone(zone).toInstant();
+		return Date.from(instant);
 	}
 }

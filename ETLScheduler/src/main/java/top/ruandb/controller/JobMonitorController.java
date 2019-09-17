@@ -23,7 +23,7 @@ public class JobMonitorController {
 	@ResponseBody
 	public Map<String,Object> listAllJobs(JobMonitor jobMonitor,@RequestParam(value="page",required=false)Integer page,@RequestParam(value="limit",required=false)Integer limit) {
 		Map<String, Object> resultMap = new HashMap<>();
-		List<JobMonitor> jobLogList = jobMonitorService.findAll(jobMonitor, page, limit, Sort.Direction.DESC, "id");
+		List<JobMonitor> jobLogList = jobMonitorService.findAll(jobMonitor, page, limit, Sort.Direction.DESC, "prviousDate","id");
 		Long count = jobMonitorService.getCount(jobMonitor);
 		resultMap.put("code", 0);
 		resultMap.put("count", count);

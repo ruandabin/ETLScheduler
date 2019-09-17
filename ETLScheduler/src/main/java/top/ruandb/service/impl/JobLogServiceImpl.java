@@ -45,12 +45,32 @@ public class JobLogServiceImpl implements JobLogService{
 						predicate.getExpressions()
 								.add(criteriaBuilder.like(root.get("jobName"), "%" + jobLog.getJobName() + "%"));
 					}
+					if (StringUtils.isNotEmpty(jobLog.getStatus())) {
+						predicate.getExpressions()
+								.add(criteriaBuilder.like(root.get("status"), "%" + jobLog.getStatus() + "%"));
+					}
 				}
 				return predicate;
 			}
 		}, pageable);
 
 		return pageJobLog.getContent();
+	}
+	
+	/**
+	 * 按条件分页查询
+	 */
+	@Override
+	public List<JobLog> findAll(JobLog jobLog, Integer page, Integer pageSize) {
+		Integer rowNum;
+		Integer rn;
+		String jobName;
+		String status;
+		rowNum = page * pageSize ;
+		rn = (page-1) * pageSize;
+		jobName =  jobLog.getJobName()!=null&&!jobLog.getJobName().equals("")? "%"+jobLog.getJobName()+"%" : jobLog.getJobName();
+		status =  jobLog.getStatus()!=null&&!jobLog.getStatus().equals("")? "%"+jobLog.getStatus()+"%" : jobLog.getStatus();
+		return jobLogRespository.getLogList(rowNum,rn,jobName,status);
 	}
 
 	/**
@@ -68,6 +88,10 @@ public class JobLogServiceImpl implements JobLogService{
 					if (StringUtils.isNotEmpty(jobLog.getJobName())) {
 						predicate.getExpressions()
 								.add(criteriaBuilder.like(root.get("jobName"), "%" + jobLog.getJobName() + "%"));
+					}
+					if (StringUtils.isNotEmpty(jobLog.getStatus())) {
+						predicate.getExpressions()
+								.add(criteriaBuilder.like(root.get("status"), "%" + jobLog.getStatus() + "%"));
 					}
 				}
 				return predicate;
@@ -87,7 +111,9 @@ public class JobLogServiceImpl implements JobLogService{
 		return jobLogRespository.findById(id).get();
 	}
 	
-	
-	
+	@Override
+	public void updateIsDeal(Long id,String isDeal) {
+		jobLogRespository.updateIsDeal(id, isDeal);
+	};
 
 }

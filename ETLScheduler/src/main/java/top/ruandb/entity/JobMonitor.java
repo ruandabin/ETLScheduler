@@ -17,7 +17,7 @@ public class JobMonitor implements Serializable{
 		private Long id;
 		
 		//job名称
-		@Column(name="jobname")
+		@Column(name="jobname",columnDefinition="varchar(max)")
 		private String jobName;
 		
 		//状态
@@ -35,6 +35,22 @@ public class JobMonitor implements Serializable{
 		//下一次开始时间
 		@Column(name="nextDate")
 		private Date nextDate;
+		
+		//作业别名
+		@Column(name="nick_name")
+		private String nickName;
+		
+		
+
+		public String getNickName() {
+			return nickName;
+		}
+
+
+		public void setNickName(String nickName) {
+			this.nickName = nickName;
+		}
+
 
 		public Long getId() {
 			return id;
@@ -117,10 +133,11 @@ public class JobMonitor implements Serializable{
 		
 		
 
-		public JobMonitor(Long id, String jobName, String status, Integer errors, Date prviousDate, Date nextDate) {
+		public JobMonitor(Long id, String nickName,String jobName, String status, Integer errors, Date prviousDate, Date nextDate) {
 			super();
 			this.id = id;
 			this.jobName = jobName;
+			this.nickName = nickName;
 			this.status = status;
 			this.errors = errors;
 			this.prviousDate = prviousDate;

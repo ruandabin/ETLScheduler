@@ -35,6 +35,7 @@ public class JobLogController {
 	public Map<String,Object> listAllJobs(JobLog jobLog,@RequestParam(value="page",required=false)Integer page,@RequestParam(value="limit",required=false)Integer limit) {
 		Map<String, Object> resultMap = new HashMap<>();
 		List<JobLog> jobLogList = jobLogService.findAll(jobLog, page, limit, Sort.Direction.DESC, "id");
+		//List<JobLog> jobLogList = jobLogService.findAll(jobLog, page, limit);
 		Long count = jobLogService.getCount(jobLog);
 		resultMap.put("code", 0);
 		resultMap.put("count", count);
@@ -91,5 +92,14 @@ public class JobLogController {
 		resultMap.put("series", series);
 		resultMap.put("legend", legend);
 		return resultMap ;
+	}
+	
+	@RequestMapping("deal")
+	@ResponseBody
+	public	Map<String,Object> updateDeal(Long id,String isDeal){
+		Map<String, Object> resultMap = new HashMap<>();
+		jobLogService.updateIsDeal(id, isDeal);
+		resultMap.put("success", true);
+		return resultMap;
 	}
 }

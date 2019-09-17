@@ -1,10 +1,15 @@
 package top.ruandb.service.impl;
+import java.util.ArrayList;
+import java.util.Comparator;
 import java.util.List;
 import javax.annotation.Resource;
 import javax.persistence.criteria.CriteriaBuilder;
 import javax.persistence.criteria.CriteriaQuery;
 import javax.persistence.criteria.Predicate;
 import javax.persistence.criteria.Root;
+
+import org.pentaho.di.core.exception.KettleException;
+import org.quartz.JobDataMap;
 import org.quartz.JobKey;
 import org.quartz.Scheduler;
 import org.quartz.SchedulerException;
@@ -18,9 +23,12 @@ import org.springframework.data.domain.Pageable;
 import org.springframework.data.domain.Sort.Direction;
 import org.springframework.data.jpa.domain.Specification;
 import org.springframework.stereotype.Service;
+
+import top.ruandb.Job.BaseJob;
 import top.ruandb.config.TaskSchedulerFactory;
 import top.ruandb.entity.TaskCronJob;
 import top.ruandb.exception.ParamException;
+import top.ruandb.init.TaskInit;
 import top.ruandb.repository.TaskCronJobRepository;
 import top.ruandb.service.JobMonitorService;
 import top.ruandb.service.TaskCronJobService;
@@ -49,6 +57,9 @@ public class TaskCronJobServiceImpl implements TaskCronJobService {
 	@Autowired 
 	@Qualifier("Scheduler")
     private Scheduler scheduler;
+	
+	@Autowired 
+	private TaskInit taskInit;
 
 	@Resource
 	private TaskSchedulerFactory taskSchedulerFactory;
@@ -168,10 +179,9 @@ public class TaskCronJobServiceImpl implements TaskCronJobService {
 		TaskCronJob taskCronJob = findOne(id);
 		TaskUtils.deleteJobAndCronTrigger(taskCronJob, scheduler);
 		taskCronJobRepository.deleteById(id);
-		jobMonitorService.deleteOne(id);//修改后同步监控表
-	
-		
-
+		if(taskCronJob.isEnable()) {
+			jobMonitorService.deleteOne(id);//修改后同步监控表
+		}
 	}
 	/**
 	 * 手动执行
@@ -180,8 +190,128 @@ public class TaskCronJobServiceImpl implements TaskCronJobService {
 	@Override
 	public Boolean runJob(TaskCronJob taskCronJob) throws SchedulerException {
 		JobKey jobKey = TaskUtils.getCronJobKey(taskCronJob);
-		scheduler.triggerJob(jobKey);
+		JobDataMap jobDataMap = new JobDataMap();
+		jobDataMap.put("manualExecution", BaseJob.SCHEDULER_1);
+		scheduler.triggerJob(jobKey,jobDataMap);
 		return true;
 	}
+	
+	/**
+	 * 批量手动执行
+	 * @throws SchedulerException 
+	 */
+	@Override
+	public void batchRunJob(String ids) throws SchedulerException  {
+		
+		List<TaskCronJob> jobList =  getJobList(ids);
+		
+		//按组排序
+		jobList.sort(new Comparator<TaskCronJob>() {
+			@Override
+			public int compare(TaskCronJob o1, TaskCronJob o2) {
+				
+				return o1.getJobGroup().compareTo(o2.getJobGroup());
+			}
+		});
+		//遍历循环执行作业
+		for(TaskCronJob j : jobList) {
+			this.runJob(j);
+		}
+	}
+	
+	public static void main(String[] args) {
+		System.out.println("B".compareTo("A"));
+	}
 
+
+
+	/**
+	 * 	判断是否为空，为空返回 "1900-01-01 00:00:00",相当于全量抽取
+	 */
+	@Override
+	public String getLastDate(TaskCronJob taskCronJob) {
+		TaskCronJob tj = this.findOne(taskCronJob.getId());
+		if( tj != null && tj.getLastDate() != null && !tj.getLastDate().equals("") ) {
+			return StringUtils.redundant1s(tj.getLastDate());
+		}else {
+			return "1900-01-01 00:00:00";
+		}
+	}
+
+
+
+	/**
+	 * 	更新最新的更新日期
+	 */
+	@Override
+	public void updateLastDate(TaskCronJob taskCronJob,String lastDate) {
+		TaskCronJob tj = this.findOne(taskCronJob.getId());
+		tj.setLastDate(lastDate);
+		taskCronJobRepository.save(tj);
+	}
+
+
+
+	/**
+	 * 	初始化调度配置
+	 * @throws SchedulerException 
+	 * @throws KettleException 
+	 * @throws ClassNotFoundException 
+	 */
+	@Override
+	public void csh() throws ClassNotFoundException, KettleException, SchedulerException {
+		taskInit.manualExecutionRun();
+	}
+
+
+
+	/**
+	 * 批量更新cron
+	 * @throws SchedulerException 
+	 * @throws ClassNotFoundException 
+	 */
+	@Override
+	public void batchEditCron(String ids,String cron ) throws ClassNotFoundException, SchedulerException {
+		
+		if(!TaskUtils.isValidExpression(cron)) {
+			throw new ParamException("调度表达式无效");
+		}
+		List<TaskCronJob> jobList =  getJobList(ids);
+		for(TaskCronJob job : jobList) {
+			job.setCron(cron);
+			addJob(job);
+		}
+		
+	}
+	
+	/**
+	 * 批量更新param
+	 * @throws SchedulerException 
+	 * @throws ClassNotFoundException 
+	 */
+	@Override
+	public void batchEditParam(String ids,String param ) throws ClassNotFoundException, SchedulerException {
+		List<TaskCronJob> jobList =  getJobList(ids);
+		for(TaskCronJob job : jobList) {
+			job.setJobParams(param);
+			addJob(job);
+		}
+		
+		
+	}
+	
+	private  List<TaskCronJob> getJobList(String ids) {
+		String[] idS = ids.split(",");
+		TaskCronJob job;
+		List<TaskCronJob> jobList =  new ArrayList<TaskCronJob>();
+		for(String id : idS) {
+			 job = this.findOne(Long.parseLong(id));
+			 jobList.add(job);	
+		}
+		return jobList;
+	}
+
+
+
+	
 }

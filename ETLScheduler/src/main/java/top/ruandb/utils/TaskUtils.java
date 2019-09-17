@@ -1,4 +1,7 @@
 package top.ruandb.utils;
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
+
 import org.quartz.CronExpression;
 import org.quartz.CronScheduleBuilder;
 import org.quartz.CronTrigger;
@@ -12,6 +15,8 @@ import org.quartz.TriggerBuilder;
 import org.quartz.TriggerKey;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+
+import top.ruandb.Job.BaseJob;
 import top.ruandb.entity.TaskCronJob;
 import top.ruandb.exception.ParamException;
 
@@ -24,16 +29,17 @@ import top.ruandb.exception.ParamException;
 public class TaskUtils {
 
 	private final static Logger logger = LoggerFactory.getLogger(TaskUtils.class);
-
+	
+	
 	// 返回Jobkey
 	public static JobKey getCronJobKey(TaskCronJob cronJob) {
-		return new JobKey(cronJob.getId().toString() + "_" + cronJob.getJobName(),
+		return new JobKey(cronJob.getId().toString(),// + "_" + cronJob.getJobName(),
 				cronJob.getJobClassName().substring(cronJob.getJobClassName().indexOf(".") + 1));
 	}
 
 	// 返回TriggerKey
 	public static TriggerKey getCronTriggerKey(TaskCronJob cronJob) {
-		return new TriggerKey("trigger_" + cronJob.getId().toString() + "_" + cronJob.getJobName(),
+		return new TriggerKey("trigger_" + cronJob.getId().toString(),// + "_" + cronJob.getJobName(),
 				cronJob.getJobClassName().substring(cronJob.getJobClassName().lastIndexOf(".") + 1));
 	}
 
@@ -122,4 +128,15 @@ public class TaskUtils {
 		JobKey jobKey = TaskUtils.getCronJobKey(job);
 		scheduler.deleteJob(jobKey);
 	}
+	
+	/**
+	 * 判断是否临时手动调度
+	 * @return
+	 */
+	public static boolean isTempRun(String triggerName) {
+		Pattern p = Pattern.compile("MT_.*");
+		Matcher m = p.matcher(triggerName);
+		return m.matches();
+	}
+	
 }
