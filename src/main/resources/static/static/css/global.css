@@ -1,0 +1,75 @@
+html {
+	width: 100%;
+	height: 100%;
+	overflow-x: hidden;
+	overflow-y: auto;
+}
+
+body {
+	width: 100%;
+	min-height: 100%;
+	/*  background: #f1f1f1; */
+	/*background: #fff;*/
+}
+/* Õ∑≤ø */
+.fly-user {
+	float: right;
+	padding-top: 20px;
+	padding-right: 30px;
+}
+
+.etl-logo {
+	position: absolute;
+	left: 0px;
+	top: 12px;
+}
+
+img {
+	width: 180px;
+}
+
+/* ◊Û≤‡¿∏ */
+.layui-layout-admin .layui-side {
+	width: 140px;
+}
+
+/* ”“≤‡¿∏ */
+.tab {
+	width: 100%;
+	height: 100%;
+	margin: 1px;
+}
+
+.layui-tab-content .layui-tab-item {
+	width: 100%;
+	height: 100%;
+}
+
+.layui-tab-content .layui-tab-item iframe {
+	width: 100%;
+	height: 100%;
+}
+
+.layui-tab-content {
+	position: absolute;
+	top: 50px;
+	bottom: 0px;
+	width: 100%;
+	padding: 0px;
+	padding-left: 10px;
+}
+
+.layui-body {
+	position: absolute;
+	left: 139px;
+	right: 0;
+	zindex: 998;
+	width: 100%;
+	overflow: hidden;
+	overflow-y: auto;
+	box-sizing: borderbox;
+}
+
+.layui-layout-admin .layui-body {
+	bottom: 0
+}

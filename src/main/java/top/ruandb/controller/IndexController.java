@@ -1,0 +1,21 @@
+package top.ruandb.controller;
+
+import javax.servlet.http.HttpServletRequest;
+
+import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.RequestMapping;
+
+@Controller
+public class IndexController {
+	@RequestMapping("/")
+	public String index(HttpServletRequest request) {
+		request.setAttribute("errorInfo", "请输入用户名和密码");
+		return "login";
+	}
+	
+	@RequestMapping("/index")
+	public String main() {
+		//System.out.println("ssssss");
+		return "admin/main" ;
+	}
+}

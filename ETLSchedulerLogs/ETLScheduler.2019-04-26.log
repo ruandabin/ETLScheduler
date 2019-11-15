@@ -1,0 +1,624 @@
+2019-04-26 11:12:00.913 [main] INFO  top.ruandb.EtlSchedulerApplication - Starting EtlSchedulerApplication on LAPTOP-MK6P63H0 with PID 15332 (C:\Java\eclipse-workspace2\ETLScheduler\target\classes started by rdb in C:\Java\eclipse-workspace2\ETLScheduler)
+2019-04-26 11:12:00.918 [main] INFO  top.ruandb.EtlSchedulerApplication - No active profile set, falling back to default profiles: default
+2019-04-26 11:12:02.712 [main] INFO  org.springframework.data.repository.config.RepositoryConfigurationDelegate - Bootstrapping Spring Data repositories in DEFAULT mode.
+2019-04-26 11:12:02.973 [main] INFO  org.springframework.data.repository.config.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 250ms. Found 4 repository interfaces.
+2019-04-26 11:12:03.470 [main] INFO  org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$eb628307] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-04-26 11:12:03.496 [main] INFO  org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'shiroConfig' of type [top.ruandb.config.ShiroConfig$$EnhancerBySpringCGLIB$$16bfb65a] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-04-26 11:12:03.914 [main] INFO  org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'myRealm' of type [top.ruandb.config.MyRealm] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-04-26 11:12:03.922 [main] INFO  org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'securityManager' of type [org.apache.shiro.web.mgt.DefaultWebSecurityManager] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-04-26 11:12:04.565 [main] INFO  org.springframework.boot.web.embedded.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8080 (http)
+2019-04-26 11:12:04.583 [main] INFO  org.apache.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+2019-04-26 11:12:04.596 [main] INFO  org.apache.catalina.core.StandardService - Starting service [Tomcat]
+2019-04-26 11:12:04.596 [main] INFO  org.apache.catalina.core.StandardEngine - Starting Servlet Engine: Apache Tomcat/9.0.13
+2019-04-26 11:12:04.623 [main] INFO  org.apache.catalina.core.AprLifecycleListener - Loaded APR based Apache Tomcat Native library [1.2.19] using APR version [1.6.5].
+2019-04-26 11:12:04.623 [main] INFO  org.apache.catalina.core.AprLifecycleListener - APR capabilities: IPv6 [true], sendfile [true], accept filters [false], random [true].
+2019-04-26 11:12:04.624 [main] INFO  org.apache.catalina.core.AprLifecycleListener - APR/OpenSSL configuration: useAprConnector [false], useOpenSSL [true]
+2019-04-26 11:12:05.716 [main] INFO  org.apache.catalina.core.AprLifecycleListener - OpenSSL successfully initialized [OpenSSL 1.0.2q  20 Nov 2018]
+2019-04-26 11:12:05.939 [main] INFO  org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2019-04-26 11:12:05.940 [main] INFO  org.springframework.web.context.ContextLoader - Root WebApplicationContext: initialization completed in 4929 ms
+2019-04-26 11:12:06.616 [main] INFO  com.alibaba.druid.pool.DruidDataSource - {dataSource-1} inited
+2019-04-26 11:12:27.701 [Druid-ConnectionPool-Create-669365112] ERROR com.alibaba.druid.pool.DruidDataSource - create connection SQLException, url: jdbc:oracle:thin:@172.17.1.233:1521:orcl, errorCode 20, state 61000
+java.sql.SQLException: The Network Adapter could not establish the connection
+	at oracle.jdbc.driver.T4CConnection.logon(T4CConnection.java:412)
+	at oracle.jdbc.driver.PhysicalConnection.<init>(PhysicalConnection.java:531)
+	at oracle.jdbc.driver.T4CConnection.<init>(T4CConnection.java:221)
+	at oracle.jdbc.driver.T4CDriverExtension.getConnection(T4CDriverExtension.java:32)
+	at oracle.jdbc.driver.OracleDriver.connect(OracleDriver.java:503)
+	at com.alibaba.druid.pool.DruidAbstractDataSource.createPhysicalConnection(DruidAbstractDataSource.java:1513)
+	at com.alibaba.druid.pool.DruidAbstractDataSource.createPhysicalConnection(DruidAbstractDataSource.java:1578)
+	at com.alibaba.druid.pool.DruidDataSource$CreateConnectionThread.run(DruidDataSource.java:2451)
+Caused by: oracle.net.ns.NetException: The Network Adapter could not establish the connection
+	at oracle.net.nt.ConnStrategy.execute(ConnStrategy.java:359)
+	at oracle.net.resolver.AddrResolution.resolveAndExecute(AddrResolution.java:422)
+	at oracle.net.ns.NSProtocol.establishConnection(NSProtocol.java:672)
+	at oracle.net.ns.NSProtocol.connect(NSProtocol.java:237)
+	at oracle.jdbc.driver.T4CConnection.connect(T4CConnection.java:1042)
+	at oracle.jdbc.driver.T4CConnection.logon(T4CConnection.java:301)
+	... 7 common frames omitted
+Caused by: java.net.ConnectException: Connection timed out: connect
+	at java.net.DualStackPlainSocketImpl.waitForConnect(Native Method)
+	at java.net.DualStackPlainSocketImpl.socketConnect(DualStackPlainSocketImpl.java:85)
+	at java.net.AbstractPlainSocketImpl.doConnect(AbstractPlainSocketImpl.java:350)
+	at java.net.AbstractPlainSocketImpl.connectToAddress(AbstractPlainSocketImpl.java:206)
+	at java.net.AbstractPlainSocketImpl.connect(AbstractPlainSocketImpl.java:188)
+	at java.net.PlainSocketImpl.connect(PlainSocketImpl.java:172)
+	at java.net.SocksSocketImpl.connect(SocksSocketImpl.java:392)
+	at java.net.Socket.connect(Socket.java:589)
+	at oracle.net.nt.TcpNTAdapter.connect(TcpNTAdapter.java:141)
+	at oracle.net.nt.ConnOption.connect(ConnOption.java:123)
+	at oracle.net.nt.ConnStrategy.execute(ConnStrategy.java:337)
+	... 12 common frames omitted
+2019-04-26 11:12:48.715 [Druid-ConnectionPool-Create-669365112] ERROR com.alibaba.druid.pool.DruidDataSource - create connection SQLException, url: jdbc:oracle:thin:@172.17.1.233:1521:orcl, errorCode 20, state 61000
+java.sql.SQLException: The Network Adapter could not establish the connection
+	at oracle.jdbc.driver.T4CConnection.logon(T4CConnection.java:412)
+	at oracle.jdbc.driver.PhysicalConnection.<init>(PhysicalConnection.java:531)
+	at oracle.jdbc.driver.T4CConnection.<init>(T4CConnection.java:221)
+	at oracle.jdbc.driver.T4CDriverExtension.getConnection(T4CDriverExtension.java:32)
+	at oracle.jdbc.driver.OracleDriver.connect(OracleDriver.java:503)
+	at com.alibaba.druid.pool.DruidAbstractDataSource.createPhysicalConnection(DruidAbstractDataSource.java:1513)
+	at com.alibaba.druid.pool.DruidAbstractDataSource.createPhysicalConnection(DruidAbstractDataSource.java:1578)
+	at com.alibaba.druid.pool.DruidDataSource$CreateConnectionThread.run(DruidDataSource.java:2451)
+Caused by: oracle.net.ns.NetException: The Network Adapter could not establish the connection
+	at oracle.net.nt.ConnStrategy.execute(ConnStrategy.java:359)
+	at oracle.net.resolver.AddrResolution.resolveAndExecute(AddrResolution.java:422)
+	at oracle.net.ns.NSProtocol.establishConnection(NSProtocol.java:672)
+	at oracle.net.ns.NSProtocol.connect(NSProtocol.java:237)
+	at oracle.jdbc.driver.T4CConnection.connect(T4CConnection.java:1042)
+	at oracle.jdbc.driver.T4CConnection.logon(T4CConnection.java:301)
+	... 7 common frames omitted
+Caused by: java.net.ConnectException: Connection timed out: connect
+	at java.net.DualStackPlainSocketImpl.waitForConnect(Native Method)
+	at java.net.DualStackPlainSocketImpl.socketConnect(DualStackPlainSocketImpl.java:85)
+	at java.net.AbstractPlainSocketImpl.doConnect(AbstractPlainSocketImpl.java:350)
+	at java.net.AbstractPlainSocketImpl.connectToAddress(AbstractPlainSocketImpl.java:206)
+	at java.net.AbstractPlainSocketImpl.connect(AbstractPlainSocketImpl.java:188)
+	at java.net.PlainSocketImpl.connect(PlainSocketImpl.java:172)
+	at java.net.SocksSocketImpl.connect(SocksSocketImpl.java:392)
+	at java.net.Socket.connect(Socket.java:589)
+	at oracle.net.nt.TcpNTAdapter.connect(TcpNTAdapter.java:141)
+	at oracle.net.nt.ConnOption.connect(ConnOption.java:123)
+	at oracle.net.nt.ConnStrategy.execute(ConnStrategy.java:337)
+	... 12 common frames omitted
+2019-04-26 11:13:10.225 [Druid-ConnectionPool-Create-669365112] ERROR com.alibaba.druid.pool.DruidDataSource - create connection SQLException, url: jdbc:oracle:thin:@172.17.1.233:1521:orcl, errorCode 20, state 61000
+java.sql.SQLException: The Network Adapter could not establish the connection
+	at oracle.jdbc.driver.T4CConnection.logon(T4CConnection.java:412)
+	at oracle.jdbc.driver.PhysicalConnection.<init>(PhysicalConnection.java:531)
+	at oracle.jdbc.driver.T4CConnection.<init>(T4CConnection.java:221)
+	at oracle.jdbc.driver.T4CDriverExtension.getConnection(T4CDriverExtension.java:32)
+	at oracle.jdbc.driver.OracleDriver.connect(OracleDriver.java:503)
+	at com.alibaba.druid.pool.DruidAbstractDataSource.createPhysicalConnection(DruidAbstractDataSource.java:1513)
+	at com.alibaba.druid.pool.DruidAbstractDataSource.createPhysicalConnection(DruidAbstractDataSource.java:1578)
+	at com.alibaba.druid.pool.DruidDataSource$CreateConnectionThread.run(DruidDataSource.java:2451)
+Caused by: oracle.net.ns.NetException: The Network Adapter could not establish the connection
+	at oracle.net.nt.ConnStrategy.execute(ConnStrategy.java:359)
+	at oracle.net.resolver.AddrResolution.resolveAndExecute(AddrResolution.java:422)
+	at oracle.net.ns.NSProtocol.establishConnection(NSProtocol.java:672)
+	at oracle.net.ns.NSProtocol.connect(NSProtocol.java:237)
+	at oracle.jdbc.driver.T4CConnection.connect(T4CConnection.java:1042)
+	at oracle.jdbc.driver.T4CConnection.logon(T4CConnection.java:301)
+	... 7 common frames omitted
+Caused by: java.net.ConnectException: Connection timed out: connect
+	at java.net.DualStackPlainSocketImpl.waitForConnect(Native Method)
+	at java.net.DualStackPlainSocketImpl.socketConnect(DualStackPlainSocketImpl.java:85)
+	at java.net.AbstractPlainSocketImpl.doConnect(AbstractPlainSocketImpl.java:350)
+	at java.net.AbstractPlainSocketImpl.connectToAddress(AbstractPlainSocketImpl.java:206)
+	at java.net.AbstractPlainSocketImpl.connect(AbstractPlainSocketImpl.java:188)
+	at java.net.PlainSocketImpl.connect(PlainSocketImpl.java:172)
+	at java.net.SocksSocketImpl.connect(SocksSocketImpl.java:392)
+	at java.net.Socket.connect(Socket.java:589)
+	at oracle.net.nt.TcpNTAdapter.connect(TcpNTAdapter.java:141)
+	at oracle.net.nt.ConnOption.connect(ConnOption.java:123)
+	at oracle.net.nt.ConnStrategy.execute(ConnStrategy.java:337)
+	... 12 common frames omitted
+2019-04-26 11:13:31.727 [Druid-ConnectionPool-Create-669365112] ERROR com.alibaba.druid.pool.DruidDataSource - create connection SQLException, url: jdbc:oracle:thin:@172.17.1.233:1521:orcl, errorCode 20, state 61000
+java.sql.SQLException: The Network Adapter could not establish the connection
+	at oracle.jdbc.driver.T4CConnection.logon(T4CConnection.java:412)
+	at oracle.jdbc.driver.PhysicalConnection.<init>(PhysicalConnection.java:531)
+	at oracle.jdbc.driver.T4CConnection.<init>(T4CConnection.java:221)
+	at oracle.jdbc.driver.T4CDriverExtension.getConnection(T4CDriverExtension.java:32)
+	at oracle.jdbc.driver.OracleDriver.connect(OracleDriver.java:503)
+	at com.alibaba.druid.pool.DruidAbstractDataSource.createPhysicalConnection(DruidAbstractDataSource.java:1513)
+	at com.alibaba.druid.pool.DruidAbstractDataSource.createPhysicalConnection(DruidAbstractDataSource.java:1578)
+	at com.alibaba.druid.pool.DruidDataSource$CreateConnectionThread.run(DruidDataSource.java:2451)
+Caused by: oracle.net.ns.NetException: The Network Adapter could not establish the connection
+	at oracle.net.nt.ConnStrategy.execute(ConnStrategy.java:359)
+	at oracle.net.resolver.AddrResolution.resolveAndExecute(AddrResolution.java:422)
+	at oracle.net.ns.NSProtocol.establishConnection(NSProtocol.java:672)
+	at oracle.net.ns.NSProtocol.connect(NSProtocol.java:237)
+	at oracle.jdbc.driver.T4CConnection.connect(T4CConnection.java:1042)
+	at oracle.jdbc.driver.T4CConnection.logon(T4CConnection.java:301)
+	... 7 common frames omitted
+Caused by: java.net.ConnectException: Connection timed out: connect
+	at java.net.DualStackPlainSocketImpl.waitForConnect(Native Method)
+	at java.net.DualStackPlainSocketImpl.socketConnect(DualStackPlainSocketImpl.java:85)
+	at java.net.AbstractPlainSocketImpl.doConnect(AbstractPlainSocketImpl.java:350)
+	at java.net.AbstractPlainSocketImpl.connectToAddress(AbstractPlainSocketImpl.java:206)
+	at java.net.AbstractPlainSocketImpl.connect(AbstractPlainSocketImpl.java:188)
+	at java.net.PlainSocketImpl.connect(PlainSocketImpl.java:172)
+	at java.net.SocksSocketImpl.connect(SocksSocketImpl.java:392)
+	at java.net.Socket.connect(Socket.java:589)
+	at oracle.net.nt.TcpNTAdapter.connect(TcpNTAdapter.java:141)
+	at oracle.net.nt.ConnOption.connect(ConnOption.java:123)
+	at oracle.net.nt.ConnStrategy.execute(ConnStrategy.java:337)
+	... 12 common frames omitted
+2019-04-26 11:13:47.552 [main] INFO  top.ruandb.EtlSchedulerApplication - Starting EtlSchedulerApplication on LAPTOP-MK6P63H0 with PID 15008 (C:\Java\eclipse-workspace2\ETLScheduler\target\classes started by rdb in C:\Java\eclipse-workspace2\ETLScheduler)
+2019-04-26 11:13:47.556 [main] INFO  top.ruandb.EtlSchedulerApplication - No active profile set, falling back to default profiles: default
+2019-04-26 11:13:48.514 [main] INFO  org.springframework.data.repository.config.RepositoryConfigurationDelegate - Bootstrapping Spring Data repositories in DEFAULT mode.
+2019-04-26 11:13:48.731 [main] INFO  org.springframework.data.repository.config.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 205ms. Found 4 repository interfaces.
+2019-04-26 11:13:49.162 [main] INFO  org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$2a4e756c] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-04-26 11:13:49.191 [main] INFO  org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'shiroConfig' of type [top.ruandb.config.ShiroConfig$$EnhancerBySpringCGLIB$$55aba8bf] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-04-26 11:13:49.574 [main] INFO  org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'myRealm' of type [top.ruandb.config.MyRealm] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-04-26 11:13:49.583 [main] INFO  org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'securityManager' of type [org.apache.shiro.web.mgt.DefaultWebSecurityManager] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-04-26 11:13:49.933 [main] INFO  org.springframework.boot.web.embedded.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8080 (http)
+2019-04-26 11:13:49.965 [main] INFO  org.apache.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+2019-04-26 11:13:49.975 [main] INFO  org.apache.catalina.core.StandardService - Starting service [Tomcat]
+2019-04-26 11:13:49.975 [main] INFO  org.apache.catalina.core.StandardEngine - Starting Servlet Engine: Apache Tomcat/9.0.13
+2019-04-26 11:13:49.982 [main] INFO  org.apache.catalina.core.AprLifecycleListener - Loaded APR based Apache Tomcat Native library [1.2.19] using APR version [1.6.5].
+2019-04-26 11:13:49.982 [main] INFO  org.apache.catalina.core.AprLifecycleListener - APR capabilities: IPv6 [true], sendfile [true], accept filters [false], random [true].
+2019-04-26 11:13:49.982 [main] INFO  org.apache.catalina.core.AprLifecycleListener - APR/OpenSSL configuration: useAprConnector [false], useOpenSSL [true]
+2019-04-26 11:13:51.048 [main] INFO  org.apache.catalina.core.AprLifecycleListener - OpenSSL successfully initialized [OpenSSL 1.0.2q  20 Nov 2018]
+2019-04-26 11:13:51.230 [main] INFO  org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2019-04-26 11:13:51.231 [main] INFO  org.springframework.web.context.ContextLoader - Root WebApplicationContext: initialization completed in 3613 ms
+2019-04-26 11:13:51.611 [main] INFO  com.alibaba.druid.pool.DruidDataSource - {dataSource-1} inited
+2019-04-26 11:13:51.934 [main] INFO  org.hibernate.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+2019-04-26 11:13:52.068 [main] INFO  org.hibernate.Version - HHH000412: Hibernate Core {5.3.7.Final}
+2019-04-26 11:13:52.070 [main] INFO  org.hibernate.cfg.Environment - HHH000206: hibernate.properties not found
+2019-04-26 11:13:52.523 [main] INFO  org.hibernate.annotations.common.Version - HCANN000001: Hibernate Commons Annotations {5.0.4.Final}
+2019-04-26 11:13:53.122 [main] INFO  org.hibernate.dialect.Dialect - HHH000400: Using dialect: org.hibernate.dialect.Oracle12cDialect
+2019-04-26 11:13:53.229 [Druid-ConnectionPool-Create-669365112] ERROR com.alibaba.druid.pool.DruidDataSource - create connection SQLException, url: jdbc:oracle:thin:@172.17.1.233:1521:orcl, errorCode 20, state 61000
+java.sql.SQLException: The Network Adapter could not establish the connection
+	at oracle.jdbc.driver.T4CConnection.logon(T4CConnection.java:412)
+	at oracle.jdbc.driver.PhysicalConnection.<init>(PhysicalConnection.java:531)
+	at oracle.jdbc.driver.T4CConnection.<init>(T4CConnection.java:221)
+	at oracle.jdbc.driver.T4CDriverExtension.getConnection(T4CDriverExtension.java:32)
+	at oracle.jdbc.driver.OracleDriver.connect(OracleDriver.java:503)
+	at com.alibaba.druid.pool.DruidAbstractDataSource.createPhysicalConnection(DruidAbstractDataSource.java:1513)
+	at com.alibaba.druid.pool.DruidAbstractDataSource.createPhysicalConnection(DruidAbstractDataSource.java:1578)
+	at com.alibaba.druid.pool.DruidDataSource$CreateConnectionThread.run(DruidDataSource.java:2451)
+Caused by: oracle.net.ns.NetException: The Network Adapter could not establish the connection
+	at oracle.net.nt.ConnStrategy.execute(ConnStrategy.java:359)
+	at oracle.net.resolver.AddrResolution.resolveAndExecute(AddrResolution.java:422)
+	at oracle.net.ns.NSProtocol.establishConnection(NSProtocol.java:672)
+	at oracle.net.ns.NSProtocol.connect(NSProtocol.java:237)
+	at oracle.jdbc.driver.T4CConnection.connect(T4CConnection.java:1042)
+	at oracle.jdbc.driver.T4CConnection.logon(T4CConnection.java:301)
+	... 7 common frames omitted
+Caused by: java.net.ConnectException: Connection timed out: connect
+	at java.net.DualStackPlainSocketImpl.waitForConnect(Native Method)
+	at java.net.DualStackPlainSocketImpl.socketConnect(DualStackPlainSocketImpl.java:85)
+	at java.net.AbstractPlainSocketImpl.doConnect(AbstractPlainSocketImpl.java:350)
+	at java.net.AbstractPlainSocketImpl.connectToAddress(AbstractPlainSocketImpl.java:206)
+	at java.net.AbstractPlainSocketImpl.connect(AbstractPlainSocketImpl.java:188)
+	at java.net.PlainSocketImpl.connect(PlainSocketImpl.java:172)
+	at java.net.SocksSocketImpl.connect(SocksSocketImpl.java:392)
+	at java.net.Socket.connect(Socket.java:589)
+	at oracle.net.nt.TcpNTAdapter.connect(TcpNTAdapter.java:141)
+	at oracle.net.nt.ConnOption.connect(ConnOption.java:123)
+	at oracle.net.nt.ConnStrategy.execute(ConnStrategy.java:337)
+	... 12 common frames omitted
+2019-04-26 11:13:53.250 [main] INFO  org.hibernate.type.BasicTypeRegistry - HHH000270: Type registration [byte[]] overrides previous : org.hibernate.type.BinaryType@1fedf0a4
+2019-04-26 11:13:53.251 [main] INFO  org.hibernate.type.BasicTypeRegistry - HHH000270: Type registration [[B] overrides previous : org.hibernate.type.BinaryType@1fedf0a4
+2019-04-26 11:13:53.252 [main] INFO  org.hibernate.type.BasicTypeRegistry - HHH000270: Type registration [Byte[]] overrides previous : org.hibernate.type.WrapperBinaryType@1d901f20
+2019-04-26 11:13:53.252 [main] INFO  org.hibernate.type.BasicTypeRegistry - HHH000270: Type registration [[Ljava.lang.Byte;] overrides previous : org.hibernate.type.WrapperBinaryType@1d901f20
+2019-04-26 11:13:53.553 [main] WARN  org.hibernate.boot.internal.InFlightMetadataCollectorImpl - HHH000069: Duplicate generator name mseq
+2019-04-26 11:13:55.179 [main] INFO  org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2019-04-26 11:13:55.242 [main] INFO  org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor - Autowired annotation is not supported on static methods: public static void top.ruandb.config.ProcedureConfig.setPROCEDURE_PRO(java.lang.String)
+2019-04-26 11:13:55.735 [main] INFO  org.hibernate.hql.internal.QueryTranslatorFactoryInitiator - HHH000397: Using ASTQueryTranslatorFactory
+2019-04-26 11:13:56.046 [main] INFO  org.quartz.impl.StdSchedulerFactory - Using default implementation for ThreadExecutor
+2019-04-26 11:13:56.066 [main] INFO  org.quartz.core.SchedulerSignalerImpl - Initialized Scheduler Signaller of type: class org.quartz.core.SchedulerSignalerImpl
+2019-04-26 11:13:56.066 [main] INFO  org.quartz.core.QuartzScheduler - Quartz Scheduler v.2.2.1 created.
+2019-04-26 11:13:56.067 [main] INFO  org.quartz.core.QuartzScheduler - JobFactory set to: org.quartz.simpl.SimpleJobFactory@384472bf
+2019-04-26 11:13:56.068 [main] INFO  org.quartz.impl.jdbcjobstore.JobStoreTX - Using thread monitor-based data access locking (synchronization).
+2019-04-26 11:13:56.069 [main] INFO  org.quartz.impl.jdbcjobstore.JobStoreTX - JobStoreTX initialized.
+2019-04-26 11:13:56.070 [main] INFO  org.quartz.core.QuartzScheduler - Scheduler meta-data: Quartz Scheduler (v2.2.1) 'SchedulerFactory' with instanceId 'ETLScheduler'
+  Scheduler class: 'org.quartz.core.QuartzScheduler' - running locally.
+  NOT STARTED.
+  Currently in standby mode.
+  Number of jobs executed: 0
+  Using thread pool 'org.quartz.simpl.SimpleThreadPool' - with 5 threads.
+  Using job-store 'org.quartz.impl.jdbcjobstore.JobStoreTX' - which supports persistence. and is not clustered.
+
+2019-04-26 11:13:56.070 [main] INFO  org.quartz.impl.StdSchedulerFactory - Quartz scheduler 'SchedulerFactory' initialized from an externally provided properties instance.
+2019-04-26 11:13:56.070 [main] INFO  org.quartz.impl.StdSchedulerFactory - Quartz scheduler version: 2.2.1
+2019-04-26 11:13:56.071 [main] INFO  org.quartz.core.QuartzScheduler - JobFactory set to: top.ruandb.config.MyJobFactory@191ec193
+2019-04-26 11:13:56.471 [main] INFO  org.springframework.scheduling.concurrent.ThreadPoolTaskExecutor - Initializing ExecutorService 'applicationTaskExecutor'
+2019-04-26 11:13:57.051 [main] INFO  org.springframework.scheduling.quartz.SchedulerFactoryBean - Starting Quartz Scheduler now
+2019-04-26 11:13:57.054 [main] INFO  com.alibaba.druid.pool.DruidDataSource - {dataSource-2} inited
+2019-04-26 11:13:57.136 [main] INFO  org.quartz.impl.jdbcjobstore.JobStoreTX - Freed 0 triggers from 'acquired' / 'blocked' state.
+2019-04-26 11:13:57.141 [main] INFO  org.quartz.impl.jdbcjobstore.JobStoreTX - Handling 12 trigger(s) that missed their scheduled fire-time.
+2019-04-26 11:13:57.319 [main] INFO  org.quartz.impl.jdbcjobstore.JobStoreTX - Recovering 0 jobs that were in-progress at the time of the last shut-down.
+2019-04-26 11:13:57.319 [main] INFO  org.quartz.impl.jdbcjobstore.JobStoreTX - Recovery complete.
+2019-04-26 11:13:57.320 [main] INFO  org.quartz.impl.jdbcjobstore.JobStoreTX - Removed 0 'complete' triggers.
+2019-04-26 11:13:57.321 [main] INFO  org.quartz.impl.jdbcjobstore.JobStoreTX - Removed 0 stale fired job entries.
+2019-04-26 11:13:57.324 [main] INFO  org.quartz.core.QuartzScheduler - Scheduler SchedulerFactory_$_ETLScheduler started.
+2019-04-26 11:13:57.335 [main] INFO  org.apache.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
+2019-04-26 11:13:57.347 [main] INFO  org.apache.tomcat.util.net.NioSelectorPool - Using a shared selector for servlet write/read
+2019-04-26 11:13:57.380 [main] INFO  org.springframework.boot.web.embedded.tomcat.TomcatWebServer - Tomcat started on port(s): 8080 (http) with context path ''
+2019-04-26 11:13:57.383 [main] INFO  top.ruandb.EtlSchedulerApplication - Started EtlSchedulerApplication in 10.497 seconds (JVM running for 11.796)
+2019-04-26 11:13:59.375 [main] INFO  top.ruandb.init.TaskInit - 重新启动清空scheduler
+2019-04-26 11:13:59.527 [main] INFO  top.ruandb.init.TaskInit - 初始化job到调度器-------------------------------->jobname:JB_YK
+2019-04-26 11:13:59.549 [main] INFO  top.ruandb.init.TaskInit - 初始化job到调度器-------------------------------->jobname:JB_ASMC
+2019-04-26 11:13:59.562 [main] INFO  top.ruandb.init.TaskInit - 初始化job到调度器-------------------------------->jobname:JB_DC
+2019-04-26 11:13:59.569 [main] INFO  top.ruandb.init.TaskInit - 初始化job到调度器-------------------------------->jobname:JB_BQ
+2019-04-26 11:13:59.576 [main] INFO  top.ruandb.init.TaskInit - 初始化job到调度器-------------------------------->jobname:JB_GH
+2019-04-26 11:13:59.582 [main] INFO  top.ruandb.init.TaskInit - 初始化job到调度器-------------------------------->jobname:JB_KSS
+2019-04-26 11:13:59.590 [main] INFO  top.ruandb.init.TaskInit - 初始化job到调度器-------------------------------->jobname:JB_SS
+2019-04-26 11:13:59.596 [main] INFO  top.ruandb.init.TaskInit - 初始化job到调度器-------------------------------->jobname:JB_VW
+2019-04-26 11:13:59.602 [main] INFO  top.ruandb.init.TaskInit - 初始化job到调度器-------------------------------->jobname:JB_YF
+2019-04-26 11:13:59.609 [main] INFO  top.ruandb.init.TaskInit - 初始化job到调度器-------------------------------->jobname:JB_YY
+2019-04-26 11:13:59.616 [main] INFO  top.ruandb.init.TaskInit - 初始化job到调度器-------------------------------->jobname:JB_ZY
+2019-04-26 11:13:59.829 [main] INFO  top.ruandb.init.TaskInit - jobMap--->{22=PENDDING, 12=PENDDING, 23=PENDDING, 13=PENDDING, 14=PENDDING, 16=PENDDING, 17=PENDDING, 18=PENDDING, 19=PENDDING, 20=PENDDING, 21=PENDDING}
+2019-04-26 11:13:59.829 [main] INFO  top.ruandb.init.TaskInit - groupMap--->{A=[], B=[], C=[], D=[]}
+2019-04-26 11:13:59.829 [main] INFO  top.ruandb.init.TaskInit - jobMap,groupMap----------------------->初始化成功
+2019-04-26 11:14:14.747 [Druid-ConnectionPool-Create-669365112] ERROR com.alibaba.druid.pool.DruidDataSource - create connection SQLException, url: jdbc:oracle:thin:@172.17.1.233:1521:orcl, errorCode 20, state 61000
+java.sql.SQLException: The Network Adapter could not establish the connection
+	at oracle.jdbc.driver.T4CConnection.logon(T4CConnection.java:412)
+	at oracle.jdbc.driver.PhysicalConnection.<init>(PhysicalConnection.java:531)
+	at oracle.jdbc.driver.T4CConnection.<init>(T4CConnection.java:221)
+	at oracle.jdbc.driver.T4CDriverExtension.getConnection(T4CDriverExtension.java:32)
+	at oracle.jdbc.driver.OracleDriver.connect(OracleDriver.java:503)
+	at com.alibaba.druid.pool.DruidAbstractDataSource.createPhysicalConnection(DruidAbstractDataSource.java:1513)
+	at com.alibaba.druid.pool.DruidAbstractDataSource.createPhysicalConnection(DruidAbstractDataSource.java:1578)
+	at com.alibaba.druid.pool.DruidDataSource$CreateConnectionThread.run(DruidDataSource.java:2451)
+Caused by: oracle.net.ns.NetException: The Network Adapter could not establish the connection
+	at oracle.net.nt.ConnStrategy.execute(ConnStrategy.java:359)
+	at oracle.net.resolver.AddrResolution.resolveAndExecute(AddrResolution.java:422)
+	at oracle.net.ns.NSProtocol.establishConnection(NSProtocol.java:672)
+	at oracle.net.ns.NSProtocol.connect(NSProtocol.java:237)
+	at oracle.jdbc.driver.T4CConnection.connect(T4CConnection.java:1042)
+	at oracle.jdbc.driver.T4CConnection.logon(T4CConnection.java:301)
+	... 7 common frames omitted
+Caused by: java.net.ConnectException: Connection timed out: connect
+	at java.net.DualStackPlainSocketImpl.waitForConnect(Native Method)
+	at java.net.DualStackPlainSocketImpl.socketConnect(DualStackPlainSocketImpl.java:85)
+	at java.net.AbstractPlainSocketImpl.doConnect(AbstractPlainSocketImpl.java:350)
+	at java.net.AbstractPlainSocketImpl.connectToAddress(AbstractPlainSocketImpl.java:206)
+	at java.net.AbstractPlainSocketImpl.connect(AbstractPlainSocketImpl.java:188)
+	at java.net.PlainSocketImpl.connect(PlainSocketImpl.java:172)
+	at java.net.SocksSocketImpl.connect(SocksSocketImpl.java:392)
+	at java.net.Socket.connect(Socket.java:589)
+	at oracle.net.nt.TcpNTAdapter.connect(TcpNTAdapter.java:141)
+	at oracle.net.nt.ConnOption.connect(ConnOption.java:123)
+	at oracle.net.nt.ConnStrategy.execute(ConnStrategy.java:337)
+	... 12 common frames omitted
+2019-04-26 11:14:36.257 [Druid-ConnectionPool-Create-669365112] ERROR com.alibaba.druid.pool.DruidDataSource - create connection SQLException, url: jdbc:oracle:thin:@172.17.1.233:1521:orcl, errorCode 20, state 61000
+java.sql.SQLException: The Network Adapter could not establish the connection
+	at oracle.jdbc.driver.T4CConnection.logon(T4CConnection.java:412)
+	at oracle.jdbc.driver.PhysicalConnection.<init>(PhysicalConnection.java:531)
+	at oracle.jdbc.driver.T4CConnection.<init>(T4CConnection.java:221)
+	at oracle.jdbc.driver.T4CDriverExtension.getConnection(T4CDriverExtension.java:32)
+	at oracle.jdbc.driver.OracleDriver.connect(OracleDriver.java:503)
+	at com.alibaba.druid.pool.DruidAbstractDataSource.createPhysicalConnection(DruidAbstractDataSource.java:1513)
+	at com.alibaba.druid.pool.DruidAbstractDataSource.createPhysicalConnection(DruidAbstractDataSource.java:1578)
+	at com.alibaba.druid.pool.DruidDataSource$CreateConnectionThread.run(DruidDataSource.java:2451)
+Caused by: oracle.net.ns.NetException: The Network Adapter could not establish the connection
+	at oracle.net.nt.ConnStrategy.execute(ConnStrategy.java:359)
+	at oracle.net.resolver.AddrResolution.resolveAndExecute(AddrResolution.java:422)
+	at oracle.net.ns.NSProtocol.establishConnection(NSProtocol.java:672)
+	at oracle.net.ns.NSProtocol.connect(NSProtocol.java:237)
+	at oracle.jdbc.driver.T4CConnection.connect(T4CConnection.java:1042)
+	at oracle.jdbc.driver.T4CConnection.logon(T4CConnection.java:301)
+	... 7 common frames omitted
+Caused by: java.net.ConnectException: Connection timed out: connect
+	at java.net.DualStackPlainSocketImpl.waitForConnect(Native Method)
+	at java.net.DualStackPlainSocketImpl.socketConnect(DualStackPlainSocketImpl.java:85)
+	at java.net.AbstractPlainSocketImpl.doConnect(AbstractPlainSocketImpl.java:350)
+	at java.net.AbstractPlainSocketImpl.connectToAddress(AbstractPlainSocketImpl.java:206)
+	at java.net.AbstractPlainSocketImpl.connect(AbstractPlainSocketImpl.java:188)
+	at java.net.PlainSocketImpl.connect(PlainSocketImpl.java:172)
+	at java.net.SocksSocketImpl.connect(SocksSocketImpl.java:392)
+	at java.net.Socket.connect(Socket.java:589)
+	at oracle.net.nt.TcpNTAdapter.connect(TcpNTAdapter.java:141)
+	at oracle.net.nt.ConnOption.connect(ConnOption.java:123)
+	at oracle.net.nt.ConnStrategy.execute(ConnStrategy.java:337)
+	... 12 common frames omitted
+2019-04-26 11:14:57.779 [Druid-ConnectionPool-Create-669365112] ERROR com.alibaba.druid.pool.DruidDataSource - create connection SQLException, url: jdbc:oracle:thin:@172.17.1.233:1521:orcl, errorCode 20, state 61000
+java.sql.SQLException: The Network Adapter could not establish the connection
+	at oracle.jdbc.driver.T4CConnection.logon(T4CConnection.java:412)
+	at oracle.jdbc.driver.PhysicalConnection.<init>(PhysicalConnection.java:531)
+	at oracle.jdbc.driver.T4CConnection.<init>(T4CConnection.java:221)
+	at oracle.jdbc.driver.T4CDriverExtension.getConnection(T4CDriverExtension.java:32)
+	at oracle.jdbc.driver.OracleDriver.connect(OracleDriver.java:503)
+	at com.alibaba.druid.pool.DruidAbstractDataSource.createPhysicalConnection(DruidAbstractDataSource.java:1513)
+	at com.alibaba.druid.pool.DruidAbstractDataSource.createPhysicalConnection(DruidAbstractDataSource.java:1578)
+	at com.alibaba.druid.pool.DruidDataSource$CreateConnectionThread.run(DruidDataSource.java:2451)
+Caused by: oracle.net.ns.NetException: The Network Adapter could not establish the connection
+	at oracle.net.nt.ConnStrategy.execute(ConnStrategy.java:359)
+	at oracle.net.resolver.AddrResolution.resolveAndExecute(AddrResolution.java:422)
+	at oracle.net.ns.NSProtocol.establishConnection(NSProtocol.java:672)
+	at oracle.net.ns.NSProtocol.connect(NSProtocol.java:237)
+	at oracle.jdbc.driver.T4CConnection.connect(T4CConnection.java:1042)
+	at oracle.jdbc.driver.T4CConnection.logon(T4CConnection.java:301)
+	... 7 common frames omitted
+Caused by: java.net.ConnectException: Connection timed out: connect
+	at java.net.DualStackPlainSocketImpl.waitForConnect(Native Method)
+	at java.net.DualStackPlainSocketImpl.socketConnect(DualStackPlainSocketImpl.java:85)
+	at java.net.AbstractPlainSocketImpl.doConnect(AbstractPlainSocketImpl.java:350)
+	at java.net.AbstractPlainSocketImpl.connectToAddress(AbstractPlainSocketImpl.java:206)
+	at java.net.AbstractPlainSocketImpl.connect(AbstractPlainSocketImpl.java:188)
+	at java.net.PlainSocketImpl.connect(PlainSocketImpl.java:172)
+	at java.net.SocksSocketImpl.connect(SocksSocketImpl.java:392)
+	at java.net.Socket.connect(Socket.java:589)
+	at oracle.net.nt.TcpNTAdapter.connect(TcpNTAdapter.java:141)
+	at oracle.net.nt.ConnOption.connect(ConnOption.java:123)
+	at oracle.net.nt.ConnStrategy.execute(ConnStrategy.java:337)
+	... 12 common frames omitted
+2019-04-26 11:15:14.544 [RMI TCP Connection(2)-127.0.0.1] INFO  org.springframework.boot.admin.SpringApplicationAdminMXBeanRegistrar$SpringApplicationAdmin - Application shutdown requested.
+2019-04-26 11:15:14.549 [RMI TCP Connection(2)-127.0.0.1] INFO  org.quartz.core.QuartzScheduler - Scheduler SchedulerFactory_$_ETLScheduler paused.
+2019-04-26 11:15:14.551 [RMI TCP Connection(2)-127.0.0.1] INFO  org.springframework.scheduling.concurrent.ThreadPoolTaskExecutor - Shutting down ExecutorService 'applicationTaskExecutor'
+2019-04-26 11:15:14.553 [RMI TCP Connection(2)-127.0.0.1] INFO  org.quartz.core.QuartzScheduler - Scheduler SchedulerFactory_$_ETLScheduler shutting down.
+2019-04-26 11:15:14.553 [RMI TCP Connection(2)-127.0.0.1] INFO  org.quartz.core.QuartzScheduler - Scheduler SchedulerFactory_$_ETLScheduler paused.
+2019-04-26 11:15:14.562 [RMI TCP Connection(2)-127.0.0.1] INFO  com.alibaba.druid.pool.DruidDataSource - {dataSource-2} closed
+2019-04-26 11:15:14.562 [RMI TCP Connection(2)-127.0.0.1] INFO  org.quartz.core.QuartzScheduler - Scheduler SchedulerFactory_$_ETLScheduler shutdown complete.
+2019-04-26 11:15:14.562 [RMI TCP Connection(2)-127.0.0.1] INFO  org.springframework.scheduling.quartz.SchedulerFactoryBean - Shutting down Quartz Scheduler
+2019-04-26 11:15:14.563 [RMI TCP Connection(2)-127.0.0.1] INFO  org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+2019-04-26 11:15:14.572 [RMI TCP Connection(2)-127.0.0.1] INFO  com.alibaba.druid.pool.DruidDataSource - {dataSource-1} closed
+2019-04-26 11:15:28.386 [main] INFO  top.ruandb.EtlSchedulerApplication - Starting EtlSchedulerApplication on LAPTOP-MK6P63H0 with PID 16128 (C:\Java\eclipse-workspace2\ETLScheduler\target\classes started by rdb in C:\Java\eclipse-workspace2\ETLScheduler)
+2019-04-26 11:15:28.393 [main] INFO  top.ruandb.EtlSchedulerApplication - No active profile set, falling back to default profiles: default
+2019-04-26 11:15:30.112 [main] INFO  org.springframework.data.repository.config.RepositoryConfigurationDelegate - Bootstrapping Spring Data repositories in DEFAULT mode.
+2019-04-26 11:15:30.561 [main] INFO  org.springframework.data.repository.config.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 431ms. Found 4 repository interfaces.
+2019-04-26 11:15:31.134 [main] INFO  org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$e37804cb] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-04-26 11:15:31.163 [main] INFO  org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'shiroConfig' of type [top.ruandb.config.ShiroConfig$$EnhancerBySpringCGLIB$$ed5381e] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-04-26 11:15:31.660 [main] INFO  org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'myRealm' of type [top.ruandb.config.MyRealm] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-04-26 11:15:31.672 [main] INFO  org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'securityManager' of type [org.apache.shiro.web.mgt.DefaultWebSecurityManager] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-04-26 11:15:32.104 [main] INFO  org.springframework.boot.web.embedded.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8080 (http)
+2019-04-26 11:15:32.124 [main] INFO  org.apache.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+2019-04-26 11:15:32.134 [main] INFO  org.apache.catalina.core.StandardService - Starting service [Tomcat]
+2019-04-26 11:15:32.134 [main] INFO  org.apache.catalina.core.StandardEngine - Starting Servlet Engine: Apache Tomcat/9.0.13
+2019-04-26 11:15:32.141 [main] INFO  org.apache.catalina.core.AprLifecycleListener - Loaded APR based Apache Tomcat Native library [1.2.19] using APR version [1.6.5].
+2019-04-26 11:15:32.141 [main] INFO  org.apache.catalina.core.AprLifecycleListener - APR capabilities: IPv6 [true], sendfile [true], accept filters [false], random [true].
+2019-04-26 11:15:32.142 [main] INFO  org.apache.catalina.core.AprLifecycleListener - APR/OpenSSL configuration: useAprConnector [false], useOpenSSL [true]
+2019-04-26 11:15:33.233 [main] INFO  org.apache.catalina.core.AprLifecycleListener - OpenSSL successfully initialized [OpenSSL 1.0.2q  20 Nov 2018]
+2019-04-26 11:15:33.524 [main] INFO  org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2019-04-26 11:15:33.524 [main] INFO  org.springframework.web.context.ContextLoader - Root WebApplicationContext: initialization completed in 5036 ms
+2019-04-26 11:15:34.044 [main] INFO  com.alibaba.druid.pool.DruidDataSource - {dataSource-1} inited
+2019-04-26 11:15:34.343 [main] INFO  org.hibernate.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+2019-04-26 11:15:34.435 [main] INFO  org.hibernate.Version - HHH000412: Hibernate Core {5.3.7.Final}
+2019-04-26 11:15:34.438 [main] INFO  org.hibernate.cfg.Environment - HHH000206: hibernate.properties not found
+2019-04-26 11:15:34.630 [main] INFO  org.hibernate.annotations.common.Version - HCANN000001: Hibernate Commons Annotations {5.0.4.Final}
+2019-04-26 11:15:35.088 [main] INFO  org.hibernate.dialect.Dialect - HHH000400: Using dialect: org.hibernate.dialect.Oracle12cDialect
+2019-04-26 11:15:35.172 [main] INFO  org.hibernate.type.BasicTypeRegistry - HHH000270: Type registration [byte[]] overrides previous : org.hibernate.type.BinaryType@24a2e565
+2019-04-26 11:15:35.172 [main] INFO  org.hibernate.type.BasicTypeRegistry - HHH000270: Type registration [[B] overrides previous : org.hibernate.type.BinaryType@24a2e565
+2019-04-26 11:15:35.173 [main] INFO  org.hibernate.type.BasicTypeRegistry - HHH000270: Type registration [Byte[]] overrides previous : org.hibernate.type.WrapperBinaryType@f5cf29b
+2019-04-26 11:15:35.173 [main] INFO  org.hibernate.type.BasicTypeRegistry - HHH000270: Type registration [[Ljava.lang.Byte;] overrides previous : org.hibernate.type.WrapperBinaryType@f5cf29b
+2019-04-26 11:15:35.307 [main] WARN  org.hibernate.boot.internal.InFlightMetadataCollectorImpl - HHH000069: Duplicate generator name mseq
+2019-04-26 11:15:36.680 [main] INFO  org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2019-04-26 11:15:36.743 [main] INFO  org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor - Autowired annotation is not supported on static methods: public static void top.ruandb.config.ProcedureConfig.setPROCEDURE_PRO(java.lang.String)
+2019-04-26 11:15:37.169 [main] INFO  org.hibernate.hql.internal.QueryTranslatorFactoryInitiator - HHH000397: Using ASTQueryTranslatorFactory
+2019-04-26 11:15:37.379 [main] INFO  org.quartz.impl.StdSchedulerFactory - Using default implementation for ThreadExecutor
+2019-04-26 11:15:37.391 [main] INFO  org.quartz.core.SchedulerSignalerImpl - Initialized Scheduler Signaller of type: class org.quartz.core.SchedulerSignalerImpl
+2019-04-26 11:15:37.391 [main] INFO  org.quartz.core.QuartzScheduler - Quartz Scheduler v.2.2.1 created.
+2019-04-26 11:15:37.392 [main] INFO  org.quartz.core.QuartzScheduler - JobFactory set to: org.quartz.simpl.SimpleJobFactory@4d25f816
+2019-04-26 11:15:37.393 [main] INFO  org.quartz.impl.jdbcjobstore.JobStoreTX - Using thread monitor-based data access locking (synchronization).
+2019-04-26 11:15:37.394 [main] INFO  org.quartz.impl.jdbcjobstore.JobStoreTX - JobStoreTX initialized.
+2019-04-26 11:15:37.395 [main] INFO  org.quartz.core.QuartzScheduler - Scheduler meta-data: Quartz Scheduler (v2.2.1) 'SchedulerFactory' with instanceId 'ETLScheduler'
+  Scheduler class: 'org.quartz.core.QuartzScheduler' - running locally.
+  NOT STARTED.
+  Currently in standby mode.
+  Number of jobs executed: 0
+  Using thread pool 'org.quartz.simpl.SimpleThreadPool' - with 5 threads.
+  Using job-store 'org.quartz.impl.jdbcjobstore.JobStoreTX' - which supports persistence. and is not clustered.
+
+2019-04-26 11:15:37.395 [main] INFO  org.quartz.impl.StdSchedulerFactory - Quartz scheduler 'SchedulerFactory' initialized from an externally provided properties instance.
+2019-04-26 11:15:37.395 [main] INFO  org.quartz.impl.StdSchedulerFactory - Quartz scheduler version: 2.2.1
+2019-04-26 11:15:37.396 [main] INFO  org.quartz.core.QuartzScheduler - JobFactory set to: top.ruandb.config.MyJobFactory@289f15e9
+2019-04-26 11:15:37.721 [main] INFO  org.springframework.scheduling.concurrent.ThreadPoolTaskExecutor - Initializing ExecutorService 'applicationTaskExecutor'
+2019-04-26 11:15:38.218 [main] INFO  org.springframework.scheduling.quartz.SchedulerFactoryBean - Starting Quartz Scheduler now
+2019-04-26 11:15:38.220 [main] INFO  com.alibaba.druid.pool.DruidDataSource - {dataSource-2} inited
+2019-04-26 11:15:38.257 [main] INFO  org.quartz.impl.jdbcjobstore.JobStoreTX - Freed 0 triggers from 'acquired' / 'blocked' state.
+2019-04-26 11:15:38.261 [main] INFO  org.quartz.impl.jdbcjobstore.JobStoreTX - Recovering 0 jobs that were in-progress at the time of the last shut-down.
+2019-04-26 11:15:38.261 [main] INFO  org.quartz.impl.jdbcjobstore.JobStoreTX - Recovery complete.
+2019-04-26 11:15:38.262 [main] INFO  org.quartz.impl.jdbcjobstore.JobStoreTX - Removed 0 'complete' triggers.
+2019-04-26 11:15:38.263 [main] INFO  org.quartz.impl.jdbcjobstore.JobStoreTX - Removed 0 stale fired job entries.
+2019-04-26 11:15:38.265 [main] INFO  org.quartz.core.QuartzScheduler - Scheduler SchedulerFactory_$_ETLScheduler started.
+2019-04-26 11:15:38.275 [main] INFO  org.apache.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
+2019-04-26 11:15:38.289 [main] INFO  org.apache.tomcat.util.net.NioSelectorPool - Using a shared selector for servlet write/read
+2019-04-26 11:15:38.310 [main] INFO  org.springframework.boot.web.embedded.tomcat.TomcatWebServer - Tomcat started on port(s): 8080 (http) with context path ''
+2019-04-26 11:15:38.312 [main] INFO  top.ruandb.EtlSchedulerApplication - Started EtlSchedulerApplication in 11.023 seconds (JVM running for 12.271)
+2019-04-26 11:15:39.919 [main] INFO  top.ruandb.init.TaskInit - 重新启动清空scheduler
+2019-04-26 11:15:40.050 [main] INFO  top.ruandb.init.TaskInit - 初始化job到调度器-------------------------------->jobname:JB_YK
+2019-04-26 11:15:40.081 [main] INFO  top.ruandb.init.TaskInit - 初始化job到调度器-------------------------------->jobname:JB_ASMC
+2019-04-26 11:15:40.092 [main] INFO  top.ruandb.init.TaskInit - 初始化job到调度器-------------------------------->jobname:JB_DC
+2019-04-26 11:15:40.100 [main] INFO  top.ruandb.init.TaskInit - 初始化job到调度器-------------------------------->jobname:JB_BQ
+2019-04-26 11:15:40.108 [main] INFO  top.ruandb.init.TaskInit - 初始化job到调度器-------------------------------->jobname:JB_GH
+2019-04-26 11:15:40.116 [main] INFO  top.ruandb.init.TaskInit - 初始化job到调度器-------------------------------->jobname:JB_KSS
+2019-04-26 11:15:40.122 [main] INFO  top.ruandb.init.TaskInit - 初始化job到调度器-------------------------------->jobname:JB_SS
+2019-04-26 11:15:40.129 [main] INFO  top.ruandb.init.TaskInit - 初始化job到调度器-------------------------------->jobname:JB_VW
+2019-04-26 11:15:40.136 [main] INFO  top.ruandb.init.TaskInit - 初始化job到调度器-------------------------------->jobname:JB_YF
+2019-04-26 11:15:40.142 [main] INFO  top.ruandb.init.TaskInit - 初始化job到调度器-------------------------------->jobname:JB_YY
+2019-04-26 11:15:40.149 [main] INFO  top.ruandb.init.TaskInit - 初始化job到调度器-------------------------------->jobname:JB_ZY
+2019-04-26 11:15:40.365 [main] INFO  top.ruandb.init.TaskInit - jobMap--->{22=PENDDING, 12=PENDDING, 23=PENDDING, 13=PENDDING, 14=PENDDING, 16=PENDDING, 17=PENDDING, 18=PENDDING, 19=PENDDING, 20=PENDDING, 21=PENDDING}
+2019-04-26 11:15:40.365 [main] INFO  top.ruandb.init.TaskInit - groupMap--->{A=[], B=[], C=[], D=[]}
+2019-04-26 11:15:40.366 [main] INFO  top.ruandb.init.TaskInit - jobMap,groupMap----------------------->初始化成功
+2019-04-26 11:16:03.968 [http-nio-8080-exec-1] INFO  org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2019-04-26 11:16:03.968 [http-nio-8080-exec-1] INFO  org.springframework.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2019-04-26 11:16:03.983 [http-nio-8080-exec-1] INFO  org.springframework.web.servlet.DispatcherServlet - Completed initialization in 14 ms
+2019-04-26 11:16:17.654 [SchedulerFactory_Worker-1] INFO  top.ruandb.Job.KettleJob - D:\\Soft\\Kettle\\WY_HDW_Repository\YK\JB_YK.kjb----------------->开始运行
+2019-04-26 11:16:17.665 [Thread-9] WARN  org.pentaho.di.job.Job - [/YK/null]  开始执行任务
+2019-04-26 11:16:17.679 [Thread-9] INFO  org.pentaho.di.job.Job - [/YK/null]  开始项[JB_YK_GHDWDMK]
+2019-04-26 11:16:17.975 [Thread-9] INFO  org.pentaho.di.job.Job - [/YK/null]  Using run configuration [Pentaho local]
+2019-04-26 11:16:17.978 [JB_YK_GHDWDMK UUID: 5e89b4a3-4ffa-4de2-8304-2cda07912340] INFO  org.pentaho.di.job.Job - [/YK/null  /YK/null]  开始项[创建临时表]
+2019-04-26 11:16:39.187 [JB_YK_GHDWDMK UUID: 5e89b4a3-4ffa-4de2-8304-2cda07912340] ERROR org.pentaho.di.job.Job - [/YK/null  /YK/null]  执行该作业项时发生了一个错误:
+Error occurred while trying to connect to the database
+
+Error connecting to database: (using class oracle.jdbc.driver.OracleDriver)
+The Network Adapter could not establish the connection
+
+
+2019-04-26 11:16:39.188 [JB_YK_GHDWDMK UUID: 5e89b4a3-4ffa-4de2-8304-2cda07912340] INFO  org.pentaho.di.job.Job - [/YK/null  /YK/null]  完成作业项[创建临时表] (结果=[false])
+2019-04-26 11:16:39.189 [Thread-9] INFO  org.pentaho.di.job.Job - [/YK/null]  完成作业项[JB_YK_GHDWDMK] (结果=[false])
+2019-04-26 11:16:39.190 [Thread-9] INFO  org.pentaho.di.job.Job - [/YK/null]  开始项[JB_YK_YKDMK]
+2019-04-26 11:16:39.399 [Thread-9] INFO  org.pentaho.di.job.Job - [/YK/null]  Using run configuration [Pentaho local]
+2019-04-26 11:16:39.401 [JB_YK_YKDMK UUID: 58dc6527-22de-496a-8ff5-99c3c3d15788] INFO  org.pentaho.di.job.Job - [/YK/null  /YK/null]  开始项[创建临时表]
+2019-04-26 11:17:00.408 [JB_YK_YKDMK UUID: 58dc6527-22de-496a-8ff5-99c3c3d15788] ERROR org.pentaho.di.job.Job - [/YK/null  /YK/null]  执行该作业项时发生了一个错误:
+Error occurred while trying to connect to the database
+
+Error connecting to database: (using class oracle.jdbc.driver.OracleDriver)
+The Network Adapter could not establish the connection
+
+
+2019-04-26 11:17:00.409 [JB_YK_YKDMK UUID: 58dc6527-22de-496a-8ff5-99c3c3d15788] INFO  org.pentaho.di.job.Job - [/YK/null  /YK/null]  完成作业项[创建临时表] (结果=[false])
+2019-04-26 11:17:00.411 [Thread-9] INFO  org.pentaho.di.job.Job - [/YK/null]  完成作业项[JB_YK_YKDMK] (结果=[false])
+2019-04-26 11:17:00.413 [Thread-9] INFO  org.pentaho.di.job.Job - [/YK/null]  开始项[JB_YK_YPCDMLK]
+2019-04-26 11:17:00.637 [Thread-9] INFO  org.pentaho.di.job.Job - [/YK/null]  Using run configuration [Pentaho local]
+2019-04-26 11:17:00.638 [JB_YK_YPCDMLK UUID: a60d5c3e-e928-42d9-b0d8-a4cd8b290a87] INFO  org.pentaho.di.job.Job - [/YK/null  /YK/null]  开始项[创建临时表]
+2019-04-26 11:17:21.642 [JB_YK_YPCDMLK UUID: a60d5c3e-e928-42d9-b0d8-a4cd8b290a87] ERROR org.pentaho.di.job.Job - [/YK/null  /YK/null]  执行该作业项时发生了一个错误:
+Error occurred while trying to connect to the database
+
+Error connecting to database: (using class oracle.jdbc.driver.OracleDriver)
+The Network Adapter could not establish the connection
+
+
+2019-04-26 11:17:21.644 [JB_YK_YPCDMLK UUID: a60d5c3e-e928-42d9-b0d8-a4cd8b290a87] INFO  org.pentaho.di.job.Job - [/YK/null  /YK/null]  完成作业项[创建临时表] (结果=[false])
+2019-04-26 11:17:21.647 [Thread-9] INFO  org.pentaho.di.job.Job - [/YK/null]  完成作业项[JB_YK_YPCDMLK] (结果=[false])
+2019-04-26 11:17:21.648 [Thread-9] INFO  org.pentaho.di.job.Job - [/YK/null]  开始项[JB_YK_YPCZDMK]
+2019-04-26 11:17:21.808 [Thread-9] INFO  org.pentaho.di.job.Job - [/YK/null]  Using run configuration [Pentaho local]
+2019-04-26 11:17:21.809 [JB_YK_YPCZDMK UUID: a0006c17-ba66-49cd-a122-045f2c68cdf5] INFO  org.pentaho.di.job.Job - [/YK/null  /YK/null]  开始项[创建临时表]
+2019-04-26 11:17:42.814 [JB_YK_YPCZDMK UUID: a0006c17-ba66-49cd-a122-045f2c68cdf5] ERROR org.pentaho.di.job.Job - [/YK/null  /YK/null]  执行该作业项时发生了一个错误:
+Error occurred while trying to connect to the database
+
+Error connecting to database: (using class oracle.jdbc.driver.OracleDriver)
+The Network Adapter could not establish the connection
+
+
+2019-04-26 11:17:42.815 [JB_YK_YPCZDMK UUID: a0006c17-ba66-49cd-a122-045f2c68cdf5] INFO  org.pentaho.di.job.Job - [/YK/null  /YK/null]  完成作业项[创建临时表] (结果=[false])
+2019-04-26 11:17:42.816 [Thread-9] INFO  org.pentaho.di.job.Job - [/YK/null]  完成作业项[JB_YK_YPCZDMK] (结果=[false])
+2019-04-26 11:17:42.817 [Thread-9] INFO  org.pentaho.di.job.Job - [/YK/null]  开始项[JB_YK_YPFLDLK]
+2019-04-26 11:17:42.990 [Thread-9] INFO  org.pentaho.di.job.Job - [/YK/null]  Using run configuration [Pentaho local]
+2019-04-26 11:17:42.991 [JB_YK_YPFLDLK UUID: 151340cb-1882-4cb3-a6de-70e9b8414014] INFO  org.pentaho.di.job.Job - [/YK/null  /YK/null]  开始项[创建临时表]
+2019-04-26 11:18:03.995 [JB_YK_YPFLDLK UUID: 151340cb-1882-4cb3-a6de-70e9b8414014] ERROR org.pentaho.di.job.Job - [/YK/null  /YK/null]  执行该作业项时发生了一个错误:
+Error occurred while trying to connect to the database
+
+Error connecting to database: (using class oracle.jdbc.driver.OracleDriver)
+The Network Adapter could not establish the connection
+
+
+2019-04-26 11:18:03.997 [JB_YK_YPFLDLK UUID: 151340cb-1882-4cb3-a6de-70e9b8414014] INFO  org.pentaho.di.job.Job - [/YK/null  /YK/null]  完成作业项[创建临时表] (结果=[false])
+2019-04-26 11:18:04.000 [Thread-9] INFO  org.pentaho.di.job.Job - [/YK/null]  完成作业项[JB_YK_YPFLDLK] (结果=[false])
+2019-04-26 11:18:04.001 [Thread-9] INFO  org.pentaho.di.job.Job - [/YK/null]  开始项[JB_YK_YPFLK]
+2019-04-26 11:18:04.261 [Thread-9] INFO  org.pentaho.di.job.Job - [/YK/null]  Using run configuration [Pentaho local]
+2019-04-26 11:18:04.263 [JB_YK_YPFLK UUID: 38c983dd-65e6-4184-867d-087b0f6a3450] INFO  org.pentaho.di.job.Job - [/YK/null  /YK/null]  开始项[创建临时表]
+2019-04-26 11:18:25.277 [JB_YK_YPFLK UUID: 38c983dd-65e6-4184-867d-087b0f6a3450] ERROR org.pentaho.di.job.Job - [/YK/null  /YK/null]  执行该作业项时发生了一个错误:
+Error occurred while trying to connect to the database
+
+Error connecting to database: (using class oracle.jdbc.driver.OracleDriver)
+The Network Adapter could not establish the connection
+
+
+2019-04-26 11:18:25.279 [JB_YK_YPFLK UUID: 38c983dd-65e6-4184-867d-087b0f6a3450] INFO  org.pentaho.di.job.Job - [/YK/null  /YK/null]  完成作业项[创建临时表] (结果=[false])
+2019-04-26 11:18:25.284 [Thread-9] INFO  org.pentaho.di.job.Job - [/YK/null]  完成作业项[JB_YK_YPFLK] (结果=[false])
+2019-04-26 11:18:25.286 [Thread-9] INFO  org.pentaho.di.job.Job - [/YK/null]  开始项[JB_YK_YPJXK]
+2019-04-26 11:18:25.441 [Thread-9] INFO  org.pentaho.di.job.Job - [/YK/null]  Using run configuration [Pentaho local]
+2019-04-26 11:18:25.443 [JB_YK_YPJXK UUID: e214f02a-8e74-4779-bb18-d32c5d5fcd38] INFO  org.pentaho.di.job.Job - [/YK/null  /YK/null]  开始项[创建临时表]
+2019-04-26 11:18:46.448 [JB_YK_YPJXK UUID: e214f02a-8e74-4779-bb18-d32c5d5fcd38] ERROR org.pentaho.di.job.Job - [/YK/null  /YK/null]  执行该作业项时发生了一个错误:
+Error occurred while trying to connect to the database
+
+Error connecting to database: (using class oracle.jdbc.driver.OracleDriver)
+The Network Adapter could not establish the connection
+
+
+2019-04-26 11:18:46.449 [JB_YK_YPJXK UUID: e214f02a-8e74-4779-bb18-d32c5d5fcd38] INFO  org.pentaho.di.job.Job - [/YK/null  /YK/null]  完成作业项[创建临时表] (结果=[false])
+2019-04-26 11:18:46.451 [Thread-9] INFO  org.pentaho.di.job.Job - [/YK/null]  完成作业项[JB_YK_YPJXK] (结果=[false])
+2019-04-26 11:18:46.451 [Thread-9] INFO  org.pentaho.di.job.Job - [/YK/null]  开始项[JB_YK_ZMLBK]
+2019-04-26 11:18:46.696 [Thread-9] INFO  org.pentaho.di.job.Job - [/YK/null]  Using run configuration [Pentaho local]
+2019-04-26 11:18:46.698 [JB_YK_ZMLBK UUID: 2d0d6678-6108-4605-9fdd-bab99cbffe57] INFO  org.pentaho.di.job.Job - [/YK/null  /YK/null]  开始项[创建临时表]
+2019-04-26 11:19:07.713 [JB_YK_ZMLBK UUID: 2d0d6678-6108-4605-9fdd-bab99cbffe57] ERROR org.pentaho.di.job.Job - [/YK/null  /YK/null]  执行该作业项时发生了一个错误:
+Error occurred while trying to connect to the database
+
+Error connecting to database: (using class oracle.jdbc.driver.OracleDriver)
+The Network Adapter could not establish the connection
+
+
+2019-04-26 11:19:07.714 [JB_YK_ZMLBK UUID: 2d0d6678-6108-4605-9fdd-bab99cbffe57] INFO  org.pentaho.di.job.Job - [/YK/null  /YK/null]  完成作业项[创建临时表] (结果=[false])
+2019-04-26 11:19:07.716 [Thread-9] INFO  org.pentaho.di.job.Job - [/YK/null]  完成作业项[JB_YK_ZMLBK] (结果=[false])
+2019-04-26 11:19:07.717 [Thread-9] WARN  org.pentaho.di.job.Job - [/YK/null]  任务执行完毕
+2019-04-26 11:19:07.721 [SchedulerFactory_Worker-1] ERROR top.ruandb.Job.KettleJob - D:\\Soft\\Kettle\\WY_HDW_Repository\YK\JB_YK.kjb----------------->运行失败，请查阅日志
+2019-04-26 11:19:32.728 [RMI TCP Connection(2)-127.0.0.1] INFO  org.springframework.boot.admin.SpringApplicationAdminMXBeanRegistrar$SpringApplicationAdmin - Application shutdown requested.
+2019-04-26 11:19:32.730 [RMI TCP Connection(2)-127.0.0.1] INFO  org.quartz.core.QuartzScheduler - Scheduler SchedulerFactory_$_ETLScheduler paused.
+2019-04-26 11:19:32.731 [RMI TCP Connection(2)-127.0.0.1] INFO  org.springframework.scheduling.concurrent.ThreadPoolTaskExecutor - Shutting down ExecutorService 'applicationTaskExecutor'
+2019-04-26 11:19:32.732 [RMI TCP Connection(2)-127.0.0.1] INFO  org.quartz.core.QuartzScheduler - Scheduler SchedulerFactory_$_ETLScheduler shutting down.
+2019-04-26 11:19:32.732 [RMI TCP Connection(2)-127.0.0.1] INFO  org.quartz.core.QuartzScheduler - Scheduler SchedulerFactory_$_ETLScheduler paused.
+2019-04-26 11:19:32.739 [RMI TCP Connection(2)-127.0.0.1] INFO  com.alibaba.druid.pool.DruidDataSource - {dataSource-2} closed
+2019-04-26 11:19:32.740 [RMI TCP Connection(2)-127.0.0.1] INFO  org.quartz.core.QuartzScheduler - Scheduler SchedulerFactory_$_ETLScheduler shutdown complete.
+2019-04-26 11:19:32.740 [RMI TCP Connection(2)-127.0.0.1] INFO  org.springframework.scheduling.quartz.SchedulerFactoryBean - Shutting down Quartz Scheduler
+2019-04-26 11:19:32.741 [RMI TCP Connection(2)-127.0.0.1] INFO  org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+2019-04-26 11:19:32.746 [RMI TCP Connection(2)-127.0.0.1] INFO  com.alibaba.druid.pool.DruidDataSource - {dataSource-1} closed
+2019-04-26 11:19:52.184 [main] INFO  top.ruandb.EtlSchedulerApplicationTests - Starting EtlSchedulerApplicationTests on LAPTOP-MK6P63H0 with PID 15872 (started by rdb in C:\Java\eclipse-workspace2\ETLScheduler)
+2019-04-26 11:19:52.187 [main] INFO  top.ruandb.EtlSchedulerApplicationTests - No active profile set, falling back to default profiles: default
+2019-04-26 11:19:54.753 [main] INFO  org.springframework.data.repository.config.RepositoryConfigurationDelegate - Bootstrapping Spring Data repositories in DEFAULT mode.
+2019-04-26 11:19:55.041 [main] INFO  org.springframework.data.repository.config.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 249ms. Found 4 repository interfaces.
+2019-04-26 11:19:55.837 [main] INFO  org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$864deac4] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-04-26 11:19:55.941 [main] INFO  org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'shiroConfig' of type [top.ruandb.config.ShiroConfig$$EnhancerBySpringCGLIB$$b1ab1e17] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-04-26 11:19:56.796 [main] INFO  org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'myRealm' of type [top.ruandb.config.MyRealm] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-04-26 11:19:56.854 [main] INFO  org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'securityManager' of type [org.apache.shiro.web.mgt.DefaultWebSecurityManager] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-04-26 11:19:57.717 [main] INFO  com.alibaba.druid.pool.DruidDataSource - {dataSource-1} inited
+2019-04-26 11:19:58.348 [main] INFO  org.hibernate.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+2019-04-26 11:19:58.567 [main] INFO  org.hibernate.Version - HHH000412: Hibernate Core {5.3.7.Final}
+2019-04-26 11:19:58.573 [main] INFO  org.hibernate.cfg.Environment - HHH000206: hibernate.properties not found
+2019-04-26 11:19:58.998 [main] INFO  org.hibernate.annotations.common.Version - HCANN000001: Hibernate Commons Annotations {5.0.4.Final}
+2019-04-26 11:19:59.510 [main] INFO  org.hibernate.dialect.Dialect - HHH000400: Using dialect: org.hibernate.dialect.Oracle12cDialect
+2019-04-26 11:19:59.638 [main] INFO  org.hibernate.type.BasicTypeRegistry - HHH000270: Type registration [byte[]] overrides previous : org.hibernate.type.BinaryType@41d16cc3
+2019-04-26 11:19:59.639 [main] INFO  org.hibernate.type.BasicTypeRegistry - HHH000270: Type registration [[B] overrides previous : org.hibernate.type.BinaryType@41d16cc3
+2019-04-26 11:19:59.640 [main] INFO  org.hibernate.type.BasicTypeRegistry - HHH000270: Type registration [Byte[]] overrides previous : org.hibernate.type.WrapperBinaryType@649f25f3
+2019-04-26 11:19:59.641 [main] INFO  org.hibernate.type.BasicTypeRegistry - HHH000270: Type registration [[Ljava.lang.Byte;] overrides previous : org.hibernate.type.WrapperBinaryType@649f25f3
+2019-04-26 11:19:59.948 [main] WARN  org.hibernate.boot.internal.InFlightMetadataCollectorImpl - HHH000069: Duplicate generator name mseq
+2019-04-26 11:20:01.571 [main] INFO  org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2019-04-26 11:20:01.603 [main] INFO  org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor - Autowired annotation is not supported on static methods: public static void top.ruandb.config.ProcedureConfig.setPROCEDURE_PRO(java.lang.String)
+2019-04-26 11:20:02.329 [main] INFO  org.hibernate.hql.internal.QueryTranslatorFactoryInitiator - HHH000397: Using ASTQueryTranslatorFactory
+2019-04-26 11:20:03.041 [main] INFO  org.quartz.impl.StdSchedulerFactory - Using default implementation for ThreadExecutor
+2019-04-26 11:20:03.080 [main] INFO  org.quartz.core.SchedulerSignalerImpl - Initialized Scheduler Signaller of type: class org.quartz.core.SchedulerSignalerImpl
+2019-04-26 11:20:03.081 [main] INFO  org.quartz.core.QuartzScheduler - Quartz Scheduler v.2.2.1 created.
+2019-04-26 11:20:03.084 [main] INFO  org.quartz.core.QuartzScheduler - JobFactory set to: org.quartz.simpl.SimpleJobFactory@31b741e2
+2019-04-26 11:20:03.091 [main] INFO  org.quartz.impl.jdbcjobstore.JobStoreTX - Using thread monitor-based data access locking (synchronization).
+2019-04-26 11:20:03.095 [main] INFO  org.quartz.impl.jdbcjobstore.JobStoreTX - JobStoreTX initialized.
+2019-04-26 11:20:03.102 [main] INFO  org.quartz.core.QuartzScheduler - Scheduler meta-data: Quartz Scheduler (v2.2.1) 'SchedulerFactory' with instanceId 'ETLScheduler'
+  Scheduler class: 'org.quartz.core.QuartzScheduler' - running locally.
+  NOT STARTED.
+  Currently in standby mode.
+  Number of jobs executed: 0
+  Using thread pool 'org.quartz.simpl.SimpleThreadPool' - with 5 threads.
+  Using job-store 'org.quartz.impl.jdbcjobstore.JobStoreTX' - which supports persistence. and is not clustered.
+
+2019-04-26 11:20:03.102 [main] INFO  org.quartz.impl.StdSchedulerFactory - Quartz scheduler 'SchedulerFactory' initialized from an externally provided properties instance.
+2019-04-26 11:20:03.116 [main] INFO  org.quartz.impl.StdSchedulerFactory - Quartz scheduler version: 2.2.1
+2019-04-26 11:20:03.119 [main] INFO  org.quartz.core.QuartzScheduler - JobFactory set to: top.ruandb.config.MyJobFactory@2eebce87
+2019-04-26 11:20:04.912 [main] INFO  org.springframework.scheduling.concurrent.ThreadPoolTaskExecutor - Initializing ExecutorService 'applicationTaskExecutor'
+2019-04-26 11:20:06.308 [main] INFO  org.springframework.scheduling.quartz.SchedulerFactoryBean - Starting Quartz Scheduler now
+2019-04-26 11:20:06.311 [main] INFO  com.alibaba.druid.pool.DruidDataSource - {dataSource-2} inited
+2019-04-26 11:20:06.376 [main] INFO  org.quartz.impl.jdbcjobstore.JobStoreTX - Freed 0 triggers from 'acquired' / 'blocked' state.
+2019-04-26 11:20:06.383 [main] INFO  org.quartz.impl.jdbcjobstore.JobStoreTX - Recovering 0 jobs that were in-progress at the time of the last shut-down.
+2019-04-26 11:20:06.384 [main] INFO  org.quartz.impl.jdbcjobstore.JobStoreTX - Recovery complete.
+2019-04-26 11:20:06.385 [main] INFO  org.quartz.impl.jdbcjobstore.JobStoreTX - Removed 0 'complete' triggers.
+2019-04-26 11:20:06.389 [main] INFO  org.quartz.impl.jdbcjobstore.JobStoreTX - Removed 0 stale fired job entries.
+2019-04-26 11:20:06.393 [main] INFO  org.quartz.core.QuartzScheduler - Scheduler SchedulerFactory_$_ETLScheduler started.
+2019-04-26 11:20:06.408 [main] INFO  top.ruandb.EtlSchedulerApplicationTests - Started EtlSchedulerApplicationTests in 15.255 seconds (JVM running for 17.257)
+2019-04-26 11:20:09.357 [main] INFO  top.ruandb.init.TaskInit - �����������scheduler
+2019-04-26 11:20:09.672 [main] INFO  top.ruandb.init.TaskInit - ��ʼ��job��������-------------------------------->jobname:JB_YK
+2019-04-26 11:20:09.751 [main] INFO  top.ruandb.init.TaskInit - ��ʼ��job��������-------------------------------->jobname:JB_ASMC
+2019-04-26 11:20:09.763 [main] INFO  top.ruandb.init.TaskInit - ��ʼ��job��������-------------------------------->jobname:JB_DC
+2019-04-26 11:20:09.771 [main] INFO  top.ruandb.init.TaskInit - ��ʼ��job��������-------------------------------->jobname:JB_BQ
+2019-04-26 11:20:09.780 [main] INFO  top.ruandb.init.TaskInit - ��ʼ��job��������-------------------------------->jobname:JB_GH
+2019-04-26 11:20:09.790 [main] INFO  top.ruandb.init.TaskInit - ��ʼ��job��������-------------------------------->jobname:JB_KSS
+2019-04-26 11:20:09.801 [main] INFO  top.ruandb.init.TaskInit - ��ʼ��job��������-------------------------------->jobname:JB_SS
+2019-04-26 11:20:09.811 [main] INFO  top.ruandb.init.TaskInit - ��ʼ��job��������-------------------------------->jobname:JB_VW
+2019-04-26 11:20:09.821 [main] INFO  top.ruandb.init.TaskInit - ��ʼ��job��������-------------------------------->jobname:JB_YF
+2019-04-26 11:20:09.833 [main] INFO  top.ruandb.init.TaskInit - ��ʼ��job��������-------------------------------->jobname:JB_YY
+2019-04-26 11:20:09.840 [main] INFO  top.ruandb.init.TaskInit - ��ʼ��job��������-------------------------------->jobname:JB_ZY
+2019-04-26 11:20:10.106 [main] INFO  top.ruandb.init.TaskInit - jobMap--->{22=PENDDING, 12=PENDDING, 23=PENDDING, 13=PENDDING, 14=PENDDING, 16=PENDDING, 17=PENDDING, 18=PENDDING, 19=PENDDING, 20=PENDDING, 21=PENDDING}
+2019-04-26 11:20:10.106 [main] INFO  top.ruandb.init.TaskInit - groupMap--->{A=[], B=[], C=[], D=[]}
+2019-04-26 11:20:10.107 [main] INFO  top.ruandb.init.TaskInit - jobMap,groupMap----------------------->��ʼ���ɹ�
+2019-04-26 11:20:10.362 [Thread-3] INFO  org.quartz.core.QuartzScheduler - Scheduler SchedulerFactory_$_ETLScheduler paused.
+2019-04-26 11:20:10.367 [Thread-3] INFO  org.springframework.scheduling.concurrent.ThreadPoolTaskExecutor - Shutting down ExecutorService 'applicationTaskExecutor'
+2019-04-26 11:20:10.371 [Thread-3] INFO  org.quartz.core.QuartzScheduler - Scheduler SchedulerFactory_$_ETLScheduler shutting down.
+2019-04-26 11:20:10.371 [Thread-3] INFO  org.quartz.core.QuartzScheduler - Scheduler SchedulerFactory_$_ETLScheduler paused.
+2019-04-26 11:20:10.405 [Thread-3] INFO  com.alibaba.druid.pool.DruidDataSource - {dataSource-2} closed
+2019-04-26 11:20:10.406 [Thread-3] INFO  org.quartz.core.QuartzScheduler - Scheduler SchedulerFactory_$_ETLScheduler shutdown complete.
+2019-04-26 11:20:10.406 [Thread-3] INFO  org.springframework.scheduling.quartz.SchedulerFactoryBean - Shutting down Quartz Scheduler
+2019-04-26 11:20:10.407 [Thread-3] INFO  org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+2019-04-26 11:20:10.414 [Thread-3] INFO  com.alibaba.druid.pool.DruidDataSource - {dataSource-1} closed

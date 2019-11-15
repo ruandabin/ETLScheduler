@@ -1,0 +1,81 @@
+server:
+  port: 8080
+  context-path: / 
+  tomcat:
+    min-spare-threads: 5
+    max-connections: 50
+  connection-timeout: 5000
+spring:
+  datasource:
+    type: com.alibaba.druid.pool.DruidDataSource
+    driver-class-name: com.microsoft.sqlserver.jdbc.SQLServerDriver
+    url: jdbc:sqlserver://192.168.43.9:1433;DatabaseName=PLATFORM_TYPT
+    username: sa
+    password: Rdb123456*
+  jpa:
+    show-sql: false
+    hibernate:
+      ddl-auto: update
+      naming:
+        physical-strategy: org.hibernate.boot.model.naming.PhysicalNamingStrategyStandardImpl
+  thymeleaf:
+    cache: false
+    prefix: classpath:/templates/
+  jackson:
+    time-zone: GMT+8
+    date-format: yyyy/MM/dd HH:mm:ss
+#quartz的配置
+quartzConfig:
+   quartz:
+      scheduler:
+        instance-name: ETLScheduler
+        instance-id: ETLScheduler
+        skip-update-check: true
+        job-factory:
+          class: org.quartz.simpl.SimpleJobFactory
+      job-store:
+        class: org.quartz.impl.jdbcjobstore.JobStoreTX
+        driver-delegate-class: org.quartz.impl.jdbcjobstore.StdJDBCDelegate
+        datasource: quartzDataSource
+        table-prefix: QRTZ_
+        is-clustered: false
+      thread-pool:
+        class: org.quartz.simpl.SimpleThreadPool
+        thread-count: 50
+      datasource:
+        quartzDataSource:
+          driver: com.microsoft.sqlserver.jdbc.SQLServerDriver #com.microsoft.sqlserver.jdbc.SQLServerDriver
+          url: jdbc:sqlserver://192.168.43.9:1433;DatabaseName=PLATFORM_TYPT
+          user: sa
+          password: Rdb123456*
+          maxConnections: 5
+          validationQuery: select 0
+          connection-provider:
+            class: top.ruandb.config.DruidConnectionProvider
+
+#控制台的一些日志不需要打印
+logging:
+  level:
+    org.springframework.boot.autoconfigure: ERROR 
+    org.thymeleaf: info
+
+kettleConfig: 
+  kettle_home: D:\\kettle\\pdi-ce-8.2.0.0-342\\data-integration #根据现场调整
+  kettle_job_dir: D:\\kettle\\SK_HDW_Repository  #根据现场调整 #D:\\Soft\\Kettle\\SK_HDW_Repository  #根据现场调整 kettle_job_dir  D:\\Soft\\Kettle\\SKRepository
+  #kettle_log_db_name: ETL_MONITOR
+  #kettle_log_db_type: MSSQLNATIVE
+  #kettle_log_db_access: Native
+  #kettle_log_db_host: 172.30.3.34
+  #kettle_log_db_db: ETL_MONITOR
+  #kettle_log_db_port: 49215
+  #kettle_log_db_user: sa
+  #kettle_log_db_pass: Wonders123$
+user:
+  username: 1002
+  password: 123456
+  
+sqlserverProcedurePro: HOSPITAL_CUBEDB_RDB.dbo. #HDW_SK.dbo.
+oracleProcedurePro: HOSPITAL_CUBEDB. #HDW_SK.dbo.
+
+dailyInitJobStatusCron: 0 0 22 * * ?
+ 

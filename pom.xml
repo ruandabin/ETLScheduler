@@ -1,0 +1,340 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+	<repositories>
+    <repository>
+      <id>nexus</id>
+      <name>my-nexus-repository</name>
+      <url>http://203.110.176.176:7081/nexus/content/groups/public/</url>
+      <releases>
+        <enabled>true</enabled>
+      </releases>
+      <snapshots>
+        <enabled>false</enabled>
+      </snapshots>
+    </repository>
+  </repositories>
+	<parent>
+		<groupId>org.springframework.boot</groupId>
+		<artifactId>spring-boot-starter-parent</artifactId>
+		<version>2.1.1.RELEASE</version>
+		<relativePath /> <!-- lookup parent from repository -->
+	</parent>
+	<groupId>top.ruandb</groupId>
+	<artifactId>ETLScheduler</artifactId>
+	<version>0.0.1-SNAPSHOT</version>
+	<packaging>jar</packaging>
+	<name>ETLScheduler</name>
+	<description>Demo project for Spring Boot</description>
+
+	<properties>
+		<java.version>1.8</java.version>
+	</properties>
+
+	<dependencies>
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-data-jpa</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-thymeleaf</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-web</artifactId>
+		</dependency>
+
+		<dependency>
+			<groupId>mysql</groupId>
+			<artifactId>mysql-connector-java</artifactId>
+			<scope>runtime</scope>
+		</dependency>
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-tomcat</artifactId>
+			<scope>provided</scope>
+		</dependency>
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-test</artifactId>
+			<scope>test</scope>
+		</dependency>
+		<!-- https://mvnrepository.com/artifact/org.quartz-scheduler/quartz -->
+		<dependency>
+			<groupId>org.quartz-scheduler</groupId>
+			<artifactId>quartz</artifactId>
+			<version>2.2.1</version>
+		</dependency>
+
+		<!-- https://mvnrepository.com/artifact/org.apache.commons/commons-vfs2 -->
+		<dependency>
+			<groupId>org.apache.commons</groupId>
+			<artifactId>commons-vfs2</artifactId>
+			<version>2.2</version>
+		</dependency>
+		<!-- https://mvnrepository.com/artifact/org.scannotation/scannotation -->
+		<dependency>
+			<groupId>org.scannotation</groupId>
+			<artifactId>scannotation</artifactId>
+			<version>1.0.3</version>
+		</dependency>
+		<!-- https://mvnrepository.com/artifact/org.dom4j/dom4j -->
+		<dependency>
+			<groupId>org.dom4j</groupId>
+			<artifactId>dom4j</artifactId>
+			<version>2.1.1</version>
+		</dependency>
+		<!-- https://mvnrepository.com/artifact/com.google.guava/guava -->
+		<dependency>
+			<groupId>com.google.guava</groupId>
+			<artifactId>guava</artifactId>
+			<version>27.0.1-jre</version>
+		</dependency>
+		<!-- https://mvnrepository.com/artifact/commons-io/commons-io -->
+		<dependency>
+			<groupId>commons-io</groupId>
+			<artifactId>commons-io</artifactId>
+			<version>2.2</version>
+		</dependency>
+		<!-- https://mvnrepository.com/artifact/org.apache.commons/commons-lang3 -->
+		<dependency>
+			<groupId>org.apache.commons</groupId>
+			<artifactId>commons-lang3</artifactId>
+			<version>3.3</version>
+		</dependency>
+		<!-- https://mvnrepository.com/artifact/commons-lang/commons-lang -->
+		<dependency>
+			<groupId>commons-lang</groupId>
+			<artifactId>commons-lang</artifactId>
+			<version>2.6</version>
+		</dependency>
+		<!-- https://mvnrepository.com/artifact/org.safehaus.jug/jug -->
+		<dependency>
+			<groupId>org.safehaus.jug</groupId>
+			<artifactId>jug</artifactId>
+			<version>2.0.0</version>
+			<classifier>lgpl</classifier>
+		</dependency>
+		<!-- <dependency> <groupId>com.microsoft.sqlserver</groupId> <artifactId>sqljdbc4</artifactId> 
+			<version>4.0</version> </dependency> -->
+		<!-- https://mvnrepository.com/artifact/com.microsoft.sqlserver/mssql-jdbc -->
+		
+
+
+
+		<!-- https://mvnrepository.com/artifact/com.alibaba/druid -->
+		<dependency>
+			<groupId>com.alibaba</groupId>
+			<artifactId>druid</artifactId>
+			<version>1.1.8</version>
+		</dependency>
+		<dependency>
+			<groupId>org.springframework</groupId>
+			<artifactId>spring-context-support</artifactId>
+			<!-- <version>4.1.2.RELEASE</version> -->
+		</dependency>
+		<dependency>
+			<groupId>org.apache.shiro</groupId>
+			<artifactId>shiro-core</artifactId>
+			<version>1.4.0</version>
+		</dependency>
+
+		<dependency>
+			<groupId>org.apache.shiro</groupId>
+			<artifactId>shiro-spring</artifactId>
+			<version>1.4.0</version>
+		</dependency>
+
+		<!-- https://mvnrepository.com/artifact/org.postgresql/postgresql -->
+		<dependency>
+			<groupId>org.postgresql</groupId>
+			<artifactId>postgresql</artifactId>
+			<version>42.1.1</version>
+		</dependency>
+		<!-- https://mvnrepository.com/artifact/xml-apis/xml-apis -->
+		<dependency>
+			<groupId>xml-apis</groupId>
+			<artifactId>xml-apis</artifactId>
+			<version>2.0.2</version>
+		</dependency>
+
+
+
+
+		<dependency>
+			<groupId>com.pentaho.kettle</groupId>
+			<artifactId>kettle-core</artifactId>
+			<version>8.2.0.0</version>
+		</dependency>
+		<dependency>
+			<groupId>com.pentaho.kettle</groupId>
+			<artifactId>kettle-dbdialog</artifactId>
+			<version>8.2.0.0</version>
+		</dependency>
+		<dependency>
+			<groupId>com.pentaho.kettle</groupId>
+			<artifactId>kettle-engine</artifactId>
+			<version>8.2.0.0</version>
+		</dependency>
+		<!-- <dependency> <groupId>com.pentaho.kettle</groupId> <artifactId>kettle-log4j-core</artifactId> 
+			<version>8.2.0.0</version> </dependency> -->
+
+		<dependency>
+			<groupId>com.pentaho.kettle</groupId>
+			<artifactId>kettle-ui-swt</artifactId>
+			<version>8.2.0.0</version>
+		</dependency>
+		<dependency>
+			<groupId>com.pentaho.kettle</groupId>
+			<artifactId>pentaho-metadata</artifactId>
+			<version>8.2.0.0</version>
+		</dependency>
+		<dependency>
+			<groupId>com.pentaho.kettle</groupId>
+			<artifactId>pentaho-capability-manager</artifactId>
+			<version>8.2.0.0</version>
+		</dependency>
+		<dependency>
+			<groupId>com.pentaho.kettle</groupId>
+			<artifactId>pentaho-connections</artifactId>
+			<version>8.2.0.0</version>
+		</dependency>
+		<dependency>
+			<groupId>com.pentaho.kettle</groupId>
+			<artifactId>pentaho-cwm</artifactId>
+			<version>8.2.0.0</version>
+		</dependency>
+		<dependency>
+			<groupId>com.pentaho.kettle</groupId>
+			<artifactId>pentaho-metaverse-api</artifactId>
+			<version>8.2.0.0</version>
+		</dependency>
+		<dependency>
+			<groupId>com.pentaho.kettle</groupId>
+			<artifactId>pentaho-osgi-utils-api</artifactId>
+			<version>8.2.0.0</version>
+		</dependency>
+		<dependency>
+			<groupId>com.pentaho.kettle</groupId>
+			<artifactId>pentaho-platform-api</artifactId>
+			<version>8.2.0.0</version>
+		</dependency>
+		<dependency>
+			<groupId>com.pentaho.kettle</groupId>
+			<artifactId>pentaho-platform-core</artifactId>
+			<version>8.2.0.0</version>
+		</dependency>
+
+		<dependency>
+			<groupId>com.pentaho.kettle</groupId>
+			<artifactId>pentaho-platform-extensions</artifactId>
+			<version>8.2.0.0</version>
+		</dependency>
+		<dependency>
+			<groupId>com.pentaho.kettle</groupId>
+			<artifactId>pentaho-platform-repository</artifactId>
+			<version>8.2.0.0</version>
+		</dependency>
+		<dependency>
+			<groupId>com.pentaho.kettle</groupId>
+			<artifactId>pentaho-registry</artifactId>
+			<version>8.2.0.0</version>
+		</dependency>
+		<dependency>
+			<groupId>com.pentaho.kettle</groupId>
+			<artifactId>pentaho-service-coordinator</artifactId>
+			<version>8.2.0.0</version>
+		</dependency>
+
+		<dependency>
+			<groupId>com.pentaho.kettle</groupId>
+			<artifactId>pentaho-vfs-browser</artifactId>
+			<version>8.2.0.0</version>
+		</dependency>
+		<dependency>
+			<groupId>com.pentaho.kettle</groupId>
+			<artifactId>js-1.7R3</artifactId>
+			<version>8.2.0.0</version>
+		</dependency>
+		<!-- https://mvnrepository.com/artifact/org.javassist/javassist -->
+		<!--<dependency> <groupId>org.javassist</groupId> <artifactId>javassist</artifactId> 
+			<version>3.20.0-GA</version> </dependency> -->
+		<dependency>
+			<groupId>com.pentaho.kettle</groupId>
+			<artifactId>metastore</artifactId>
+			<version>8.2.0.0</version>
+		</dependency>
+		<!-- https://mvnrepository.com/artifact/org.apache.xmlbeans/xmlbeans -->
+		<dependency>
+			<groupId>org.apache.xmlbeans</groupId>
+			<artifactId>xmlbeans</artifactId>
+			<version>2.6.0</version>
+		</dependency>
+		<!-- https://mvnrepository.com/artifact/commons-io/commons-io -->
+		<dependency>
+			<groupId>commons-io</groupId>
+			<artifactId>commons-io</artifactId>
+			<version>2.6</version>
+		</dependency>
+		<!-- https://mvnrepository.com/artifact/commons-logging/commons-logging -->
+		<dependency>
+			<groupId>commons-logging</groupId>
+			<artifactId>commons-logging</artifactId>
+			<version>1.2</version>
+		</dependency>
+		<!-- https://mvnrepository.com/artifact/com.jcraft/jsch -->
+		<dependency>
+			<groupId>com.jcraft</groupId>
+			<artifactId>jsch</artifactId>
+			<version>0.1.54</version>
+		</dependency>
+		<!-- https://mvnrepository.com/artifact/commons-codec/commons-codec -->
+		<dependency>
+			<groupId>commons-codec</groupId>
+			<artifactId>commons-codec</artifactId>
+			<version>1.10</version>
+		</dependency>
+		<!-- https://mvnrepository.com/artifact/org.ow2.asm/asm -->
+		<dependency>
+			<groupId>org.ow2.asm</groupId>
+			<artifactId>asm</artifactId>
+			<version>5.0.4</version>
+		</dependency>
+
+		<dependency>
+			<groupId>com.microsoft.sqlserver</groupId>
+			<artifactId>mssql-jdbc</artifactId>
+			<version>7.0.0.jre8</version>
+		</dependency>
+		
+		<dependency>
+			<groupId>com.oracle</groupId>
+			<artifactId>ojdbc6</artifactId>
+			<version>11.2.0.3</version>
+		</dependency>
+		
+		<dependency>
+		<groupId>com.winning</groupId>
+		<artifactId>jcpt-sdk</artifactId>
+		<version>1.0.5-RELEASE</version>
+		</dependency>
+
+
+	</dependencies>
+
+	<build>
+		<plugins>
+			<plugin>
+				<groupId>org.springframework.boot</groupId>
+				<artifactId>spring-boot-maven-plugin</artifactId>
+				<configuration>
+					<fork>false</fork>
+				</configuration>
+			</plugin>
+		</plugins>
+	</build>
+
+</project>

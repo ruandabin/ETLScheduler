@@ -1,0 +1,393 @@
+2019-04-28 16:56:10.512 [main] INFO  top.ruandb.EtlSchedulerApplication - Starting EtlSchedulerApplication on LAPTOP-MK6P63H0 with PID 17956 (C:\Java\eclipse-workspace2\ETLScheduler\target\classes started by rdb in C:\Java\eclipse-workspace2\ETLScheduler)
+2019-04-28 16:56:10.515 [main] INFO  top.ruandb.EtlSchedulerApplication - No active profile set, falling back to default profiles: default
+2019-04-28 16:56:11.853 [main] INFO  org.springframework.data.repository.config.RepositoryConfigurationDelegate - Bootstrapping Spring Data repositories in DEFAULT mode.
+2019-04-28 16:56:12.096 [main] INFO  org.springframework.data.repository.config.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 232ms. Found 4 repository interfaces.
+2019-04-28 16:56:12.589 [main] INFO  org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$1f10667e] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-04-28 16:56:12.615 [main] INFO  org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'shiroConfig' of type [top.ruandb.config.ShiroConfig$$EnhancerBySpringCGLIB$$4a6d99d1] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-04-28 16:56:13.084 [main] INFO  org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'myRealm' of type [top.ruandb.config.MyRealm] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-04-28 16:56:13.094 [main] INFO  org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'securityManager' of type [org.apache.shiro.web.mgt.DefaultWebSecurityManager] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-04-28 16:56:13.572 [main] INFO  org.springframework.boot.web.embedded.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8080 (http)
+2019-04-28 16:56:13.608 [main] INFO  org.apache.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+2019-04-28 16:56:13.639 [main] INFO  org.apache.catalina.core.StandardService - Starting service [Tomcat]
+2019-04-28 16:56:13.640 [main] INFO  org.apache.catalina.core.StandardEngine - Starting Servlet Engine: Apache Tomcat/9.0.13
+2019-04-28 16:56:13.649 [main] INFO  org.apache.catalina.core.AprLifecycleListener - Loaded APR based Apache Tomcat Native library [1.2.19] using APR version [1.6.5].
+2019-04-28 16:56:13.649 [main] INFO  org.apache.catalina.core.AprLifecycleListener - APR capabilities: IPv6 [true], sendfile [true], accept filters [false], random [true].
+2019-04-28 16:56:13.649 [main] INFO  org.apache.catalina.core.AprLifecycleListener - APR/OpenSSL configuration: useAprConnector [false], useOpenSSL [true]
+2019-04-28 16:56:14.763 [main] INFO  org.apache.catalina.core.AprLifecycleListener - OpenSSL successfully initialized [OpenSSL 1.0.2q  20 Nov 2018]
+2019-04-28 16:56:15.045 [main] INFO  org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2019-04-28 16:56:15.045 [main] INFO  org.springframework.web.context.ContextLoader - Root WebApplicationContext: initialization completed in 4383 ms
+2019-04-28 16:56:15.806 [main] INFO  com.alibaba.druid.pool.DruidDataSource - {dataSource-1} inited
+2019-04-28 16:56:17.433 [main] INFO  org.hibernate.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+2019-04-28 16:56:17.664 [main] INFO  org.hibernate.Version - HHH000412: Hibernate Core {5.3.7.Final}
+2019-04-28 16:56:17.667 [main] INFO  org.hibernate.cfg.Environment - HHH000206: hibernate.properties not found
+2019-04-28 16:56:18.015 [main] INFO  org.hibernate.annotations.common.Version - HCANN000001: Hibernate Commons Annotations {5.0.4.Final}
+2019-04-28 16:56:18.579 [main] INFO  org.hibernate.dialect.Dialect - HHH000400: Using dialect: org.hibernate.dialect.Oracle12cDialect
+2019-04-28 16:56:18.705 [main] INFO  org.hibernate.type.BasicTypeRegistry - HHH000270: Type registration [byte[]] overrides previous : org.hibernate.type.BinaryType@5d7399f9
+2019-04-28 16:56:18.706 [main] INFO  org.hibernate.type.BasicTypeRegistry - HHH000270: Type registration [[B] overrides previous : org.hibernate.type.BinaryType@5d7399f9
+2019-04-28 16:56:18.707 [main] INFO  org.hibernate.type.BasicTypeRegistry - HHH000270: Type registration [Byte[]] overrides previous : org.hibernate.type.WrapperBinaryType@bc6288b
+2019-04-28 16:56:18.707 [main] INFO  org.hibernate.type.BasicTypeRegistry - HHH000270: Type registration [[Ljava.lang.Byte;] overrides previous : org.hibernate.type.WrapperBinaryType@bc6288b
+2019-04-28 16:56:18.904 [main] WARN  org.hibernate.boot.internal.InFlightMetadataCollectorImpl - HHH000069: Duplicate generator name mseq
+2019-04-28 16:56:21.905 [main] INFO  org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2019-04-28 16:56:21.992 [main] INFO  org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor - Autowired annotation is not supported on static methods: public static void top.ruandb.config.ProcedureConfig.setPROCEDURE_PRO(java.lang.String)
+2019-04-28 16:56:22.517 [main] INFO  org.hibernate.hql.internal.QueryTranslatorFactoryInitiator - HHH000397: Using ASTQueryTranslatorFactory
+2019-04-28 16:56:22.790 [main] INFO  org.quartz.impl.StdSchedulerFactory - Using default implementation for ThreadExecutor
+2019-04-28 16:56:22.805 [main] INFO  org.quartz.core.SchedulerSignalerImpl - Initialized Scheduler Signaller of type: class org.quartz.core.SchedulerSignalerImpl
+2019-04-28 16:56:22.805 [main] INFO  org.quartz.core.QuartzScheduler - Quartz Scheduler v.2.2.1 created.
+2019-04-28 16:56:22.806 [main] INFO  org.quartz.core.QuartzScheduler - JobFactory set to: org.quartz.simpl.SimpleJobFactory@ca546a1
+2019-04-28 16:56:22.807 [main] INFO  org.quartz.impl.jdbcjobstore.JobStoreTX - Using thread monitor-based data access locking (synchronization).
+2019-04-28 16:56:22.808 [main] INFO  org.quartz.impl.jdbcjobstore.JobStoreTX - JobStoreTX initialized.
+2019-04-28 16:56:22.809 [main] INFO  org.quartz.core.QuartzScheduler - Scheduler meta-data: Quartz Scheduler (v2.2.1) 'SchedulerFactory' with instanceId 'ETLScheduler'
+  Scheduler class: 'org.quartz.core.QuartzScheduler' - running locally.
+  NOT STARTED.
+  Currently in standby mode.
+  Number of jobs executed: 0
+  Using thread pool 'org.quartz.simpl.SimpleThreadPool' - with 5 threads.
+  Using job-store 'org.quartz.impl.jdbcjobstore.JobStoreTX' - which supports persistence. and is not clustered.
+
+2019-04-28 16:56:22.809 [main] INFO  org.quartz.impl.StdSchedulerFactory - Quartz scheduler 'SchedulerFactory' initialized from an externally provided properties instance.
+2019-04-28 16:56:22.809 [main] INFO  org.quartz.impl.StdSchedulerFactory - Quartz scheduler version: 2.2.1
+2019-04-28 16:56:22.810 [main] INFO  org.quartz.core.QuartzScheduler - JobFactory set to: top.ruandb.config.MyJobFactory@ca7e37f
+2019-04-28 16:56:23.233 [main] INFO  org.springframework.scheduling.concurrent.ThreadPoolTaskExecutor - Initializing ExecutorService 'applicationTaskExecutor'
+2019-04-28 16:56:23.748 [main] INFO  org.springframework.scheduling.quartz.SchedulerFactoryBean - Starting Quartz Scheduler now
+2019-04-28 16:56:23.750 [main] INFO  com.alibaba.druid.pool.DruidDataSource - {dataSource-2} inited
+2019-04-28 16:56:23.932 [main] INFO  org.quartz.impl.jdbcjobstore.JobStoreTX - Freed 0 triggers from 'acquired' / 'blocked' state.
+2019-04-28 16:56:23.946 [main] INFO  org.quartz.impl.jdbcjobstore.JobStoreTX - Handling 12 trigger(s) that missed their scheduled fire-time.
+2019-04-28 16:56:24.238 [main] WARN  org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.context.ApplicationContextException: Failed to start bean 'SchedulerFactory'; nested exception is org.springframework.scheduling.SchedulingException: Could not start Quartz Scheduler; nested exception is org.quartz.SchedulerConfigException: Failure occured during job recovery. [See nested exception: org.quartz.JobPersistenceException: Couldn't store trigger 'KettleJob.trigger_12_JB_YK' for 'ruandb.Job.KettleJob.12_JB_YK' job:top.ruandb.entity.TaskCronJob; local class incompatible: stream classdesc serialVersionUID = -7650897035941831420, local class serialVersionUID = -7464684866777666331 [See nested exception: java.io.InvalidClassException: top.ruandb.entity.TaskCronJob; local class incompatible: stream classdesc serialVersionUID = -7650897035941831420, local class serialVersionUID = -7464684866777666331]]
+2019-04-28 16:56:24.240 [main] INFO  org.springframework.scheduling.concurrent.ThreadPoolTaskExecutor - Shutting down ExecutorService 'applicationTaskExecutor'
+2019-04-28 16:56:24.243 [main] INFO  org.quartz.core.QuartzScheduler - Scheduler SchedulerFactory_$_ETLScheduler shutting down.
+2019-04-28 16:56:24.244 [main] INFO  org.quartz.core.QuartzScheduler - Scheduler SchedulerFactory_$_ETLScheduler paused.
+2019-04-28 16:56:24.254 [main] INFO  com.alibaba.druid.pool.DruidDataSource - {dataSource-2} closed
+2019-04-28 16:56:24.255 [main] INFO  org.quartz.core.QuartzScheduler - Scheduler SchedulerFactory_$_ETLScheduler shutdown complete.
+2019-04-28 16:56:24.256 [main] INFO  org.springframework.scheduling.quartz.SchedulerFactoryBean - Shutting down Quartz Scheduler
+2019-04-28 16:56:24.258 [main] INFO  org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+2019-04-28 16:56:24.267 [main] INFO  com.alibaba.druid.pool.DruidDataSource - {dataSource-1} closed
+2019-04-28 16:56:24.270 [main] INFO  org.apache.catalina.core.StandardService - Stopping service [Tomcat]
+2019-04-28 16:56:24.317 [main] ERROR org.springframework.boot.SpringApplication - Application run failed
+org.springframework.context.ApplicationContextException: Failed to start bean 'SchedulerFactory'; nested exception is org.springframework.scheduling.SchedulingException: Could not start Quartz Scheduler; nested exception is org.quartz.SchedulerConfigException: Failure occured during job recovery. [See nested exception: org.quartz.JobPersistenceException: Couldn't store trigger 'KettleJob.trigger_12_JB_YK' for 'ruandb.Job.KettleJob.12_JB_YK' job:top.ruandb.entity.TaskCronJob; local class incompatible: stream classdesc serialVersionUID = -7650897035941831420, local class serialVersionUID = -7464684866777666331 [See nested exception: java.io.InvalidClassException: top.ruandb.entity.TaskCronJob; local class incompatible: stream classdesc serialVersionUID = -7650897035941831420, local class serialVersionUID = -7464684866777666331]]
+	at org.springframework.context.support.DefaultLifecycleProcessor.doStart(DefaultLifecycleProcessor.java:185)
+	at org.springframework.context.support.DefaultLifecycleProcessor.access$200(DefaultLifecycleProcessor.java:53)
+	at org.springframework.context.support.DefaultLifecycleProcessor$LifecycleGroup.start(DefaultLifecycleProcessor.java:360)
+	at org.springframework.context.support.DefaultLifecycleProcessor.startBeans(DefaultLifecycleProcessor.java:158)
+	at org.springframework.context.support.DefaultLifecycleProcessor.onRefresh(DefaultLifecycleProcessor.java:122)
+	at org.springframework.context.support.AbstractApplicationContext.finishRefresh(AbstractApplicationContext.java:879)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.finishRefresh(ServletWebServerApplicationContext.java:163)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:549)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:142)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:775)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:397)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:316)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1260)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1248)
+	at top.ruandb.EtlSchedulerApplication.main(EtlSchedulerApplication.java:15)
+Caused by: org.springframework.scheduling.SchedulingException: Could not start Quartz Scheduler; nested exception is org.quartz.SchedulerConfigException: Failure occured during job recovery. [See nested exception: org.quartz.JobPersistenceException: Couldn't store trigger 'KettleJob.trigger_12_JB_YK' for 'ruandb.Job.KettleJob.12_JB_YK' job:top.ruandb.entity.TaskCronJob; local class incompatible: stream classdesc serialVersionUID = -7650897035941831420, local class serialVersionUID = -7464684866777666331 [See nested exception: java.io.InvalidClassException: top.ruandb.entity.TaskCronJob; local class incompatible: stream classdesc serialVersionUID = -7650897035941831420, local class serialVersionUID = -7464684866777666331]]
+	at org.springframework.scheduling.quartz.SchedulerFactoryBean.start(SchedulerFactoryBean.java:802)
+	at org.springframework.context.support.DefaultLifecycleProcessor.doStart(DefaultLifecycleProcessor.java:182)
+	... 14 common frames omitted
+Caused by: org.quartz.SchedulerConfigException: Failure occured during job recovery.
+	at org.quartz.impl.jdbcjobstore.JobStoreSupport.schedulerStarted(JobStoreSupport.java:692)
+	at org.quartz.core.QuartzScheduler.start(QuartzScheduler.java:567)
+	at org.quartz.impl.StdScheduler.start(StdScheduler.java:142)
+	at org.springframework.scheduling.quartz.SchedulerFactoryBean.startScheduler(SchedulerFactoryBean.java:727)
+	at org.springframework.scheduling.quartz.SchedulerFactoryBean.start(SchedulerFactoryBean.java:799)
+	... 15 common frames omitted
+Caused by: org.quartz.JobPersistenceException: Couldn't store trigger 'KettleJob.trigger_12_JB_YK' for 'ruandb.Job.KettleJob.12_JB_YK' job:top.ruandb.entity.TaskCronJob; local class incompatible: stream classdesc serialVersionUID = -7650897035941831420, local class serialVersionUID = -7464684866777666331
+	at org.quartz.impl.jdbcjobstore.JobStoreSupport.storeTrigger(JobStoreSupport.java:1223)
+	at org.quartz.impl.jdbcjobstore.JobStoreSupport.doUpdateOfMisfiredTrigger(JobStoreSupport.java:1037)
+	at org.quartz.impl.jdbcjobstore.JobStoreSupport.recoverMisfiredJobs(JobStoreSupport.java:986)
+	at org.quartz.impl.jdbcjobstore.JobStoreSupport.recoverJobs(JobStoreSupport.java:866)
+	at org.quartz.impl.jdbcjobstore.JobStoreSupport$1.executeVoid(JobStoreSupport.java:838)
+	at org.quartz.impl.jdbcjobstore.JobStoreSupport$VoidTransactionCallback.execute(JobStoreSupport.java:3703)
+	at org.quartz.impl.jdbcjobstore.JobStoreSupport$VoidTransactionCallback.execute(JobStoreSupport.java:3701)
+	at org.quartz.impl.jdbcjobstore.JobStoreSupport.executeInNonManagedTXLock(JobStoreSupport.java:3787)
+	at org.quartz.impl.jdbcjobstore.JobStoreSupport.recoverJobs(JobStoreSupport.java:834)
+	at org.quartz.impl.jdbcjobstore.JobStoreSupport.schedulerStarted(JobStoreSupport.java:690)
+	... 19 common frames omitted
+Caused by: java.io.InvalidClassException: top.ruandb.entity.TaskCronJob; local class incompatible: stream classdesc serialVersionUID = -7650897035941831420, local class serialVersionUID = -7464684866777666331
+	at java.io.ObjectStreamClass.initNonProxy(ObjectStreamClass.java:687)
+	at java.io.ObjectInputStream.readNonProxyDesc(ObjectInputStream.java:1883)
+	at java.io.ObjectInputStream.readClassDesc(ObjectInputStream.java:1749)
+	at java.io.ObjectInputStream.readOrdinaryObject(ObjectInputStream.java:2040)
+	at java.io.ObjectInputStream.readObject0(ObjectInputStream.java:1571)
+	at java.io.ObjectInputStream.readObject(ObjectInputStream.java:431)
+	at java.util.HashMap.readObject(HashMap.java:1409)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at java.io.ObjectStreamClass.invokeReadObject(ObjectStreamClass.java:1158)
+	at java.io.ObjectInputStream.readSerialData(ObjectInputStream.java:2176)
+	at java.io.ObjectInputStream.readOrdinaryObject(ObjectInputStream.java:2067)
+	at java.io.ObjectInputStream.readObject0(ObjectInputStream.java:1571)
+	at java.io.ObjectInputStream.defaultReadFields(ObjectInputStream.java:2285)
+	at java.io.ObjectInputStream.readSerialData(ObjectInputStream.java:2209)
+	at java.io.ObjectInputStream.readOrdinaryObject(ObjectInputStream.java:2067)
+	at java.io.ObjectInputStream.readObject0(ObjectInputStream.java:1571)
+	at java.io.ObjectInputStream.readObject(ObjectInputStream.java:431)
+	at org.quartz.impl.jdbcjobstore.StdJDBCDelegate.getObjectFromBlob(StdJDBCDelegate.java:3201)
+	at org.quartz.impl.jdbcjobstore.StdJDBCDelegate.selectJobDetail(StdJDBCDelegate.java:860)
+	at org.quartz.impl.jdbcjobstore.JobStoreSupport.storeTrigger(JobStoreSupport.java:1205)
+	... 28 common frames omitted
+2019-04-28 16:57:20.696 [main] INFO  top.ruandb.EtlSchedulerApplication - Starting EtlSchedulerApplication on LAPTOP-MK6P63H0 with PID 17784 (C:\Java\eclipse-workspace2\ETLScheduler\target\classes started by rdb in C:\Java\eclipse-workspace2\ETLScheduler)
+2019-04-28 16:57:20.701 [main] INFO  top.ruandb.EtlSchedulerApplication - No active profile set, falling back to default profiles: default
+2019-04-28 16:57:21.691 [main] INFO  org.springframework.data.repository.config.RepositoryConfigurationDelegate - Bootstrapping Spring Data repositories in DEFAULT mode.
+2019-04-28 16:57:21.900 [main] INFO  org.springframework.data.repository.config.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 200ms. Found 4 repository interfaces.
+2019-04-28 16:57:22.272 [main] INFO  org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$71a96361] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-04-28 16:57:22.296 [main] INFO  org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'shiroConfig' of type [top.ruandb.config.ShiroConfig$$EnhancerBySpringCGLIB$$9d0696b4] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-04-28 16:57:22.676 [main] INFO  org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'myRealm' of type [top.ruandb.config.MyRealm] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-04-28 16:57:22.685 [main] INFO  org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'securityManager' of type [org.apache.shiro.web.mgt.DefaultWebSecurityManager] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-04-28 16:57:23.062 [main] INFO  org.springframework.boot.web.embedded.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8080 (http)
+2019-04-28 16:57:23.077 [main] INFO  org.apache.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+2019-04-28 16:57:23.086 [main] INFO  org.apache.catalina.core.StandardService - Starting service [Tomcat]
+2019-04-28 16:57:23.087 [main] INFO  org.apache.catalina.core.StandardEngine - Starting Servlet Engine: Apache Tomcat/9.0.13
+2019-04-28 16:57:23.094 [main] INFO  org.apache.catalina.core.AprLifecycleListener - Loaded APR based Apache Tomcat Native library [1.2.19] using APR version [1.6.5].
+2019-04-28 16:57:23.095 [main] INFO  org.apache.catalina.core.AprLifecycleListener - APR capabilities: IPv6 [true], sendfile [true], accept filters [false], random [true].
+2019-04-28 16:57:23.095 [main] INFO  org.apache.catalina.core.AprLifecycleListener - APR/OpenSSL configuration: useAprConnector [false], useOpenSSL [true]
+2019-04-28 16:57:24.169 [main] INFO  org.apache.catalina.core.AprLifecycleListener - OpenSSL successfully initialized [OpenSSL 1.0.2q  20 Nov 2018]
+2019-04-28 16:57:24.374 [main] INFO  org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2019-04-28 16:57:24.374 [main] INFO  org.springframework.web.context.ContextLoader - Root WebApplicationContext: initialization completed in 3547 ms
+2019-04-28 16:57:24.765 [main] INFO  com.alibaba.druid.pool.DruidDataSource - {dataSource-1} inited
+2019-04-28 16:57:25.056 [main] INFO  org.hibernate.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+2019-04-28 16:57:25.152 [main] INFO  org.hibernate.Version - HHH000412: Hibernate Core {5.3.7.Final}
+2019-04-28 16:57:25.155 [main] INFO  org.hibernate.cfg.Environment - HHH000206: hibernate.properties not found
+2019-04-28 16:57:25.337 [main] INFO  org.hibernate.annotations.common.Version - HCANN000001: Hibernate Commons Annotations {5.0.4.Final}
+2019-04-28 16:57:25.726 [main] INFO  org.hibernate.dialect.Dialect - HHH000400: Using dialect: org.hibernate.dialect.Oracle12cDialect
+2019-04-28 16:57:25.808 [main] INFO  org.hibernate.type.BasicTypeRegistry - HHH000270: Type registration [byte[]] overrides previous : org.hibernate.type.BinaryType@506aabf6
+2019-04-28 16:57:25.808 [main] INFO  org.hibernate.type.BasicTypeRegistry - HHH000270: Type registration [[B] overrides previous : org.hibernate.type.BinaryType@506aabf6
+2019-04-28 16:57:25.809 [main] INFO  org.hibernate.type.BasicTypeRegistry - HHH000270: Type registration [Byte[]] overrides previous : org.hibernate.type.WrapperBinaryType@756aadfc
+2019-04-28 16:57:25.809 [main] INFO  org.hibernate.type.BasicTypeRegistry - HHH000270: Type registration [[Ljava.lang.Byte;] overrides previous : org.hibernate.type.WrapperBinaryType@756aadfc
+2019-04-28 16:57:25.953 [main] WARN  org.hibernate.boot.internal.InFlightMetadataCollectorImpl - HHH000069: Duplicate generator name mseq
+2019-04-28 16:57:27.060 [main] INFO  org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2019-04-28 16:57:27.102 [main] INFO  org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor - Autowired annotation is not supported on static methods: public static void top.ruandb.config.ProcedureConfig.setPROCEDURE_PRO(java.lang.String)
+2019-04-28 16:57:27.403 [main] INFO  org.hibernate.hql.internal.QueryTranslatorFactoryInitiator - HHH000397: Using ASTQueryTranslatorFactory
+2019-04-28 16:57:27.594 [main] INFO  org.quartz.impl.StdSchedulerFactory - Using default implementation for ThreadExecutor
+2019-04-28 16:57:27.608 [main] INFO  org.quartz.core.SchedulerSignalerImpl - Initialized Scheduler Signaller of type: class org.quartz.core.SchedulerSignalerImpl
+2019-04-28 16:57:27.608 [main] INFO  org.quartz.core.QuartzScheduler - Quartz Scheduler v.2.2.1 created.
+2019-04-28 16:57:27.609 [main] INFO  org.quartz.core.QuartzScheduler - JobFactory set to: org.quartz.simpl.SimpleJobFactory@76828577
+2019-04-28 16:57:27.609 [main] INFO  org.quartz.impl.jdbcjobstore.JobStoreTX - Using thread monitor-based data access locking (synchronization).
+2019-04-28 16:57:27.610 [main] INFO  org.quartz.impl.jdbcjobstore.JobStoreTX - JobStoreTX initialized.
+2019-04-28 16:57:27.611 [main] INFO  org.quartz.core.QuartzScheduler - Scheduler meta-data: Quartz Scheduler (v2.2.1) 'SchedulerFactory' with instanceId 'ETLScheduler'
+  Scheduler class: 'org.quartz.core.QuartzScheduler' - running locally.
+  NOT STARTED.
+  Currently in standby mode.
+  Number of jobs executed: 0
+  Using thread pool 'org.quartz.simpl.SimpleThreadPool' - with 5 threads.
+  Using job-store 'org.quartz.impl.jdbcjobstore.JobStoreTX' - which supports persistence. and is not clustered.
+
+2019-04-28 16:57:27.611 [main] INFO  org.quartz.impl.StdSchedulerFactory - Quartz scheduler 'SchedulerFactory' initialized from an externally provided properties instance.
+2019-04-28 16:57:27.611 [main] INFO  org.quartz.impl.StdSchedulerFactory - Quartz scheduler version: 2.2.1
+2019-04-28 16:57:27.612 [main] INFO  org.quartz.core.QuartzScheduler - JobFactory set to: top.ruandb.config.MyJobFactory@7be94cd6
+2019-04-28 16:57:27.915 [main] INFO  org.springframework.scheduling.concurrent.ThreadPoolTaskExecutor - Initializing ExecutorService 'applicationTaskExecutor'
+2019-04-28 16:57:28.403 [main] INFO  org.springframework.scheduling.quartz.SchedulerFactoryBean - Starting Quartz Scheduler now
+2019-04-28 16:57:28.405 [main] INFO  com.alibaba.druid.pool.DruidDataSource - {dataSource-2} inited
+2019-04-28 16:57:28.441 [main] INFO  org.quartz.impl.jdbcjobstore.JobStoreTX - Freed 0 triggers from 'acquired' / 'blocked' state.
+2019-04-28 16:57:28.443 [main] INFO  org.quartz.impl.jdbcjobstore.JobStoreTX - Handling 12 trigger(s) that missed their scheduled fire-time.
+2019-04-28 16:57:28.578 [main] WARN  org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.context.ApplicationContextException: Failed to start bean 'SchedulerFactory'; nested exception is org.springframework.scheduling.SchedulingException: Could not start Quartz Scheduler; nested exception is org.quartz.SchedulerConfigException: Failure occured during job recovery. [See nested exception: org.quartz.JobPersistenceException: Couldn't store trigger 'KettleJob.trigger_12_JB_YK' for 'ruandb.Job.KettleJob.12_JB_YK' job:top.ruandb.entity.TaskCronJob; local class incompatible: stream classdesc serialVersionUID = -7650897035941831420, local class serialVersionUID = -7464684866777666331 [See nested exception: java.io.InvalidClassException: top.ruandb.entity.TaskCronJob; local class incompatible: stream classdesc serialVersionUID = -7650897035941831420, local class serialVersionUID = -7464684866777666331]]
+2019-04-28 16:57:28.579 [main] INFO  org.springframework.scheduling.concurrent.ThreadPoolTaskExecutor - Shutting down ExecutorService 'applicationTaskExecutor'
+2019-04-28 16:57:28.581 [main] INFO  org.quartz.core.QuartzScheduler - Scheduler SchedulerFactory_$_ETLScheduler shutting down.
+2019-04-28 16:57:28.581 [main] INFO  org.quartz.core.QuartzScheduler - Scheduler SchedulerFactory_$_ETLScheduler paused.
+2019-04-28 16:57:28.584 [main] INFO  com.alibaba.druid.pool.DruidDataSource - {dataSource-2} closed
+2019-04-28 16:57:28.585 [main] INFO  org.quartz.core.QuartzScheduler - Scheduler SchedulerFactory_$_ETLScheduler shutdown complete.
+2019-04-28 16:57:28.585 [main] INFO  org.springframework.scheduling.quartz.SchedulerFactoryBean - Shutting down Quartz Scheduler
+2019-04-28 16:57:28.586 [main] INFO  org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+2019-04-28 16:57:28.591 [main] INFO  com.alibaba.druid.pool.DruidDataSource - {dataSource-1} closed
+2019-04-28 16:57:28.592 [main] INFO  org.apache.catalina.core.StandardService - Stopping service [Tomcat]
+2019-04-28 16:57:28.620 [main] ERROR org.springframework.boot.SpringApplication - Application run failed
+org.springframework.context.ApplicationContextException: Failed to start bean 'SchedulerFactory'; nested exception is org.springframework.scheduling.SchedulingException: Could not start Quartz Scheduler; nested exception is org.quartz.SchedulerConfigException: Failure occured during job recovery. [See nested exception: org.quartz.JobPersistenceException: Couldn't store trigger 'KettleJob.trigger_12_JB_YK' for 'ruandb.Job.KettleJob.12_JB_YK' job:top.ruandb.entity.TaskCronJob; local class incompatible: stream classdesc serialVersionUID = -7650897035941831420, local class serialVersionUID = -7464684866777666331 [See nested exception: java.io.InvalidClassException: top.ruandb.entity.TaskCronJob; local class incompatible: stream classdesc serialVersionUID = -7650897035941831420, local class serialVersionUID = -7464684866777666331]]
+	at org.springframework.context.support.DefaultLifecycleProcessor.doStart(DefaultLifecycleProcessor.java:185)
+	at org.springframework.context.support.DefaultLifecycleProcessor.access$200(DefaultLifecycleProcessor.java:53)
+	at org.springframework.context.support.DefaultLifecycleProcessor$LifecycleGroup.start(DefaultLifecycleProcessor.java:360)
+	at org.springframework.context.support.DefaultLifecycleProcessor.startBeans(DefaultLifecycleProcessor.java:158)
+	at org.springframework.context.support.DefaultLifecycleProcessor.onRefresh(DefaultLifecycleProcessor.java:122)
+	at org.springframework.context.support.AbstractApplicationContext.finishRefresh(AbstractApplicationContext.java:879)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.finishRefresh(ServletWebServerApplicationContext.java:163)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:549)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:142)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:775)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:397)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:316)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1260)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1248)
+	at top.ruandb.EtlSchedulerApplication.main(EtlSchedulerApplication.java:15)
+Caused by: org.springframework.scheduling.SchedulingException: Could not start Quartz Scheduler; nested exception is org.quartz.SchedulerConfigException: Failure occured during job recovery. [See nested exception: org.quartz.JobPersistenceException: Couldn't store trigger 'KettleJob.trigger_12_JB_YK' for 'ruandb.Job.KettleJob.12_JB_YK' job:top.ruandb.entity.TaskCronJob; local class incompatible: stream classdesc serialVersionUID = -7650897035941831420, local class serialVersionUID = -7464684866777666331 [See nested exception: java.io.InvalidClassException: top.ruandb.entity.TaskCronJob; local class incompatible: stream classdesc serialVersionUID = -7650897035941831420, local class serialVersionUID = -7464684866777666331]]
+	at org.springframework.scheduling.quartz.SchedulerFactoryBean.start(SchedulerFactoryBean.java:802)
+	at org.springframework.context.support.DefaultLifecycleProcessor.doStart(DefaultLifecycleProcessor.java:182)
+	... 14 common frames omitted
+Caused by: org.quartz.SchedulerConfigException: Failure occured during job recovery.
+	at org.quartz.impl.jdbcjobstore.JobStoreSupport.schedulerStarted(JobStoreSupport.java:692)
+	at org.quartz.core.QuartzScheduler.start(QuartzScheduler.java:567)
+	at org.quartz.impl.StdScheduler.start(StdScheduler.java:142)
+	at org.springframework.scheduling.quartz.SchedulerFactoryBean.startScheduler(SchedulerFactoryBean.java:727)
+	at org.springframework.scheduling.quartz.SchedulerFactoryBean.start(SchedulerFactoryBean.java:799)
+	... 15 common frames omitted
+Caused by: org.quartz.JobPersistenceException: Couldn't store trigger 'KettleJob.trigger_12_JB_YK' for 'ruandb.Job.KettleJob.12_JB_YK' job:top.ruandb.entity.TaskCronJob; local class incompatible: stream classdesc serialVersionUID = -7650897035941831420, local class serialVersionUID = -7464684866777666331
+	at org.quartz.impl.jdbcjobstore.JobStoreSupport.storeTrigger(JobStoreSupport.java:1223)
+	at org.quartz.impl.jdbcjobstore.JobStoreSupport.doUpdateOfMisfiredTrigger(JobStoreSupport.java:1037)
+	at org.quartz.impl.jdbcjobstore.JobStoreSupport.recoverMisfiredJobs(JobStoreSupport.java:986)
+	at org.quartz.impl.jdbcjobstore.JobStoreSupport.recoverJobs(JobStoreSupport.java:866)
+	at org.quartz.impl.jdbcjobstore.JobStoreSupport$1.executeVoid(JobStoreSupport.java:838)
+	at org.quartz.impl.jdbcjobstore.JobStoreSupport$VoidTransactionCallback.execute(JobStoreSupport.java:3703)
+	at org.quartz.impl.jdbcjobstore.JobStoreSupport$VoidTransactionCallback.execute(JobStoreSupport.java:3701)
+	at org.quartz.impl.jdbcjobstore.JobStoreSupport.executeInNonManagedTXLock(JobStoreSupport.java:3787)
+	at org.quartz.impl.jdbcjobstore.JobStoreSupport.recoverJobs(JobStoreSupport.java:834)
+	at org.quartz.impl.jdbcjobstore.JobStoreSupport.schedulerStarted(JobStoreSupport.java:690)
+	... 19 common frames omitted
+Caused by: java.io.InvalidClassException: top.ruandb.entity.TaskCronJob; local class incompatible: stream classdesc serialVersionUID = -7650897035941831420, local class serialVersionUID = -7464684866777666331
+	at java.io.ObjectStreamClass.initNonProxy(ObjectStreamClass.java:687)
+	at java.io.ObjectInputStream.readNonProxyDesc(ObjectInputStream.java:1883)
+	at java.io.ObjectInputStream.readClassDesc(ObjectInputStream.java:1749)
+	at java.io.ObjectInputStream.readOrdinaryObject(ObjectInputStream.java:2040)
+	at java.io.ObjectInputStream.readObject0(ObjectInputStream.java:1571)
+	at java.io.ObjectInputStream.readObject(ObjectInputStream.java:431)
+	at java.util.HashMap.readObject(HashMap.java:1409)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at java.io.ObjectStreamClass.invokeReadObject(ObjectStreamClass.java:1158)
+	at java.io.ObjectInputStream.readSerialData(ObjectInputStream.java:2176)
+	at java.io.ObjectInputStream.readOrdinaryObject(ObjectInputStream.java:2067)
+	at java.io.ObjectInputStream.readObject0(ObjectInputStream.java:1571)
+	at java.io.ObjectInputStream.defaultReadFields(ObjectInputStream.java:2285)
+	at java.io.ObjectInputStream.readSerialData(ObjectInputStream.java:2209)
+	at java.io.ObjectInputStream.readOrdinaryObject(ObjectInputStream.java:2067)
+	at java.io.ObjectInputStream.readObject0(ObjectInputStream.java:1571)
+	at java.io.ObjectInputStream.readObject(ObjectInputStream.java:431)
+	at org.quartz.impl.jdbcjobstore.StdJDBCDelegate.getObjectFromBlob(StdJDBCDelegate.java:3201)
+	at org.quartz.impl.jdbcjobstore.StdJDBCDelegate.selectJobDetail(StdJDBCDelegate.java:860)
+	at org.quartz.impl.jdbcjobstore.JobStoreSupport.storeTrigger(JobStoreSupport.java:1205)
+	... 28 common frames omitted
+2019-04-28 16:58:31.790 [main] INFO  top.ruandb.EtlSchedulerApplication - Starting EtlSchedulerApplication on LAPTOP-MK6P63H0 with PID 17588 (C:\Java\eclipse-workspace2\ETLScheduler\target\classes started by rdb in C:\Java\eclipse-workspace2\ETLScheduler)
+2019-04-28 16:58:31.795 [main] INFO  top.ruandb.EtlSchedulerApplication - No active profile set, falling back to default profiles: default
+2019-04-28 16:58:32.714 [main] INFO  org.springframework.data.repository.config.RepositoryConfigurationDelegate - Bootstrapping Spring Data repositories in DEFAULT mode.
+2019-04-28 16:58:32.922 [main] INFO  org.springframework.data.repository.config.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 198ms. Found 4 repository interfaces.
+2019-04-28 16:58:33.340 [main] INFO  org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$34ab722b] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-04-28 16:58:33.364 [main] INFO  org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'shiroConfig' of type [top.ruandb.config.ShiroConfig$$EnhancerBySpringCGLIB$$6008a57e] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-04-28 16:58:33.733 [main] INFO  org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'myRealm' of type [top.ruandb.config.MyRealm] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-04-28 16:58:33.742 [main] INFO  org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'securityManager' of type [org.apache.shiro.web.mgt.DefaultWebSecurityManager] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-04-28 16:58:34.086 [main] INFO  org.springframework.boot.web.embedded.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8080 (http)
+2019-04-28 16:58:34.104 [main] INFO  org.apache.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+2019-04-28 16:58:34.130 [main] INFO  org.apache.catalina.core.StandardService - Starting service [Tomcat]
+2019-04-28 16:58:34.130 [main] INFO  org.apache.catalina.core.StandardEngine - Starting Servlet Engine: Apache Tomcat/9.0.13
+2019-04-28 16:58:34.137 [main] INFO  org.apache.catalina.core.AprLifecycleListener - Loaded APR based Apache Tomcat Native library [1.2.19] using APR version [1.6.5].
+2019-04-28 16:58:34.137 [main] INFO  org.apache.catalina.core.AprLifecycleListener - APR capabilities: IPv6 [true], sendfile [true], accept filters [false], random [true].
+2019-04-28 16:58:34.138 [main] INFO  org.apache.catalina.core.AprLifecycleListener - APR/OpenSSL configuration: useAprConnector [false], useOpenSSL [true]
+2019-04-28 16:58:35.206 [main] INFO  org.apache.catalina.core.AprLifecycleListener - OpenSSL successfully initialized [OpenSSL 1.0.2q  20 Nov 2018]
+2019-04-28 16:58:35.437 [main] INFO  org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2019-04-28 16:58:35.437 [main] INFO  org.springframework.web.context.ContextLoader - Root WebApplicationContext: initialization completed in 3586 ms
+2019-04-28 16:58:35.846 [main] INFO  com.alibaba.druid.pool.DruidDataSource - {dataSource-1} inited
+2019-04-28 16:58:36.105 [main] INFO  org.hibernate.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+2019-04-28 16:58:36.180 [main] INFO  org.hibernate.Version - HHH000412: Hibernate Core {5.3.7.Final}
+2019-04-28 16:58:36.183 [main] INFO  org.hibernate.cfg.Environment - HHH000206: hibernate.properties not found
+2019-04-28 16:58:36.354 [main] INFO  org.hibernate.annotations.common.Version - HCANN000001: Hibernate Commons Annotations {5.0.4.Final}
+2019-04-28 16:58:36.728 [main] INFO  org.hibernate.dialect.Dialect - HHH000400: Using dialect: org.hibernate.dialect.Oracle12cDialect
+2019-04-28 16:58:36.837 [main] INFO  org.hibernate.type.BasicTypeRegistry - HHH000270: Type registration [byte[]] overrides previous : org.hibernate.type.BinaryType@7c1447b5
+2019-04-28 16:58:36.837 [main] INFO  org.hibernate.type.BasicTypeRegistry - HHH000270: Type registration [[B] overrides previous : org.hibernate.type.BinaryType@7c1447b5
+2019-04-28 16:58:36.838 [main] INFO  org.hibernate.type.BasicTypeRegistry - HHH000270: Type registration [Byte[]] overrides previous : org.hibernate.type.WrapperBinaryType@3e36b7a0
+2019-04-28 16:58:36.839 [main] INFO  org.hibernate.type.BasicTypeRegistry - HHH000270: Type registration [[Ljava.lang.Byte;] overrides previous : org.hibernate.type.WrapperBinaryType@3e36b7a0
+2019-04-28 16:58:36.977 [main] WARN  org.hibernate.boot.internal.InFlightMetadataCollectorImpl - HHH000069: Duplicate generator name mseq
+2019-04-28 16:58:38.138 [main] INFO  org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2019-04-28 16:58:38.178 [main] INFO  org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor - Autowired annotation is not supported on static methods: public static void top.ruandb.config.ProcedureConfig.setPROCEDURE_PRO(java.lang.String)
+2019-04-28 16:58:38.483 [main] INFO  org.hibernate.hql.internal.QueryTranslatorFactoryInitiator - HHH000397: Using ASTQueryTranslatorFactory
+2019-04-28 16:58:38.670 [main] INFO  org.quartz.impl.StdSchedulerFactory - Using default implementation for ThreadExecutor
+2019-04-28 16:58:38.683 [main] INFO  org.quartz.core.SchedulerSignalerImpl - Initialized Scheduler Signaller of type: class org.quartz.core.SchedulerSignalerImpl
+2019-04-28 16:58:38.683 [main] INFO  org.quartz.core.QuartzScheduler - Quartz Scheduler v.2.2.1 created.
+2019-04-28 16:58:38.684 [main] INFO  org.quartz.core.QuartzScheduler - JobFactory set to: org.quartz.simpl.SimpleJobFactory@40faff12
+2019-04-28 16:58:38.684 [main] INFO  org.quartz.impl.jdbcjobstore.JobStoreTX - Using thread monitor-based data access locking (synchronization).
+2019-04-28 16:58:38.685 [main] INFO  org.quartz.impl.jdbcjobstore.JobStoreTX - JobStoreTX initialized.
+2019-04-28 16:58:38.686 [main] INFO  org.quartz.core.QuartzScheduler - Scheduler meta-data: Quartz Scheduler (v2.2.1) 'SchedulerFactory' with instanceId 'ETLScheduler'
+  Scheduler class: 'org.quartz.core.QuartzScheduler' - running locally.
+  NOT STARTED.
+  Currently in standby mode.
+  Number of jobs executed: 0
+  Using thread pool 'org.quartz.simpl.SimpleThreadPool' - with 5 threads.
+  Using job-store 'org.quartz.impl.jdbcjobstore.JobStoreTX' - which supports persistence. and is not clustered.
+
+2019-04-28 16:58:38.686 [main] INFO  org.quartz.impl.StdSchedulerFactory - Quartz scheduler 'SchedulerFactory' initialized from an externally provided properties instance.
+2019-04-28 16:58:38.686 [main] INFO  org.quartz.impl.StdSchedulerFactory - Quartz scheduler version: 2.2.1
+2019-04-28 16:58:38.687 [main] INFO  org.quartz.core.QuartzScheduler - JobFactory set to: top.ruandb.config.MyJobFactory@9408857
+2019-04-28 16:58:38.993 [main] INFO  org.springframework.scheduling.concurrent.ThreadPoolTaskExecutor - Initializing ExecutorService 'applicationTaskExecutor'
+2019-04-28 16:58:39.526 [main] INFO  org.springframework.scheduling.quartz.SchedulerFactoryBean - Starting Quartz Scheduler now
+2019-04-28 16:58:39.528 [main] INFO  com.alibaba.druid.pool.DruidDataSource - {dataSource-2} inited
+2019-04-28 16:58:39.570 [main] INFO  org.quartz.impl.jdbcjobstore.JobStoreTX - Freed 0 triggers from 'acquired' / 'blocked' state.
+2019-04-28 16:58:39.573 [main] INFO  org.quartz.impl.jdbcjobstore.JobStoreTX - Handling 12 trigger(s) that missed their scheduled fire-time.
+2019-04-28 16:58:39.624 [main] WARN  org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.context.ApplicationContextException: Failed to start bean 'SchedulerFactory'; nested exception is org.springframework.scheduling.SchedulingException: Could not start Quartz Scheduler; nested exception is org.quartz.SchedulerConfigException: Failure occured during job recovery. [See nested exception: org.quartz.JobPersistenceException: Couldn't store trigger 'KettleJob.trigger_12_JB_YK' for 'ruandb.Job.KettleJob.12_JB_YK' job:top.ruandb.entity.TaskCronJob; local class incompatible: stream classdesc serialVersionUID = -7650897035941831420, local class serialVersionUID = -7464684866777666331 [See nested exception: java.io.InvalidClassException: top.ruandb.entity.TaskCronJob; local class incompatible: stream classdesc serialVersionUID = -7650897035941831420, local class serialVersionUID = -7464684866777666331]]
+2019-04-28 16:58:39.625 [main] INFO  org.springframework.scheduling.concurrent.ThreadPoolTaskExecutor - Shutting down ExecutorService 'applicationTaskExecutor'
+2019-04-28 16:58:39.626 [main] INFO  org.quartz.core.QuartzScheduler - Scheduler SchedulerFactory_$_ETLScheduler shutting down.
+2019-04-28 16:58:39.627 [main] INFO  org.quartz.core.QuartzScheduler - Scheduler SchedulerFactory_$_ETLScheduler paused.
+2019-04-28 16:58:39.632 [main] INFO  com.alibaba.druid.pool.DruidDataSource - {dataSource-2} closed
+2019-04-28 16:58:39.632 [main] INFO  org.quartz.core.QuartzScheduler - Scheduler SchedulerFactory_$_ETLScheduler shutdown complete.
+2019-04-28 16:58:39.633 [main] INFO  org.springframework.scheduling.quartz.SchedulerFactoryBean - Shutting down Quartz Scheduler
+2019-04-28 16:58:39.634 [main] INFO  org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+2019-04-28 16:58:39.638 [main] INFO  com.alibaba.druid.pool.DruidDataSource - {dataSource-1} closed
+2019-04-28 16:58:39.640 [main] INFO  org.apache.catalina.core.StandardService - Stopping service [Tomcat]
+2019-04-28 16:58:39.669 [main] ERROR org.springframework.boot.SpringApplication - Application run failed
+org.springframework.context.ApplicationContextException: Failed to start bean 'SchedulerFactory'; nested exception is org.springframework.scheduling.SchedulingException: Could not start Quartz Scheduler; nested exception is org.quartz.SchedulerConfigException: Failure occured during job recovery. [See nested exception: org.quartz.JobPersistenceException: Couldn't store trigger 'KettleJob.trigger_12_JB_YK' for 'ruandb.Job.KettleJob.12_JB_YK' job:top.ruandb.entity.TaskCronJob; local class incompatible: stream classdesc serialVersionUID = -7650897035941831420, local class serialVersionUID = -7464684866777666331 [See nested exception: java.io.InvalidClassException: top.ruandb.entity.TaskCronJob; local class incompatible: stream classdesc serialVersionUID = -7650897035941831420, local class serialVersionUID = -7464684866777666331]]
+	at org.springframework.context.support.DefaultLifecycleProcessor.doStart(DefaultLifecycleProcessor.java:185)
+	at org.springframework.context.support.DefaultLifecycleProcessor.access$200(DefaultLifecycleProcessor.java:53)
+	at org.springframework.context.support.DefaultLifecycleProcessor$LifecycleGroup.start(DefaultLifecycleProcessor.java:360)
+	at org.springframework.context.support.DefaultLifecycleProcessor.startBeans(DefaultLifecycleProcessor.java:158)
+	at org.springframework.context.support.DefaultLifecycleProcessor.onRefresh(DefaultLifecycleProcessor.java:122)
+	at org.springframework.context.support.AbstractApplicationContext.finishRefresh(AbstractApplicationContext.java:879)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.finishRefresh(ServletWebServerApplicationContext.java:163)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:549)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:142)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:775)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:397)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:316)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1260)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1248)
+	at top.ruandb.EtlSchedulerApplication.main(EtlSchedulerApplication.java:15)
+Caused by: org.springframework.scheduling.SchedulingException: Could not start Quartz Scheduler; nested exception is org.quartz.SchedulerConfigException: Failure occured during job recovery. [See nested exception: org.quartz.JobPersistenceException: Couldn't store trigger 'KettleJob.trigger_12_JB_YK' for 'ruandb.Job.KettleJob.12_JB_YK' job:top.ruandb.entity.TaskCronJob; local class incompatible: stream classdesc serialVersionUID = -7650897035941831420, local class serialVersionUID = -7464684866777666331 [See nested exception: java.io.InvalidClassException: top.ruandb.entity.TaskCronJob; local class incompatible: stream classdesc serialVersionUID = -7650897035941831420, local class serialVersionUID = -7464684866777666331]]
+	at org.springframework.scheduling.quartz.SchedulerFactoryBean.start(SchedulerFactoryBean.java:802)
+	at org.springframework.context.support.DefaultLifecycleProcessor.doStart(DefaultLifecycleProcessor.java:182)
+	... 14 common frames omitted
+Caused by: org.quartz.SchedulerConfigException: Failure occured during job recovery.
+	at org.quartz.impl.jdbcjobstore.JobStoreSupport.schedulerStarted(JobStoreSupport.java:692)
+	at org.quartz.core.QuartzScheduler.start(QuartzScheduler.java:567)
+	at org.quartz.impl.StdScheduler.start(StdScheduler.java:142)
+	at org.springframework.scheduling.quartz.SchedulerFactoryBean.startScheduler(SchedulerFactoryBean.java:727)
+	at org.springframework.scheduling.quartz.SchedulerFactoryBean.start(SchedulerFactoryBean.java:799)
+	... 15 common frames omitted
+Caused by: org.quartz.JobPersistenceException: Couldn't store trigger 'KettleJob.trigger_12_JB_YK' for 'ruandb.Job.KettleJob.12_JB_YK' job:top.ruandb.entity.TaskCronJob; local class incompatible: stream classdesc serialVersionUID = -7650897035941831420, local class serialVersionUID = -7464684866777666331
+	at org.quartz.impl.jdbcjobstore.JobStoreSupport.storeTrigger(JobStoreSupport.java:1223)
+	at org.quartz.impl.jdbcjobstore.JobStoreSupport.doUpdateOfMisfiredTrigger(JobStoreSupport.java:1037)
+	at org.quartz.impl.jdbcjobstore.JobStoreSupport.recoverMisfiredJobs(JobStoreSupport.java:986)
+	at org.quartz.impl.jdbcjobstore.JobStoreSupport.recoverJobs(JobStoreSupport.java:866)
+	at org.quartz.impl.jdbcjobstore.JobStoreSupport$1.executeVoid(JobStoreSupport.java:838)
+	at org.quartz.impl.jdbcjobstore.JobStoreSupport$VoidTransactionCallback.execute(JobStoreSupport.java:3703)
+	at org.quartz.impl.jdbcjobstore.JobStoreSupport$VoidTransactionCallback.execute(JobStoreSupport.java:3701)
+	at org.quartz.impl.jdbcjobstore.JobStoreSupport.executeInNonManagedTXLock(JobStoreSupport.java:3787)
+	at org.quartz.impl.jdbcjobstore.JobStoreSupport.recoverJobs(JobStoreSupport.java:834)
+	at org.quartz.impl.jdbcjobstore.JobStoreSupport.schedulerStarted(JobStoreSupport.java:690)
+	... 19 common frames omitted
+Caused by: java.io.InvalidClassException: top.ruandb.entity.TaskCronJob; local class incompatible: stream classdesc serialVersionUID = -7650897035941831420, local class serialVersionUID = -7464684866777666331
+	at java.io.ObjectStreamClass.initNonProxy(ObjectStreamClass.java:687)
+	at java.io.ObjectInputStream.readNonProxyDesc(ObjectInputStream.java:1883)
+	at java.io.ObjectInputStream.readClassDesc(ObjectInputStream.java:1749)
+	at java.io.ObjectInputStream.readOrdinaryObject(ObjectInputStream.java:2040)
+	at java.io.ObjectInputStream.readObject0(ObjectInputStream.java:1571)
+	at java.io.ObjectInputStream.readObject(ObjectInputStream.java:431)
+	at java.util.HashMap.readObject(HashMap.java:1409)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at java.io.ObjectStreamClass.invokeReadObject(ObjectStreamClass.java:1158)
+	at java.io.ObjectInputStream.readSerialData(ObjectInputStream.java:2176)
+	at java.io.ObjectInputStream.readOrdinaryObject(ObjectInputStream.java:2067)
+	at java.io.ObjectInputStream.readObject0(ObjectInputStream.java:1571)
+	at java.io.ObjectInputStream.defaultReadFields(ObjectInputStream.java:2285)
+	at java.io.ObjectInputStream.readSerialData(ObjectInputStream.java:2209)
+	at java.io.ObjectInputStream.readOrdinaryObject(ObjectInputStream.java:2067)
+	at java.io.ObjectInputStream.readObject0(ObjectInputStream.java:1571)
+	at java.io.ObjectInputStream.readObject(ObjectInputStream.java:431)
+	at org.quartz.impl.jdbcjobstore.StdJDBCDelegate.getObjectFromBlob(StdJDBCDelegate.java:3201)
+	at org.quartz.impl.jdbcjobstore.StdJDBCDelegate.selectJobDetail(StdJDBCDelegate.java:860)
+	at org.quartz.impl.jdbcjobstore.JobStoreSupport.storeTrigger(JobStoreSupport.java:1205)
+	... 28 common frames omitted

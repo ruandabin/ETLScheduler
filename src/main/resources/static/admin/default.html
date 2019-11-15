@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" class="x-admin-sm">
+<head>
+<meta charset="UTF-8">
+<title>欢迎页面</title>
+<meta name="renderer" content="webkit">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta name="viewport"
+	content="width=device-width,user-scalable=yes, minimum-scale=0.4, initial-scale=0.8,target-densitydpi=low-dpi" />
+<link rel="stylesheet" href="/static/css/font.css">
+<link rel="stylesheet" href="/static//css/xadmin.css">
+<script src="/static/layui/layui.js" charset="utf-8"></script>
+<script type="text/javascript" src="/static/js/xadmin.js"></script>
+<!-- 让IE8/9支持媒体查询，从而兼容栅格 -->
+<!--[if lt IE 9]>
+          <script src="https://cdn.staticfile.org/html5shiv/r29/html5.min.js"></script>
+          <script src="https://cdn.staticfile.org/respond.js/1.4.2/respond.min.js"></script>
+        <![endif]-->
+</head>
+<body onload="showTime()">
+	<div class="layui-fluid">
+		<div class="layui-row layui-col-space15">
+			<div class="layui-col-md12">
+				<div class="layui-card">
+					<div class="layui-card-body ">
+						<blockquote class="layui-elem-quote">
+							欢迎使用： <span class="x-red" ></span>&nbsp;&nbsp;&nbsp;<a id="result"></a>
+						</blockquote>
+					</div>
+				</div>
+			</div>
+
+
+			<div class="layui-col-md12">
+				<div class="layui-card">
+					<div class="layui-card-header">Cron调度表达式使用说明</div>
+					<div class="layui-card-body ">
+						<table class="layui-table" >
+						<thead>
+							<tr>
+								<th width='120px'>字段</th>
+								<th width='120px'>允许值</th>
+								<th width='120px'>允许的特殊字符</th>
+								<th>特殊字符说明</th>
+							</tr>
+							</thead>
+							<tbody>
+								<tr>
+									<td>Seconds (秒)</td>
+									<td>0－59</td>
+									<td>, - * /</td>
+									<td rowspan="7">*：代表所有可能的值 -：指定范围
+										,：列出枚举  例如在分钟里，"5,15"表示5分钟和20分钟触发
+										/：指定增量  例如在分钟里，"3/15"表示从3分钟开始，每隔15分钟执行一次 ?：表示没有具体的值，使用?要注意冲突
+										L：表示last，例如星期中表示7或SAT，月份中表示最后一天31或30，6L表示这个月倒数第6天，FRIL表示这个月的最后一个星期五
+										W：只能用在月份中，表示最接近指定天的工作日 #：只能用在星期中，表示这个月的第几个周几，例如6#3表示这个月的第3个周五
+									</td>
+								</tr>
+								<tr>
+									<td>Minutes(分)</td>
+									<td>0-59</td>
+									<td>, - * /</td>
+
+								</tr>
+								<tr>
+									<td>Hours(时)</td>
+									<td>0-23</td>
+									<td>, - * /</td>
+
+								</tr>
+								<tr>
+									<td>DayofMonth(天)</td>
+									<td>1-31</td>
+									<td>, - * ? / L W C</td>
+
+								</tr>
+								<tr>
+									<td>Month(月)</td>
+									<td>1-12 或者 JAN-DEC</td>
+									<td>, - * /</td>
+
+								</tr>
+								<tr>
+									<td>DayofWeek(每周)</td>
+									<td>1-7 或者 SUN-SAT</td>
+									<td>, - * ? / L C #</td>
+
+								</tr>
+								<tr>
+									<td>Year(年)</td>
+									<td>留空, 1970-2099</td>
+									<td>, - * /</td>
+								</tr>
+								<tr>
+									<td colspan="1">示例</td>
+									<td colspan="3">*/5 * * * * ?：每5秒钟执行一次 0 */1 * * *
+										?：每1分钟执行一次 0 0 23 * * ?：每天23点执行一次 0 0 1 1 * ?：每月1号1点执行一次</td>
+								</tr>
+							</tbody>
+						</table>
+					</div>
+				</div>
+			</div>
+			<div class="layui-col-md12">
+				<blockquote class="layui-elem-quote layui-quote-nm"><a href="#">卫宁健康</a> 2019 &copy; <a href="#">BI研发出品</a></blockquote>
+			</div>
+		</div>
+	</div>
+	<script type="text/javascript">
+       
+       function showTime(){
+    	      //创建Date对象
+    	      var today = new Date();
+    	      //分别取出年、月、日、时、分、秒
+    	      var year = today.getFullYear();
+    	      var month = today.getMonth()+1;
+    	      var day = today.getDate();
+    	      var hours = today.getHours();
+    	      var minutes = today.getMinutes();
+    	      var seconds = today.getSeconds();
+    	      //如果是单个数，则前面补0
+    	      month  = month<10  ? "0"+month : month;
+    	      day  = day <10  ? "0"+day : day;
+    	      hours  = hours<10  ? "0"+hours : hours;
+    	      minutes = minutes<10 ? "0"+minutes : minutes;
+    	      seconds = seconds<10 ? "0"+seconds : seconds;
+    	       
+    	      //构建要输出的字符串
+    	      var str = year+"年"+month+"月"+day+"日 "+hours+":"+minutes+":"+seconds;
+    	       
+    	      //获取id=result的对象
+    	      var obj = document.getElementById("result");
+    	      //将str的内容写入到id=result的<div>中去
+    	      obj.innerHTML = str;
+    	      //延时器
+    	      window.setTimeout("showTime()",1000);
+    	        }
+       </script>
+</body>
+</html>

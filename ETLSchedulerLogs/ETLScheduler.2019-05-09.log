@@ -1,0 +1,701 @@
+2019-05-09 09:49:33.067 [main] INFO  top.ruandb.EtlSchedulerApplication - Starting EtlSchedulerApplication on LAPTOP-MK6P63H0 with PID 12456 (C:\Java\eclipse-workspace2\ETLScheduler\target\classes started by rdb in C:\Java\eclipse-workspace2\ETLScheduler)
+2019-05-09 09:49:33.070 [main] INFO  top.ruandb.EtlSchedulerApplication - No active profile set, falling back to default profiles: default
+2019-05-09 09:49:34.683 [main] INFO  org.springframework.data.repository.config.RepositoryConfigurationDelegate - Bootstrapping Spring Data repositories in DEFAULT mode.
+2019-05-09 09:49:34.951 [main] INFO  org.springframework.data.repository.config.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 256ms. Found 4 repository interfaces.
+2019-05-09 09:49:35.566 [main] INFO  org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$2a4e756c] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-05-09 09:49:35.592 [main] INFO  org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'shiroConfig' of type [top.ruandb.config.ShiroConfig$$EnhancerBySpringCGLIB$$55aba8bf] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-05-09 09:49:36.037 [main] INFO  org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'myRealm' of type [top.ruandb.config.MyRealm] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-05-09 09:49:36.046 [main] INFO  org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'securityManager' of type [org.apache.shiro.web.mgt.DefaultWebSecurityManager] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-05-09 09:49:36.631 [main] INFO  org.springframework.boot.web.embedded.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8080 (http)
+2019-05-09 09:49:36.651 [main] INFO  org.apache.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+2019-05-09 09:49:36.671 [main] INFO  org.apache.catalina.core.StandardService - Starting service [Tomcat]
+2019-05-09 09:49:36.672 [main] INFO  org.apache.catalina.core.StandardEngine - Starting Servlet Engine: Apache Tomcat/9.0.13
+2019-05-09 09:49:36.680 [main] INFO  org.apache.catalina.core.AprLifecycleListener - Loaded APR based Apache Tomcat Native library [1.2.19] using APR version [1.6.5].
+2019-05-09 09:49:36.680 [main] INFO  org.apache.catalina.core.AprLifecycleListener - APR capabilities: IPv6 [true], sendfile [true], accept filters [false], random [true].
+2019-05-09 09:49:36.680 [main] INFO  org.apache.catalina.core.AprLifecycleListener - APR/OpenSSL configuration: useAprConnector [false], useOpenSSL [true]
+2019-05-09 09:49:37.753 [main] INFO  org.apache.catalina.core.AprLifecycleListener - OpenSSL successfully initialized [OpenSSL 1.0.2q  20 Nov 2018]
+2019-05-09 09:49:37.953 [main] INFO  org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2019-05-09 09:49:37.954 [main] INFO  org.springframework.web.context.ContextLoader - Root WebApplicationContext: initialization completed in 4794 ms
+2019-05-09 09:49:38.575 [main] INFO  com.alibaba.druid.pool.DruidDataSource - {dataSource-1} inited
+2019-05-09 09:49:38.870 [main] INFO  org.hibernate.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+2019-05-09 09:49:38.983 [main] INFO  org.hibernate.Version - HHH000412: Hibernate Core {5.3.7.Final}
+2019-05-09 09:49:38.986 [main] INFO  org.hibernate.cfg.Environment - HHH000206: hibernate.properties not found
+2019-05-09 09:49:39.333 [main] INFO  org.hibernate.annotations.common.Version - HCANN000001: Hibernate Commons Annotations {5.0.4.Final}
+2019-05-09 09:49:39.869 [main] INFO  org.hibernate.dialect.Dialect - HHH000400: Using dialect: org.hibernate.dialect.Oracle12cDialect
+2019-05-09 09:49:39.971 [main] INFO  org.hibernate.type.BasicTypeRegistry - HHH000270: Type registration [byte[]] overrides previous : org.hibernate.type.BinaryType@64dae3b7
+2019-05-09 09:49:39.971 [main] INFO  org.hibernate.type.BasicTypeRegistry - HHH000270: Type registration [[B] overrides previous : org.hibernate.type.BinaryType@64dae3b7
+2019-05-09 09:49:39.972 [main] INFO  org.hibernate.type.BasicTypeRegistry - HHH000270: Type registration [Byte[]] overrides previous : org.hibernate.type.WrapperBinaryType@2ee48610
+2019-05-09 09:49:39.973 [main] INFO  org.hibernate.type.BasicTypeRegistry - HHH000270: Type registration [[Ljava.lang.Byte;] overrides previous : org.hibernate.type.WrapperBinaryType@2ee48610
+2019-05-09 09:49:40.198 [main] WARN  org.hibernate.boot.internal.InFlightMetadataCollectorImpl - HHH000069: Duplicate generator name mseq
+2019-05-09 09:49:41.416 [main] INFO  org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2019-05-09 09:49:41.463 [main] INFO  org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor - Autowired annotation is not supported on static methods: public static void top.ruandb.config.ProcedureConfig.setPROCEDURE_PRO(java.lang.String)
+2019-05-09 09:49:41.894 [main] INFO  org.hibernate.hql.internal.QueryTranslatorFactoryInitiator - HHH000397: Using ASTQueryTranslatorFactory
+2019-05-09 09:49:42.177 [main] INFO  org.quartz.impl.StdSchedulerFactory - Using default implementation for ThreadExecutor
+2019-05-09 09:49:42.190 [main] INFO  org.quartz.core.SchedulerSignalerImpl - Initialized Scheduler Signaller of type: class org.quartz.core.SchedulerSignalerImpl
+2019-05-09 09:49:42.190 [main] INFO  org.quartz.core.QuartzScheduler - Quartz Scheduler v.2.2.1 created.
+2019-05-09 09:49:42.191 [main] INFO  org.quartz.core.QuartzScheduler - JobFactory set to: org.quartz.simpl.SimpleJobFactory@c497a55
+2019-05-09 09:49:42.191 [main] INFO  org.quartz.impl.jdbcjobstore.JobStoreTX - Using thread monitor-based data access locking (synchronization).
+2019-05-09 09:49:42.192 [main] INFO  org.quartz.impl.jdbcjobstore.JobStoreTX - JobStoreTX initialized.
+2019-05-09 09:49:42.194 [main] INFO  org.quartz.core.QuartzScheduler - Scheduler meta-data: Quartz Scheduler (v2.2.1) 'SchedulerFactory' with instanceId 'ETLScheduler'
+  Scheduler class: 'org.quartz.core.QuartzScheduler' - running locally.
+  NOT STARTED.
+  Currently in standby mode.
+  Number of jobs executed: 0
+  Using thread pool 'org.quartz.simpl.SimpleThreadPool' - with 5 threads.
+  Using job-store 'org.quartz.impl.jdbcjobstore.JobStoreTX' - which supports persistence. and is not clustered.
+
+2019-05-09 09:49:42.194 [main] INFO  org.quartz.impl.StdSchedulerFactory - Quartz scheduler 'SchedulerFactory' initialized from an externally provided properties instance.
+2019-05-09 09:49:42.194 [main] INFO  org.quartz.impl.StdSchedulerFactory - Quartz scheduler version: 2.2.1
+2019-05-09 09:49:42.194 [main] INFO  org.quartz.core.QuartzScheduler - JobFactory set to: top.ruandb.config.MyJobFactory@191ec193
+2019-05-09 09:49:42.522 [main] INFO  org.springframework.scheduling.concurrent.ThreadPoolTaskExecutor - Initializing ExecutorService 'applicationTaskExecutor'
+2019-05-09 09:49:43.035 [main] INFO  org.springframework.scheduling.quartz.SchedulerFactoryBean - Starting Quartz Scheduler now
+2019-05-09 09:49:43.037 [main] INFO  com.alibaba.druid.pool.DruidDataSource - {dataSource-2} inited
+2019-05-09 09:49:43.075 [main] INFO  org.quartz.impl.jdbcjobstore.JobStoreTX - Freed 0 triggers from 'acquired' / 'blocked' state.
+2019-05-09 09:49:43.081 [main] INFO  org.quartz.impl.jdbcjobstore.JobStoreTX - Handling 34 trigger(s) that missed their scheduled fire-time.
+2019-05-09 09:49:43.338 [main] INFO  org.quartz.impl.jdbcjobstore.JobStoreTX - Recovering 0 jobs that were in-progress at the time of the last shut-down.
+2019-05-09 09:49:43.338 [main] INFO  org.quartz.impl.jdbcjobstore.JobStoreTX - Recovery complete.
+2019-05-09 09:49:43.339 [main] INFO  org.quartz.impl.jdbcjobstore.JobStoreTX - Removed 0 'complete' triggers.
+2019-05-09 09:49:43.340 [main] INFO  org.quartz.impl.jdbcjobstore.JobStoreTX - Removed 0 stale fired job entries.
+2019-05-09 09:49:43.354 [main] INFO  org.quartz.core.QuartzScheduler - Scheduler SchedulerFactory_$_ETLScheduler started.
+2019-05-09 09:49:43.364 [main] INFO  org.apache.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
+2019-05-09 09:49:43.386 [main] INFO  org.apache.tomcat.util.net.NioSelectorPool - Using a shared selector for servlet write/read
+2019-05-09 09:49:43.405 [main] INFO  org.springframework.boot.web.embedded.tomcat.TomcatWebServer - Tomcat started on port(s): 8080 (http) with context path ''
+2019-05-09 09:49:43.407 [main] INFO  top.ruandb.EtlSchedulerApplication - Started EtlSchedulerApplication in 11.37 seconds (JVM running for 12.656)
+2019-05-09 09:49:43.409 [main] INFO  top.ruandb.init.TaskInit - kettle初始化开始-------------------------------------------------------->
+2019-05-09 09:49:47.542 [main] INFO  top.ruandb.init.TaskInit - kettle初始化结束-------------------------------------------------------->
+2019-05-09 09:49:47.542 [main] INFO  top.ruandb.init.TaskInit - 重新启动清空scheduler
+2019-05-09 09:49:47.797 [main] INFO  top.ruandb.init.TaskInit - 初始化job到调度器-------------------------------->jobname:JB_YY
+2019-05-09 09:49:47.832 [main] INFO  top.ruandb.init.TaskInit - 初始化job到调度器-------------------------------->jobname:JB_YF
+2019-05-09 09:49:47.839 [main] INFO  top.ruandb.init.TaskInit - 初始化job到调度器-------------------------------->jobname:JB_VW
+2019-05-09 09:49:47.845 [main] INFO  top.ruandb.init.TaskInit - 初始化job到调度器-------------------------------->jobname:JB_SS
+2019-05-09 09:49:47.851 [main] INFO  top.ruandb.init.TaskInit - 初始化job到调度器-------------------------------->jobname:JB_KSS
+2019-05-09 09:49:47.858 [main] INFO  top.ruandb.init.TaskInit - 初始化job到调度器-------------------------------->jobname:JB_ZY
+2019-05-09 09:49:47.865 [main] INFO  top.ruandb.init.TaskInit - 初始化job到调度器-------------------------------->jobname:JB_BQ
+2019-05-09 09:49:47.871 [main] INFO  top.ruandb.init.TaskInit - 初始化job到调度器-------------------------------->jobname:JB_DC
+2019-05-09 09:49:47.877 [main] INFO  top.ruandb.init.TaskInit - 初始化job到调度器-------------------------------->jobname:JB_ASMC
+2019-05-09 09:49:47.883 [main] INFO  top.ruandb.init.TaskInit - 初始化job到调度器-------------------------------->jobname:JB_YK
+2019-05-09 09:49:47.892 [main] INFO  top.ruandb.init.TaskInit - 初始化job到调度器-------------------------------->jobname:JB_GH
+2019-05-09 09:49:47.898 [main] INFO  top.ruandb.init.TaskInit - 初始化job到调度器-------------------------------->jobname:usp_dim_zlzb_jbbz_zkks,usp_dim_zlzb_zlgl_lcjybb,usp_dim_zlzb_zlgl_lcjyzk,usp_dim_zyts,usp_dim_zy_ypyfk,usp_dim_zy_zlzxx,usp_dim_zy_zlzxx_ys
+2019-05-09 09:49:47.906 [main] INFO  top.ruandb.init.TaskInit - 初始化job到调度器-------------------------------->jobname:usp_dim_yyxx,usp_dim_zddmk_ba,usp_dim_zdjb,usp_dim_zdss,usp_dim_zljg,usp_dim_zlzb_bfzlx,usp_dim_zlzb_fmfs,usp_dim_zlzb_jbbz_dbz,usp_dim_zlzb_jbbz_dq,usp_dim_zlzb_jbbz_xzljs
+2019-05-09 09:49:47.915 [main] INFO  top.ruandb.init.TaskInit - 初始化job到调度器-------------------------------->jobname:usp_dim_yk_czdmk,usp_dim_ypdl,usp_dim_ypfl,usp_dim_ypjx,usp_dim_ypxx,usp_dim_ysxx_ba,usp_dim_yyfs,usp_dim_yygr_dcnyjxx,usp_dim_yygr_xgdgbw,usp_dim_yylb,usp_dim_yymd,usp_dim_yysjd
+2019-05-09 09:49:47.927 [main] INFO  top.ruandb.init.TaskInit - 初始化job到调度器-------------------------------->jobname:usp_dim_xydl,usp_dim_xyzlxx,usp_dim_ybflxx,usp_dim_yb_yblx,usp_dim_ycbw,usp_dim_ycfj,usp_dim_ycly,usp_dim_yfdmk,usp_dim_yf_czdmk,usp_dim_yg_ssfxdj,usp_dim_yg_ssgrbw,usp_dim_ykdmk
+2019-05-09 09:49:47.932 [main] INFO  top.ruandb.init.TaskInit - 初始化job到调度器-------------------------------->jobname:usp_dim_wzjb,usp_dim_wzsb_cblx,usp_dim_wzsb_kfxx,usp_dim_wzsb_wzkpxx,usp_dim_wzsb_wzpmggxx,usp_dim_wzsb_wz_djlb,usp_dim_wzsb_wz_ghdwxx,usp_dim_wzsb_wz_rkfs,usp_dim_xxxx
+2019-05-09 09:49:47.937 [main] INFO  top.ruandb.init.TaskInit - 初始化job到调度器-------------------------------->jobname:usp_dim_ssjb,usp_dim_ssmz_asamzfj,usp_dim_ssmz_mzfsfl,usp_dim_ssmz_sssjlx,usp_dim_ssxx,usp_dim_sxblfylx,usp_dim_sxfsxx,usp_dim_sxlyxx,usp_dim_sxytxx,usp_dim_time,usp_dim_tsypbz
+2019-05-09 09:49:47.962 [main] INFO  top.ruandb.init.TaskInit - 初始化job到调度器-------------------------------->jobname:usp_dim_rjssxx,usp_dim_sex,usp_dim_sfdxmk,usp_dim_sfxxmk,usp_dim_sf_cfsfjg,usp_dim_sf_cfwt,usp_dim_sf_cfwtfl,usp_dim_sf_cfwtjb,usp_dim_sf_ypyfk,usp_dim_ssbw,usp_dim_ssflxx
+2019-05-09 09:49:47.966 [main] INFO  top.ruandb.init.TaskInit - 初始化job到调度器-------------------------------->jobname:usp_dim_lclj,usp_dim_lcsfxmk,usp_dim_lis_instrument,usp_dim_lyfs,usp_dim_mjzbz,usp_dim_mzfs,usp_dim_mzzy,usp_dim_nld,usp_dim_qkdj,usp_dim_qzts,usp_dim_ris_instrument,usp_dim_rjssbz
+2019-05-09 09:49:47.971 [main] INFO  top.ruandb.init.TaskInit - 初始化job到调度器-------------------------------->jobname:usp_dim_jsk_ysyy,usp_dim_jsk_ztsxfs,usp_dim_jylb,usp_dim_jzzy_bqfj,usp_dim_jzzy_brqx,usp_dim_jzzy_cyfs,usp_dim_kfyxk_bfzlx,usp_dim_kfyxk_kflx,usp_dim_kssjb,usp_dim_ksxx_ba
+2019-05-09 09:49:47.978 [main] INFO  top.ruandb.init.TaskInit - 初始化job到调度器-------------------------------->jobname:usp_dim_aers_warningeventtype,usp_dim_bqdmk_ba,usp_dim_cflx,usp_dim_cfz,usp_dim_cyfs,usp_dim_czryk,usp_dim_ddshcdjb,usp_dim_ddyy,usp_dim_drgs_fxpgdj,usp_dim_fyck,usp_dim_ghlb
+2019-05-09 09:49:47.984 [main] INFO  top.ruandb.init.TaskInit - 初始化job到调度器-------------------------------->jobname:usp_dim_ghtj,usp_dim_ghyysjc,usp_dim_gysxx,usp_dim_hour,usp_dim_hsxm,usp_dim_jclb,usp_dim_jsk_txfs,usp_dim_jsk_xgtllb,usp_dim_jsk_xtzlfs,usp_dim_jsk_ysfs,usp_dim_jsk_ysgj
+2019-05-09 09:49:47.990 [main] INFO  top.ruandb.init.TaskInit - 初始化job到调度器-------------------------------->jobname:usp_dim_aers_eventyzcd,usp_dim_aers_medevent_ss_cwlx,usp_dim_aers_medicaleventtype,usp_dim_aers_nursevt_gl_bfzlx,usp_dim_aers_nursingeventtype,usp_dim_aers_ryzc
+2019-05-09 09:49:47.996 [main] INFO  top.ruandb.init.TaskInit - 初始化job到调度器-------------------------------->jobname:usp_dim_aers_bloodeventtype,usp_dim_aers_drugseventtype,usp_dim_aers_eventclfs,usp_dim_aers_eventconsequence,usp_dim_aers_eventdj,usp_dim_aers_eventtype
+2019-05-09 09:49:48.001 [main] INFO  top.ruandb.init.TaskInit - 初始化job到调度器-------------------------------->jobname:usp_fat_bacwsyqk,usp_fat_basyjb,usp_fat_basyss,usp_fat_basyzd,usp_fat_bq_brcwxxk
+2019-05-09 09:49:48.006 [main] INFO  top.ruandb.init.TaskInit - 初始化job到调度器-------------------------------->jobname:usp_fat_jcbgmx,usp_fat_jybgmx,usp_fat_mz_yffymx,usp_fat_sxxx,usp_fat_wzsb_sb_byxx,usp_fat_wzsb_sb_jlxx
+2019-05-09 09:49:48.011 [main] INFO  top.ruandb.init.TaskInit - 初始化job到调度器-------------------------------->jobname:usp_fat_wzsb_sb_srxx,usp_fat_wzsb_sb_wxxx,usp_fat_wzsb_sb_zjxx,usp_fat_wzsb_wz_bsxx,usp_fat_wzsb_wz_ckxx
+2019-05-09 09:49:48.029 [main] INFO  top.ruandb.init.TaskInit - 初始化job到调度器-------------------------------->jobname:usp_fat_wzsb_wz_qlxx,usp_fat_wzsb_wz_rkxx,usp_fat_wzsb_wz_wtdxxx,usp_fat_wzsb_wz_xhxx,usp_fat_wzsb_wz_ykxx
+2019-05-09 09:49:48.036 [main] INFO  top.ruandb.init.TaskInit - 初始化job到调度器-------------------------------->jobname:usp_fat_wzsb_wz_zgxx,usp_fat_yf_ypczmx,usp_fat_yk_ypczmx,usp_fat_yygh_pbxx,usp_fat_yy_mz_yyrc
+2019-05-09 09:49:48.042 [main] INFO  top.ruandb.init.TaskInit - 初始化job到调度器-------------------------------->jobname:usp_fat_zlzb_zlgl_lcjybb,usp_fat_zlzb_zlgl_lcjyzk,usp_fat_zy_cwsyqk,usp_fat_zy_rjssbrfy_fat
+2019-05-09 09:49:48.050 [main] INFO  top.ruandb.init.TaskInit - 初始化job到调度器-------------------------------->jobname:usp_fat_zy_rjsshzxx,usp_fat_zy_rjssxx,usp_fat_zy_ryywl,usp_fat_zy_yffymx,usp_fat_zy_zyfy_zy
+2019-05-09 09:49:48.056 [main] INFO  top.ruandb.init.TaskInit - 初始化job到调度器-------------------------------->jobname:usp_fat_mz_ybjsxx,usp_fat_mz_mzfy,usp_fat_mz_mzywl
+2019-05-09 09:49:48.063 [main] INFO  top.ruandb.init.TaskInit - 初始化job到调度器-------------------------------->jobname:usp_fat_zy_ybjsxx,usp_fat_zy_zyfy,usp_fat_zy_zyywl
+2019-05-09 09:49:48.542 [main] INFO  top.ruandb.init.TaskInit - jobMap--->{22=PENDDING, 23=PENDDING, 24=PENDDING, 25=PENDDING, 26=PENDDING, 27=PENDDING, 28=PENDDING, 29=PENDDING, 30=PENDDING, 31=PENDDING, 10=PENDDING, 32=PENDDING, 11=PENDDING, 33=PENDDING, 12=PENDDING, 34=PENDDING, 13=PENDDING, 14=PENDDING, 15=PENDDING, 16=PENDDING, 17=PENDDING, 18=PENDDING, 19=PENDDING, 1=PENDDING, 2=PENDDING, 3=PENDDING, 4=PENDDING, 5=PENDDING, 6=PENDDING, 7=PENDDING, 9=PENDDING, 20=PENDDING, 21=PENDDING}
+2019-05-09 09:49:48.542 [main] INFO  top.ruandb.init.TaskInit - groupMap--->{A=[13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25], B=[26, 27, 28, 29, 30, 31, 32, 33, 34], C=[], D=[]}
+2019-05-09 09:49:48.543 [main] INFO  top.ruandb.init.TaskInit - jobMap,groupMap----------------------->初始化成功
+2019-05-09 09:50:28.591 [http-nio-8080-exec-1] INFO  org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2019-05-09 09:50:28.592 [http-nio-8080-exec-1] INFO  org.springframework.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2019-05-09 09:50:28.605 [http-nio-8080-exec-1] INFO  org.springframework.web.servlet.DispatcherServlet - Completed initialization in 13 ms
+2019-05-09 15:16:33.157 [main] INFO  top.ruandb.EtlSchedulerApplication - Starting EtlSchedulerApplication on LAPTOP-MK6P63H0 with PID 5088 (C:\Java\eclipse-workspace2\ETLScheduler\target\classes started by rdb in C:\Java\eclipse-workspace2\ETLScheduler)
+2019-05-09 15:16:33.161 [main] INFO  top.ruandb.EtlSchedulerApplication - No active profile set, falling back to default profiles: default
+2019-05-09 15:16:34.255 [main] INFO  org.springframework.data.repository.config.RepositoryConfigurationDelegate - Bootstrapping Spring Data repositories in DEFAULT mode.
+2019-05-09 15:16:34.468 [main] INFO  org.springframework.data.repository.config.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 204ms. Found 4 repository interfaces.
+2019-05-09 15:16:34.876 [main] INFO  org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$df43783c] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-05-09 15:16:34.902 [main] INFO  org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'shiroConfig' of type [top.ruandb.config.ShiroConfig$$EnhancerBySpringCGLIB$$aa0ab8f] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-05-09 15:16:35.334 [main] INFO  org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'myRealm' of type [top.ruandb.config.MyRealm] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-05-09 15:16:35.344 [main] INFO  org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'securityManager' of type [org.apache.shiro.web.mgt.DefaultWebSecurityManager] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-05-09 15:16:35.801 [main] INFO  org.springframework.boot.web.embedded.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8080 (http)
+2019-05-09 15:16:35.823 [main] INFO  org.apache.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+2019-05-09 15:16:35.853 [main] INFO  org.apache.catalina.core.StandardService - Starting service [Tomcat]
+2019-05-09 15:16:35.854 [main] INFO  org.apache.catalina.core.StandardEngine - Starting Servlet Engine: Apache Tomcat/9.0.13
+2019-05-09 15:16:35.864 [main] INFO  org.apache.catalina.core.AprLifecycleListener - Loaded APR based Apache Tomcat Native library [1.2.19] using APR version [1.6.5].
+2019-05-09 15:16:35.865 [main] INFO  org.apache.catalina.core.AprLifecycleListener - APR capabilities: IPv6 [true], sendfile [true], accept filters [false], random [true].
+2019-05-09 15:16:35.865 [main] INFO  org.apache.catalina.core.AprLifecycleListener - APR/OpenSSL configuration: useAprConnector [false], useOpenSSL [true]
+2019-05-09 15:16:36.942 [main] INFO  org.apache.catalina.core.AprLifecycleListener - OpenSSL successfully initialized [OpenSSL 1.0.2q  20 Nov 2018]
+2019-05-09 15:16:37.294 [main] INFO  org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2019-05-09 15:16:37.294 [main] INFO  org.springframework.web.context.ContextLoader - Root WebApplicationContext: initialization completed in 4052 ms
+2019-05-09 15:16:37.784 [main] INFO  com.alibaba.druid.pool.DruidDataSource - {dataSource-1} inited
+2019-05-09 15:16:38.086 [main] INFO  org.hibernate.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+2019-05-09 15:16:38.250 [main] INFO  org.hibernate.Version - HHH000412: Hibernate Core {5.3.7.Final}
+2019-05-09 15:16:38.253 [main] INFO  org.hibernate.cfg.Environment - HHH000206: hibernate.properties not found
+2019-05-09 15:16:38.633 [main] INFO  org.hibernate.annotations.common.Version - HCANN000001: Hibernate Commons Annotations {5.0.4.Final}
+2019-05-09 15:16:39.158 [main] INFO  org.hibernate.dialect.Dialect - HHH000400: Using dialect: org.hibernate.dialect.Oracle12cDialect
+2019-05-09 15:16:39.268 [main] INFO  org.hibernate.type.BasicTypeRegistry - HHH000270: Type registration [byte[]] overrides previous : org.hibernate.type.BinaryType@465b38e6
+2019-05-09 15:16:39.268 [main] INFO  org.hibernate.type.BasicTypeRegistry - HHH000270: Type registration [[B] overrides previous : org.hibernate.type.BinaryType@465b38e6
+2019-05-09 15:16:39.269 [main] INFO  org.hibernate.type.BasicTypeRegistry - HHH000270: Type registration [Byte[]] overrides previous : org.hibernate.type.WrapperBinaryType@7bd96822
+2019-05-09 15:16:39.269 [main] INFO  org.hibernate.type.BasicTypeRegistry - HHH000270: Type registration [[Ljava.lang.Byte;] overrides previous : org.hibernate.type.WrapperBinaryType@7bd96822
+2019-05-09 15:16:39.438 [main] WARN  org.hibernate.boot.internal.InFlightMetadataCollectorImpl - HHH000069: Duplicate generator name mseq
+2019-05-09 15:16:40.669 [main] INFO  org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2019-05-09 15:16:40.709 [main] INFO  org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor - Autowired annotation is not supported on static methods: public static void top.ruandb.config.ProcedureConfig.setPROCEDURE_PRO(java.lang.String)
+2019-05-09 15:16:41.080 [main] INFO  org.hibernate.hql.internal.QueryTranslatorFactoryInitiator - HHH000397: Using ASTQueryTranslatorFactory
+2019-05-09 15:16:41.302 [main] INFO  org.quartz.impl.StdSchedulerFactory - Using default implementation for ThreadExecutor
+2019-05-09 15:16:41.316 [main] INFO  org.quartz.core.SchedulerSignalerImpl - Initialized Scheduler Signaller of type: class org.quartz.core.SchedulerSignalerImpl
+2019-05-09 15:16:41.316 [main] INFO  org.quartz.core.QuartzScheduler - Quartz Scheduler v.2.2.1 created.
+2019-05-09 15:16:41.317 [main] INFO  org.quartz.core.QuartzScheduler - JobFactory set to: org.quartz.simpl.SimpleJobFactory@56e5c8fb
+2019-05-09 15:16:41.318 [main] INFO  org.quartz.impl.jdbcjobstore.JobStoreTX - Using thread monitor-based data access locking (synchronization).
+2019-05-09 15:16:41.319 [main] INFO  org.quartz.impl.jdbcjobstore.JobStoreTX - JobStoreTX initialized.
+2019-05-09 15:16:41.320 [main] INFO  org.quartz.core.QuartzScheduler - Scheduler meta-data: Quartz Scheduler (v2.2.1) 'SchedulerFactory' with instanceId 'ETLScheduler'
+  Scheduler class: 'org.quartz.core.QuartzScheduler' - running locally.
+  NOT STARTED.
+  Currently in standby mode.
+  Number of jobs executed: 0
+  Using thread pool 'org.quartz.simpl.SimpleThreadPool' - with 5 threads.
+  Using job-store 'org.quartz.impl.jdbcjobstore.JobStoreTX' - which supports persistence. and is not clustered.
+
+2019-05-09 15:16:41.320 [main] INFO  org.quartz.impl.StdSchedulerFactory - Quartz scheduler 'SchedulerFactory' initialized from an externally provided properties instance.
+2019-05-09 15:16:41.320 [main] INFO  org.quartz.impl.StdSchedulerFactory - Quartz scheduler version: 2.2.1
+2019-05-09 15:16:41.321 [main] INFO  org.quartz.core.QuartzScheduler - JobFactory set to: top.ruandb.config.MyJobFactory@2ab09943
+2019-05-09 15:16:41.623 [main] INFO  org.springframework.scheduling.concurrent.ThreadPoolTaskExecutor - Initializing ExecutorService 'applicationTaskExecutor'
+2019-05-09 15:16:42.167 [main] INFO  org.springframework.scheduling.quartz.SchedulerFactoryBean - Starting Quartz Scheduler now
+2019-05-09 15:16:42.169 [main] INFO  com.alibaba.druid.pool.DruidDataSource - {dataSource-2} inited
+2019-05-09 15:16:42.216 [main] INFO  org.quartz.impl.jdbcjobstore.JobStoreTX - Freed 0 triggers from 'acquired' / 'blocked' state.
+2019-05-09 15:16:42.224 [main] INFO  org.quartz.impl.jdbcjobstore.JobStoreTX - Recovering 0 jobs that were in-progress at the time of the last shut-down.
+2019-05-09 15:16:42.224 [main] INFO  org.quartz.impl.jdbcjobstore.JobStoreTX - Recovery complete.
+2019-05-09 15:16:42.225 [main] INFO  org.quartz.impl.jdbcjobstore.JobStoreTX - Removed 0 'complete' triggers.
+2019-05-09 15:16:42.227 [main] INFO  org.quartz.impl.jdbcjobstore.JobStoreTX - Removed 0 stale fired job entries.
+2019-05-09 15:16:42.229 [main] INFO  org.quartz.core.QuartzScheduler - Scheduler SchedulerFactory_$_ETLScheduler started.
+2019-05-09 15:16:42.242 [main] INFO  org.apache.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
+2019-05-09 15:16:42.266 [main] INFO  org.apache.tomcat.util.net.NioSelectorPool - Using a shared selector for servlet write/read
+2019-05-09 15:16:42.272 [main] ERROR org.apache.catalina.util.LifecycleBase - Failed to start component [Connector[HTTP/1.1-8080]]
+org.apache.catalina.LifecycleException: Protocol handler start failed
+	at org.apache.catalina.connector.Connector.startInternal(Connector.java:1001)
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:183)
+	at org.apache.catalina.core.StandardService.addConnector(StandardService.java:225)
+	at org.springframework.boot.web.embedded.tomcat.TomcatWebServer.addPreviouslyRemovedConnectors(TomcatWebServer.java:259)
+	at org.springframework.boot.web.embedded.tomcat.TomcatWebServer.start(TomcatWebServer.java:197)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.startWebServer(ServletWebServerApplicationContext.java:311)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.finishRefresh(ServletWebServerApplicationContext.java:164)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:549)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:142)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:775)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:397)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:316)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1260)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1248)
+	at top.ruandb.EtlSchedulerApplication.main(EtlSchedulerApplication.java:15)
+Caused by: java.net.BindException: Address already in use: bind
+	at sun.nio.ch.Net.bind0(Native Method)
+	at sun.nio.ch.Net.bind(Net.java:433)
+	at sun.nio.ch.Net.bind(Net.java:425)
+	at sun.nio.ch.ServerSocketChannelImpl.bind(ServerSocketChannelImpl.java:223)
+	at sun.nio.ch.ServerSocketAdaptor.bind(ServerSocketAdaptor.java:74)
+	at org.apache.tomcat.util.net.NioEndpoint.initServerSocket(NioEndpoint.java:236)
+	at org.apache.tomcat.util.net.NioEndpoint.bind(NioEndpoint.java:210)
+	at org.apache.tomcat.util.net.AbstractEndpoint.bindWithCleanup(AbstractEndpoint.java:1067)
+	at org.apache.tomcat.util.net.AbstractEndpoint.start(AbstractEndpoint.java:1149)
+	at org.apache.coyote.AbstractProtocol.start(AbstractProtocol.java:561)
+	at org.apache.catalina.connector.Connector.startInternal(Connector.java:998)
+	... 14 common frames omitted
+2019-05-09 15:16:42.283 [main] INFO  org.apache.coyote.http11.Http11NioProtocol - Pausing ProtocolHandler ["http-nio-8080"]
+2019-05-09 15:16:42.283 [main] INFO  org.apache.catalina.core.StandardService - Stopping service [Tomcat]
+2019-05-09 15:16:42.292 [main] INFO  org.apache.catalina.util.LifecycleBase - The stop() method was called on component [StandardServer[-1]] after stop() had already been called. The second call will be ignored.
+2019-05-09 15:16:42.292 [main] INFO  org.apache.coyote.http11.Http11NioProtocol - Stopping ProtocolHandler ["http-nio-8080"]
+2019-05-09 15:16:42.292 [main] INFO  org.apache.coyote.http11.Http11NioProtocol - Destroying ProtocolHandler ["http-nio-8080"]
+2019-05-09 15:16:42.305 [main] ERROR org.springframework.boot.diagnostics.LoggingFailureAnalysisReporter - 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+The Tomcat connector configured to listen on port 8080 failed to start. The port may already be in use or the connector may be misconfigured.
+
+Action:
+
+Verify the connector's configuration, identify and stop any process that's listening on port 8080, or configure this application to listen on another port.
+
+2019-05-09 15:16:42.308 [main] INFO  org.quartz.core.QuartzScheduler - Scheduler SchedulerFactory_$_ETLScheduler paused.
+2019-05-09 15:16:42.309 [main] INFO  org.springframework.scheduling.concurrent.ThreadPoolTaskExecutor - Shutting down ExecutorService 'applicationTaskExecutor'
+2019-05-09 15:16:42.310 [main] INFO  org.quartz.core.QuartzScheduler - Scheduler SchedulerFactory_$_ETLScheduler shutting down.
+2019-05-09 15:16:42.310 [main] INFO  org.quartz.core.QuartzScheduler - Scheduler SchedulerFactory_$_ETLScheduler paused.
+2019-05-09 15:16:42.316 [main] INFO  com.alibaba.druid.pool.DruidDataSource - {dataSource-2} closed
+2019-05-09 15:16:42.317 [main] INFO  org.quartz.core.QuartzScheduler - Scheduler SchedulerFactory_$_ETLScheduler shutdown complete.
+2019-05-09 15:16:42.317 [main] INFO  org.springframework.scheduling.quartz.SchedulerFactoryBean - Shutting down Quartz Scheduler
+2019-05-09 15:16:42.318 [main] INFO  org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+2019-05-09 15:16:42.325 [main] INFO  com.alibaba.druid.pool.DruidDataSource - {dataSource-1} closed
+2019-05-09 15:16:50.181 [RMI TCP Connection(2)-127.0.0.1] INFO  org.springframework.boot.admin.SpringApplicationAdminMXBeanRegistrar$SpringApplicationAdmin - Application shutdown requested.
+2019-05-09 15:16:50.198 [RMI TCP Connection(2)-127.0.0.1] INFO  org.quartz.core.QuartzScheduler - Scheduler SchedulerFactory_$_ETLScheduler paused.
+2019-05-09 15:16:50.200 [RMI TCP Connection(2)-127.0.0.1] INFO  org.springframework.scheduling.concurrent.ThreadPoolTaskExecutor - Shutting down ExecutorService 'applicationTaskExecutor'
+2019-05-09 15:16:50.202 [RMI TCP Connection(2)-127.0.0.1] INFO  org.quartz.core.QuartzScheduler - Scheduler SchedulerFactory_$_ETLScheduler shutting down.
+2019-05-09 15:16:50.202 [RMI TCP Connection(2)-127.0.0.1] INFO  org.quartz.core.QuartzScheduler - Scheduler SchedulerFactory_$_ETLScheduler paused.
+2019-05-09 15:16:50.208 [RMI TCP Connection(2)-127.0.0.1] INFO  com.alibaba.druid.pool.DruidDataSource - {dataSource-2} closed
+2019-05-09 15:16:50.209 [RMI TCP Connection(2)-127.0.0.1] INFO  org.quartz.core.QuartzScheduler - Scheduler SchedulerFactory_$_ETLScheduler shutdown complete.
+2019-05-09 15:16:50.209 [RMI TCP Connection(2)-127.0.0.1] INFO  org.springframework.scheduling.quartz.SchedulerFactoryBean - Shutting down Quartz Scheduler
+2019-05-09 15:16:50.210 [RMI TCP Connection(2)-127.0.0.1] INFO  org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+2019-05-09 15:16:50.221 [RMI TCP Connection(2)-127.0.0.1] INFO  com.alibaba.druid.pool.DruidDataSource - {dataSource-1} closed
+2019-05-09 15:16:58.036 [main] INFO  top.ruandb.EtlSchedulerApplication - Starting EtlSchedulerApplication on LAPTOP-MK6P63H0 with PID 10044 (C:\Java\eclipse-workspace2\ETLScheduler\target\classes started by rdb in C:\Java\eclipse-workspace2\ETLScheduler)
+2019-05-09 15:16:58.040 [main] INFO  top.ruandb.EtlSchedulerApplication - No active profile set, falling back to default profiles: default
+2019-05-09 15:16:59.043 [main] INFO  org.springframework.data.repository.config.RepositoryConfigurationDelegate - Bootstrapping Spring Data repositories in DEFAULT mode.
+2019-05-09 15:16:59.250 [main] INFO  org.springframework.data.repository.config.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 198ms. Found 4 repository interfaces.
+2019-05-09 15:16:59.618 [main] INFO  org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$9d1da576] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-05-09 15:16:59.642 [main] INFO  org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'shiroConfig' of type [top.ruandb.config.ShiroConfig$$EnhancerBySpringCGLIB$$c87ad8c9] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-05-09 15:17:00.029 [main] INFO  org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'myRealm' of type [top.ruandb.config.MyRealm] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-05-09 15:17:00.037 [main] INFO  org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'securityManager' of type [org.apache.shiro.web.mgt.DefaultWebSecurityManager] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-05-09 15:17:00.392 [main] INFO  org.springframework.boot.web.embedded.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8080 (http)
+2019-05-09 15:17:00.408 [main] INFO  org.apache.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+2019-05-09 15:17:00.418 [main] INFO  org.apache.catalina.core.StandardService - Starting service [Tomcat]
+2019-05-09 15:17:00.419 [main] INFO  org.apache.catalina.core.StandardEngine - Starting Servlet Engine: Apache Tomcat/9.0.13
+2019-05-09 15:17:00.425 [main] INFO  org.apache.catalina.core.AprLifecycleListener - Loaded APR based Apache Tomcat Native library [1.2.19] using APR version [1.6.5].
+2019-05-09 15:17:00.426 [main] INFO  org.apache.catalina.core.AprLifecycleListener - APR capabilities: IPv6 [true], sendfile [true], accept filters [false], random [true].
+2019-05-09 15:17:00.426 [main] INFO  org.apache.catalina.core.AprLifecycleListener - APR/OpenSSL configuration: useAprConnector [false], useOpenSSL [true]
+2019-05-09 15:17:01.489 [main] INFO  org.apache.catalina.core.AprLifecycleListener - OpenSSL successfully initialized [OpenSSL 1.0.2q  20 Nov 2018]
+2019-05-09 15:17:01.671 [main] INFO  org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2019-05-09 15:17:01.671 [main] INFO  org.springframework.web.context.ContextLoader - Root WebApplicationContext: initialization completed in 3533 ms
+2019-05-09 15:17:02.047 [main] INFO  com.alibaba.druid.pool.DruidDataSource - {dataSource-1} inited
+2019-05-09 15:17:02.282 [main] INFO  org.hibernate.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+2019-05-09 15:17:02.360 [main] INFO  org.hibernate.Version - HHH000412: Hibernate Core {5.3.7.Final}
+2019-05-09 15:17:02.362 [main] INFO  org.hibernate.cfg.Environment - HHH000206: hibernate.properties not found
+2019-05-09 15:17:02.535 [main] INFO  org.hibernate.annotations.common.Version - HCANN000001: Hibernate Commons Annotations {5.0.4.Final}
+2019-05-09 15:17:02.975 [main] INFO  org.hibernate.dialect.Dialect - HHH000400: Using dialect: org.hibernate.dialect.Oracle12cDialect
+2019-05-09 15:17:03.070 [main] INFO  org.hibernate.type.BasicTypeRegistry - HHH000270: Type registration [byte[]] overrides previous : org.hibernate.type.BinaryType@670f2466
+2019-05-09 15:17:03.070 [main] INFO  org.hibernate.type.BasicTypeRegistry - HHH000270: Type registration [[B] overrides previous : org.hibernate.type.BinaryType@670f2466
+2019-05-09 15:17:03.071 [main] INFO  org.hibernate.type.BasicTypeRegistry - HHH000270: Type registration [Byte[]] overrides previous : org.hibernate.type.WrapperBinaryType@708eb310
+2019-05-09 15:17:03.071 [main] INFO  org.hibernate.type.BasicTypeRegistry - HHH000270: Type registration [[Ljava.lang.Byte;] overrides previous : org.hibernate.type.WrapperBinaryType@708eb310
+2019-05-09 15:17:03.233 [main] WARN  org.hibernate.boot.internal.InFlightMetadataCollectorImpl - HHH000069: Duplicate generator name mseq
+2019-05-09 15:17:04.094 [main] INFO  org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2019-05-09 15:17:04.140 [main] INFO  org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor - Autowired annotation is not supported on static methods: public static void top.ruandb.config.ProcedureConfig.setPROCEDURE_PRO(java.lang.String)
+2019-05-09 15:17:04.482 [main] INFO  org.hibernate.hql.internal.QueryTranslatorFactoryInitiator - HHH000397: Using ASTQueryTranslatorFactory
+2019-05-09 15:17:04.664 [main] INFO  org.quartz.impl.StdSchedulerFactory - Using default implementation for ThreadExecutor
+2019-05-09 15:17:04.677 [main] INFO  org.quartz.core.SchedulerSignalerImpl - Initialized Scheduler Signaller of type: class org.quartz.core.SchedulerSignalerImpl
+2019-05-09 15:17:04.677 [main] INFO  org.quartz.core.QuartzScheduler - Quartz Scheduler v.2.2.1 created.
+2019-05-09 15:17:04.679 [main] INFO  org.quartz.core.QuartzScheduler - JobFactory set to: org.quartz.simpl.SimpleJobFactory@7bec8cb0
+2019-05-09 15:17:04.679 [main] INFO  org.quartz.impl.jdbcjobstore.JobStoreTX - Using thread monitor-based data access locking (synchronization).
+2019-05-09 15:17:04.680 [main] INFO  org.quartz.impl.jdbcjobstore.JobStoreTX - JobStoreTX initialized.
+2019-05-09 15:17:04.680 [main] INFO  org.quartz.core.QuartzScheduler - Scheduler meta-data: Quartz Scheduler (v2.2.1) 'SchedulerFactory' with instanceId 'ETLScheduler'
+  Scheduler class: 'org.quartz.core.QuartzScheduler' - running locally.
+  NOT STARTED.
+  Currently in standby mode.
+  Number of jobs executed: 0
+  Using thread pool 'org.quartz.simpl.SimpleThreadPool' - with 5 threads.
+  Using job-store 'org.quartz.impl.jdbcjobstore.JobStoreTX' - which supports persistence. and is not clustered.
+
+2019-05-09 15:17:04.680 [main] INFO  org.quartz.impl.StdSchedulerFactory - Quartz scheduler 'SchedulerFactory' initialized from an externally provided properties instance.
+2019-05-09 15:17:04.680 [main] INFO  org.quartz.impl.StdSchedulerFactory - Quartz scheduler version: 2.2.1
+2019-05-09 15:17:04.681 [main] INFO  org.quartz.core.QuartzScheduler - JobFactory set to: top.ruandb.config.MyJobFactory@7ec3a8bd
+2019-05-09 15:17:05.010 [main] INFO  org.springframework.scheduling.concurrent.ThreadPoolTaskExecutor - Initializing ExecutorService 'applicationTaskExecutor'
+2019-05-09 15:17:05.514 [main] INFO  org.springframework.scheduling.quartz.SchedulerFactoryBean - Starting Quartz Scheduler now
+2019-05-09 15:17:05.515 [main] INFO  com.alibaba.druid.pool.DruidDataSource - {dataSource-2} inited
+2019-05-09 15:17:05.551 [main] INFO  org.quartz.impl.jdbcjobstore.JobStoreTX - Freed 0 triggers from 'acquired' / 'blocked' state.
+2019-05-09 15:17:05.555 [main] INFO  org.quartz.impl.jdbcjobstore.JobStoreTX - Recovering 0 jobs that were in-progress at the time of the last shut-down.
+2019-05-09 15:17:05.556 [main] INFO  org.quartz.impl.jdbcjobstore.JobStoreTX - Recovery complete.
+2019-05-09 15:17:05.557 [main] INFO  org.quartz.impl.jdbcjobstore.JobStoreTX - Removed 0 'complete' triggers.
+2019-05-09 15:17:05.558 [main] INFO  org.quartz.impl.jdbcjobstore.JobStoreTX - Removed 0 stale fired job entries.
+2019-05-09 15:17:05.559 [main] INFO  org.quartz.core.QuartzScheduler - Scheduler SchedulerFactory_$_ETLScheduler started.
+2019-05-09 15:17:05.569 [main] INFO  org.apache.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
+2019-05-09 15:17:05.582 [main] INFO  org.apache.tomcat.util.net.NioSelectorPool - Using a shared selector for servlet write/read
+2019-05-09 15:17:05.604 [main] INFO  org.springframework.boot.web.embedded.tomcat.TomcatWebServer - Tomcat started on port(s): 8080 (http) with context path ''
+2019-05-09 15:17:05.607 [main] INFO  top.ruandb.EtlSchedulerApplication - Started EtlSchedulerApplication in 8.174 seconds (JVM running for 9.277)
+2019-05-09 15:17:05.609 [main] INFO  top.ruandb.init.TaskInit - kettle初始化开始-------------------------------------------------------->
+2019-05-09 15:17:09.036 [main] INFO  top.ruandb.init.TaskInit - kettle初始化结束-------------------------------------------------------->
+2019-05-09 15:17:09.036 [main] INFO  top.ruandb.init.TaskInit - 重新启动清空scheduler
+2019-05-09 15:17:09.219 [main] INFO  top.ruandb.init.TaskInit - 初始化job到调度器-------------------------------->jobname:JB_YY
+2019-05-09 15:17:09.272 [main] INFO  top.ruandb.init.TaskInit - 初始化job到调度器-------------------------------->jobname:JB_YF
+2019-05-09 15:17:09.284 [main] INFO  top.ruandb.init.TaskInit - 初始化job到调度器-------------------------------->jobname:JB_VW
+2019-05-09 15:17:09.292 [main] INFO  top.ruandb.init.TaskInit - 初始化job到调度器-------------------------------->jobname:JB_SS
+2019-05-09 15:17:09.299 [main] INFO  top.ruandb.init.TaskInit - 初始化job到调度器-------------------------------->jobname:JB_KSS
+2019-05-09 15:17:09.305 [main] INFO  top.ruandb.init.TaskInit - 初始化job到调度器-------------------------------->jobname:JB_ZY
+2019-05-09 15:17:09.311 [main] INFO  top.ruandb.init.TaskInit - 初始化job到调度器-------------------------------->jobname:JB_BQ
+2019-05-09 15:17:09.317 [main] INFO  top.ruandb.init.TaskInit - 初始化job到调度器-------------------------------->jobname:JB_DC
+2019-05-09 15:17:09.324 [main] INFO  top.ruandb.init.TaskInit - 初始化job到调度器-------------------------------->jobname:JB_ASMC
+2019-05-09 15:17:09.331 [main] INFO  top.ruandb.init.TaskInit - 初始化job到调度器-------------------------------->jobname:JB_YK
+2019-05-09 15:17:09.338 [main] INFO  top.ruandb.init.TaskInit - 初始化job到调度器-------------------------------->jobname:JB_GH
+2019-05-09 15:17:09.345 [main] INFO  top.ruandb.init.TaskInit - 初始化job到调度器-------------------------------->jobname:usp_dim_zlzb_jbbz_zkks,usp_dim_zlzb_zlgl_lcjybb,usp_dim_zlzb_zlgl_lcjyzk,usp_dim_zyts,usp_dim_zy_ypyfk,usp_dim_zy_zlzxx,usp_dim_zy_zlzxx_ys
+2019-05-09 15:17:09.356 [main] INFO  top.ruandb.init.TaskInit - 初始化job到调度器-------------------------------->jobname:usp_dim_yyxx,usp_dim_zddmk_ba,usp_dim_zdjb,usp_dim_zdss,usp_dim_zljg,usp_dim_zlzb_bfzlx,usp_dim_zlzb_fmfs,usp_dim_zlzb_jbbz_dbz,usp_dim_zlzb_jbbz_dq,usp_dim_zlzb_jbbz_xzljs
+2019-05-09 15:17:09.363 [main] INFO  top.ruandb.init.TaskInit - 初始化job到调度器-------------------------------->jobname:usp_dim_yk_czdmk,usp_dim_ypdl,usp_dim_ypfl,usp_dim_ypjx,usp_dim_ypxx,usp_dim_ysxx_ba,usp_dim_yyfs,usp_dim_yygr_dcnyjxx,usp_dim_yygr_xgdgbw,usp_dim_yylb,usp_dim_yymd,usp_dim_yysjd
+2019-05-09 15:17:09.374 [main] INFO  top.ruandb.init.TaskInit - 初始化job到调度器-------------------------------->jobname:usp_dim_xydl,usp_dim_xyzlxx,usp_dim_ybflxx,usp_dim_yb_yblx,usp_dim_ycbw,usp_dim_ycfj,usp_dim_ycly,usp_dim_yfdmk,usp_dim_yf_czdmk,usp_dim_yg_ssfxdj,usp_dim_yg_ssgrbw,usp_dim_ykdmk
+2019-05-09 15:17:09.379 [main] INFO  top.ruandb.init.TaskInit - 初始化job到调度器-------------------------------->jobname:usp_dim_wzjb,usp_dim_wzsb_cblx,usp_dim_wzsb_kfxx,usp_dim_wzsb_wzkpxx,usp_dim_wzsb_wzpmggxx,usp_dim_wzsb_wz_djlb,usp_dim_wzsb_wz_ghdwxx,usp_dim_wzsb_wz_rkfs,usp_dim_xxxx
+2019-05-09 15:17:09.387 [main] INFO  top.ruandb.init.TaskInit - 初始化job到调度器-------------------------------->jobname:usp_dim_ssjb,usp_dim_ssmz_asamzfj,usp_dim_ssmz_mzfsfl,usp_dim_ssmz_sssjlx,usp_dim_ssxx,usp_dim_sxblfylx,usp_dim_sxfsxx,usp_dim_sxlyxx,usp_dim_sxytxx,usp_dim_time,usp_dim_tsypbz
+2019-05-09 15:17:09.421 [main] INFO  top.ruandb.init.TaskInit - 初始化job到调度器-------------------------------->jobname:usp_dim_rjssxx,usp_dim_sex,usp_dim_sfdxmk,usp_dim_sfxxmk,usp_dim_sf_cfsfjg,usp_dim_sf_cfwt,usp_dim_sf_cfwtfl,usp_dim_sf_cfwtjb,usp_dim_sf_ypyfk,usp_dim_ssbw,usp_dim_ssflxx
+2019-05-09 15:17:09.430 [main] INFO  top.ruandb.init.TaskInit - 初始化job到调度器-------------------------------->jobname:usp_dim_lclj,usp_dim_lcsfxmk,usp_dim_lis_instrument,usp_dim_lyfs,usp_dim_mjzbz,usp_dim_mzfs,usp_dim_mzzy,usp_dim_nld,usp_dim_qkdj,usp_dim_qzts,usp_dim_ris_instrument,usp_dim_rjssbz
+2019-05-09 15:17:09.438 [main] INFO  top.ruandb.init.TaskInit - 初始化job到调度器-------------------------------->jobname:usp_dim_jsk_ysyy,usp_dim_jsk_ztsxfs,usp_dim_jylb,usp_dim_jzzy_bqfj,usp_dim_jzzy_brqx,usp_dim_jzzy_cyfs,usp_dim_kfyxk_bfzlx,usp_dim_kfyxk_kflx,usp_dim_kssjb,usp_dim_ksxx_ba
+2019-05-09 15:17:09.445 [main] INFO  top.ruandb.init.TaskInit - 初始化job到调度器-------------------------------->jobname:usp_dim_aers_warningeventtype,usp_dim_bqdmk_ba,usp_dim_cflx,usp_dim_cfz,usp_dim_cyfs,usp_dim_czryk,usp_dim_ddshcdjb,usp_dim_ddyy,usp_dim_drgs_fxpgdj,usp_dim_fyck,usp_dim_ghlb
+2019-05-09 15:17:09.452 [main] INFO  top.ruandb.init.TaskInit - 初始化job到调度器-------------------------------->jobname:usp_dim_ghtj,usp_dim_ghyysjc,usp_dim_gysxx,usp_dim_hour,usp_dim_hsxm,usp_dim_jclb,usp_dim_jsk_txfs,usp_dim_jsk_xgtllb,usp_dim_jsk_xtzlfs,usp_dim_jsk_ysfs,usp_dim_jsk_ysgj
+2019-05-09 15:17:09.458 [main] INFO  top.ruandb.init.TaskInit - 初始化job到调度器-------------------------------->jobname:usp_dim_aers_eventyzcd,usp_dim_aers_medevent_ss_cwlx,usp_dim_aers_medicaleventtype,usp_dim_aers_nursevt_gl_bfzlx,usp_dim_aers_nursingeventtype,usp_dim_aers_ryzc
+2019-05-09 15:17:09.463 [main] INFO  top.ruandb.init.TaskInit - 初始化job到调度器-------------------------------->jobname:usp_dim_aers_bloodeventtype,usp_dim_aers_drugseventtype,usp_dim_aers_eventclfs,usp_dim_aers_eventconsequence,usp_dim_aers_eventdj,usp_dim_aers_eventtype
+2019-05-09 15:17:09.470 [main] INFO  top.ruandb.init.TaskInit - 初始化job到调度器-------------------------------->jobname:usp_fat_bacwsyqk,usp_fat_basyjb,usp_fat_basyss,usp_fat_basyzd,usp_fat_bq_brcwxxk
+2019-05-09 15:17:09.477 [main] INFO  top.ruandb.init.TaskInit - 初始化job到调度器-------------------------------->jobname:usp_fat_jcbgmx,usp_fat_jybgmx,usp_fat_mz_yffymx,usp_fat_sxxx,usp_fat_wzsb_sb_byxx,usp_fat_wzsb_sb_jlxx
+2019-05-09 15:17:09.483 [main] INFO  top.ruandb.init.TaskInit - 初始化job到调度器-------------------------------->jobname:usp_fat_wzsb_sb_srxx,usp_fat_wzsb_sb_wxxx,usp_fat_wzsb_sb_zjxx,usp_fat_wzsb_wz_bsxx,usp_fat_wzsb_wz_ckxx
+2019-05-09 15:17:09.509 [main] INFO  top.ruandb.init.TaskInit - 初始化job到调度器-------------------------------->jobname:usp_fat_wzsb_wz_qlxx,usp_fat_wzsb_wz_rkxx,usp_fat_wzsb_wz_wtdxxx,usp_fat_wzsb_wz_xhxx,usp_fat_wzsb_wz_ykxx
+2019-05-09 15:17:09.515 [main] INFO  top.ruandb.init.TaskInit - 初始化job到调度器-------------------------------->jobname:usp_fat_wzsb_wz_zgxx,usp_fat_yf_ypczmx,usp_fat_yk_ypczmx,usp_fat_yygh_pbxx,usp_fat_yy_mz_yyrc
+2019-05-09 15:17:09.522 [main] INFO  top.ruandb.init.TaskInit - 初始化job到调度器-------------------------------->jobname:usp_fat_zlzb_zlgl_lcjybb,usp_fat_zlzb_zlgl_lcjyzk,usp_fat_zy_cwsyqk,usp_fat_zy_rjssbrfy_fat
+2019-05-09 15:17:09.530 [main] INFO  top.ruandb.init.TaskInit - 初始化job到调度器-------------------------------->jobname:usp_fat_zy_rjsshzxx,usp_fat_zy_rjssxx,usp_fat_zy_ryywl,usp_fat_zy_yffymx,usp_fat_zy_zyfy_zy
+2019-05-09 15:17:09.536 [main] INFO  top.ruandb.init.TaskInit - 初始化job到调度器-------------------------------->jobname:usp_fat_mz_ybjsxx,usp_fat_mz_mzfy,usp_fat_mz_mzywl
+2019-05-09 15:17:09.542 [main] INFO  top.ruandb.init.TaskInit - 初始化job到调度器-------------------------------->jobname:usp_fat_zy_ybjsxx,usp_fat_zy_zyfy,usp_fat_zy_zyywl
+2019-05-09 15:17:09.945 [main] INFO  top.ruandb.init.TaskInit - jobMap--->{22=PENDDING, 23=PENDDING, 24=PENDDING, 25=PENDDING, 26=PENDDING, 27=PENDDING, 28=PENDDING, 29=PENDDING, 30=PENDDING, 31=PENDDING, 10=PENDDING, 32=PENDDING, 11=PENDDING, 33=PENDDING, 12=PENDDING, 34=PENDDING, 13=PENDDING, 14=PENDDING, 15=PENDDING, 16=PENDDING, 17=PENDDING, 18=PENDDING, 19=PENDDING, 1=PENDDING, 2=PENDDING, 3=PENDDING, 4=PENDDING, 5=PENDDING, 6=PENDDING, 7=PENDDING, 9=PENDDING, 20=PENDDING, 21=PENDDING}
+2019-05-09 15:17:09.945 [main] INFO  top.ruandb.init.TaskInit - groupMap--->{A=[13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25], B=[26, 27, 28, 29, 30, 31, 32, 33, 34], C=[], D=[]}
+2019-05-09 15:17:09.945 [main] INFO  top.ruandb.init.TaskInit - jobMap,groupMap----------------------->初始化成功
+2019-05-09 15:17:16.351 [http-nio-8080-exec-1] INFO  org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2019-05-09 15:17:16.351 [http-nio-8080-exec-1] INFO  org.springframework.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2019-05-09 15:17:16.361 [http-nio-8080-exec-1] INFO  org.springframework.web.servlet.DispatcherServlet - Completed initialization in 10 ms
+2019-05-09 15:20:15.294 [RMI TCP Connection(2)-127.0.0.1] INFO  org.springframework.boot.admin.SpringApplicationAdminMXBeanRegistrar$SpringApplicationAdmin - Application shutdown requested.
+2019-05-09 15:20:15.297 [RMI TCP Connection(2)-127.0.0.1] INFO  org.quartz.core.QuartzScheduler - Scheduler SchedulerFactory_$_ETLScheduler paused.
+2019-05-09 15:20:15.298 [RMI TCP Connection(2)-127.0.0.1] INFO  org.springframework.scheduling.concurrent.ThreadPoolTaskExecutor - Shutting down ExecutorService 'applicationTaskExecutor'
+2019-05-09 15:20:15.298 [RMI TCP Connection(2)-127.0.0.1] INFO  org.quartz.core.QuartzScheduler - Scheduler SchedulerFactory_$_ETLScheduler shutting down.
+2019-05-09 15:20:15.299 [RMI TCP Connection(2)-127.0.0.1] INFO  org.quartz.core.QuartzScheduler - Scheduler SchedulerFactory_$_ETLScheduler paused.
+2019-05-09 15:20:15.305 [RMI TCP Connection(2)-127.0.0.1] INFO  com.alibaba.druid.pool.DruidDataSource - {dataSource-2} closed
+2019-05-09 15:20:15.305 [RMI TCP Connection(2)-127.0.0.1] INFO  org.quartz.core.QuartzScheduler - Scheduler SchedulerFactory_$_ETLScheduler shutdown complete.
+2019-05-09 15:20:15.306 [RMI TCP Connection(2)-127.0.0.1] INFO  org.springframework.scheduling.quartz.SchedulerFactoryBean - Shutting down Quartz Scheduler
+2019-05-09 15:20:15.307 [RMI TCP Connection(2)-127.0.0.1] INFO  org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+2019-05-09 15:20:15.312 [RMI TCP Connection(2)-127.0.0.1] INFO  com.alibaba.druid.pool.DruidDataSource - {dataSource-1} closed
+2019-05-09 15:22:48.614 [main] INFO  top.ruandb.EtlSchedulerApplication - Starting EtlSchedulerApplication on LAPTOP-MK6P63H0 with PID 6856 (C:\Java\eclipse-workspace2\ETLScheduler\target\classes started by rdb in C:\Java\eclipse-workspace2\ETLScheduler)
+2019-05-09 15:22:48.618 [main] INFO  top.ruandb.EtlSchedulerApplication - No active profile set, falling back to default profiles: default
+2019-05-09 15:22:49.540 [main] INFO  org.springframework.data.repository.config.RepositoryConfigurationDelegate - Bootstrapping Spring Data repositories in DEFAULT mode.
+2019-05-09 15:22:49.761 [main] INFO  org.springframework.data.repository.config.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 211ms. Found 4 repository interfaces.
+2019-05-09 15:22:50.186 [main] INFO  org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$60c34aa8] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-05-09 15:22:50.211 [main] INFO  org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'shiroConfig' of type [top.ruandb.config.ShiroConfig$$EnhancerBySpringCGLIB$$8c207dfb] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-05-09 15:22:50.580 [main] INFO  org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'myRealm' of type [top.ruandb.config.MyRealm] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-05-09 15:22:50.588 [main] INFO  org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'securityManager' of type [org.apache.shiro.web.mgt.DefaultWebSecurityManager] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-05-09 15:22:50.952 [main] INFO  org.springframework.boot.web.embedded.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8080 (http)
+2019-05-09 15:22:50.978 [main] INFO  org.apache.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+2019-05-09 15:22:51.029 [main] INFO  org.apache.catalina.core.StandardService - Starting service [Tomcat]
+2019-05-09 15:22:51.030 [main] INFO  org.apache.catalina.core.StandardEngine - Starting Servlet Engine: Apache Tomcat/9.0.13
+2019-05-09 15:22:51.041 [main] INFO  org.apache.catalina.core.AprLifecycleListener - Loaded APR based Apache Tomcat Native library [1.2.19] using APR version [1.6.5].
+2019-05-09 15:22:51.042 [main] INFO  org.apache.catalina.core.AprLifecycleListener - APR capabilities: IPv6 [true], sendfile [true], accept filters [false], random [true].
+2019-05-09 15:22:51.043 [main] INFO  org.apache.catalina.core.AprLifecycleListener - APR/OpenSSL configuration: useAprConnector [false], useOpenSSL [true]
+2019-05-09 15:22:52.131 [main] INFO  org.apache.catalina.core.AprLifecycleListener - OpenSSL successfully initialized [OpenSSL 1.0.2q  20 Nov 2018]
+2019-05-09 15:22:52.322 [main] INFO  org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2019-05-09 15:22:52.322 [main] INFO  org.springframework.web.context.ContextLoader - Root WebApplicationContext: initialization completed in 3601 ms
+2019-05-09 15:22:52.749 [main] INFO  com.alibaba.druid.pool.DruidDataSource - {dataSource-1} inited
+2019-05-09 15:22:53.029 [main] INFO  org.hibernate.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+2019-05-09 15:22:53.105 [main] INFO  org.hibernate.Version - HHH000412: Hibernate Core {5.3.7.Final}
+2019-05-09 15:22:53.108 [main] INFO  org.hibernate.cfg.Environment - HHH000206: hibernate.properties not found
+2019-05-09 15:22:53.303 [main] INFO  org.hibernate.annotations.common.Version - HCANN000001: Hibernate Commons Annotations {5.0.4.Final}
+2019-05-09 15:22:53.701 [main] INFO  org.hibernate.dialect.Dialect - HHH000400: Using dialect: org.hibernate.dialect.Oracle12cDialect
+2019-05-09 15:22:53.791 [main] INFO  org.hibernate.type.BasicTypeRegistry - HHH000270: Type registration [byte[]] overrides previous : org.hibernate.type.BinaryType@2acdcce8
+2019-05-09 15:22:53.791 [main] INFO  org.hibernate.type.BasicTypeRegistry - HHH000270: Type registration [[B] overrides previous : org.hibernate.type.BinaryType@2acdcce8
+2019-05-09 15:22:53.792 [main] INFO  org.hibernate.type.BasicTypeRegistry - HHH000270: Type registration [Byte[]] overrides previous : org.hibernate.type.WrapperBinaryType@2db2a05f
+2019-05-09 15:22:53.792 [main] INFO  org.hibernate.type.BasicTypeRegistry - HHH000270: Type registration [[Ljava.lang.Byte;] overrides previous : org.hibernate.type.WrapperBinaryType@2db2a05f
+2019-05-09 15:22:53.934 [main] WARN  org.hibernate.boot.internal.InFlightMetadataCollectorImpl - HHH000069: Duplicate generator name mseq
+2019-05-09 15:22:54.788 [main] INFO  org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2019-05-09 15:22:54.827 [main] INFO  org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor - Autowired annotation is not supported on static methods: public static void top.ruandb.config.ProcedureConfig.setPROCEDURE_PRO(java.lang.String)
+2019-05-09 15:22:55.128 [main] INFO  org.hibernate.hql.internal.QueryTranslatorFactoryInitiator - HHH000397: Using ASTQueryTranslatorFactory
+2019-05-09 15:22:55.304 [main] INFO  org.quartz.impl.StdSchedulerFactory - Using default implementation for ThreadExecutor
+2019-05-09 15:22:55.317 [main] INFO  org.quartz.core.SchedulerSignalerImpl - Initialized Scheduler Signaller of type: class org.quartz.core.SchedulerSignalerImpl
+2019-05-09 15:22:55.317 [main] INFO  org.quartz.core.QuartzScheduler - Quartz Scheduler v.2.2.1 created.
+2019-05-09 15:22:55.318 [main] INFO  org.quartz.core.QuartzScheduler - JobFactory set to: org.quartz.simpl.SimpleJobFactory@44d43cc9
+2019-05-09 15:22:55.318 [main] INFO  org.quartz.impl.jdbcjobstore.JobStoreTX - Using thread monitor-based data access locking (synchronization).
+2019-05-09 15:22:55.319 [main] INFO  org.quartz.impl.jdbcjobstore.JobStoreTX - JobStoreTX initialized.
+2019-05-09 15:22:55.320 [main] INFO  org.quartz.core.QuartzScheduler - Scheduler meta-data: Quartz Scheduler (v2.2.1) 'SchedulerFactory' with instanceId 'ETLScheduler'
+  Scheduler class: 'org.quartz.core.QuartzScheduler' - running locally.
+  NOT STARTED.
+  Currently in standby mode.
+  Number of jobs executed: 0
+  Using thread pool 'org.quartz.simpl.SimpleThreadPool' - with 5 threads.
+  Using job-store 'org.quartz.impl.jdbcjobstore.JobStoreTX' - which supports persistence. and is not clustered.
+
+2019-05-09 15:22:55.320 [main] INFO  org.quartz.impl.StdSchedulerFactory - Quartz scheduler 'SchedulerFactory' initialized from an externally provided properties instance.
+2019-05-09 15:22:55.320 [main] INFO  org.quartz.impl.StdSchedulerFactory - Quartz scheduler version: 2.2.1
+2019-05-09 15:22:55.321 [main] INFO  org.quartz.core.QuartzScheduler - JobFactory set to: top.ruandb.config.MyJobFactory@5329f6b3
+2019-05-09 15:22:55.616 [main] INFO  org.springframework.scheduling.concurrent.ThreadPoolTaskExecutor - Initializing ExecutorService 'applicationTaskExecutor'
+2019-05-09 15:22:56.128 [main] INFO  org.springframework.scheduling.quartz.SchedulerFactoryBean - Starting Quartz Scheduler now
+2019-05-09 15:22:56.130 [main] INFO  com.alibaba.druid.pool.DruidDataSource - {dataSource-2} inited
+2019-05-09 15:22:56.180 [main] INFO  org.quartz.impl.jdbcjobstore.JobStoreTX - Freed 0 triggers from 'acquired' / 'blocked' state.
+2019-05-09 15:22:56.186 [main] INFO  org.quartz.impl.jdbcjobstore.JobStoreTX - Recovering 0 jobs that were in-progress at the time of the last shut-down.
+2019-05-09 15:22:56.186 [main] INFO  org.quartz.impl.jdbcjobstore.JobStoreTX - Recovery complete.
+2019-05-09 15:22:56.187 [main] INFO  org.quartz.impl.jdbcjobstore.JobStoreTX - Removed 0 'complete' triggers.
+2019-05-09 15:22:56.189 [main] INFO  org.quartz.impl.jdbcjobstore.JobStoreTX - Removed 0 stale fired job entries.
+2019-05-09 15:22:56.191 [main] INFO  org.quartz.core.QuartzScheduler - Scheduler SchedulerFactory_$_ETLScheduler started.
+2019-05-09 15:22:56.203 [main] INFO  org.apache.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
+2019-05-09 15:22:56.220 [main] INFO  org.apache.tomcat.util.net.NioSelectorPool - Using a shared selector for servlet write/read
+2019-05-09 15:22:56.253 [main] INFO  org.springframework.boot.web.embedded.tomcat.TomcatWebServer - Tomcat started on port(s): 8080 (http) with context path ''
+2019-05-09 15:22:56.257 [main] INFO  top.ruandb.EtlSchedulerApplication - Started EtlSchedulerApplication in 8.315 seconds (JVM running for 9.364)
+2019-05-09 15:22:56.260 [main] INFO  top.ruandb.init.TaskInit - kettle初始化开始-------------------------------------------------------->
+2019-05-09 15:22:57.988 [main] INFO  top.ruandb.init.TaskInit - kettle初始化结束-------------------------------------------------------->
+2019-05-09 15:22:57.988 [main] INFO  top.ruandb.init.TaskInit - 重新启动清空scheduler
+2019-05-09 15:22:58.095 [main] INFO  top.ruandb.init.TaskInit - 初始化job到调度器-------------------------------->jobname:JB_YY
+2019-05-09 15:22:58.145 [main] INFO  top.ruandb.init.TaskInit - 初始化job到调度器-------------------------------->jobname:JB_YF
+2019-05-09 15:22:58.180 [main] INFO  top.ruandb.init.TaskInit - 初始化job到调度器-------------------------------->jobname:JB_VW
+2019-05-09 15:22:58.202 [main] INFO  top.ruandb.init.TaskInit - 初始化job到调度器-------------------------------->jobname:JB_SS
+2019-05-09 15:22:58.212 [main] INFO  top.ruandb.init.TaskInit - 初始化job到调度器-------------------------------->jobname:JB_KSS
+2019-05-09 15:22:58.219 [main] INFO  top.ruandb.init.TaskInit - 初始化job到调度器-------------------------------->jobname:JB_ZY
+2019-05-09 15:22:58.226 [main] INFO  top.ruandb.init.TaskInit - 初始化job到调度器-------------------------------->jobname:JB_BQ
+2019-05-09 15:22:58.233 [main] INFO  top.ruandb.init.TaskInit - 初始化job到调度器-------------------------------->jobname:JB_DC
+2019-05-09 15:22:58.241 [main] INFO  top.ruandb.init.TaskInit - 初始化job到调度器-------------------------------->jobname:JB_ASMC
+2019-05-09 15:22:58.250 [main] INFO  top.ruandb.init.TaskInit - 初始化job到调度器-------------------------------->jobname:JB_YK
+2019-05-09 15:22:58.257 [main] INFO  top.ruandb.init.TaskInit - 初始化job到调度器-------------------------------->jobname:JB_GH
+2019-05-09 15:22:58.264 [main] INFO  top.ruandb.init.TaskInit - 初始化job到调度器-------------------------------->jobname:usp_dim_zlzb_jbbz_zkks,usp_dim_zlzb_zlgl_lcjybb,usp_dim_zlzb_zlgl_lcjyzk,usp_dim_zyts,usp_dim_zy_ypyfk,usp_dim_zy_zlzxx,usp_dim_zy_zlzxx_ys
+2019-05-09 15:22:58.272 [main] INFO  top.ruandb.init.TaskInit - 初始化job到调度器-------------------------------->jobname:usp_dim_yyxx,usp_dim_zddmk_ba,usp_dim_zdjb,usp_dim_zdss,usp_dim_zljg,usp_dim_zlzb_bfzlx,usp_dim_zlzb_fmfs,usp_dim_zlzb_jbbz_dbz,usp_dim_zlzb_jbbz_dq,usp_dim_zlzb_jbbz_xzljs
+2019-05-09 15:22:58.276 [main] INFO  top.ruandb.init.TaskInit - 初始化job到调度器-------------------------------->jobname:usp_dim_yk_czdmk,usp_dim_ypdl,usp_dim_ypfl,usp_dim_ypjx,usp_dim_ypxx,usp_dim_ysxx_ba,usp_dim_yyfs,usp_dim_yygr_dcnyjxx,usp_dim_yygr_xgdgbw,usp_dim_yylb,usp_dim_yymd,usp_dim_yysjd
+2019-05-09 15:22:58.283 [main] INFO  top.ruandb.init.TaskInit - 初始化job到调度器-------------------------------->jobname:usp_dim_xydl,usp_dim_xyzlxx,usp_dim_ybflxx,usp_dim_yb_yblx,usp_dim_ycbw,usp_dim_ycfj,usp_dim_ycly,usp_dim_yfdmk,usp_dim_yf_czdmk,usp_dim_yg_ssfxdj,usp_dim_yg_ssgrbw,usp_dim_ykdmk
+2019-05-09 15:22:58.289 [main] INFO  top.ruandb.init.TaskInit - 初始化job到调度器-------------------------------->jobname:usp_dim_wzjb,usp_dim_wzsb_cblx,usp_dim_wzsb_kfxx,usp_dim_wzsb_wzkpxx,usp_dim_wzsb_wzpmggxx,usp_dim_wzsb_wz_djlb,usp_dim_wzsb_wz_ghdwxx,usp_dim_wzsb_wz_rkfs,usp_dim_xxxx
+2019-05-09 15:22:58.296 [main] INFO  top.ruandb.init.TaskInit - 初始化job到调度器-------------------------------->jobname:usp_dim_ssjb,usp_dim_ssmz_asamzfj,usp_dim_ssmz_mzfsfl,usp_dim_ssmz_sssjlx,usp_dim_ssxx,usp_dim_sxblfylx,usp_dim_sxfsxx,usp_dim_sxlyxx,usp_dim_sxytxx,usp_dim_time,usp_dim_tsypbz
+2019-05-09 15:22:58.302 [main] INFO  top.ruandb.init.TaskInit - 初始化job到调度器-------------------------------->jobname:usp_dim_rjssxx,usp_dim_sex,usp_dim_sfdxmk,usp_dim_sfxxmk,usp_dim_sf_cfsfjg,usp_dim_sf_cfwt,usp_dim_sf_cfwtfl,usp_dim_sf_cfwtjb,usp_dim_sf_ypyfk,usp_dim_ssbw,usp_dim_ssflxx
+2019-05-09 15:22:58.312 [main] INFO  top.ruandb.init.TaskInit - 初始化job到调度器-------------------------------->jobname:usp_dim_lclj,usp_dim_lcsfxmk,usp_dim_lis_instrument,usp_dim_lyfs,usp_dim_mjzbz,usp_dim_mzfs,usp_dim_mzzy,usp_dim_nld,usp_dim_qkdj,usp_dim_qzts,usp_dim_ris_instrument,usp_dim_rjssbz
+2019-05-09 15:22:58.320 [main] INFO  top.ruandb.init.TaskInit - 初始化job到调度器-------------------------------->jobname:usp_dim_jsk_ysyy,usp_dim_jsk_ztsxfs,usp_dim_jylb,usp_dim_jzzy_bqfj,usp_dim_jzzy_brqx,usp_dim_jzzy_cyfs,usp_dim_kfyxk_bfzlx,usp_dim_kfyxk_kflx,usp_dim_kssjb,usp_dim_ksxx_ba
+2019-05-09 15:22:58.326 [main] INFO  top.ruandb.init.TaskInit - 初始化job到调度器-------------------------------->jobname:usp_dim_aers_warningeventtype,usp_dim_bqdmk_ba,usp_dim_cflx,usp_dim_cfz,usp_dim_cyfs,usp_dim_czryk,usp_dim_ddshcdjb,usp_dim_ddyy,usp_dim_drgs_fxpgdj,usp_dim_fyck,usp_dim_ghlb
+2019-05-09 15:22:58.333 [main] INFO  top.ruandb.init.TaskInit - 初始化job到调度器-------------------------------->jobname:usp_dim_ghtj,usp_dim_ghyysjc,usp_dim_gysxx,usp_dim_hour,usp_dim_hsxm,usp_dim_jclb,usp_dim_jsk_txfs,usp_dim_jsk_xgtllb,usp_dim_jsk_xtzlfs,usp_dim_jsk_ysfs,usp_dim_jsk_ysgj
+2019-05-09 15:22:58.339 [main] INFO  top.ruandb.init.TaskInit - 初始化job到调度器-------------------------------->jobname:usp_dim_aers_eventyzcd,usp_dim_aers_medevent_ss_cwlx,usp_dim_aers_medicaleventtype,usp_dim_aers_nursevt_gl_bfzlx,usp_dim_aers_nursingeventtype,usp_dim_aers_ryzc
+2019-05-09 15:22:58.344 [main] INFO  top.ruandb.init.TaskInit - 初始化job到调度器-------------------------------->jobname:usp_dim_aers_bloodeventtype,usp_dim_aers_drugseventtype,usp_dim_aers_eventclfs,usp_dim_aers_eventconsequence,usp_dim_aers_eventdj,usp_dim_aers_eventtype
+2019-05-09 15:22:58.351 [main] INFO  top.ruandb.init.TaskInit - 初始化job到调度器-------------------------------->jobname:usp_fat_bacwsyqk,usp_fat_basyjb,usp_fat_basyss,usp_fat_basyzd,usp_fat_bq_brcwxxk
+2019-05-09 15:22:58.355 [main] INFO  top.ruandb.init.TaskInit - 初始化job到调度器-------------------------------->jobname:usp_fat_jcbgmx,usp_fat_jybgmx,usp_fat_mz_yffymx,usp_fat_sxxx,usp_fat_wzsb_sb_byxx,usp_fat_wzsb_sb_jlxx
+2019-05-09 15:22:58.361 [main] INFO  top.ruandb.init.TaskInit - 初始化job到调度器-------------------------------->jobname:usp_fat_wzsb_sb_srxx,usp_fat_wzsb_sb_wxxx,usp_fat_wzsb_sb_zjxx,usp_fat_wzsb_wz_bsxx,usp_fat_wzsb_wz_ckxx
+2019-05-09 15:22:58.366 [main] INFO  top.ruandb.init.TaskInit - 初始化job到调度器-------------------------------->jobname:usp_fat_wzsb_wz_qlxx,usp_fat_wzsb_wz_rkxx,usp_fat_wzsb_wz_wtdxxx,usp_fat_wzsb_wz_xhxx,usp_fat_wzsb_wz_ykxx
+2019-05-09 15:22:58.379 [main] INFO  top.ruandb.init.TaskInit - 初始化job到调度器-------------------------------->jobname:usp_fat_wzsb_wz_zgxx,usp_fat_yf_ypczmx,usp_fat_yk_ypczmx,usp_fat_yygh_pbxx,usp_fat_yy_mz_yyrc
+2019-05-09 15:22:58.386 [main] INFO  top.ruandb.init.TaskInit - 初始化job到调度器-------------------------------->jobname:usp_fat_zlzb_zlgl_lcjybb,usp_fat_zlzb_zlgl_lcjyzk,usp_fat_zy_cwsyqk,usp_fat_zy_rjssbrfy_fat
+2019-05-09 15:22:58.394 [main] INFO  top.ruandb.init.TaskInit - 初始化job到调度器-------------------------------->jobname:usp_fat_zy_rjsshzxx,usp_fat_zy_rjssxx,usp_fat_zy_ryywl,usp_fat_zy_yffymx,usp_fat_zy_zyfy_zy
+2019-05-09 15:22:58.401 [main] INFO  top.ruandb.init.TaskInit - 初始化job到调度器-------------------------------->jobname:usp_fat_mz_ybjsxx,usp_fat_mz_mzfy,usp_fat_mz_mzywl
+2019-05-09 15:22:58.406 [main] INFO  top.ruandb.init.TaskInit - 初始化job到调度器-------------------------------->jobname:usp_fat_zy_ybjsxx,usp_fat_zy_zyfy,usp_fat_zy_zyywl
+2019-05-09 15:22:58.770 [main] INFO  top.ruandb.init.TaskInit - jobMap--->{22=PENDDING, 23=PENDDING, 24=PENDDING, 25=PENDDING, 26=PENDDING, 27=PENDDING, 28=PENDDING, 29=PENDDING, 30=PENDDING, 31=PENDDING, 10=PENDDING, 32=PENDDING, 11=PENDDING, 33=PENDDING, 12=PENDDING, 34=PENDDING, 13=PENDDING, 14=PENDDING, 15=PENDDING, 16=PENDDING, 17=PENDDING, 18=PENDDING, 19=PENDDING, 1=PENDDING, 2=PENDDING, 3=PENDDING, 4=PENDDING, 5=PENDDING, 6=PENDDING, 7=PENDDING, 9=PENDDING, 20=PENDDING, 21=PENDDING}
+2019-05-09 15:22:58.770 [main] INFO  top.ruandb.init.TaskInit - groupMap--->{A=[13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25], B=[26, 27, 28, 29, 30, 31, 32, 33, 34], C=[], D=[]}
+2019-05-09 15:22:58.770 [main] INFO  top.ruandb.init.TaskInit - jobMap,groupMap----------------------->初始化成功
+2019-05-09 15:23:00.789 [http-nio-8080-exec-1] INFO  org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2019-05-09 15:23:00.789 [http-nio-8080-exec-1] INFO  org.springframework.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2019-05-09 15:23:00.800 [http-nio-8080-exec-1] INFO  org.springframework.web.servlet.DispatcherServlet - Completed initialization in 11 ms
+2019-05-09 15:23:33.871 [RMI TCP Connection(2)-127.0.0.1] INFO  org.springframework.boot.admin.SpringApplicationAdminMXBeanRegistrar$SpringApplicationAdmin - Application shutdown requested.
+2019-05-09 15:23:33.874 [RMI TCP Connection(2)-127.0.0.1] INFO  org.quartz.core.QuartzScheduler - Scheduler SchedulerFactory_$_ETLScheduler paused.
+2019-05-09 15:23:33.875 [RMI TCP Connection(2)-127.0.0.1] INFO  org.springframework.scheduling.concurrent.ThreadPoolTaskExecutor - Shutting down ExecutorService 'applicationTaskExecutor'
+2019-05-09 15:23:33.876 [RMI TCP Connection(2)-127.0.0.1] INFO  org.quartz.core.QuartzScheduler - Scheduler SchedulerFactory_$_ETLScheduler shutting down.
+2019-05-09 15:23:33.876 [RMI TCP Connection(2)-127.0.0.1] INFO  org.quartz.core.QuartzScheduler - Scheduler SchedulerFactory_$_ETLScheduler paused.
+2019-05-09 15:23:33.889 [RMI TCP Connection(2)-127.0.0.1] INFO  com.alibaba.druid.pool.DruidDataSource - {dataSource-2} closed
+2019-05-09 15:23:33.890 [RMI TCP Connection(2)-127.0.0.1] INFO  org.quartz.core.QuartzScheduler - Scheduler SchedulerFactory_$_ETLScheduler shutdown complete.
+2019-05-09 15:23:33.890 [RMI TCP Connection(2)-127.0.0.1] INFO  org.springframework.scheduling.quartz.SchedulerFactoryBean - Shutting down Quartz Scheduler
+2019-05-09 15:23:33.891 [RMI TCP Connection(2)-127.0.0.1] INFO  org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+2019-05-09 15:23:33.899 [RMI TCP Connection(2)-127.0.0.1] INFO  com.alibaba.druid.pool.DruidDataSource - {dataSource-1} closed
+2019-05-09 15:26:02.784 [main] INFO  top.ruandb.EtlSchedulerApplication - Starting EtlSchedulerApplication on LAPTOP-MK6P63H0 with PID 17808 (C:\Java\eclipse-workspace2\ETLScheduler\target\classes started by rdb in C:\Java\eclipse-workspace2\ETLScheduler)
+2019-05-09 15:26:02.788 [main] INFO  top.ruandb.EtlSchedulerApplication - No active profile set, falling back to default profiles: default
+2019-05-09 15:26:03.709 [main] INFO  org.springframework.data.repository.config.RepositoryConfigurationDelegate - Bootstrapping Spring Data repositories in DEFAULT mode.
+2019-05-09 15:26:03.945 [main] INFO  org.springframework.data.repository.config.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 227ms. Found 4 repository interfaces.
+2019-05-09 15:26:04.330 [main] INFO  org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$58b69901] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-05-09 15:26:04.353 [main] INFO  org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'shiroConfig' of type [top.ruandb.config.ShiroConfig$$EnhancerBySpringCGLIB$$8413cc54] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-05-09 15:26:04.723 [main] INFO  org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'myRealm' of type [top.ruandb.config.MyRealm] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-05-09 15:26:04.732 [main] INFO  org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'securityManager' of type [org.apache.shiro.web.mgt.DefaultWebSecurityManager] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-05-09 15:26:05.077 [main] INFO  org.springframework.boot.web.embedded.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8080 (http)
+2019-05-09 15:26:05.092 [main] INFO  org.apache.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+2019-05-09 15:26:05.103 [main] INFO  org.apache.catalina.core.StandardService - Starting service [Tomcat]
+2019-05-09 15:26:05.104 [main] INFO  org.apache.catalina.core.StandardEngine - Starting Servlet Engine: Apache Tomcat/9.0.13
+2019-05-09 15:26:05.111 [main] INFO  org.apache.catalina.core.AprLifecycleListener - Loaded APR based Apache Tomcat Native library [1.2.19] using APR version [1.6.5].
+2019-05-09 15:26:05.111 [main] INFO  org.apache.catalina.core.AprLifecycleListener - APR capabilities: IPv6 [true], sendfile [true], accept filters [false], random [true].
+2019-05-09 15:26:05.111 [main] INFO  org.apache.catalina.core.AprLifecycleListener - APR/OpenSSL configuration: useAprConnector [false], useOpenSSL [true]
+2019-05-09 15:26:06.182 [main] INFO  org.apache.catalina.core.AprLifecycleListener - OpenSSL successfully initialized [OpenSSL 1.0.2q  20 Nov 2018]
+2019-05-09 15:26:06.379 [main] INFO  org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2019-05-09 15:26:06.380 [main] INFO  org.springframework.web.context.ContextLoader - Root WebApplicationContext: initialization completed in 3495 ms
+2019-05-09 15:26:06.768 [main] INFO  com.alibaba.druid.pool.DruidDataSource - {dataSource-1} inited
+2019-05-09 15:26:07.016 [main] INFO  org.hibernate.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+2019-05-09 15:26:07.092 [main] INFO  org.hibernate.Version - HHH000412: Hibernate Core {5.3.7.Final}
+2019-05-09 15:26:07.095 [main] INFO  org.hibernate.cfg.Environment - HHH000206: hibernate.properties not found
+2019-05-09 15:26:07.253 [main] INFO  org.hibernate.annotations.common.Version - HCANN000001: Hibernate Commons Annotations {5.0.4.Final}
+2019-05-09 15:26:07.634 [main] INFO  org.hibernate.dialect.Dialect - HHH000400: Using dialect: org.hibernate.dialect.Oracle12cDialect
+2019-05-09 15:26:07.718 [main] INFO  org.hibernate.type.BasicTypeRegistry - HHH000270: Type registration [byte[]] overrides previous : org.hibernate.type.BinaryType@611640f0
+2019-05-09 15:26:07.718 [main] INFO  org.hibernate.type.BasicTypeRegistry - HHH000270: Type registration [[B] overrides previous : org.hibernate.type.BinaryType@611640f0
+2019-05-09 15:26:07.719 [main] INFO  org.hibernate.type.BasicTypeRegistry - HHH000270: Type registration [Byte[]] overrides previous : org.hibernate.type.WrapperBinaryType@21a9a705
+2019-05-09 15:26:07.720 [main] INFO  org.hibernate.type.BasicTypeRegistry - HHH000270: Type registration [[Ljava.lang.Byte;] overrides previous : org.hibernate.type.WrapperBinaryType@21a9a705
+2019-05-09 15:26:07.873 [main] WARN  org.hibernate.boot.internal.InFlightMetadataCollectorImpl - HHH000069: Duplicate generator name mseq
+2019-05-09 15:26:08.791 [main] INFO  org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2019-05-09 15:26:08.837 [main] INFO  org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor - Autowired annotation is not supported on static methods: public static void top.ruandb.config.ProcedureConfig.setPROCEDURE_PRO(java.lang.String)
+2019-05-09 15:26:09.261 [main] INFO  org.hibernate.hql.internal.QueryTranslatorFactoryInitiator - HHH000397: Using ASTQueryTranslatorFactory
+2019-05-09 15:26:09.517 [main] INFO  org.quartz.impl.StdSchedulerFactory - Using default implementation for ThreadExecutor
+2019-05-09 15:26:09.534 [main] INFO  org.quartz.core.SchedulerSignalerImpl - Initialized Scheduler Signaller of type: class org.quartz.core.SchedulerSignalerImpl
+2019-05-09 15:26:09.535 [main] INFO  org.quartz.core.QuartzScheduler - Quartz Scheduler v.2.2.1 created.
+2019-05-09 15:26:09.536 [main] INFO  org.quartz.core.QuartzScheduler - JobFactory set to: org.quartz.simpl.SimpleJobFactory@2154652c
+2019-05-09 15:26:09.536 [main] INFO  org.quartz.impl.jdbcjobstore.JobStoreTX - Using thread monitor-based data access locking (synchronization).
+2019-05-09 15:26:09.537 [main] INFO  org.quartz.impl.jdbcjobstore.JobStoreTX - JobStoreTX initialized.
+2019-05-09 15:26:09.538 [main] INFO  org.quartz.core.QuartzScheduler - Scheduler meta-data: Quartz Scheduler (v2.2.1) 'SchedulerFactory' with instanceId 'ETLScheduler'
+  Scheduler class: 'org.quartz.core.QuartzScheduler' - running locally.
+  NOT STARTED.
+  Currently in standby mode.
+  Number of jobs executed: 0
+  Using thread pool 'org.quartz.simpl.SimpleThreadPool' - with 5 threads.
+  Using job-store 'org.quartz.impl.jdbcjobstore.JobStoreTX' - which supports persistence. and is not clustered.
+
+2019-05-09 15:26:09.538 [main] INFO  org.quartz.impl.StdSchedulerFactory - Quartz scheduler 'SchedulerFactory' initialized from an externally provided properties instance.
+2019-05-09 15:26:09.539 [main] INFO  org.quartz.impl.StdSchedulerFactory - Quartz scheduler version: 2.2.1
+2019-05-09 15:26:09.540 [main] INFO  org.quartz.core.QuartzScheduler - JobFactory set to: top.ruandb.config.MyJobFactory@2bf2d6eb
+2019-05-09 15:26:09.892 [main] INFO  org.springframework.scheduling.concurrent.ThreadPoolTaskExecutor - Initializing ExecutorService 'applicationTaskExecutor'
+2019-05-09 15:26:10.382 [main] INFO  org.springframework.scheduling.quartz.SchedulerFactoryBean - Starting Quartz Scheduler now
+2019-05-09 15:26:10.384 [main] INFO  com.alibaba.druid.pool.DruidDataSource - {dataSource-2} inited
+2019-05-09 15:26:10.420 [main] INFO  org.quartz.impl.jdbcjobstore.JobStoreTX - Freed 0 triggers from 'acquired' / 'blocked' state.
+2019-05-09 15:26:10.423 [main] INFO  org.quartz.impl.jdbcjobstore.JobStoreTX - Recovering 0 jobs that were in-progress at the time of the last shut-down.
+2019-05-09 15:26:10.423 [main] INFO  org.quartz.impl.jdbcjobstore.JobStoreTX - Recovery complete.
+2019-05-09 15:26:10.424 [main] INFO  org.quartz.impl.jdbcjobstore.JobStoreTX - Removed 0 'complete' triggers.
+2019-05-09 15:26:10.426 [main] INFO  org.quartz.impl.jdbcjobstore.JobStoreTX - Removed 0 stale fired job entries.
+2019-05-09 15:26:10.428 [main] INFO  org.quartz.core.QuartzScheduler - Scheduler SchedulerFactory_$_ETLScheduler started.
+2019-05-09 15:26:10.436 [main] INFO  org.apache.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
+2019-05-09 15:26:10.448 [main] INFO  org.apache.tomcat.util.net.NioSelectorPool - Using a shared selector for servlet write/read
+2019-05-09 15:26:10.469 [main] INFO  org.springframework.boot.web.embedded.tomcat.TomcatWebServer - Tomcat started on port(s): 8080 (http) with context path ''
+2019-05-09 15:26:10.472 [main] INFO  top.ruandb.EtlSchedulerApplication - Started EtlSchedulerApplication in 8.316 seconds (JVM running for 9.927)
+2019-05-09 15:26:10.474 [main] INFO  top.ruandb.init.TaskInit - kettle初始化开始-------------------------------------------------------->
+2019-05-09 15:26:12.137 [main] INFO  top.ruandb.init.TaskInit - kettle初始化结束-------------------------------------------------------->
+2019-05-09 15:26:12.137 [main] INFO  top.ruandb.init.TaskInit - 重新启动清空scheduler
+2019-05-09 15:26:12.451 [main] INFO  top.ruandb.init.TaskInit - 初始化job到调度器-------------------------------->jobname:JB_YY
+2019-05-09 15:26:12.492 [main] INFO  top.ruandb.init.TaskInit - 初始化job到调度器-------------------------------->jobname:JB_YF
+2019-05-09 15:26:12.520 [main] INFO  top.ruandb.init.TaskInit - 初始化job到调度器-------------------------------->jobname:JB_VW
+2019-05-09 15:26:12.558 [main] INFO  top.ruandb.init.TaskInit - 初始化job到调度器-------------------------------->jobname:JB_SS
+2019-05-09 15:26:12.588 [main] INFO  top.ruandb.init.TaskInit - 初始化job到调度器-------------------------------->jobname:JB_KSS
+2019-05-09 15:26:12.626 [main] INFO  top.ruandb.init.TaskInit - 初始化job到调度器-------------------------------->jobname:JB_ZY
+2019-05-09 15:26:12.654 [main] INFO  top.ruandb.init.TaskInit - 初始化job到调度器-------------------------------->jobname:JB_BQ
+2019-05-09 15:26:12.660 [main] INFO  top.ruandb.init.TaskInit - 初始化job到调度器-------------------------------->jobname:JB_DC
+2019-05-09 15:26:12.683 [main] INFO  top.ruandb.init.TaskInit - 初始化job到调度器-------------------------------->jobname:JB_ASMC
+2019-05-09 15:26:12.691 [main] INFO  top.ruandb.init.TaskInit - 初始化job到调度器-------------------------------->jobname:JB_YK
+2019-05-09 15:26:12.702 [main] INFO  top.ruandb.init.TaskInit - 初始化job到调度器-------------------------------->jobname:JB_GH
+2019-05-09 15:26:12.710 [main] INFO  top.ruandb.init.TaskInit - 初始化job到调度器-------------------------------->jobname:usp_dim_zlzb_jbbz_zkks,usp_dim_zlzb_zlgl_lcjybb,usp_dim_zlzb_zlgl_lcjyzk,usp_dim_zyts,usp_dim_zy_ypyfk,usp_dim_zy_zlzxx,usp_dim_zy_zlzxx_ys
+2019-05-09 15:26:12.720 [main] INFO  top.ruandb.init.TaskInit - 初始化job到调度器-------------------------------->jobname:usp_dim_yyxx,usp_dim_zddmk_ba,usp_dim_zdjb,usp_dim_zdss,usp_dim_zljg,usp_dim_zlzb_bfzlx,usp_dim_zlzb_fmfs,usp_dim_zlzb_jbbz_dbz,usp_dim_zlzb_jbbz_dq,usp_dim_zlzb_jbbz_xzljs
+2019-05-09 15:26:12.727 [main] INFO  top.ruandb.init.TaskInit - 初始化job到调度器-------------------------------->jobname:usp_dim_yk_czdmk,usp_dim_ypdl,usp_dim_ypfl,usp_dim_ypjx,usp_dim_ypxx,usp_dim_ysxx_ba,usp_dim_yyfs,usp_dim_yygr_dcnyjxx,usp_dim_yygr_xgdgbw,usp_dim_yylb,usp_dim_yymd,usp_dim_yysjd
+2019-05-09 15:26:12.733 [main] INFO  top.ruandb.init.TaskInit - 初始化job到调度器-------------------------------->jobname:usp_dim_xydl,usp_dim_xyzlxx,usp_dim_ybflxx,usp_dim_yb_yblx,usp_dim_ycbw,usp_dim_ycfj,usp_dim_ycly,usp_dim_yfdmk,usp_dim_yf_czdmk,usp_dim_yg_ssfxdj,usp_dim_yg_ssgrbw,usp_dim_ykdmk
+2019-05-09 15:26:12.739 [main] INFO  top.ruandb.init.TaskInit - 初始化job到调度器-------------------------------->jobname:usp_dim_wzjb,usp_dim_wzsb_cblx,usp_dim_wzsb_kfxx,usp_dim_wzsb_wzkpxx,usp_dim_wzsb_wzpmggxx,usp_dim_wzsb_wz_djlb,usp_dim_wzsb_wz_ghdwxx,usp_dim_wzsb_wz_rkfs,usp_dim_xxxx
+2019-05-09 15:26:12.746 [main] INFO  top.ruandb.init.TaskInit - 初始化job到调度器-------------------------------->jobname:usp_dim_ssjb,usp_dim_ssmz_asamzfj,usp_dim_ssmz_mzfsfl,usp_dim_ssmz_sssjlx,usp_dim_ssxx,usp_dim_sxblfylx,usp_dim_sxfsxx,usp_dim_sxlyxx,usp_dim_sxytxx,usp_dim_time,usp_dim_tsypbz
+2019-05-09 15:26:12.752 [main] INFO  top.ruandb.init.TaskInit - 初始化job到调度器-------------------------------->jobname:usp_dim_rjssxx,usp_dim_sex,usp_dim_sfdxmk,usp_dim_sfxxmk,usp_dim_sf_cfsfjg,usp_dim_sf_cfwt,usp_dim_sf_cfwtfl,usp_dim_sf_cfwtjb,usp_dim_sf_ypyfk,usp_dim_ssbw,usp_dim_ssflxx
+2019-05-09 15:26:12.758 [main] INFO  top.ruandb.init.TaskInit - 初始化job到调度器-------------------------------->jobname:usp_dim_lclj,usp_dim_lcsfxmk,usp_dim_lis_instrument,usp_dim_lyfs,usp_dim_mjzbz,usp_dim_mzfs,usp_dim_mzzy,usp_dim_nld,usp_dim_qkdj,usp_dim_qzts,usp_dim_ris_instrument,usp_dim_rjssbz
+2019-05-09 15:26:12.766 [main] INFO  top.ruandb.init.TaskInit - 初始化job到调度器-------------------------------->jobname:usp_dim_jsk_ysyy,usp_dim_jsk_ztsxfs,usp_dim_jylb,usp_dim_jzzy_bqfj,usp_dim_jzzy_brqx,usp_dim_jzzy_cyfs,usp_dim_kfyxk_bfzlx,usp_dim_kfyxk_kflx,usp_dim_kssjb,usp_dim_ksxx_ba
+2019-05-09 15:26:12.782 [main] INFO  top.ruandb.init.TaskInit - 初始化job到调度器-------------------------------->jobname:usp_dim_aers_warningeventtype,usp_dim_bqdmk_ba,usp_dim_cflx,usp_dim_cfz,usp_dim_cyfs,usp_dim_czryk,usp_dim_ddshcdjb,usp_dim_ddyy,usp_dim_drgs_fxpgdj,usp_dim_fyck,usp_dim_ghlb
+2019-05-09 15:26:12.790 [main] INFO  top.ruandb.init.TaskInit - 初始化job到调度器-------------------------------->jobname:usp_dim_ghtj,usp_dim_ghyysjc,usp_dim_gysxx,usp_dim_hour,usp_dim_hsxm,usp_dim_jclb,usp_dim_jsk_txfs,usp_dim_jsk_xgtllb,usp_dim_jsk_xtzlfs,usp_dim_jsk_ysfs,usp_dim_jsk_ysgj
+2019-05-09 15:26:12.798 [main] INFO  top.ruandb.init.TaskInit - 初始化job到调度器-------------------------------->jobname:usp_dim_aers_eventyzcd,usp_dim_aers_medevent_ss_cwlx,usp_dim_aers_medicaleventtype,usp_dim_aers_nursevt_gl_bfzlx,usp_dim_aers_nursingeventtype,usp_dim_aers_ryzc
+2019-05-09 15:26:12.806 [main] INFO  top.ruandb.init.TaskInit - 初始化job到调度器-------------------------------->jobname:usp_dim_aers_bloodeventtype,usp_dim_aers_drugseventtype,usp_dim_aers_eventclfs,usp_dim_aers_eventconsequence,usp_dim_aers_eventdj,usp_dim_aers_eventtype
+2019-05-09 15:26:12.815 [main] INFO  top.ruandb.init.TaskInit - 初始化job到调度器-------------------------------->jobname:usp_fat_bacwsyqk,usp_fat_basyjb,usp_fat_basyss,usp_fat_basyzd,usp_fat_bq_brcwxxk
+2019-05-09 15:26:12.820 [main] INFO  top.ruandb.init.TaskInit - 初始化job到调度器-------------------------------->jobname:usp_fat_jcbgmx,usp_fat_jybgmx,usp_fat_mz_yffymx,usp_fat_sxxx,usp_fat_wzsb_sb_byxx,usp_fat_wzsb_sb_jlxx
+2019-05-09 15:26:12.825 [main] INFO  top.ruandb.init.TaskInit - 初始化job到调度器-------------------------------->jobname:usp_fat_wzsb_sb_srxx,usp_fat_wzsb_sb_wxxx,usp_fat_wzsb_sb_zjxx,usp_fat_wzsb_wz_bsxx,usp_fat_wzsb_wz_ckxx
+2019-05-09 15:26:12.831 [main] INFO  top.ruandb.init.TaskInit - 初始化job到调度器-------------------------------->jobname:usp_fat_wzsb_wz_qlxx,usp_fat_wzsb_wz_rkxx,usp_fat_wzsb_wz_wtdxxx,usp_fat_wzsb_wz_xhxx,usp_fat_wzsb_wz_ykxx
+2019-05-09 15:26:12.836 [main] INFO  top.ruandb.init.TaskInit - 初始化job到调度器-------------------------------->jobname:usp_fat_wzsb_wz_zgxx,usp_fat_yf_ypczmx,usp_fat_yk_ypczmx,usp_fat_yygh_pbxx,usp_fat_yy_mz_yyrc
+2019-05-09 15:26:12.841 [main] INFO  top.ruandb.init.TaskInit - 初始化job到调度器-------------------------------->jobname:usp_fat_zlzb_zlgl_lcjybb,usp_fat_zlzb_zlgl_lcjyzk,usp_fat_zy_cwsyqk,usp_fat_zy_rjssbrfy_fat
+2019-05-09 15:26:12.860 [main] INFO  top.ruandb.init.TaskInit - 初始化job到调度器-------------------------------->jobname:usp_fat_zy_rjsshzxx,usp_fat_zy_rjssxx,usp_fat_zy_ryywl,usp_fat_zy_yffymx,usp_fat_zy_zyfy_zy
+2019-05-09 15:26:12.867 [main] INFO  top.ruandb.init.TaskInit - 初始化job到调度器-------------------------------->jobname:usp_fat_mz_ybjsxx,usp_fat_mz_mzfy,usp_fat_mz_mzywl
+2019-05-09 15:26:12.874 [main] INFO  top.ruandb.init.TaskInit - 初始化job到调度器-------------------------------->jobname:usp_fat_zy_ybjsxx,usp_fat_zy_zyfy,usp_fat_zy_zyywl
+2019-05-09 15:26:13.260 [main] INFO  top.ruandb.init.TaskInit - jobMap--->{22=PENDDING, 23=PENDDING, 24=PENDDING, 25=PENDDING, 26=PENDDING, 27=PENDDING, 28=PENDDING, 29=PENDDING, 30=PENDDING, 31=PENDDING, 10=PENDDING, 32=PENDDING, 11=PENDDING, 33=PENDDING, 12=PENDDING, 34=PENDDING, 13=PENDDING, 14=PENDDING, 15=PENDDING, 16=PENDDING, 17=PENDDING, 18=PENDDING, 19=PENDDING, 1=PENDDING, 2=PENDDING, 3=PENDDING, 4=PENDDING, 5=PENDDING, 6=PENDDING, 7=PENDDING, 9=PENDDING, 20=PENDDING, 21=PENDDING}
+2019-05-09 15:26:13.260 [main] INFO  top.ruandb.init.TaskInit - groupMap--->{A=[13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25], B=[26, 27, 28, 29, 30, 31, 32, 33, 34], C=[], D=[]}
+2019-05-09 15:26:13.260 [main] INFO  top.ruandb.init.TaskInit - jobMap,groupMap----------------------->初始化成功
+2019-05-09 15:26:16.554 [http-nio-8080-exec-1] INFO  org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2019-05-09 15:26:16.555 [http-nio-8080-exec-1] INFO  org.springframework.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2019-05-09 15:26:16.568 [http-nio-8080-exec-1] INFO  org.springframework.web.servlet.DispatcherServlet - Completed initialization in 13 ms
+2019-05-09 15:35:32.296 [RMI TCP Connection(2)-127.0.0.1] INFO  org.springframework.boot.admin.SpringApplicationAdminMXBeanRegistrar$SpringApplicationAdmin - Application shutdown requested.
+2019-05-09 15:35:32.298 [RMI TCP Connection(2)-127.0.0.1] INFO  org.quartz.core.QuartzScheduler - Scheduler SchedulerFactory_$_ETLScheduler paused.
+2019-05-09 15:35:32.299 [RMI TCP Connection(2)-127.0.0.1] INFO  org.springframework.scheduling.concurrent.ThreadPoolTaskExecutor - Shutting down ExecutorService 'applicationTaskExecutor'
+2019-05-09 15:35:32.299 [RMI TCP Connection(2)-127.0.0.1] INFO  org.quartz.core.QuartzScheduler - Scheduler SchedulerFactory_$_ETLScheduler shutting down.
+2019-05-09 15:35:32.299 [RMI TCP Connection(2)-127.0.0.1] INFO  org.quartz.core.QuartzScheduler - Scheduler SchedulerFactory_$_ETLScheduler paused.
+2019-05-09 15:35:32.306 [RMI TCP Connection(2)-127.0.0.1] INFO  com.alibaba.druid.pool.DruidDataSource - {dataSource-2} closed
+2019-05-09 15:35:32.307 [RMI TCP Connection(2)-127.0.0.1] INFO  org.quartz.core.QuartzScheduler - Scheduler SchedulerFactory_$_ETLScheduler shutdown complete.
+2019-05-09 15:35:32.307 [RMI TCP Connection(2)-127.0.0.1] INFO  org.springframework.scheduling.quartz.SchedulerFactoryBean - Shutting down Quartz Scheduler
+2019-05-09 15:35:32.307 [RMI TCP Connection(2)-127.0.0.1] INFO  org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+2019-05-09 15:35:32.314 [RMI TCP Connection(2)-127.0.0.1] INFO  com.alibaba.druid.pool.DruidDataSource - {dataSource-1} closed
+2019-05-09 15:37:56.924 [main] INFO  top.ruandb.EtlSchedulerApplication - Starting EtlSchedulerApplication on LAPTOP-MK6P63H0 with PID 17232 (C:\Java\eclipse-workspace2\ETLScheduler\target\classes started by rdb in C:\Java\eclipse-workspace2\ETLScheduler)
+2019-05-09 15:37:56.929 [main] INFO  top.ruandb.EtlSchedulerApplication - No active profile set, falling back to default profiles: default
+2019-05-09 15:37:57.948 [main] INFO  org.springframework.data.repository.config.RepositoryConfigurationDelegate - Bootstrapping Spring Data repositories in DEFAULT mode.
+2019-05-09 15:37:58.154 [main] INFO  org.springframework.data.repository.config.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 196ms. Found 4 repository interfaces.
+2019-05-09 15:37:58.654 [main] INFO  org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$5b5d8566] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-05-09 15:37:58.695 [main] INFO  org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'shiroConfig' of type [top.ruandb.config.ShiroConfig$$EnhancerBySpringCGLIB$$86bab8b9] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-05-09 15:37:59.240 [main] INFO  org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'myRealm' of type [top.ruandb.config.MyRealm] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-05-09 15:37:59.253 [main] INFO  org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'securityManager' of type [org.apache.shiro.web.mgt.DefaultWebSecurityManager] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-05-09 15:37:59.649 [main] INFO  org.springframework.boot.web.embedded.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8080 (http)
+2019-05-09 15:37:59.667 [main] INFO  org.apache.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+2019-05-09 15:37:59.679 [main] INFO  org.apache.catalina.core.StandardService - Starting service [Tomcat]
+2019-05-09 15:37:59.680 [main] INFO  org.apache.catalina.core.StandardEngine - Starting Servlet Engine: Apache Tomcat/9.0.13
+2019-05-09 15:37:59.687 [main] INFO  org.apache.catalina.core.AprLifecycleListener - Loaded APR based Apache Tomcat Native library [1.2.19] using APR version [1.6.5].
+2019-05-09 15:37:59.687 [main] INFO  org.apache.catalina.core.AprLifecycleListener - APR capabilities: IPv6 [true], sendfile [true], accept filters [false], random [true].
+2019-05-09 15:37:59.687 [main] INFO  org.apache.catalina.core.AprLifecycleListener - APR/OpenSSL configuration: useAprConnector [false], useOpenSSL [true]
+2019-05-09 15:38:00.780 [main] INFO  org.apache.catalina.core.AprLifecycleListener - OpenSSL successfully initialized [OpenSSL 1.0.2q  20 Nov 2018]
+2019-05-09 15:38:00.961 [main] INFO  org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2019-05-09 15:38:00.962 [main] INFO  org.springframework.web.context.ContextLoader - Root WebApplicationContext: initialization completed in 3969 ms
+2019-05-09 15:38:01.374 [main] INFO  com.alibaba.druid.pool.DruidDataSource - {dataSource-1} inited
+2019-05-09 15:38:01.620 [main] INFO  org.hibernate.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+2019-05-09 15:38:01.698 [main] INFO  org.hibernate.Version - HHH000412: Hibernate Core {5.3.7.Final}
+2019-05-09 15:38:01.700 [main] INFO  org.hibernate.cfg.Environment - HHH000206: hibernate.properties not found
+2019-05-09 15:38:01.870 [main] INFO  org.hibernate.annotations.common.Version - HCANN000001: Hibernate Commons Annotations {5.0.4.Final}
+2019-05-09 15:38:02.432 [main] INFO  org.hibernate.dialect.Dialect - HHH000400: Using dialect: org.hibernate.dialect.Oracle12cDialect
+2019-05-09 15:38:02.533 [main] INFO  org.hibernate.type.BasicTypeRegistry - HHH000270: Type registration [byte[]] overrides previous : org.hibernate.type.BinaryType@1015a4b9
+2019-05-09 15:38:02.533 [main] INFO  org.hibernate.type.BasicTypeRegistry - HHH000270: Type registration [[B] overrides previous : org.hibernate.type.BinaryType@1015a4b9
+2019-05-09 15:38:02.535 [main] INFO  org.hibernate.type.BasicTypeRegistry - HHH000270: Type registration [Byte[]] overrides previous : org.hibernate.type.WrapperBinaryType@2f382a5e
+2019-05-09 15:38:02.535 [main] INFO  org.hibernate.type.BasicTypeRegistry - HHH000270: Type registration [[Ljava.lang.Byte;] overrides previous : org.hibernate.type.WrapperBinaryType@2f382a5e
+2019-05-09 15:38:02.679 [main] WARN  org.hibernate.boot.internal.InFlightMetadataCollectorImpl - HHH000069: Duplicate generator name mseq
+2019-05-09 15:38:03.573 [main] INFO  org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2019-05-09 15:38:03.615 [main] INFO  org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor - Autowired annotation is not supported on static methods: public static void top.ruandb.config.ProcedureConfig.setPROCEDURE_PRO(java.lang.String)
+2019-05-09 15:38:03.919 [main] INFO  org.hibernate.hql.internal.QueryTranslatorFactoryInitiator - HHH000397: Using ASTQueryTranslatorFactory
+2019-05-09 15:38:04.111 [main] INFO  org.quartz.impl.StdSchedulerFactory - Using default implementation for ThreadExecutor
+2019-05-09 15:38:04.124 [main] INFO  org.quartz.core.SchedulerSignalerImpl - Initialized Scheduler Signaller of type: class org.quartz.core.SchedulerSignalerImpl
+2019-05-09 15:38:04.124 [main] INFO  org.quartz.core.QuartzScheduler - Quartz Scheduler v.2.2.1 created.
+2019-05-09 15:38:04.125 [main] INFO  org.quartz.core.QuartzScheduler - JobFactory set to: org.quartz.simpl.SimpleJobFactory@18d30e7
+2019-05-09 15:38:04.125 [main] INFO  org.quartz.impl.jdbcjobstore.JobStoreTX - Using thread monitor-based data access locking (synchronization).
+2019-05-09 15:38:04.126 [main] INFO  org.quartz.impl.jdbcjobstore.JobStoreTX - JobStoreTX initialized.
+2019-05-09 15:38:04.127 [main] INFO  org.quartz.core.QuartzScheduler - Scheduler meta-data: Quartz Scheduler (v2.2.1) 'SchedulerFactory' with instanceId 'ETLScheduler'
+  Scheduler class: 'org.quartz.core.QuartzScheduler' - running locally.
+  NOT STARTED.
+  Currently in standby mode.
+  Number of jobs executed: 0
+  Using thread pool 'org.quartz.simpl.SimpleThreadPool' - with 5 threads.
+  Using job-store 'org.quartz.impl.jdbcjobstore.JobStoreTX' - which supports persistence. and is not clustered.
+
+2019-05-09 15:38:04.128 [main] INFO  org.quartz.impl.StdSchedulerFactory - Quartz scheduler 'SchedulerFactory' initialized from an externally provided properties instance.
+2019-05-09 15:38:04.128 [main] INFO  org.quartz.impl.StdSchedulerFactory - Quartz scheduler version: 2.2.1
+2019-05-09 15:38:04.129 [main] INFO  org.quartz.core.QuartzScheduler - JobFactory set to: top.ruandb.config.MyJobFactory@1b7554d4
+2019-05-09 15:38:04.428 [main] INFO  org.springframework.scheduling.concurrent.ThreadPoolTaskExecutor - Initializing ExecutorService 'applicationTaskExecutor'
+2019-05-09 15:38:04.945 [main] INFO  org.springframework.scheduling.quartz.SchedulerFactoryBean - Starting Quartz Scheduler now
+2019-05-09 15:38:04.947 [main] INFO  com.alibaba.druid.pool.DruidDataSource - {dataSource-2} inited
+2019-05-09 15:38:04.992 [main] INFO  org.quartz.impl.jdbcjobstore.JobStoreTX - Freed 0 triggers from 'acquired' / 'blocked' state.
+2019-05-09 15:38:04.995 [main] INFO  org.quartz.impl.jdbcjobstore.JobStoreTX - Recovering 0 jobs that were in-progress at the time of the last shut-down.
+2019-05-09 15:38:04.996 [main] INFO  org.quartz.impl.jdbcjobstore.JobStoreTX - Recovery complete.
+2019-05-09 15:38:04.997 [main] INFO  org.quartz.impl.jdbcjobstore.JobStoreTX - Removed 0 'complete' triggers.
+2019-05-09 15:38:04.998 [main] INFO  org.quartz.impl.jdbcjobstore.JobStoreTX - Removed 0 stale fired job entries.
+2019-05-09 15:38:05.001 [main] INFO  org.quartz.core.QuartzScheduler - Scheduler SchedulerFactory_$_ETLScheduler started.
+2019-05-09 15:38:05.013 [main] INFO  org.apache.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
+2019-05-09 15:38:05.029 [main] INFO  org.apache.tomcat.util.net.NioSelectorPool - Using a shared selector for servlet write/read
+2019-05-09 15:38:05.052 [main] INFO  org.springframework.boot.web.embedded.tomcat.TomcatWebServer - Tomcat started on port(s): 8080 (http) with context path ''
+2019-05-09 15:38:05.055 [main] INFO  top.ruandb.EtlSchedulerApplication - Started EtlSchedulerApplication in 8.791 seconds (JVM running for 10.042)
+2019-05-09 15:38:05.057 [main] INFO  top.ruandb.init.TaskInit - kettle初始化开始-------------------------------------------------------->
+2019-05-09 15:38:06.664 [main] INFO  top.ruandb.init.TaskInit - kettle初始化结束-------------------------------------------------------->
+2019-05-09 15:38:06.664 [main] INFO  top.ruandb.init.TaskInit - 重新启动清空scheduler
+2019-05-09 15:38:06.769 [main] INFO  top.ruandb.init.TaskInit - 初始化job到调度器-------------------------------->jobname:JB_YY
+2019-05-09 15:38:06.803 [main] INFO  top.ruandb.init.TaskInit - 初始化job到调度器-------------------------------->jobname:JB_YF
+2019-05-09 15:38:06.814 [main] INFO  top.ruandb.init.TaskInit - 初始化job到调度器-------------------------------->jobname:JB_VW
+2019-05-09 15:38:06.821 [main] INFO  top.ruandb.init.TaskInit - 初始化job到调度器-------------------------------->jobname:JB_SS
+2019-05-09 15:38:06.829 [main] INFO  top.ruandb.init.TaskInit - 初始化job到调度器-------------------------------->jobname:JB_KSS
+2019-05-09 15:38:06.837 [main] INFO  top.ruandb.init.TaskInit - 初始化job到调度器-------------------------------->jobname:JB_ZY
+2019-05-09 15:38:06.844 [main] INFO  top.ruandb.init.TaskInit - 初始化job到调度器-------------------------------->jobname:JB_BQ
+2019-05-09 15:38:06.850 [main] INFO  top.ruandb.init.TaskInit - 初始化job到调度器-------------------------------->jobname:JB_DC
+2019-05-09 15:38:06.856 [main] INFO  top.ruandb.init.TaskInit - 初始化job到调度器-------------------------------->jobname:JB_ASMC
+2019-05-09 15:38:06.864 [main] INFO  top.ruandb.init.TaskInit - 初始化job到调度器-------------------------------->jobname:JB_YK
+2019-05-09 15:38:06.870 [main] INFO  top.ruandb.init.TaskInit - 初始化job到调度器-------------------------------->jobname:JB_GH
+2019-05-09 15:38:06.876 [main] INFO  top.ruandb.init.TaskInit - 初始化job到调度器-------------------------------->jobname:usp_dim_zlzb_jbbz_zkks,usp_dim_zlzb_zlgl_lcjybb,usp_dim_zlzb_zlgl_lcjyzk,usp_dim_zyts,usp_dim_zy_ypyfk,usp_dim_zy_zlzxx,usp_dim_zy_zlzxx_ys
+2019-05-09 15:38:06.886 [main] INFO  top.ruandb.init.TaskInit - 初始化job到调度器-------------------------------->jobname:usp_dim_yyxx,usp_dim_zddmk_ba,usp_dim_zdjb,usp_dim_zdss,usp_dim_zljg,usp_dim_zlzb_bfzlx,usp_dim_zlzb_fmfs,usp_dim_zlzb_jbbz_dbz,usp_dim_zlzb_jbbz_dq,usp_dim_zlzb_jbbz_xzljs
+2019-05-09 15:38:06.894 [main] INFO  top.ruandb.init.TaskInit - 初始化job到调度器-------------------------------->jobname:usp_dim_yk_czdmk,usp_dim_ypdl,usp_dim_ypfl,usp_dim_ypjx,usp_dim_ypxx,usp_dim_ysxx_ba,usp_dim_yyfs,usp_dim_yygr_dcnyjxx,usp_dim_yygr_xgdgbw,usp_dim_yylb,usp_dim_yymd,usp_dim_yysjd
+2019-05-09 15:38:06.902 [main] INFO  top.ruandb.init.TaskInit - 初始化job到调度器-------------------------------->jobname:usp_dim_xydl,usp_dim_xyzlxx,usp_dim_ybflxx,usp_dim_yb_yblx,usp_dim_ycbw,usp_dim_ycfj,usp_dim_ycly,usp_dim_yfdmk,usp_dim_yf_czdmk,usp_dim_yg_ssfxdj,usp_dim_yg_ssgrbw,usp_dim_ykdmk
+2019-05-09 15:38:06.912 [main] INFO  top.ruandb.init.TaskInit - 初始化job到调度器-------------------------------->jobname:usp_dim_wzjb,usp_dim_wzsb_cblx,usp_dim_wzsb_kfxx,usp_dim_wzsb_wzkpxx,usp_dim_wzsb_wzpmggxx,usp_dim_wzsb_wz_djlb,usp_dim_wzsb_wz_ghdwxx,usp_dim_wzsb_wz_rkfs,usp_dim_xxxx
+2019-05-09 15:38:06.923 [main] INFO  top.ruandb.init.TaskInit - 初始化job到调度器-------------------------------->jobname:usp_dim_ssjb,usp_dim_ssmz_asamzfj,usp_dim_ssmz_mzfsfl,usp_dim_ssmz_sssjlx,usp_dim_ssxx,usp_dim_sxblfylx,usp_dim_sxfsxx,usp_dim_sxlyxx,usp_dim_sxytxx,usp_dim_time,usp_dim_tsypbz
+2019-05-09 15:38:06.933 [main] INFO  top.ruandb.init.TaskInit - 初始化job到调度器-------------------------------->jobname:usp_dim_rjssxx,usp_dim_sex,usp_dim_sfdxmk,usp_dim_sfxxmk,usp_dim_sf_cfsfjg,usp_dim_sf_cfwt,usp_dim_sf_cfwtfl,usp_dim_sf_cfwtjb,usp_dim_sf_ypyfk,usp_dim_ssbw,usp_dim_ssflxx
+2019-05-09 15:38:06.942 [main] INFO  top.ruandb.init.TaskInit - 初始化job到调度器-------------------------------->jobname:usp_dim_lclj,usp_dim_lcsfxmk,usp_dim_lis_instrument,usp_dim_lyfs,usp_dim_mjzbz,usp_dim_mzfs,usp_dim_mzzy,usp_dim_nld,usp_dim_qkdj,usp_dim_qzts,usp_dim_ris_instrument,usp_dim_rjssbz
+2019-05-09 15:38:06.950 [main] INFO  top.ruandb.init.TaskInit - 初始化job到调度器-------------------------------->jobname:usp_dim_jsk_ysyy,usp_dim_jsk_ztsxfs,usp_dim_jylb,usp_dim_jzzy_bqfj,usp_dim_jzzy_brqx,usp_dim_jzzy_cyfs,usp_dim_kfyxk_bfzlx,usp_dim_kfyxk_kflx,usp_dim_kssjb,usp_dim_ksxx_ba
+2019-05-09 15:38:06.958 [main] INFO  top.ruandb.init.TaskInit - 初始化job到调度器-------------------------------->jobname:usp_dim_aers_warningeventtype,usp_dim_bqdmk_ba,usp_dim_cflx,usp_dim_cfz,usp_dim_cyfs,usp_dim_czryk,usp_dim_ddshcdjb,usp_dim_ddyy,usp_dim_drgs_fxpgdj,usp_dim_fyck,usp_dim_ghlb
+2019-05-09 15:38:06.965 [main] INFO  top.ruandb.init.TaskInit - 初始化job到调度器-------------------------------->jobname:usp_dim_ghtj,usp_dim_ghyysjc,usp_dim_gysxx,usp_dim_hour,usp_dim_hsxm,usp_dim_jclb,usp_dim_jsk_txfs,usp_dim_jsk_xgtllb,usp_dim_jsk_xtzlfs,usp_dim_jsk_ysfs,usp_dim_jsk_ysgj
+2019-05-09 15:38:06.973 [main] INFO  top.ruandb.init.TaskInit - 初始化job到调度器-------------------------------->jobname:usp_dim_aers_eventyzcd,usp_dim_aers_medevent_ss_cwlx,usp_dim_aers_medicaleventtype,usp_dim_aers_nursevt_gl_bfzlx,usp_dim_aers_nursingeventtype,usp_dim_aers_ryzc
+2019-05-09 15:38:06.979 [main] INFO  top.ruandb.init.TaskInit - 初始化job到调度器-------------------------------->jobname:usp_dim_aers_bloodeventtype,usp_dim_aers_drugseventtype,usp_dim_aers_eventclfs,usp_dim_aers_eventconsequence,usp_dim_aers_eventdj,usp_dim_aers_eventtype
+2019-05-09 15:38:06.987 [main] INFO  top.ruandb.init.TaskInit - 初始化job到调度器-------------------------------->jobname:usp_fat_bacwsyqk,usp_fat_basyjb,usp_fat_basyss,usp_fat_basyzd,usp_fat_bq_brcwxxk
+2019-05-09 15:38:06.994 [main] INFO  top.ruandb.init.TaskInit - 初始化job到调度器-------------------------------->jobname:usp_fat_jcbgmx,usp_fat_jybgmx,usp_fat_mz_yffymx,usp_fat_sxxx,usp_fat_wzsb_sb_byxx,usp_fat_wzsb_sb_jlxx
+2019-05-09 15:38:07.002 [main] INFO  top.ruandb.init.TaskInit - 初始化job到调度器-------------------------------->jobname:usp_fat_wzsb_sb_srxx,usp_fat_wzsb_sb_wxxx,usp_fat_wzsb_sb_zjxx,usp_fat_wzsb_wz_bsxx,usp_fat_wzsb_wz_ckxx
+2019-05-09 15:38:07.111 [main] INFO  top.ruandb.init.TaskInit - 初始化job到调度器-------------------------------->jobname:usp_fat_wzsb_wz_qlxx,usp_fat_wzsb_wz_rkxx,usp_fat_wzsb_wz_wtdxxx,usp_fat_wzsb_wz_xhxx,usp_fat_wzsb_wz_ykxx
+2019-05-09 15:38:07.118 [main] INFO  top.ruandb.init.TaskInit - 初始化job到调度器-------------------------------->jobname:usp_fat_wzsb_wz_zgxx,usp_fat_yf_ypczmx,usp_fat_yk_ypczmx,usp_fat_yygh_pbxx,usp_fat_yy_mz_yyrc
+2019-05-09 15:38:07.125 [main] INFO  top.ruandb.init.TaskInit - 初始化job到调度器-------------------------------->jobname:usp_fat_zlzb_zlgl_lcjybb,usp_fat_zlzb_zlgl_lcjyzk,usp_fat_zy_cwsyqk,usp_fat_zy_rjssbrfy_fat
+2019-05-09 15:38:07.133 [main] INFO  top.ruandb.init.TaskInit - 初始化job到调度器-------------------------------->jobname:usp_fat_zy_rjsshzxx,usp_fat_zy_rjssxx,usp_fat_zy_ryywl,usp_fat_zy_yffymx,usp_fat_zy_zyfy_zy
+2019-05-09 15:38:07.140 [main] INFO  top.ruandb.init.TaskInit - 初始化job到调度器-------------------------------->jobname:usp_fat_mz_ybjsxx,usp_fat_mz_mzfy,usp_fat_mz_mzywl
+2019-05-09 15:38:07.146 [main] INFO  top.ruandb.init.TaskInit - 初始化job到调度器-------------------------------->jobname:usp_fat_zy_ybjsxx,usp_fat_zy_zyfy,usp_fat_zy_zyywl
+2019-05-09 15:38:07.557 [main] INFO  top.ruandb.init.TaskInit - jobMap--->{22=PENDDING, 23=PENDDING, 24=PENDDING, 25=PENDDING, 26=PENDDING, 27=PENDDING, 28=PENDDING, 29=PENDDING, 30=PENDDING, 31=PENDDING, 10=PENDDING, 32=PENDDING, 11=PENDDING, 33=PENDDING, 12=PENDDING, 34=PENDDING, 13=PENDDING, 14=PENDDING, 15=PENDDING, 16=PENDDING, 17=PENDDING, 18=PENDDING, 19=PENDDING, 1=PENDDING, 2=PENDDING, 3=PENDDING, 4=PENDDING, 5=PENDDING, 6=PENDDING, 7=PENDDING, 9=PENDDING, 20=PENDDING, 21=PENDDING}
+2019-05-09 15:38:07.558 [main] INFO  top.ruandb.init.TaskInit - groupMap--->{A=[13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25], B=[26, 27, 28, 29, 30, 31, 32, 33, 34], C=[], D=[]}
+2019-05-09 15:38:07.558 [main] INFO  top.ruandb.init.TaskInit - jobMap,groupMap----------------------->初始化成功
+2019-05-09 15:38:12.980 [http-nio-8080-exec-1] INFO  org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2019-05-09 15:38:12.980 [http-nio-8080-exec-1] INFO  org.springframework.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2019-05-09 15:38:12.992 [http-nio-8080-exec-1] INFO  org.springframework.web.servlet.DispatcherServlet - Completed initialization in 12 ms
+2019-05-09 18:43:53.619 [RMI TCP Connection(2)-127.0.0.1] INFO  org.springframework.boot.admin.SpringApplicationAdminMXBeanRegistrar$SpringApplicationAdmin - Application shutdown requested.
+2019-05-09 18:43:53.639 [RMI TCP Connection(2)-127.0.0.1] INFO  org.quartz.core.QuartzScheduler - Scheduler SchedulerFactory_$_ETLScheduler paused.
+2019-05-09 18:43:53.641 [RMI TCP Connection(2)-127.0.0.1] INFO  org.springframework.scheduling.concurrent.ThreadPoolTaskExecutor - Shutting down ExecutorService 'applicationTaskExecutor'
+2019-05-09 18:43:53.644 [RMI TCP Connection(2)-127.0.0.1] INFO  org.quartz.core.QuartzScheduler - Scheduler SchedulerFactory_$_ETLScheduler shutting down.
+2019-05-09 18:43:53.645 [RMI TCP Connection(2)-127.0.0.1] INFO  org.quartz.core.QuartzScheduler - Scheduler SchedulerFactory_$_ETLScheduler paused.
+2019-05-09 18:43:53.651 [RMI TCP Connection(2)-127.0.0.1] INFO  com.alibaba.druid.pool.DruidDataSource - {dataSource-2} closed
+2019-05-09 18:43:53.652 [RMI TCP Connection(2)-127.0.0.1] INFO  org.quartz.core.QuartzScheduler - Scheduler SchedulerFactory_$_ETLScheduler shutdown complete.
+2019-05-09 18:43:53.653 [RMI TCP Connection(2)-127.0.0.1] INFO  org.springframework.scheduling.quartz.SchedulerFactoryBean - Shutting down Quartz Scheduler
+2019-05-09 18:43:53.654 [RMI TCP Connection(2)-127.0.0.1] INFO  org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+2019-05-09 18:43:53.676 [RMI TCP Connection(2)-127.0.0.1] INFO  com.alibaba.druid.pool.DruidDataSource - {dataSource-1} closed

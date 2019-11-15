@@ -1,0 +1,396 @@
+2019-06-17 15:11:37.293 [main] INFO  top.ruandb.EtlSchedulerApplication - Starting EtlSchedulerApplication on LAPTOP-MK6P63H0 with PID 19192 (C:\Java\eclipse-workspace2\ETLScheduler\target\classes started by rdb in C:\Java\eclipse-workspace2\ETLScheduler)
+2019-06-17 15:11:37.299 [main] INFO  top.ruandb.EtlSchedulerApplication - No active profile set, falling back to default profiles: default
+2019-06-17 15:11:38.758 [main] INFO  org.springframework.data.repository.config.RepositoryConfigurationDelegate - Bootstrapping Spring Data repositories in DEFAULT mode.
+2019-06-17 15:11:39.061 [main] INFO  org.springframework.data.repository.config.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 287ms. Found 4 repository interfaces.
+2019-06-17 15:11:39.561 [main] INFO  org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$afd3678e] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-06-17 15:11:39.597 [main] INFO  org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'shiroConfig' of type [top.ruandb.config.ShiroConfig$$EnhancerBySpringCGLIB$$db309ae1] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-06-17 15:11:40.161 [main] INFO  org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'myRealm' of type [top.ruandb.config.MyRealm] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-06-17 15:11:40.170 [main] INFO  org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'securityManager' of type [org.apache.shiro.web.mgt.DefaultWebSecurityManager] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-06-17 15:11:40.912 [main] INFO  org.springframework.boot.web.embedded.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8080 (http)
+2019-06-17 15:11:40.937 [main] INFO  org.apache.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+2019-06-17 15:11:40.955 [main] INFO  org.apache.catalina.core.StandardService - Starting service [Tomcat]
+2019-06-17 15:11:40.956 [main] INFO  org.apache.catalina.core.StandardEngine - Starting Servlet Engine: Apache Tomcat/9.0.13
+2019-06-17 15:11:40.965 [main] INFO  org.apache.catalina.core.AprLifecycleListener - Loaded APR based Apache Tomcat Native library [1.2.19] using APR version [1.6.5].
+2019-06-17 15:11:40.966 [main] INFO  org.apache.catalina.core.AprLifecycleListener - APR capabilities: IPv6 [true], sendfile [true], accept filters [false], random [true].
+2019-06-17 15:11:40.966 [main] INFO  org.apache.catalina.core.AprLifecycleListener - APR/OpenSSL configuration: useAprConnector [false], useOpenSSL [true]
+2019-06-17 15:11:42.064 [main] INFO  org.apache.catalina.core.AprLifecycleListener - OpenSSL successfully initialized [OpenSSL 1.0.2q  20 Nov 2018]
+2019-06-17 15:11:42.310 [main] INFO  org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2019-06-17 15:11:42.310 [main] INFO  org.springframework.web.context.ContextLoader - Root WebApplicationContext: initialization completed in 4931 ms
+2019-06-17 15:11:43.156 [main] INFO  com.alibaba.druid.pool.DruidDataSource - {dataSource-1} inited
+2019-06-17 15:11:43.498 [main] INFO  org.hibernate.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+2019-06-17 15:11:43.649 [main] INFO  org.hibernate.Version - HHH000412: Hibernate Core {5.3.7.Final}
+2019-06-17 15:11:43.655 [main] INFO  org.hibernate.cfg.Environment - HHH000206: hibernate.properties not found
+2019-06-17 15:11:43.987 [main] INFO  org.hibernate.annotations.common.Version - HCANN000001: Hibernate Commons Annotations {5.0.4.Final}
+2019-06-17 15:11:44.562 [main] INFO  org.hibernate.dialect.Dialect - HHH000400: Using dialect: org.hibernate.dialect.SQLServer2012Dialect
+2019-06-17 15:11:46.945 [main] INFO  org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2019-06-17 15:11:47.024 [main] INFO  org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor - Autowired annotation is not supported on static methods: public static void top.ruandb.config.ProcedureConfig.setPROCEDURE_PRO(java.lang.String)
+2019-06-17 15:11:47.611 [main] INFO  org.hibernate.hql.internal.QueryTranslatorFactoryInitiator - HHH000397: Using ASTQueryTranslatorFactory
+2019-06-17 15:11:48.072 [main] INFO  org.quartz.impl.StdSchedulerFactory - Using default implementation for ThreadExecutor
+2019-06-17 15:11:48.095 [main] INFO  org.quartz.core.SchedulerSignalerImpl - Initialized Scheduler Signaller of type: class org.quartz.core.SchedulerSignalerImpl
+2019-06-17 15:11:48.095 [main] INFO  org.quartz.core.QuartzScheduler - Quartz Scheduler v.2.2.1 created.
+2019-06-17 15:11:48.096 [main] INFO  org.quartz.core.QuartzScheduler - JobFactory set to: org.quartz.simpl.SimpleJobFactory@27bb4dc5
+2019-06-17 15:11:48.096 [main] INFO  org.quartz.impl.jdbcjobstore.JobStoreTX - Using thread monitor-based data access locking (synchronization).
+2019-06-17 15:11:48.097 [main] INFO  org.quartz.impl.jdbcjobstore.JobStoreTX - JobStoreTX initialized.
+2019-06-17 15:11:48.098 [main] INFO  org.quartz.core.QuartzScheduler - Scheduler meta-data: Quartz Scheduler (v2.2.1) 'SchedulerFactory' with instanceId 'ETLScheduler'
+  Scheduler class: 'org.quartz.core.QuartzScheduler' - running locally.
+  NOT STARTED.
+  Currently in standby mode.
+  Number of jobs executed: 0
+  Using thread pool 'org.quartz.simpl.SimpleThreadPool' - with 5 threads.
+  Using job-store 'org.quartz.impl.jdbcjobstore.JobStoreTX' - which supports persistence. and is not clustered.
+
+2019-06-17 15:11:48.098 [main] INFO  org.quartz.impl.StdSchedulerFactory - Quartz scheduler 'SchedulerFactory' initialized from an externally provided properties instance.
+2019-06-17 15:11:48.099 [main] INFO  org.quartz.impl.StdSchedulerFactory - Quartz scheduler version: 2.2.1
+2019-06-17 15:11:48.100 [main] INFO  org.quartz.core.QuartzScheduler - JobFactory set to: top.ruandb.config.MyJobFactory@5e193ef5
+2019-06-17 15:11:48.576 [main] INFO  org.springframework.scheduling.concurrent.ThreadPoolTaskExecutor - Initializing ExecutorService 'applicationTaskExecutor'
+2019-06-17 15:11:49.102 [main] INFO  org.springframework.scheduling.quartz.SchedulerFactoryBean - Starting Quartz Scheduler now
+2019-06-17 15:11:49.104 [main] INFO  com.alibaba.druid.pool.DruidDataSource - {dataSource-2} inited
+2019-06-17 15:11:49.139 [main] INFO  org.quartz.impl.jdbcjobstore.JobStoreTX - Freed 0 triggers from 'acquired' / 'blocked' state.
+2019-06-17 15:11:49.146 [main] INFO  org.quartz.impl.jdbcjobstore.JobStoreTX - Handling 36 trigger(s) that missed their scheduled fire-time.
+2019-06-17 15:11:49.594 [main] INFO  org.quartz.impl.jdbcjobstore.JobStoreTX - Recovering 0 jobs that were in-progress at the time of the last shut-down.
+2019-06-17 15:11:49.595 [main] INFO  org.quartz.impl.jdbcjobstore.JobStoreTX - Recovery complete.
+2019-06-17 15:11:49.600 [main] INFO  org.quartz.impl.jdbcjobstore.JobStoreTX - Removed 0 'complete' triggers.
+2019-06-17 15:11:49.603 [main] INFO  org.quartz.impl.jdbcjobstore.JobStoreTX - Removed 0 stale fired job entries.
+2019-06-17 15:11:49.606 [main] INFO  org.quartz.core.QuartzScheduler - Scheduler SchedulerFactory_$_ETLScheduler started.
+2019-06-17 15:11:49.619 [main] INFO  org.apache.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
+2019-06-17 15:11:49.637 [main] INFO  org.apache.tomcat.util.net.NioSelectorPool - Using a shared selector for servlet write/read
+2019-06-17 15:11:49.688 [main] INFO  org.springframework.boot.web.embedded.tomcat.TomcatWebServer - Tomcat started on port(s): 8080 (http) with context path ''
+2019-06-17 15:11:49.693 [main] INFO  top.ruandb.EtlSchedulerApplication - Started EtlSchedulerApplication in 13.666 seconds (JVM running for 15.087)
+2019-06-17 15:11:49.696 [main] INFO  top.ruandb.init.TaskInit - kettleÂàùÂßãÂåñÂºÄÂßã-------------------------------------------------------->
+2019-06-17 15:11:50.420 [main] INFO  top.ruandb.init.TaskInit - kettleÂàùÂßãÂåñÁªìÊùü-------------------------------------------------------->
+2019-06-17 15:11:50.420 [main] INFO  top.ruandb.init.TaskInit - ÈáçÊñ∞ÂêØÂä®Ê∏ÖÁ©∫scheduler
+2019-06-17 15:11:50.681 [main] INFO  top.ruandb.init.TaskInit - ÂàùÂßãÂåñjobÂà∞Ë∞ÉÂ∫¶Âô®-------------------------------->jobname:usp_dim_zlzb_jbbz_zkks,usp_dim_zlzb_zlgl_lcjybb,usp_dim_zlzb_zlgl_lcjyzk,usp_dim_zyts,usp_dim_zy_ypyfk,usp_dim_zy_zlzxx,usp_dim_zy_zlzxx_ys
+2019-06-17 15:11:50.706 [main] INFO  top.ruandb.init.TaskInit - ÂàùÂßãÂåñjobÂà∞Ë∞ÉÂ∫¶Âô®-------------------------------->jobname:usp_dim_yyxx,usp_dim_zddmk_ba,usp_dim_zdjb,usp_dim_zdss,usp_dim_zljg,usp_dim_zlzb_bfzlx,usp_dim_zlzb_fmfs,usp_dim_zlzb_jbbz_dbz,usp_dim_zlzb_jbbz_dq,usp_dim_zlzb_jbbz_xzljs
+2019-06-17 15:11:50.723 [main] INFO  top.ruandb.init.TaskInit - ÂàùÂßãÂåñjobÂà∞Ë∞ÉÂ∫¶Âô®-------------------------------->jobname:usp_dim_yk_czdmk,usp_dim_ypdl,usp_dim_ypfl,usp_dim_ypjx,usp_dim_ypxx,usp_dim_ysxx_ba,usp_dim_yyfs,usp_dim_yygr_dcnyjxx,usp_dim_yygr_xgdgbw,usp_dim_yylb,usp_dim_yymd,usp_dim_yysjd
+2019-06-17 15:11:50.733 [main] INFO  top.ruandb.init.TaskInit - ÂàùÂßãÂåñjobÂà∞Ë∞ÉÂ∫¶Âô®-------------------------------->jobname:usp_dim_xydl,usp_dim_xyzlxx,usp_dim_ybflxx,usp_dim_yb_yblx,usp_dim_ycbw,usp_dim_ycfj,usp_dim_ycly,usp_dim_yfdmk,usp_dim_yf_czdmk,usp_dim_yg_ssfxdj,usp_dim_yg_ssgrbw,usp_dim_ykdmk
+2019-06-17 15:11:50.742 [main] INFO  top.ruandb.init.TaskInit - ÂàùÂßãÂåñjobÂà∞Ë∞ÉÂ∫¶Âô®-------------------------------->jobname:usp_dim_wzjb,usp_dim_wzsb_cblx,usp_dim_wzsb_kfxx,usp_dim_wzsb_wzkpxx,usp_dim_wzsb_wzpmggxx,usp_dim_wzsb_wz_djlb,usp_dim_wzsb_wz_ghdwxx,usp_dim_wzsb_wz_rkfs,usp_dim_xxxx
+2019-06-17 15:11:50.755 [main] INFO  top.ruandb.init.TaskInit - ÂàùÂßãÂåñjobÂà∞Ë∞ÉÂ∫¶Âô®-------------------------------->jobname:usp_dim_ssjb,usp_dim_ssmz_asamzfj,usp_dim_ssmz_mzfsfl,usp_dim_ssmz_sssjlx,usp_dim_ssxx,usp_dim_sxblfylx,usp_dim_sxfsxx,usp_dim_sxlyxx,usp_dim_sxytxx,usp_dim_time,usp_dim_tsypbz
+2019-06-17 15:11:50.764 [main] INFO  top.ruandb.init.TaskInit - ÂàùÂßãÂåñjobÂà∞Ë∞ÉÂ∫¶Âô®-------------------------------->jobname:usp_dim_rjssxx,usp_dim_sex,usp_dim_sfdxmk,usp_dim_sfxxmk,usp_dim_sf_cfsfjg,usp_dim_sf_cfwt,usp_dim_sf_cfwtfl,usp_dim_sf_cfwtjb,usp_dim_sf_ypyfk,usp_dim_ssbw,usp_dim_ssflxx
+2019-06-17 15:11:50.774 [main] INFO  top.ruandb.init.TaskInit - ÂàùÂßãÂåñjobÂà∞Ë∞ÉÂ∫¶Âô®-------------------------------->jobname:usp_dim_lclj,usp_dim_lcsfxmk,usp_dim_lis_instrument,usp_dim_lyfs,usp_dim_mjzbz,usp_dim_mzfs,usp_dim_mzzy,usp_dim_nld,usp_dim_qkdj,usp_dim_qzts,usp_dim_ris_instrument,usp_dim_rjssbz
+2019-06-17 15:11:50.786 [main] INFO  top.ruandb.init.TaskInit - ÂàùÂßãÂåñjobÂà∞Ë∞ÉÂ∫¶Âô®-------------------------------->jobname:usp_dim_jsk_ysyy,usp_dim_jsk_ztsxfs,usp_dim_jylb,usp_dim_jzzy_bqfj,usp_dim_jzzy_brqx,usp_dim_jzzy_cyfs,usp_dim_kfyxk_bfzlx,usp_dim_kfyxk_kflx,usp_dim_kssjb,usp_dim_ksxx_ba
+2019-06-17 15:11:50.793 [main] INFO  top.ruandb.init.TaskInit - ÂàùÂßãÂåñjobÂà∞Ë∞ÉÂ∫¶Âô®-------------------------------->jobname:usp_dim_aers_warningeventtype,usp_dim_bqdmk_ba,usp_dim_cflx,usp_dim_cfz,usp_dim_cyfs,usp_dim_czryk,usp_dim_ddshcdjb,usp_dim_ddyy,usp_dim_drgs_fxpgdj,usp_dim_fyck,usp_dim_ghlb
+2019-06-17 15:11:50.801 [main] INFO  top.ruandb.init.TaskInit - ÂàùÂßãÂåñjobÂà∞Ë∞ÉÂ∫¶Âô®-------------------------------->jobname:usp_dim_ghtj,usp_dim_ghyysjc,usp_dim_gysxx,usp_dim_hour,usp_dim_hsxm,usp_dim_jclb,usp_dim_jsk_txfs,usp_dim_jsk_xgtllb,usp_dim_jsk_xtzlfs,usp_dim_jsk_ysfs,usp_dim_jsk_ysgj
+2019-06-17 15:11:50.808 [main] INFO  top.ruandb.init.TaskInit - ÂàùÂßãÂåñjobÂà∞Ë∞ÉÂ∫¶Âô®-------------------------------->jobname:usp_dim_aers_eventyzcd,usp_dim_aers_medevent_ss_cwlx,usp_dim_aers_medicaleventtype,usp_dim_aers_nursevt_gl_bfzlx,usp_dim_aers_nursingeventtype,usp_dim_aers_ryzc
+2019-06-17 15:11:50.820 [main] INFO  top.ruandb.init.TaskInit - ÂàùÂßãÂåñjobÂà∞Ë∞ÉÂ∫¶Âô®-------------------------------->jobname:usp_dim_aers_bloodeventtype,usp_dim_aers_drugseventtype,usp_dim_aers_eventclfs,usp_dim_aers_eventconsequence,usp_dim_aers_eventdj,usp_dim_aers_eventtype
+2019-06-17 15:11:50.827 [main] INFO  top.ruandb.init.TaskInit - ÂàùÂßãÂåñjobÂà∞Ë∞ÉÂ∫¶Âô®-------------------------------->jobname:usp_fat_bacwsyqk,usp_fat_basyjb,usp_fat_basyss,usp_fat_basyzd,usp_fat_bq_brcwxxk
+2019-06-17 15:11:50.838 [main] INFO  top.ruandb.init.TaskInit - ÂàùÂßãÂåñjobÂà∞Ë∞ÉÂ∫¶Âô®-------------------------------->jobname:usp_fat_jcbgmx,usp_fat_jybgmx,usp_fat_mz_yffymx,usp_fat_sxxx,usp_fat_wzsb_sb_byxx,usp_fat_wzsb_sb_jlxx
+2019-06-17 15:11:50.846 [main] INFO  top.ruandb.init.TaskInit - ÂàùÂßãÂåñjobÂà∞Ë∞ÉÂ∫¶Âô®-------------------------------->jobname:usp_fat_wzsb_sb_srxx,usp_fat_wzsb_sb_wxxx,usp_fat_wzsb_sb_zjxx,usp_fat_wzsb_wz_bsxx,usp_fat_wzsb_wz_ckxx
+2019-06-17 15:11:50.874 [main] INFO  top.ruandb.init.TaskInit - ÂàùÂßãÂåñjobÂà∞Ë∞ÉÂ∫¶Âô®-------------------------------->jobname:usp_fat_wzsb_wz_qlxx,usp_fat_wzsb_wz_rkxx,usp_fat_wzsb_wz_wtdxxx,usp_fat_wzsb_wz_xhxx,usp_fat_wzsb_wz_ykxx
+2019-06-17 15:11:50.882 [main] INFO  top.ruandb.init.TaskInit - ÂàùÂßãÂåñjobÂà∞Ë∞ÉÂ∫¶Âô®-------------------------------->jobname:usp_fat_wzsb_wz_zgxx,usp_fat_yf_ypczmx,usp_fat_yk_ypczmx,usp_fat_yygh_pbxx,usp_fat_yy_mz_yyrc
+2019-06-17 15:11:50.890 [main] INFO  top.ruandb.init.TaskInit - ÂàùÂßãÂåñjobÂà∞Ë∞ÉÂ∫¶Âô®-------------------------------->jobname:usp_fat_zlzb_zlgl_lcjybb,usp_fat_zlzb_zlgl_lcjyzk,usp_fat_zy_cwsyqk,usp_fat_zy_rjssbrfy_fat
+2019-06-17 15:11:50.899 [main] INFO  top.ruandb.init.TaskInit - ÂàùÂßãÂåñjobÂà∞Ë∞ÉÂ∫¶Âô®-------------------------------->jobname:usp_fat_zy_rjsshzxx,usp_fat_zy_rjssxx,usp_fat_zy_ryywl,usp_fat_zy_yffymx,usp_fat_zy_zyfy_zy
+2019-06-17 15:11:50.907 [main] INFO  top.ruandb.init.TaskInit - ÂàùÂßãÂåñjobÂà∞Ë∞ÉÂ∫¶Âô®-------------------------------->jobname:usp_fat_mz_ybjsxx,usp_fat_mz_mzfy,usp_fat_mz_mzywl
+2019-06-17 15:11:50.915 [main] INFO  top.ruandb.init.TaskInit - ÂàùÂßãÂåñjobÂà∞Ë∞ÉÂ∫¶Âô®-------------------------------->jobname:usp_fat_zy_ybjsxx,usp_fat_zy_zyfy,usp_fat_zy_zyywl
+2019-06-17 15:11:50.923 [main] INFO  top.ruandb.init.TaskInit - ÂàùÂßãÂåñjobÂà∞Ë∞ÉÂ∫¶Âô®-------------------------------->jobname:usp_fact_yy_mz_jzrc_fat,usp_fact_yy_mz_patid_fat,usp_fact_yy_mz_yyrc_fat,usp_fact_yygh_pbxx_fat,usp_fact_yy_mz_tjrc_fat
+2019-06-17 15:11:50.934 [main] INFO  top.ruandb.init.TaskInit - ÂàùÂßãÂåñjobÂà∞Ë∞ÉÂ∫¶Âô®-------------------------------->jobname:usp_fact_fy_mz_fyfx_fat,usp_fact_fy_zy_fyfx_fat,usp_fact_fy_zy_fyfx_zxrq_fat,usp_fact_yy_zy_cyywlfx_fat,usp_fact_yy_zy_ryywlfx_fat
+2019-06-17 15:11:50.944 [main] INFO  top.ruandb.init.TaskInit - ÂàùÂßãÂåñjobÂà∞Ë∞ÉÂ∫¶Âô®-------------------------------->jobname:usp_fact_yy_zy_lcljfx_fat,usp_fact_yy_zy_zrzcfx_fat,usp_fact_yb_mz_fyfx_fat,usp_fact_yb_zy_fyfx_fat,usp_fact_yb_ybzkfx_fat
+2019-06-17 15:11:50.956 [main] INFO  top.ruandb.init.TaskInit - ÂàùÂßãÂåñjobÂà∞Ë∞ÉÂ∫¶Âô®-------------------------------->jobname:usp_fact_yy_zybrzyl_fat,usp_fact_zy_zycwxl,usp_fact_yy_zy_cwsyqk_fat,usp_fact_yp_mz_fyfx_fat
+2019-06-17 15:11:50.968 [main] INFO  top.ruandb.init.TaskInit - ÂàùÂßãÂåñjobÂà∞Ë∞ÉÂ∫¶Âô®-------------------------------->jobname:usp_fact_yp_cflfx_fat,usp_fact_yp_zy_fyfx_fat,usp_fact_yp_zy_fyfx_zxrq_fat,usp_fact_yp_mz_yffygzl_fat,usp_fact_yp_zy_yffygzl_fat
+2019-06-17 15:11:50.981 [main] INFO  top.ruandb.init.TaskInit - ÂàùÂßãÂåñjobÂà∞Ë∞ÉÂ∫¶Âô®-------------------------------->jobname:usp_fact_yp_jxcfx_yf_fat,usp_fact_yp_jxcfx_yk_fat,usp_fact_ba_ss_zyssywlfx_fat,usp_fact_yy_ss_mzssywlfx_fat,usp_fact_yy_ss_rjssywlfx_fat
+2019-06-17 15:11:50.990 [main] INFO  top.ruandb.init.TaskInit - ÂàùÂßãÂåñjobÂà∞Ë∞ÉÂ∫¶Âô®-------------------------------->jobname:usp_fact_ba_zy_back15_30_fat,usp_fact_ba_zy_cwsyqk_fat,usp_fact_ba_zy_cyywlfx_fat,usp_fact_lis_list_fat,usp_fact_lis_list_mx_fat
+2019-06-17 15:11:50.999 [main] INFO  top.ruandb.init.TaskInit - ÂàùÂßãÂåñjobÂà∞Ë∞ÉÂ∫¶Âô®-------------------------------->jobname:usp_fact_ris_list_fat,usp_fact_ris_list_mx_fat,usp_fact_xk_sxfx_fat,usp_fact_zqhy_jzrc_fat,usp_fact_zqhy_mzpatid_fat
+2019-06-17 15:11:51.007 [main] INFO  top.ruandb.init.TaskInit - ÂàùÂßãÂåñjobÂà∞Ë∞ÉÂ∫¶Âô®-------------------------------->jobname:usp_fact_wzsb_sb_sbgzl_fat,usp_fact_wzsb_wz_bsxx_fat,usp_fact_wzsb_wz_ckxx_fat,usp_fact_wzsb_wz_qlxx_fat,usp_fact_wzsb_wz_rkxx_fat
+2019-06-17 15:11:51.014 [main] INFO  top.ruandb.init.TaskInit - ÂàùÂßãÂåñjobÂà∞Ë∞ÉÂ∫¶Âô®-------------------------------->jobname:usp_fact_wzsb_wz_wtdxxx_fat,usp_fact_wzsb_wz_xhxx_fat,usp_fact_wzsb_wz_ykxx_fat,usp_fact_wzsb_wz_zgxx_fat
+2019-06-17 15:11:51.023 [main] INFO  top.ruandb.init.TaskInit - ÂàùÂßãÂåñjobÂà∞Ë∞ÉÂ∫¶Âô®-------------------------------->jobname:usp_hd_zbmx_hz,usp_hd_zbmx_hz_ys
+2019-06-17 15:11:51.031 [main] INFO  top.ruandb.init.TaskInit - ÂàùÂßãÂåñjobÂà∞Ë∞ÉÂ∫¶Âô®-------------------------------->jobname:usp_producure_log
+2019-06-17 15:11:51.038 [main] INFO  top.ruandb.init.TaskInit - ÂàùÂßãÂåñjobÂà∞Ë∞ÉÂ∫¶Âô®-------------------------------->jobname:usp_fact_dim_yp_dim
+2019-06-17 15:11:51.661 [main] INFO  top.ruandb.init.TaskInit - ----------------------->‰æùËµñÂàùÂßãÂåñÂºÄÂßã
+2019-06-17 15:11:51.668 [main] INFO  top.ruandb.init.TaskInit - jobMap--->{22=PENDDING, 44=PENDDING, 23=PENDDING, 45=PENDDING, 24=PENDDING, 46=PENDDING, 25=PENDDING, 47=PENDDING, 26=PENDDING, 48=PENDDING, 27=PENDDING, 28=PENDDING, 29=PENDDING, 30=PENDDING, 31=PENDDING, 32=PENDDING, 33=PENDDING, 34=PENDDING, 13=PENDDING, 35=PENDDING, 14=PENDDING, 36=PENDDING, 15=PENDDING, 16=PENDDING, 38=PENDDING, 17=PENDDING, 39=PENDDING, 18=PENDDING, 19=PENDDING, 40=PENDDING, 41=PENDDING, 20=PENDDING, 42=PENDDING, 21=PENDDING, 43=PENDDING}
+2019-06-17 15:11:51.668 [main] INFO  top.ruandb.init.TaskInit - groupMap--->{A=[13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25], B=[26, 27, 28, 29, 30, 31, 32, 33, 34], C=[35, 36, 38, 39, 40, 41, 42, 43, 44, 45, 48], D=[46, 47]}
+2019-06-17 15:11:51.668 [main] INFO  top.ruandb.init.TaskInit - jobMap,groupMap----------------------->‰æùËµñÂàùÂßãÂåñÊàêÂäü
+2019-06-17 15:11:51.668 [main] INFO  top.ruandb.init.TaskInit - ----------------------->ÂÆöÊó∂‰æùËµñÂàùÂßãÂåñÂºÄÂßã
+2019-06-17 15:11:51.684 [main] INFO  top.ruandb.init.TaskInit - ----------------------->ÂÆöÊó∂‰æùËµñÂàùÂßãÂåñÁªìÊùü
+2019-06-17 15:12:22.900 [http-nio-8080-exec-1] INFO  org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2019-06-17 15:12:22.900 [http-nio-8080-exec-1] INFO  org.springframework.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2019-06-17 15:12:22.910 [http-nio-8080-exec-1] INFO  org.springframework.web.servlet.DispatcherServlet - Completed initialization in 10 ms
+2019-06-17 15:12:53.405 [RMI TCP Connection(2)-127.0.0.1] INFO  org.springframework.boot.admin.SpringApplicationAdminMXBeanRegistrar$SpringApplicationAdmin - Application shutdown requested.
+2019-06-17 15:12:53.408 [RMI TCP Connection(2)-127.0.0.1] INFO  org.quartz.core.QuartzScheduler - Scheduler SchedulerFactory_$_ETLScheduler paused.
+2019-06-17 15:12:53.409 [RMI TCP Connection(2)-127.0.0.1] INFO  org.springframework.scheduling.concurrent.ThreadPoolTaskExecutor - Shutting down ExecutorService 'applicationTaskExecutor'
+2019-06-17 15:12:53.410 [RMI TCP Connection(2)-127.0.0.1] INFO  org.quartz.core.QuartzScheduler - Scheduler SchedulerFactory_$_ETLScheduler shutting down.
+2019-06-17 15:12:53.410 [RMI TCP Connection(2)-127.0.0.1] INFO  org.quartz.core.QuartzScheduler - Scheduler SchedulerFactory_$_ETLScheduler paused.
+2019-06-17 15:12:53.418 [RMI TCP Connection(2)-127.0.0.1] INFO  com.alibaba.druid.pool.DruidDataSource - {dataSource-2} closed
+2019-06-17 15:12:53.418 [RMI TCP Connection(2)-127.0.0.1] INFO  org.quartz.core.QuartzScheduler - Scheduler SchedulerFactory_$_ETLScheduler shutdown complete.
+2019-06-17 15:12:53.419 [RMI TCP Connection(2)-127.0.0.1] INFO  org.springframework.scheduling.quartz.SchedulerFactoryBean - Shutting down Quartz Scheduler
+2019-06-17 15:12:53.419 [RMI TCP Connection(2)-127.0.0.1] INFO  org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+2019-06-17 15:12:53.424 [RMI TCP Connection(2)-127.0.0.1] INFO  com.alibaba.druid.pool.DruidDataSource - {dataSource-1} closed
+2019-06-17 15:13:18.817 [main] INFO  top.ruandb.EtlSchedulerApplicationTests - Starting EtlSchedulerApplicationTests on LAPTOP-MK6P63H0 with PID 8856 (started by rdb in C:\Java\eclipse-workspace2\ETLScheduler)
+2019-06-17 15:13:18.819 [main] INFO  top.ruandb.EtlSchedulerApplicationTests - No active profile set, falling back to default profiles: default
+2019-06-17 15:13:20.803 [main] INFO  org.springframework.data.repository.config.RepositoryConfigurationDelegate - Bootstrapping Spring Data repositories in DEFAULT mode.
+2019-06-17 15:13:21.059 [main] INFO  org.springframework.data.repository.config.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 241ms. Found 4 repository interfaces.
+2019-06-17 15:13:22.015 [main] INFO  org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$bd1d63c3] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-06-17 15:13:22.132 [main] INFO  org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'shiroConfig' of type [top.ruandb.config.ShiroConfig$$EnhancerBySpringCGLIB$$e87a9716] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-06-17 15:13:23.072 [main] INFO  org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'myRealm' of type [top.ruandb.config.MyRealm] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-06-17 15:13:23.122 [main] INFO  org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'securityManager' of type [org.apache.shiro.web.mgt.DefaultWebSecurityManager] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-06-17 15:13:23.973 [main] INFO  com.alibaba.druid.pool.DruidDataSource - {dataSource-1} inited
+2019-06-17 15:13:24.495 [main] INFO  org.hibernate.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+2019-06-17 15:13:24.746 [main] INFO  org.hibernate.Version - HHH000412: Hibernate Core {5.3.7.Final}
+2019-06-17 15:13:24.750 [main] INFO  org.hibernate.cfg.Environment - HHH000206: hibernate.properties not found
+2019-06-17 15:13:25.194 [main] INFO  org.hibernate.annotations.common.Version - HCANN000001: Hibernate Commons Annotations {5.0.4.Final}
+2019-06-17 15:13:25.705 [main] INFO  org.hibernate.dialect.Dialect - HHH000400: Using dialect: org.hibernate.dialect.SQLServer2012Dialect
+2019-06-17 15:13:27.599 [main] INFO  org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2019-06-17 15:13:27.636 [main] INFO  org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor - Autowired annotation is not supported on static methods: public static void top.ruandb.config.ProcedureConfig.setPROCEDURE_PRO(java.lang.String)
+2019-06-17 15:13:28.478 [main] INFO  org.hibernate.hql.internal.QueryTranslatorFactoryInitiator - HHH000397: Using ASTQueryTranslatorFactory
+2019-06-17 15:13:29.205 [main] INFO  org.quartz.impl.StdSchedulerFactory - Using default implementation for ThreadExecutor
+2019-06-17 15:13:29.235 [main] INFO  org.quartz.core.SchedulerSignalerImpl - Initialized Scheduler Signaller of type: class org.quartz.core.SchedulerSignalerImpl
+2019-06-17 15:13:29.237 [main] INFO  org.quartz.core.QuartzScheduler - Quartz Scheduler v.2.2.1 created.
+2019-06-17 15:13:29.240 [main] INFO  org.quartz.core.QuartzScheduler - JobFactory set to: org.quartz.simpl.SimpleJobFactory@166e5a6d
+2019-06-17 15:13:29.240 [main] INFO  org.quartz.impl.jdbcjobstore.JobStoreTX - Using thread monitor-based data access locking (synchronization).
+2019-06-17 15:13:29.243 [main] INFO  org.quartz.impl.jdbcjobstore.JobStoreTX - JobStoreTX initialized.
+2019-06-17 15:13:29.246 [main] INFO  org.quartz.core.QuartzScheduler - Scheduler meta-data: Quartz Scheduler (v2.2.1) 'SchedulerFactory' with instanceId 'ETLScheduler'
+  Scheduler class: 'org.quartz.core.QuartzScheduler' - running locally.
+  NOT STARTED.
+  Currently in standby mode.
+  Number of jobs executed: 0
+  Using thread pool 'org.quartz.simpl.SimpleThreadPool' - with 5 threads.
+  Using job-store 'org.quartz.impl.jdbcjobstore.JobStoreTX' - which supports persistence. and is not clustered.
+
+2019-06-17 15:13:29.249 [main] INFO  org.quartz.impl.StdSchedulerFactory - Quartz scheduler 'SchedulerFactory' initialized from an externally provided properties instance.
+2019-06-17 15:13:29.250 [main] INFO  org.quartz.impl.StdSchedulerFactory - Quartz scheduler version: 2.2.1
+2019-06-17 15:13:29.267 [main] INFO  org.quartz.core.QuartzScheduler - JobFactory set to: top.ruandb.config.MyJobFactory@1c68d0db
+2019-06-17 15:13:31.995 [main] INFO  org.springframework.scheduling.concurrent.ThreadPoolTaskExecutor - Initializing ExecutorService 'applicationTaskExecutor'
+2019-06-17 15:13:33.411 [main] INFO  org.springframework.scheduling.quartz.SchedulerFactoryBean - Starting Quartz Scheduler now
+2019-06-17 15:13:33.416 [main] INFO  com.alibaba.druid.pool.DruidDataSource - {dataSource-2} inited
+2019-06-17 15:13:33.470 [main] INFO  org.quartz.impl.jdbcjobstore.JobStoreTX - Freed 0 triggers from 'acquired' / 'blocked' state.
+2019-06-17 15:13:33.483 [main] INFO  org.quartz.impl.jdbcjobstore.JobStoreTX - Recovering 0 jobs that were in-progress at the time of the last shut-down.
+2019-06-17 15:13:33.483 [main] INFO  org.quartz.impl.jdbcjobstore.JobStoreTX - Recovery complete.
+2019-06-17 15:13:33.485 [main] INFO  org.quartz.impl.jdbcjobstore.JobStoreTX - Removed 0 'complete' triggers.
+2019-06-17 15:13:33.488 [main] INFO  org.quartz.impl.jdbcjobstore.JobStoreTX - Removed 0 stale fired job entries.
+2019-06-17 15:13:33.492 [main] INFO  org.quartz.core.QuartzScheduler - Scheduler SchedulerFactory_$_ETLScheduler started.
+2019-06-17 15:13:33.511 [main] INFO  top.ruandb.EtlSchedulerApplicationTests - Started EtlSchedulerApplicationTests in 15.855 seconds (JVM running for 18.012)
+2019-06-17 15:13:33.520 [main] INFO  top.ruandb.init.TaskInit - kettle≥ı ºªØø™ º-------------------------------------------------------->
+2019-06-17 15:13:34.617 [main] INFO  top.ruandb.init.TaskInit - kettle≥ı ºªØΩ· ¯-------------------------------------------------------->
+2019-06-17 15:13:34.617 [main] INFO  top.ruandb.init.TaskInit - ÷ÿ–¬∆Ù∂Ø«Âø’scheduler
+2019-06-17 15:13:34.823 [main] INFO  top.ruandb.init.TaskInit - ≥ı ºªØjobµΩµ˜∂»∆˜-------------------------------->jobname:usp_dim_zlzb_jbbz_zkks,usp_dim_zlzb_zlgl_lcjybb,usp_dim_zlzb_zlgl_lcjyzk,usp_dim_zyts,usp_dim_zy_ypyfk,usp_dim_zy_zlzxx,usp_dim_zy_zlzxx_ys
+2019-06-17 15:13:34.870 [main] INFO  top.ruandb.init.TaskInit - ≥ı ºªØjobµΩµ˜∂»∆˜-------------------------------->jobname:usp_dim_yyxx,usp_dim_zddmk_ba,usp_dim_zdjb,usp_dim_zdss,usp_dim_zljg,usp_dim_zlzb_bfzlx,usp_dim_zlzb_fmfs,usp_dim_zlzb_jbbz_dbz,usp_dim_zlzb_jbbz_dq,usp_dim_zlzb_jbbz_xzljs
+2019-06-17 15:13:34.916 [main] INFO  top.ruandb.init.TaskInit - ≥ı ºªØjobµΩµ˜∂»∆˜-------------------------------->jobname:usp_dim_yk_czdmk,usp_dim_ypdl,usp_dim_ypfl,usp_dim_ypjx,usp_dim_ypxx,usp_dim_ysxx_ba,usp_dim_yyfs,usp_dim_yygr_dcnyjxx,usp_dim_yygr_xgdgbw,usp_dim_yylb,usp_dim_yymd,usp_dim_yysjd
+2019-06-17 15:13:34.936 [main] INFO  top.ruandb.init.TaskInit - ≥ı ºªØjobµΩµ˜∂»∆˜-------------------------------->jobname:usp_dim_xydl,usp_dim_xyzlxx,usp_dim_ybflxx,usp_dim_yb_yblx,usp_dim_ycbw,usp_dim_ycfj,usp_dim_ycly,usp_dim_yfdmk,usp_dim_yf_czdmk,usp_dim_yg_ssfxdj,usp_dim_yg_ssgrbw,usp_dim_ykdmk
+2019-06-17 15:13:34.951 [main] INFO  top.ruandb.init.TaskInit - ≥ı ºªØjobµΩµ˜∂»∆˜-------------------------------->jobname:usp_dim_wzjb,usp_dim_wzsb_cblx,usp_dim_wzsb_kfxx,usp_dim_wzsb_wzkpxx,usp_dim_wzsb_wzpmggxx,usp_dim_wzsb_wz_djlb,usp_dim_wzsb_wz_ghdwxx,usp_dim_wzsb_wz_rkfs,usp_dim_xxxx
+2019-06-17 15:13:34.982 [main] INFO  top.ruandb.init.TaskInit - ≥ı ºªØjobµΩµ˜∂»∆˜-------------------------------->jobname:usp_dim_ssjb,usp_dim_ssmz_asamzfj,usp_dim_ssmz_mzfsfl,usp_dim_ssmz_sssjlx,usp_dim_ssxx,usp_dim_sxblfylx,usp_dim_sxfsxx,usp_dim_sxlyxx,usp_dim_sxytxx,usp_dim_time,usp_dim_tsypbz
+2019-06-17 15:13:35.000 [main] INFO  top.ruandb.init.TaskInit - ≥ı ºªØjobµΩµ˜∂»∆˜-------------------------------->jobname:usp_dim_rjssxx,usp_dim_sex,usp_dim_sfdxmk,usp_dim_sfxxmk,usp_dim_sf_cfsfjg,usp_dim_sf_cfwt,usp_dim_sf_cfwtfl,usp_dim_sf_cfwtjb,usp_dim_sf_ypyfk,usp_dim_ssbw,usp_dim_ssflxx
+2019-06-17 15:13:35.016 [main] INFO  top.ruandb.init.TaskInit - ≥ı ºªØjobµΩµ˜∂»∆˜-------------------------------->jobname:usp_dim_lclj,usp_dim_lcsfxmk,usp_dim_lis_instrument,usp_dim_lyfs,usp_dim_mjzbz,usp_dim_mzfs,usp_dim_mzzy,usp_dim_nld,usp_dim_qkdj,usp_dim_qzts,usp_dim_ris_instrument,usp_dim_rjssbz
+2019-06-17 15:13:35.029 [main] INFO  top.ruandb.init.TaskInit - ≥ı ºªØjobµΩµ˜∂»∆˜-------------------------------->jobname:usp_dim_jsk_ysyy,usp_dim_jsk_ztsxfs,usp_dim_jylb,usp_dim_jzzy_bqfj,usp_dim_jzzy_brqx,usp_dim_jzzy_cyfs,usp_dim_kfyxk_bfzlx,usp_dim_kfyxk_kflx,usp_dim_kssjb,usp_dim_ksxx_ba
+2019-06-17 15:13:35.039 [main] INFO  top.ruandb.init.TaskInit - ≥ı ºªØjobµΩµ˜∂»∆˜-------------------------------->jobname:usp_dim_aers_warningeventtype,usp_dim_bqdmk_ba,usp_dim_cflx,usp_dim_cfz,usp_dim_cyfs,usp_dim_czryk,usp_dim_ddshcdjb,usp_dim_ddyy,usp_dim_drgs_fxpgdj,usp_dim_fyck,usp_dim_ghlb
+2019-06-17 15:13:35.051 [main] INFO  top.ruandb.init.TaskInit - ≥ı ºªØjobµΩµ˜∂»∆˜-------------------------------->jobname:usp_dim_ghtj,usp_dim_ghyysjc,usp_dim_gysxx,usp_dim_hour,usp_dim_hsxm,usp_dim_jclb,usp_dim_jsk_txfs,usp_dim_jsk_xgtllb,usp_dim_jsk_xtzlfs,usp_dim_jsk_ysfs,usp_dim_jsk_ysgj
+2019-06-17 15:13:35.072 [main] INFO  top.ruandb.init.TaskInit - ≥ı ºªØjobµΩµ˜∂»∆˜-------------------------------->jobname:usp_dim_aers_eventyzcd,usp_dim_aers_medevent_ss_cwlx,usp_dim_aers_medicaleventtype,usp_dim_aers_nursevt_gl_bfzlx,usp_dim_aers_nursingeventtype,usp_dim_aers_ryzc
+2019-06-17 15:13:35.091 [main] INFO  top.ruandb.init.TaskInit - ≥ı ºªØjobµΩµ˜∂»∆˜-------------------------------->jobname:usp_dim_aers_bloodeventtype,usp_dim_aers_drugseventtype,usp_dim_aers_eventclfs,usp_dim_aers_eventconsequence,usp_dim_aers_eventdj,usp_dim_aers_eventtype
+2019-06-17 15:13:35.105 [main] INFO  top.ruandb.init.TaskInit - ≥ı ºªØjobµΩµ˜∂»∆˜-------------------------------->jobname:usp_fat_bacwsyqk,usp_fat_basyjb,usp_fat_basyss,usp_fat_basyzd,usp_fat_bq_brcwxxk
+2019-06-17 15:13:35.151 [main] INFO  top.ruandb.init.TaskInit - ≥ı ºªØjobµΩµ˜∂»∆˜-------------------------------->jobname:usp_fat_jcbgmx,usp_fat_jybgmx,usp_fat_mz_yffymx,usp_fat_sxxx,usp_fat_wzsb_sb_byxx,usp_fat_wzsb_sb_jlxx
+2019-06-17 15:13:35.178 [main] INFO  top.ruandb.init.TaskInit - ≥ı ºªØjobµΩµ˜∂»∆˜-------------------------------->jobname:usp_fat_wzsb_sb_srxx,usp_fat_wzsb_sb_wxxx,usp_fat_wzsb_sb_zjxx,usp_fat_wzsb_wz_bsxx,usp_fat_wzsb_wz_ckxx
+2019-06-17 15:13:35.218 [main] INFO  top.ruandb.init.TaskInit - ≥ı ºªØjobµΩµ˜∂»∆˜-------------------------------->jobname:usp_fat_wzsb_wz_qlxx,usp_fat_wzsb_wz_rkxx,usp_fat_wzsb_wz_wtdxxx,usp_fat_wzsb_wz_xhxx,usp_fat_wzsb_wz_ykxx
+2019-06-17 15:13:35.259 [main] INFO  top.ruandb.init.TaskInit - ≥ı ºªØjobµΩµ˜∂»∆˜-------------------------------->jobname:usp_fat_wzsb_wz_zgxx,usp_fat_yf_ypczmx,usp_fat_yk_ypczmx,usp_fat_yygh_pbxx,usp_fat_yy_mz_yyrc
+2019-06-17 15:13:35.275 [main] INFO  top.ruandb.init.TaskInit - ≥ı ºªØjobµΩµ˜∂»∆˜-------------------------------->jobname:usp_fat_zlzb_zlgl_lcjybb,usp_fat_zlzb_zlgl_lcjyzk,usp_fat_zy_cwsyqk,usp_fat_zy_rjssbrfy_fat
+2019-06-17 15:13:35.302 [main] INFO  top.ruandb.init.TaskInit - ≥ı ºªØjobµΩµ˜∂»∆˜-------------------------------->jobname:usp_fat_zy_rjsshzxx,usp_fat_zy_rjssxx,usp_fat_zy_ryywl,usp_fat_zy_yffymx,usp_fat_zy_zyfy_zy
+2019-06-17 15:13:35.337 [main] INFO  top.ruandb.init.TaskInit - ≥ı ºªØjobµΩµ˜∂»∆˜-------------------------------->jobname:usp_fat_mz_ybjsxx,usp_fat_mz_mzfy,usp_fat_mz_mzywl
+2019-06-17 15:13:35.365 [main] INFO  top.ruandb.init.TaskInit - ≥ı ºªØjobµΩµ˜∂»∆˜-------------------------------->jobname:usp_fat_zy_ybjsxx,usp_fat_zy_zyfy,usp_fat_zy_zyywl
+2019-06-17 15:13:35.383 [main] INFO  top.ruandb.init.TaskInit - ≥ı ºªØjobµΩµ˜∂»∆˜-------------------------------->jobname:usp_fact_yy_mz_jzrc_fat,usp_fact_yy_mz_patid_fat,usp_fact_yy_mz_yyrc_fat,usp_fact_yygh_pbxx_fat,usp_fact_yy_mz_tjrc_fat
+2019-06-17 15:13:35.400 [main] INFO  top.ruandb.init.TaskInit - ≥ı ºªØjobµΩµ˜∂»∆˜-------------------------------->jobname:usp_fact_fy_mz_fyfx_fat,usp_fact_fy_zy_fyfx_fat,usp_fact_fy_zy_fyfx_zxrq_fat,usp_fact_yy_zy_cyywlfx_fat,usp_fact_yy_zy_ryywlfx_fat
+2019-06-17 15:13:35.419 [main] INFO  top.ruandb.init.TaskInit - ≥ı ºªØjobµΩµ˜∂»∆˜-------------------------------->jobname:usp_fact_yy_zy_lcljfx_fat,usp_fact_yy_zy_zrzcfx_fat,usp_fact_yb_mz_fyfx_fat,usp_fact_yb_zy_fyfx_fat,usp_fact_yb_ybzkfx_fat
+2019-06-17 15:13:35.429 [main] INFO  top.ruandb.init.TaskInit - ≥ı ºªØjobµΩµ˜∂»∆˜-------------------------------->jobname:usp_fact_yy_zybrzyl_fat,usp_fact_zy_zycwxl,usp_fact_yy_zy_cwsyqk_fat,usp_fact_yp_mz_fyfx_fat
+2019-06-17 15:13:35.445 [main] INFO  top.ruandb.init.TaskInit - ≥ı ºªØjobµΩµ˜∂»∆˜-------------------------------->jobname:usp_fact_yp_cflfx_fat,usp_fact_yp_zy_fyfx_fat,usp_fact_yp_zy_fyfx_zxrq_fat,usp_fact_yp_mz_yffygzl_fat,usp_fact_yp_zy_yffygzl_fat
+2019-06-17 15:13:35.465 [main] INFO  top.ruandb.init.TaskInit - ≥ı ºªØjobµΩµ˜∂»∆˜-------------------------------->jobname:usp_fact_yp_jxcfx_yf_fat,usp_fact_yp_jxcfx_yk_fat,usp_fact_ba_ss_zyssywlfx_fat,usp_fact_yy_ss_mzssywlfx_fat,usp_fact_yy_ss_rjssywlfx_fat
+2019-06-17 15:13:35.480 [main] INFO  top.ruandb.init.TaskInit - ≥ı ºªØjobµΩµ˜∂»∆˜-------------------------------->jobname:usp_fact_ba_zy_back15_30_fat,usp_fact_ba_zy_cwsyqk_fat,usp_fact_ba_zy_cyywlfx_fat,usp_fact_lis_list_fat,usp_fact_lis_list_mx_fat
+2019-06-17 15:13:35.500 [main] INFO  top.ruandb.init.TaskInit - ≥ı ºªØjobµΩµ˜∂»∆˜-------------------------------->jobname:usp_fact_ris_list_fat,usp_fact_ris_list_mx_fat,usp_fact_xk_sxfx_fat,usp_fact_zqhy_jzrc_fat,usp_fact_zqhy_mzpatid_fat
+2019-06-17 15:13:35.512 [main] INFO  top.ruandb.init.TaskInit - ≥ı ºªØjobµΩµ˜∂»∆˜-------------------------------->jobname:usp_fact_wzsb_sb_sbgzl_fat,usp_fact_wzsb_wz_bsxx_fat,usp_fact_wzsb_wz_ckxx_fat,usp_fact_wzsb_wz_qlxx_fat,usp_fact_wzsb_wz_rkxx_fat
+2019-06-17 15:13:35.524 [main] INFO  top.ruandb.init.TaskInit - ≥ı ºªØjobµΩµ˜∂»∆˜-------------------------------->jobname:usp_fact_wzsb_wz_wtdxxx_fat,usp_fact_wzsb_wz_xhxx_fat,usp_fact_wzsb_wz_ykxx_fat,usp_fact_wzsb_wz_zgxx_fat
+2019-06-17 15:13:35.541 [main] INFO  top.ruandb.init.TaskInit - ≥ı ºªØjobµΩµ˜∂»∆˜-------------------------------->jobname:usp_hd_zbmx_hz,usp_hd_zbmx_hz_ys
+2019-06-17 15:13:35.553 [main] INFO  top.ruandb.init.TaskInit - ≥ı ºªØjobµΩµ˜∂»∆˜-------------------------------->jobname:usp_producure_log
+2019-06-17 15:13:35.562 [main] INFO  top.ruandb.init.TaskInit - ≥ı ºªØjobµΩµ˜∂»∆˜-------------------------------->jobname:usp_fact_dim_yp_dim
+2019-06-17 15:13:36.134 [main] INFO  top.ruandb.init.TaskInit - ----------------------->“¿¿µ≥ı ºªØø™ º
+2019-06-17 15:13:36.141 [main] INFO  top.ruandb.init.TaskInit - jobMap--->{22=PENDDING, 44=PENDDING, 23=PENDDING, 45=PENDDING, 24=PENDDING, 46=PENDDING, 25=PENDDING, 47=PENDDING, 26=PENDDING, 48=PENDDING, 27=PENDDING, 28=PENDDING, 29=PENDDING, 30=PENDDING, 31=PENDDING, 32=PENDDING, 33=PENDDING, 34=PENDDING, 13=PENDDING, 35=PENDDING, 14=PENDDING, 36=PENDDING, 15=PENDDING, 16=PENDDING, 38=PENDDING, 17=PENDDING, 39=PENDDING, 18=PENDDING, 19=PENDDING, 40=PENDDING, 41=PENDDING, 20=PENDDING, 42=PENDDING, 21=PENDDING, 43=PENDDING}
+2019-06-17 15:13:36.141 [main] INFO  top.ruandb.init.TaskInit - groupMap--->{A=[13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25], B=[26, 27, 28, 29, 30, 31, 32, 33, 34], C=[35, 36, 38, 39, 40, 41, 42, 43, 44, 45, 48], D=[46, 47]}
+2019-06-17 15:13:36.142 [main] INFO  top.ruandb.init.TaskInit - jobMap,groupMap----------------------->“¿¿µ≥ı ºªØ≥…π¶
+2019-06-17 15:13:36.142 [main] INFO  top.ruandb.init.TaskInit - ----------------------->∂® ±“¿¿µ≥ı ºªØø™ º
+2019-06-17 15:13:36.153 [main] INFO  top.ruandb.init.TaskInit - ----------------------->∂® ±“¿¿µ≥ı ºªØΩ· ¯
+2019-06-17 15:13:36.443 [Thread-3] INFO  org.quartz.core.QuartzScheduler - Scheduler SchedulerFactory_$_ETLScheduler paused.
+2019-06-17 15:13:36.445 [Thread-3] INFO  org.springframework.scheduling.concurrent.ThreadPoolTaskExecutor - Shutting down ExecutorService 'applicationTaskExecutor'
+2019-06-17 15:13:36.446 [Thread-3] INFO  org.quartz.core.QuartzScheduler - Scheduler SchedulerFactory_$_ETLScheduler shutting down.
+2019-06-17 15:13:36.447 [Thread-3] INFO  org.quartz.core.QuartzScheduler - Scheduler SchedulerFactory_$_ETLScheduler paused.
+2019-06-17 15:13:36.455 [Thread-3] INFO  com.alibaba.druid.pool.DruidDataSource - {dataSource-2} closed
+2019-06-17 15:13:36.457 [Thread-3] INFO  org.quartz.core.QuartzScheduler - Scheduler SchedulerFactory_$_ETLScheduler shutdown complete.
+2019-06-17 15:13:36.457 [Thread-3] INFO  org.springframework.scheduling.quartz.SchedulerFactoryBean - Shutting down Quartz Scheduler
+2019-06-17 15:13:36.459 [Thread-3] INFO  org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+2019-06-17 15:13:36.464 [Thread-3] INFO  com.alibaba.druid.pool.DruidDataSource - {dataSource-1} closed
+2019-06-17 17:51:36.938 [main] INFO  top.ruandb.EtlSchedulerApplication - Starting EtlSchedulerApplication on LAPTOP-MK6P63H0 with PID 9068 (C:\Java\eclipse-workspace2\ETLScheduler\target\classes started by rdb in C:\Java\eclipse-workspace2\ETLScheduler)
+2019-06-17 17:51:36.942 [main] INFO  top.ruandb.EtlSchedulerApplication - No active profile set, falling back to default profiles: default
+2019-06-17 17:51:38.732 [main] INFO  org.springframework.data.repository.config.RepositoryConfigurationDelegate - Bootstrapping Spring Data repositories in DEFAULT mode.
+2019-06-17 17:51:39.179 [main] INFO  org.springframework.data.repository.config.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 430ms. Found 4 repository interfaces.
+2019-06-17 17:51:39.726 [main] INFO  org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$3e309885] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-06-17 17:51:39.754 [main] INFO  org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'shiroConfig' of type [top.ruandb.config.ShiroConfig$$EnhancerBySpringCGLIB$$698dcbd8] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-06-17 17:51:40.244 [main] INFO  org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'myRealm' of type [top.ruandb.config.MyRealm] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-06-17 17:51:40.254 [main] INFO  org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'securityManager' of type [org.apache.shiro.web.mgt.DefaultWebSecurityManager] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-06-17 17:51:40.840 [main] INFO  org.springframework.boot.web.embedded.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8080 (http)
+2019-06-17 17:51:40.860 [main] INFO  org.apache.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+2019-06-17 17:51:40.873 [main] INFO  org.apache.catalina.core.StandardService - Starting service [Tomcat]
+2019-06-17 17:51:40.873 [main] INFO  org.apache.catalina.core.StandardEngine - Starting Servlet Engine: Apache Tomcat/9.0.13
+2019-06-17 17:51:40.881 [main] INFO  org.apache.catalina.core.AprLifecycleListener - Loaded APR based Apache Tomcat Native library [1.2.19] using APR version [1.6.5].
+2019-06-17 17:51:40.882 [main] INFO  org.apache.catalina.core.AprLifecycleListener - APR capabilities: IPv6 [true], sendfile [true], accept filters [false], random [true].
+2019-06-17 17:51:40.882 [main] INFO  org.apache.catalina.core.AprLifecycleListener - APR/OpenSSL configuration: useAprConnector [false], useOpenSSL [true]
+2019-06-17 17:51:42.054 [main] INFO  org.apache.catalina.core.AprLifecycleListener - OpenSSL successfully initialized [OpenSSL 1.0.2q  20 Nov 2018]
+2019-06-17 17:51:42.349 [main] INFO  org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2019-06-17 17:51:42.349 [main] INFO  org.springframework.web.context.ContextLoader - Root WebApplicationContext: initialization completed in 5290 ms
+2019-06-17 17:51:43.174 [main] INFO  com.alibaba.druid.pool.DruidDataSource - {dataSource-1} inited
+2019-06-17 17:51:43.507 [main] INFO  org.hibernate.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+2019-06-17 17:51:43.705 [main] INFO  org.hibernate.Version - HHH000412: Hibernate Core {5.3.7.Final}
+2019-06-17 17:51:43.709 [main] INFO  org.hibernate.cfg.Environment - HHH000206: hibernate.properties not found
+2019-06-17 17:51:44.141 [main] INFO  org.hibernate.annotations.common.Version - HCANN000001: Hibernate Commons Annotations {5.0.4.Final}
+2019-06-17 17:51:45.082 [main] INFO  org.hibernate.dialect.Dialect - HHH000400: Using dialect: org.hibernate.dialect.SQLServer2012Dialect
+2019-06-17 17:51:49.140 [main] INFO  org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2019-06-17 17:51:49.208 [main] INFO  org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor - Autowired annotation is not supported on static methods: public static void top.ruandb.config.ProcedureConfig.setPROCEDURE_PRO(java.lang.String)
+2019-06-17 17:51:49.646 [main] INFO  org.hibernate.hql.internal.QueryTranslatorFactoryInitiator - HHH000397: Using ASTQueryTranslatorFactory
+2019-06-17 17:51:49.976 [main] INFO  org.quartz.impl.StdSchedulerFactory - Using default implementation for ThreadExecutor
+2019-06-17 17:51:49.995 [main] INFO  org.quartz.core.SchedulerSignalerImpl - Initialized Scheduler Signaller of type: class org.quartz.core.SchedulerSignalerImpl
+2019-06-17 17:51:49.995 [main] INFO  org.quartz.core.QuartzScheduler - Quartz Scheduler v.2.2.1 created.
+2019-06-17 17:51:49.996 [main] INFO  org.quartz.core.QuartzScheduler - JobFactory set to: org.quartz.simpl.SimpleJobFactory@25de8898
+2019-06-17 17:51:49.997 [main] INFO  org.quartz.impl.jdbcjobstore.JobStoreTX - Using thread monitor-based data access locking (synchronization).
+2019-06-17 17:51:49.998 [main] INFO  org.quartz.impl.jdbcjobstore.JobStoreTX - JobStoreTX initialized.
+2019-06-17 17:51:49.999 [main] INFO  org.quartz.core.QuartzScheduler - Scheduler meta-data: Quartz Scheduler (v2.2.1) 'SchedulerFactory' with instanceId 'ETLScheduler'
+  Scheduler class: 'org.quartz.core.QuartzScheduler' - running locally.
+  NOT STARTED.
+  Currently in standby mode.
+  Number of jobs executed: 0
+  Using thread pool 'org.quartz.simpl.SimpleThreadPool' - with 5 threads.
+  Using job-store 'org.quartz.impl.jdbcjobstore.JobStoreTX' - which supports persistence. and is not clustered.
+
+2019-06-17 17:51:49.999 [main] INFO  org.quartz.impl.StdSchedulerFactory - Quartz scheduler 'SchedulerFactory' initialized from an externally provided properties instance.
+2019-06-17 17:51:50.000 [main] INFO  org.quartz.impl.StdSchedulerFactory - Quartz scheduler version: 2.2.1
+2019-06-17 17:51:50.000 [main] INFO  org.quartz.core.QuartzScheduler - JobFactory set to: top.ruandb.config.MyJobFactory@27e199ce
+2019-06-17 17:51:50.420 [main] INFO  org.springframework.scheduling.concurrent.ThreadPoolTaskExecutor - Initializing ExecutorService 'applicationTaskExecutor'
+2019-06-17 17:51:50.735 [main] INFO  org.springframework.scheduling.quartz.SchedulerFactoryBean - Starting Quartz Scheduler now
+2019-06-17 17:51:50.738 [main] INFO  com.alibaba.druid.pool.DruidDataSource - {dataSource-2} inited
+2019-06-17 17:51:51.012 [main] INFO  org.quartz.impl.jdbcjobstore.JobStoreTX - Freed 0 triggers from 'acquired' / 'blocked' state.
+2019-06-17 17:51:51.018 [main] INFO  org.quartz.impl.jdbcjobstore.JobStoreTX - Recovering 0 jobs that were in-progress at the time of the last shut-down.
+2019-06-17 17:51:51.018 [main] INFO  org.quartz.impl.jdbcjobstore.JobStoreTX - Recovery complete.
+2019-06-17 17:51:51.020 [main] INFO  org.quartz.impl.jdbcjobstore.JobStoreTX - Removed 0 'complete' triggers.
+2019-06-17 17:51:51.022 [main] INFO  org.quartz.impl.jdbcjobstore.JobStoreTX - Removed 0 stale fired job entries.
+2019-06-17 17:51:51.024 [main] INFO  org.quartz.core.QuartzScheduler - Scheduler SchedulerFactory_$_ETLScheduler started.
+2019-06-17 17:51:51.035 [main] INFO  org.apache.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
+2019-06-17 17:51:51.055 [main] INFO  org.apache.tomcat.util.net.NioSelectorPool - Using a shared selector for servlet write/read
+2019-06-17 17:51:51.088 [main] INFO  org.springframework.boot.web.embedded.tomcat.TomcatWebServer - Tomcat started on port(s): 8080 (http) with context path ''
+2019-06-17 17:51:51.091 [main] INFO  top.ruandb.EtlSchedulerApplication - Started EtlSchedulerApplication in 15.05 seconds (JVM running for 18.513)
+2019-06-17 17:51:51.093 [main] INFO  top.ruandb.init.TaskInit - kettleÂàùÂßãÂåñÂºÄÂßã-------------------------------------------------------->
+2019-06-17 17:51:51.750 [main] INFO  top.ruandb.init.TaskInit - kettleÂàùÂßãÂåñÁªìÊùü-------------------------------------------------------->
+2019-06-17 17:51:51.751 [main] INFO  top.ruandb.init.TaskInit - ÈáçÊñ∞ÂêØÂä®Ê∏ÖÁ©∫scheduler
+2019-06-17 17:51:51.996 [main] INFO  top.ruandb.init.TaskInit - ÂàùÂßãÂåñjobÂà∞Ë∞ÉÂ∫¶Âô®-------------------------------->jobname:usp_dim_zlzb_jbbz_zkks,usp_dim_zlzb_zlgl_lcjybb,usp_dim_zlzb_zlgl_lcjyzk,usp_dim_zyts,usp_dim_zy_ypyfk,usp_dim_zy_zlzxx,usp_dim_zy_zlzxx_ys
+2019-06-17 17:51:52.039 [main] INFO  top.ruandb.init.TaskInit - ÂàùÂßãÂåñjobÂà∞Ë∞ÉÂ∫¶Âô®-------------------------------->jobname:usp_dim_yyxx,usp_dim_zddmk_ba,usp_dim_zdjb,usp_dim_zdss,usp_dim_zljg,usp_dim_zlzb_bfzlx,usp_dim_zlzb_fmfs,usp_dim_zlzb_jbbz_dbz,usp_dim_zlzb_jbbz_dq,usp_dim_zlzb_jbbz_xzljs
+2019-06-17 17:51:52.051 [main] INFO  top.ruandb.init.TaskInit - ÂàùÂßãÂåñjobÂà∞Ë∞ÉÂ∫¶Âô®-------------------------------->jobname:usp_dim_yk_czdmk,usp_dim_ypdl,usp_dim_ypfl,usp_dim_ypjx,usp_dim_ypxx,usp_dim_ysxx_ba,usp_dim_yyfs,usp_dim_yygr_dcnyjxx,usp_dim_yygr_xgdgbw,usp_dim_yylb,usp_dim_yymd,usp_dim_yysjd
+2019-06-17 17:51:52.062 [main] INFO  top.ruandb.init.TaskInit - ÂàùÂßãÂåñjobÂà∞Ë∞ÉÂ∫¶Âô®-------------------------------->jobname:usp_dim_xydl,usp_dim_xyzlxx,usp_dim_ybflxx,usp_dim_yb_yblx,usp_dim_ycbw,usp_dim_ycfj,usp_dim_ycly,usp_dim_yfdmk,usp_dim_yf_czdmk,usp_dim_yg_ssfxdj,usp_dim_yg_ssgrbw,usp_dim_ykdmk
+2019-06-17 17:51:52.072 [main] INFO  top.ruandb.init.TaskInit - ÂàùÂßãÂåñjobÂà∞Ë∞ÉÂ∫¶Âô®-------------------------------->jobname:usp_dim_wzjb,usp_dim_wzsb_cblx,usp_dim_wzsb_kfxx,usp_dim_wzsb_wzkpxx,usp_dim_wzsb_wzpmggxx,usp_dim_wzsb_wz_djlb,usp_dim_wzsb_wz_ghdwxx,usp_dim_wzsb_wz_rkfs,usp_dim_xxxx
+2019-06-17 17:51:52.080 [main] INFO  top.ruandb.init.TaskInit - ÂàùÂßãÂåñjobÂà∞Ë∞ÉÂ∫¶Âô®-------------------------------->jobname:usp_dim_ssjb,usp_dim_ssmz_asamzfj,usp_dim_ssmz_mzfsfl,usp_dim_ssmz_sssjlx,usp_dim_ssxx,usp_dim_sxblfylx,usp_dim_sxfsxx,usp_dim_sxlyxx,usp_dim_sxytxx,usp_dim_time,usp_dim_tsypbz
+2019-06-17 17:51:52.089 [main] INFO  top.ruandb.init.TaskInit - ÂàùÂßãÂåñjobÂà∞Ë∞ÉÂ∫¶Âô®-------------------------------->jobname:usp_dim_rjssxx,usp_dim_sex,usp_dim_sfdxmk,usp_dim_sfxxmk,usp_dim_sf_cfsfjg,usp_dim_sf_cfwt,usp_dim_sf_cfwtfl,usp_dim_sf_cfwtjb,usp_dim_sf_ypyfk,usp_dim_ssbw,usp_dim_ssflxx
+2019-06-17 17:51:52.102 [main] INFO  top.ruandb.init.TaskInit - ÂàùÂßãÂåñjobÂà∞Ë∞ÉÂ∫¶Âô®-------------------------------->jobname:usp_dim_lclj,usp_dim_lcsfxmk,usp_dim_lis_instrument,usp_dim_lyfs,usp_dim_mjzbz,usp_dim_mzfs,usp_dim_mzzy,usp_dim_nld,usp_dim_qkdj,usp_dim_qzts,usp_dim_ris_instrument,usp_dim_rjssbz
+2019-06-17 17:51:52.127 [main] INFO  top.ruandb.init.TaskInit - ÂàùÂßãÂåñjobÂà∞Ë∞ÉÂ∫¶Âô®-------------------------------->jobname:usp_dim_jsk_ysyy,usp_dim_jsk_ztsxfs,usp_dim_jylb,usp_dim_jzzy_bqfj,usp_dim_jzzy_brqx,usp_dim_jzzy_cyfs,usp_dim_kfyxk_bfzlx,usp_dim_kfyxk_kflx,usp_dim_kssjb,usp_dim_ksxx_ba
+2019-06-17 17:51:52.150 [main] INFO  top.ruandb.init.TaskInit - ÂàùÂßãÂåñjobÂà∞Ë∞ÉÂ∫¶Âô®-------------------------------->jobname:usp_dim_aers_warningeventtype,usp_dim_bqdmk_ba,usp_dim_cflx,usp_dim_cfz,usp_dim_cyfs,usp_dim_czryk,usp_dim_ddshcdjb,usp_dim_ddyy,usp_dim_drgs_fxpgdj,usp_dim_fyck,usp_dim_ghlb
+2019-06-17 17:51:52.162 [main] INFO  top.ruandb.init.TaskInit - ÂàùÂßãÂåñjobÂà∞Ë∞ÉÂ∫¶Âô®-------------------------------->jobname:usp_dim_ghtj,usp_dim_ghyysjc,usp_dim_gysxx,usp_dim_hour,usp_dim_hsxm,usp_dim_jclb,usp_dim_jsk_txfs,usp_dim_jsk_xgtllb,usp_dim_jsk_xtzlfs,usp_dim_jsk_ysfs,usp_dim_jsk_ysgj
+2019-06-17 17:51:52.185 [main] INFO  top.ruandb.init.TaskInit - ÂàùÂßãÂåñjobÂà∞Ë∞ÉÂ∫¶Âô®-------------------------------->jobname:usp_dim_aers_eventyzcd,usp_dim_aers_medevent_ss_cwlx,usp_dim_aers_medicaleventtype,usp_dim_aers_nursevt_gl_bfzlx,usp_dim_aers_nursingeventtype,usp_dim_aers_ryzc
+2019-06-17 17:51:52.192 [main] INFO  top.ruandb.init.TaskInit - ÂàùÂßãÂåñjobÂà∞Ë∞ÉÂ∫¶Âô®-------------------------------->jobname:usp_dim_aers_bloodeventtype,usp_dim_aers_drugseventtype,usp_dim_aers_eventclfs,usp_dim_aers_eventconsequence,usp_dim_aers_eventdj,usp_dim_aers_eventtype
+2019-06-17 17:51:52.202 [main] INFO  top.ruandb.init.TaskInit - ÂàùÂßãÂåñjobÂà∞Ë∞ÉÂ∫¶Âô®-------------------------------->jobname:usp_fat_bacwsyqk,usp_fat_basyjb,usp_fat_basyss,usp_fat_basyzd,usp_fat_bq_brcwxxk
+2019-06-17 17:51:52.226 [main] INFO  top.ruandb.init.TaskInit - ÂàùÂßãÂåñjobÂà∞Ë∞ÉÂ∫¶Âô®-------------------------------->jobname:usp_fat_jcbgmx,usp_fat_jybgmx,usp_fat_mz_yffymx,usp_fat_sxxx,usp_fat_wzsb_sb_byxx,usp_fat_wzsb_sb_jlxx
+2019-06-17 17:51:52.241 [main] INFO  top.ruandb.init.TaskInit - ÂàùÂßãÂåñjobÂà∞Ë∞ÉÂ∫¶Âô®-------------------------------->jobname:usp_fat_wzsb_sb_srxx,usp_fat_wzsb_sb_wxxx,usp_fat_wzsb_sb_zjxx,usp_fat_wzsb_wz_bsxx,usp_fat_wzsb_wz_ckxx
+2019-06-17 17:51:52.265 [main] INFO  top.ruandb.init.TaskInit - ÂàùÂßãÂåñjobÂà∞Ë∞ÉÂ∫¶Âô®-------------------------------->jobname:usp_fat_wzsb_wz_qlxx,usp_fat_wzsb_wz_rkxx,usp_fat_wzsb_wz_wtdxxx,usp_fat_wzsb_wz_xhxx,usp_fat_wzsb_wz_ykxx
+2019-06-17 17:51:52.279 [main] INFO  top.ruandb.init.TaskInit - ÂàùÂßãÂåñjobÂà∞Ë∞ÉÂ∫¶Âô®-------------------------------->jobname:usp_fat_wzsb_wz_zgxx,usp_fat_yf_ypczmx,usp_fat_yk_ypczmx,usp_fat_yygh_pbxx,usp_fat_yy_mz_yyrc
+2019-06-17 17:51:52.289 [main] INFO  top.ruandb.init.TaskInit - ÂàùÂßãÂåñjobÂà∞Ë∞ÉÂ∫¶Âô®-------------------------------->jobname:usp_fat_zlzb_zlgl_lcjybb,usp_fat_zlzb_zlgl_lcjyzk,usp_fat_zy_cwsyqk,usp_fat_zy_rjssbrfy_fat
+2019-06-17 17:51:52.304 [main] INFO  top.ruandb.init.TaskInit - ÂàùÂßãÂåñjobÂà∞Ë∞ÉÂ∫¶Âô®-------------------------------->jobname:usp_fat_zy_rjsshzxx,usp_fat_zy_rjssxx,usp_fat_zy_ryywl,usp_fat_zy_yffymx,usp_fat_zy_zyfy_zy
+2019-06-17 17:51:52.329 [main] INFO  top.ruandb.init.TaskInit - ÂàùÂßãÂåñjobÂà∞Ë∞ÉÂ∫¶Âô®-------------------------------->jobname:usp_fat_mz_ybjsxx,usp_fat_mz_mzfy,usp_fat_mz_mzywl
+2019-06-17 17:51:52.338 [main] INFO  top.ruandb.init.TaskInit - ÂàùÂßãÂåñjobÂà∞Ë∞ÉÂ∫¶Âô®-------------------------------->jobname:usp_fat_zy_ybjsxx,usp_fat_zy_zyfy,usp_fat_zy_zyywl
+2019-06-17 17:51:52.352 [main] INFO  top.ruandb.init.TaskInit - ÂàùÂßãÂåñjobÂà∞Ë∞ÉÂ∫¶Âô®-------------------------------->jobname:usp_fact_yy_mz_jzrc_fat,usp_fact_yy_mz_patid_fat,usp_fact_yy_mz_yyrc_fat,usp_fact_yygh_pbxx_fat,usp_fact_yy_mz_tjrc_fat
+2019-06-17 17:51:52.361 [main] INFO  top.ruandb.init.TaskInit - ÂàùÂßãÂåñjobÂà∞Ë∞ÉÂ∫¶Âô®-------------------------------->jobname:usp_fact_fy_mz_fyfx_fat,usp_fact_fy_zy_fyfx_fat,usp_fact_fy_zy_fyfx_zxrq_fat,usp_fact_yy_zy_cyywlfx_fat,usp_fact_yy_zy_ryywlfx_fat
+2019-06-17 17:51:52.379 [main] INFO  top.ruandb.init.TaskInit - ÂàùÂßãÂåñjobÂà∞Ë∞ÉÂ∫¶Âô®-------------------------------->jobname:usp_fact_yy_zy_lcljfx_fat,usp_fact_yy_zy_zrzcfx_fat,usp_fact_yb_mz_fyfx_fat,usp_fact_yb_zy_fyfx_fat,usp_fact_yb_ybzkfx_fat
+2019-06-17 17:51:52.389 [main] INFO  top.ruandb.init.TaskInit - ÂàùÂßãÂåñjobÂà∞Ë∞ÉÂ∫¶Âô®-------------------------------->jobname:usp_fact_yy_zybrzyl_fat,usp_fact_zy_zycwxl,usp_fact_yy_zy_cwsyqk_fat,usp_fact_yp_mz_fyfx_fat
+2019-06-17 17:51:52.398 [main] INFO  top.ruandb.init.TaskInit - ÂàùÂßãÂåñjobÂà∞Ë∞ÉÂ∫¶Âô®-------------------------------->jobname:usp_fact_yp_cflfx_fat,usp_fact_yp_zy_fyfx_fat,usp_fact_yp_zy_fyfx_zxrq_fat,usp_fact_yp_mz_yffygzl_fat,usp_fact_yp_zy_yffygzl_fat
+2019-06-17 17:51:52.407 [main] INFO  top.ruandb.init.TaskInit - ÂàùÂßãÂåñjobÂà∞Ë∞ÉÂ∫¶Âô®-------------------------------->jobname:usp_fact_yp_jxcfx_yf_fat,usp_fact_yp_jxcfx_yk_fat,usp_fact_ba_ss_zyssywlfx_fat,usp_fact_yy_ss_mzssywlfx_fat,usp_fact_yy_ss_rjssywlfx_fat
+2019-06-17 17:51:52.416 [main] INFO  top.ruandb.init.TaskInit - ÂàùÂßãÂåñjobÂà∞Ë∞ÉÂ∫¶Âô®-------------------------------->jobname:usp_fact_ba_zy_back15_30_fat,usp_fact_ba_zy_cwsyqk_fat,usp_fact_ba_zy_cyywlfx_fat,usp_fact_lis_list_fat,usp_fact_lis_list_mx_fat
+2019-06-17 17:51:52.425 [main] INFO  top.ruandb.init.TaskInit - ÂàùÂßãÂåñjobÂà∞Ë∞ÉÂ∫¶Âô®-------------------------------->jobname:usp_fact_ris_list_fat,usp_fact_ris_list_mx_fat,usp_fact_xk_sxfx_fat,usp_fact_zqhy_jzrc_fat,usp_fact_zqhy_mzpatid_fat
+2019-06-17 17:51:52.435 [main] INFO  top.ruandb.init.TaskInit - ÂàùÂßãÂåñjobÂà∞Ë∞ÉÂ∫¶Âô®-------------------------------->jobname:usp_fact_wzsb_sb_sbgzl_fat,usp_fact_wzsb_wz_bsxx_fat,usp_fact_wzsb_wz_ckxx_fat,usp_fact_wzsb_wz_qlxx_fat,usp_fact_wzsb_wz_rkxx_fat
+2019-06-17 17:51:52.443 [main] INFO  top.ruandb.init.TaskInit - ÂàùÂßãÂåñjobÂà∞Ë∞ÉÂ∫¶Âô®-------------------------------->jobname:usp_fact_wzsb_wz_wtdxxx_fat,usp_fact_wzsb_wz_xhxx_fat,usp_fact_wzsb_wz_ykxx_fat,usp_fact_wzsb_wz_zgxx_fat
+2019-06-17 17:51:52.452 [main] INFO  top.ruandb.init.TaskInit - ÂàùÂßãÂåñjobÂà∞Ë∞ÉÂ∫¶Âô®-------------------------------->jobname:usp_hd_zbmx_hz,usp_hd_zbmx_hz_ys
+2019-06-17 17:51:52.461 [main] INFO  top.ruandb.init.TaskInit - ÂàùÂßãÂåñjobÂà∞Ë∞ÉÂ∫¶Âô®-------------------------------->jobname:usp_producure_log
+2019-06-17 17:51:52.467 [main] INFO  top.ruandb.init.TaskInit - ÂàùÂßãÂåñjobÂà∞Ë∞ÉÂ∫¶Âô®-------------------------------->jobname:usp_fact_dim_yp_dim
+2019-06-17 17:51:53.025 [main] INFO  top.ruandb.init.TaskInit - ----------------------->‰æùËµñÂàùÂßãÂåñÂºÄÂßã
+2019-06-17 17:51:53.030 [main] INFO  top.ruandb.init.TaskInit - jobMap--->{22=PENDDING, 44=PENDDING, 23=PENDDING, 45=PENDDING, 24=PENDDING, 46=PENDDING, 25=PENDDING, 47=PENDDING, 26=PENDDING, 48=PENDDING, 27=PENDDING, 28=PENDDING, 29=PENDDING, 30=PENDDING, 31=PENDDING, 32=PENDDING, 33=PENDDING, 34=PENDDING, 13=PENDDING, 35=PENDDING, 14=PENDDING, 36=PENDDING, 15=PENDDING, 16=PENDDING, 38=PENDDING, 17=PENDDING, 39=PENDDING, 18=PENDDING, 19=PENDDING, 40=PENDDING, 41=PENDDING, 20=PENDDING, 42=PENDDING, 21=PENDDING, 43=PENDDING}
+2019-06-17 17:51:53.031 [main] INFO  top.ruandb.init.TaskInit - groupMap--->{A=[13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25], B=[26, 27, 28, 29, 30, 31, 32, 33, 34], C=[35, 36, 38, 39, 40, 41, 42, 43, 44, 45, 48], D=[46, 47]}
+2019-06-17 17:51:53.031 [main] INFO  top.ruandb.init.TaskInit - jobMap,groupMap----------------------->‰æùËµñÂàùÂßãÂåñÊàêÂäü
+2019-06-17 17:51:53.031 [main] INFO  top.ruandb.init.TaskInit - ----------------------->ÂÆöÊó∂‰æùËµñÂàùÂßãÂåñÂºÄÂßã
+2019-06-17 17:51:53.069 [main] INFO  top.ruandb.init.TaskInit - ----------------------->ÂÆöÊó∂‰æùËµñÂàùÂßãÂåñÁªìÊùü
+2019-06-17 17:52:00.526 [http-nio-8080-exec-1] INFO  org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2019-06-17 17:52:00.526 [http-nio-8080-exec-1] INFO  org.springframework.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2019-06-17 17:52:00.544 [http-nio-8080-exec-1] INFO  org.springframework.web.servlet.DispatcherServlet - Completed initialization in 18 ms
+2019-06-17 17:59:39.062 [RMI TCP Connection(2)-127.0.0.1] INFO  org.springframework.boot.admin.SpringApplicationAdminMXBeanRegistrar$SpringApplicationAdmin - Application shutdown requested.
+2019-06-17 17:59:39.065 [RMI TCP Connection(2)-127.0.0.1] INFO  org.quartz.core.QuartzScheduler - Scheduler SchedulerFactory_$_ETLScheduler paused.
+2019-06-17 17:59:39.066 [RMI TCP Connection(2)-127.0.0.1] INFO  org.springframework.scheduling.concurrent.ThreadPoolTaskExecutor - Shutting down ExecutorService 'applicationTaskExecutor'
+2019-06-17 17:59:39.067 [RMI TCP Connection(2)-127.0.0.1] INFO  org.quartz.core.QuartzScheduler - Scheduler SchedulerFactory_$_ETLScheduler shutting down.
+2019-06-17 17:59:39.068 [RMI TCP Connection(2)-127.0.0.1] INFO  org.quartz.core.QuartzScheduler - Scheduler SchedulerFactory_$_ETLScheduler paused.
+2019-06-17 17:59:39.071 [RMI TCP Connection(2)-127.0.0.1] INFO  com.alibaba.druid.pool.DruidDataSource - {dataSource-2} closed
+2019-06-17 17:59:39.072 [RMI TCP Connection(2)-127.0.0.1] INFO  org.quartz.core.QuartzScheduler - Scheduler SchedulerFactory_$_ETLScheduler shutdown complete.
+2019-06-17 17:59:39.072 [RMI TCP Connection(2)-127.0.0.1] INFO  org.springframework.scheduling.quartz.SchedulerFactoryBean - Shutting down Quartz Scheduler
+2019-06-17 17:59:39.073 [RMI TCP Connection(2)-127.0.0.1] INFO  org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+2019-06-17 17:59:39.116 [RMI TCP Connection(2)-127.0.0.1] INFO  com.alibaba.druid.pool.DruidDataSource - {dataSource-1} closed
+2019-06-17 17:59:42.679 [SchedulerFactory_QuartzSchedulerThread] WARN  org.quartz.impl.jdbcjobstore.JobStoreTX - Failed to override connection auto commit/transaction isolation.
+com.microsoft.sqlserver.jdbc.SQLServerException: Read timed out
+	at com.microsoft.sqlserver.jdbc.SQLServerConnection.terminate(SQLServerConnection.java:2826)
+	at com.microsoft.sqlserver.jdbc.TDSChannel.read(IOBuffer.java:1977)
+	at com.microsoft.sqlserver.jdbc.TDSReader.readPacket(IOBuffer.java:6369)
+	at com.microsoft.sqlserver.jdbc.TDSCommand.startResponse(IOBuffer.java:7629)
+	at com.microsoft.sqlserver.jdbc.TDSCommand.startResponse(IOBuffer.java:7590)
+	at com.microsoft.sqlserver.jdbc.SQLServerConnection$1ConnectionCommand.doExecute(SQLServerConnection.java:2907)
+	at com.microsoft.sqlserver.jdbc.TDSCommand.execute(IOBuffer.java:7240)
+	at com.microsoft.sqlserver.jdbc.SQLServerConnection.executeCommand(SQLServerConnection.java:2869)
+	at com.microsoft.sqlserver.jdbc.SQLServerConnection.connectionCommand(SQLServerConnection.java:2912)
+	at com.microsoft.sqlserver.jdbc.SQLServerConnection.setAutoCommit(SQLServerConnection.java:3045)
+	at com.alibaba.druid.pool.DruidPooledConnection.setAutoCommit(DruidPooledConnection.java:712)
+	at org.quartz.impl.jdbcjobstore.AttributeRestoringConnectionInvocationHandler.setAutoCommit(AttributeRestoringConnectionInvocationHandler.java:98)
+	at org.quartz.impl.jdbcjobstore.AttributeRestoringConnectionInvocationHandler.invoke(AttributeRestoringConnectionInvocationHandler.java:66)
+	at com.sun.proxy.$Proxy106.setAutoCommit(Unknown Source)
+	at org.quartz.impl.jdbcjobstore.JobStoreSupport.getConnection(JobStoreSupport.java:799)
+	at org.quartz.impl.jdbcjobstore.JobStoreTX.getNonManagedTXConnection(JobStoreTX.java:71)
+	at org.quartz.impl.jdbcjobstore.JobStoreSupport.executeInNonManagedTXLock(JobStoreSupport.java:3784)
+	at org.quartz.impl.jdbcjobstore.JobStoreSupport.acquireNextTriggers(JobStoreSupport.java:2756)
+	at org.quartz.core.QuartzSchedulerThread.run(QuartzSchedulerThread.java:272)
+Caused by: java.net.SocketTimeoutException: Read timed out
+	at java.net.SocketInputStream.socketRead0(Native Method)
+	at java.net.SocketInputStream.socketRead(SocketInputStream.java:116)
+	at java.net.SocketInputStream.read(SocketInputStream.java:171)
+	at java.net.SocketInputStream.read(SocketInputStream.java:141)
+	at com.microsoft.sqlserver.jdbc.TDSChannel.read(IOBuffer.java:1971)
+	... 17 common frames omitted
+2019-06-17 17:59:42.681 [SchedulerFactory_QuartzSchedulerThread] ERROR com.alibaba.druid.pool.DruidDataSource - recyle error
+com.microsoft.sqlserver.jdbc.SQLServerException: ËØ•ËøûÊé•Â∑≤ÂÖ≥Èó≠„ÄÇ
+	at com.microsoft.sqlserver.jdbc.SQLServerException.makeFromDriverError(SQLServerException.java:226)
+	at com.microsoft.sqlserver.jdbc.SQLServerConnection.checkClosed(SQLServerConnection.java:1051)
+	at com.microsoft.sqlserver.jdbc.SQLServerConnection.clearWarnings(SQLServerConnection.java:3303)
+	at com.alibaba.druid.pool.DruidConnectionHolder.reset(DruidConnectionHolder.java:295)
+	at com.alibaba.druid.pool.DruidDataSource.recycle(DruidDataSource.java:1657)
+	at com.alibaba.druid.pool.DruidPooledConnection.recycle(DruidPooledConnection.java:323)
+	at com.alibaba.druid.pool.DruidPooledConnection.close(DruidPooledConnection.java:268)
+	at org.quartz.impl.jdbcjobstore.JobStoreSupport.closeConnection(JobStoreSupport.java:3625)
+	at org.quartz.impl.jdbcjobstore.JobStoreSupport.cleanupConnection(JobStoreSupport.java:3601)
+	at org.quartz.impl.jdbcjobstore.JobStoreSupport.executeInNonManagedTXLock(JobStoreSupport.java:3819)
+	at org.quartz.impl.jdbcjobstore.JobStoreSupport.acquireNextTriggers(JobStoreSupport.java:2756)
+	at org.quartz.core.QuartzSchedulerThread.run(QuartzSchedulerThread.java:272)
+2019-06-17 17:59:42.681 [SchedulerFactory_QuartzSchedulerThread] ERROR org.quartz.core.ErrorLogger - An error occurred while scanning for the next triggers to fire.
+org.quartz.JobPersistenceException: Couldn't acquire next trigger: ËØ•ËøûÊé•Â∑≤ÂÖ≥Èó≠„ÄÇ
+	at org.quartz.impl.jdbcjobstore.JobStoreSupport.acquireNextTrigger(JobStoreSupport.java:2848)
+	at org.quartz.impl.jdbcjobstore.JobStoreSupport$40.execute(JobStoreSupport.java:2759)
+	at org.quartz.impl.jdbcjobstore.JobStoreSupport$40.execute(JobStoreSupport.java:2757)
+	at org.quartz.impl.jdbcjobstore.JobStoreSupport.executeInNonManagedTXLock(JobStoreSupport.java:3787)
+	at org.quartz.impl.jdbcjobstore.JobStoreSupport.acquireNextTriggers(JobStoreSupport.java:2756)
+	at org.quartz.core.QuartzSchedulerThread.run(QuartzSchedulerThread.java:272)
+Caused by: com.microsoft.sqlserver.jdbc.SQLServerException: ËØ•ËøûÊé•Â∑≤ÂÖ≥Èó≠„ÄÇ
+	at com.microsoft.sqlserver.jdbc.SQLServerException.makeFromDriverError(SQLServerException.java:226)
+	at com.microsoft.sqlserver.jdbc.SQLServerConnection.checkClosed(SQLServerConnection.java:1051)
+	at com.microsoft.sqlserver.jdbc.SQLServerConnection.getCatalog(SQLServerConnection.java:3236)
+	at com.alibaba.druid.pool.DruidPooledConnection.getCatalog(DruidPooledConnection.java:920)
+	at com.alibaba.druid.pool.DruidPooledConnection.prepareStatement(DruidPooledConnection.java:339)
+	at sun.reflect.GeneratedMethodAccessor68.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.quartz.impl.jdbcjobstore.AttributeRestoringConnectionInvocationHandler.invoke(AttributeRestoringConnectionInvocationHandler.java:73)
+	at com.sun.proxy.$Proxy106.prepareStatement(Unknown Source)
+	at org.quartz.impl.jdbcjobstore.StdJDBCDelegate.selectTriggerToAcquire(StdJDBCDelegate.java:2599)
+	at org.quartz.impl.jdbcjobstore.JobStoreSupport.acquireNextTrigger(JobStoreSupport.java:2800)
+	... 5 common frames omitted
