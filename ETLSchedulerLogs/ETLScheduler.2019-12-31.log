@@ -1,0 +1,91 @@
+2019-12-31 13:25:43.906 [main] INFO  top.ruandb.EtlSchedulerApplication - Starting EtlSchedulerApplication on LAPTOP-MK6P63H0 with PID 8772 (C:\Java\eclipse-workspace2\ETLScheduler\target\classes started by rdb in C:\Java\eclipse-workspace2\ETLScheduler)
+2019-12-31 13:25:43.915 [main] INFO  top.ruandb.EtlSchedulerApplication - No active profile set, falling back to default profiles: default
+2019-12-31 13:25:45.999 [main] WARN  org.mybatis.spring.mapper.ClassPathMapperScanner - No MyBatis mapper was found in '[top.ruandb]' package. Please check your configuration.
+2019-12-31 13:25:46.096 [main] INFO  org.springframework.data.repository.config.RepositoryConfigurationDelegate - Bootstrapping Spring Data repositories in DEFAULT mode.
+2019-12-31 13:25:46.420 [main] INFO  org.springframework.data.repository.config.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 304ms. Found 4 repository interfaces.
+2019-12-31 13:25:47.041 [main] INFO  org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$10aa4fc3] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-12-31 13:25:47.073 [main] INFO  org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'shiroConfig' of type [top.ruandb.config.ShiroConfig$$EnhancerBySpringCGLIB$$3c078316] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-12-31 13:25:47.918 [main] INFO  org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'myRealm' of type [top.ruandb.config.MyRealm] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-12-31 13:25:47.929 [main] INFO  org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'securityManager' of type [org.apache.shiro.web.mgt.DefaultWebSecurityManager] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-12-31 13:25:48.541 [main] INFO  org.springframework.boot.web.embedded.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8080 (http)
+2019-12-31 13:25:48.566 [main] INFO  org.apache.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+2019-12-31 13:25:48.581 [main] INFO  org.apache.catalina.core.StandardService - Starting service [Tomcat]
+2019-12-31 13:25:48.581 [main] INFO  org.apache.catalina.core.StandardEngine - Starting Servlet Engine: Apache Tomcat/9.0.13
+2019-12-31 13:25:48.588 [main] INFO  org.apache.catalina.core.AprLifecycleListener - Loaded APR based Apache Tomcat Native library [1.2.19] using APR version [1.6.5].
+2019-12-31 13:25:48.589 [main] INFO  org.apache.catalina.core.AprLifecycleListener - APR capabilities: IPv6 [true], sendfile [true], accept filters [false], random [true].
+2019-12-31 13:25:48.589 [main] INFO  org.apache.catalina.core.AprLifecycleListener - APR/OpenSSL configuration: useAprConnector [false], useOpenSSL [true]
+2019-12-31 13:25:49.657 [main] INFO  org.apache.catalina.core.AprLifecycleListener - OpenSSL successfully initialized [OpenSSL 1.0.2q  20 Nov 2018]
+2019-12-31 13:25:50.031 [main] INFO  org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2019-12-31 13:25:50.031 [main] INFO  org.springframework.web.context.ContextLoader - Root WebApplicationContext: initialization completed in 5996 ms
+2019-12-31 13:25:50.220 [main] INFO  com.alibaba.druid.spring.boot.autoconfigure.DruidDataSourceAutoConfigure - Init DruidDataSource
+2019-12-31 13:25:50.573 [main] INFO  com.alibaba.druid.pool.DruidDataSource - {dataSource-1} inited
+2019-12-31 13:25:51.187 [main] INFO  org.hibernate.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+2019-12-31 13:25:51.383 [main] INFO  org.hibernate.Version - HHH000412: Hibernate Core {5.3.7.Final}
+2019-12-31 13:25:51.387 [main] INFO  org.hibernate.cfg.Environment - HHH000206: hibernate.properties not found
+2019-12-31 13:25:51.771 [main] INFO  org.hibernate.annotations.common.Version - HCANN000001: Hibernate Commons Annotations {5.0.4.Final}
+2019-12-31 13:25:52.699 [main] INFO  org.hibernate.dialect.Dialect - HHH000400: Using dialect: org.hibernate.dialect.Oracle12cDialect
+2019-12-31 13:25:52.838 [main] INFO  org.hibernate.type.BasicTypeRegistry - HHH000270: Type registration [byte[]] overrides previous : org.hibernate.type.BinaryType@55f4887d
+2019-12-31 13:25:52.839 [main] INFO  org.hibernate.type.BasicTypeRegistry - HHH000270: Type registration [[B] overrides previous : org.hibernate.type.BinaryType@55f4887d
+2019-12-31 13:25:52.840 [main] INFO  org.hibernate.type.BasicTypeRegistry - HHH000270: Type registration [Byte[]] overrides previous : org.hibernate.type.WrapperBinaryType@991cbde
+2019-12-31 13:25:52.840 [main] INFO  org.hibernate.type.BasicTypeRegistry - HHH000270: Type registration [[Ljava.lang.Byte;] overrides previous : org.hibernate.type.WrapperBinaryType@991cbde
+2019-12-31 13:25:55.122 [main] INFO  org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2019-12-31 13:25:55.180 [main] INFO  org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor - Autowired annotation is not supported on static methods: public static void top.ruandb.config.ProcedureConfig.setSQLSERVER_PROCEDURE_PRO(java.lang.String)
+2019-12-31 13:25:55.181 [main] INFO  org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor - Autowired annotation is not supported on static methods: public static void top.ruandb.config.ProcedureConfig.setORACLE_PROCEDURE_PRO(java.lang.String)
+2019-12-31 13:25:55.661 [main] INFO  org.hibernate.hql.internal.QueryTranslatorFactoryInitiator - HHH000397: Using ASTQueryTranslatorFactory
+2019-12-31 13:25:55.977 [main] INFO  org.quartz.impl.StdSchedulerFactory - Using default implementation for ThreadExecutor
+2019-12-31 13:25:55.994 [main] INFO  org.quartz.core.SchedulerSignalerImpl - Initialized Scheduler Signaller of type: class org.quartz.core.SchedulerSignalerImpl
+2019-12-31 13:25:55.995 [main] INFO  org.quartz.core.QuartzScheduler - Quartz Scheduler v.2.2.1 created.
+2019-12-31 13:25:55.996 [main] INFO  org.quartz.core.QuartzScheduler - JobFactory set to: org.quartz.simpl.SimpleJobFactory@7530090a
+2019-12-31 13:25:55.996 [main] INFO  org.quartz.impl.jdbcjobstore.JobStoreTX - Using thread monitor-based data access locking (synchronization).
+2019-12-31 13:25:55.997 [main] INFO  org.quartz.impl.jdbcjobstore.JobStoreTX - JobStoreTX initialized.
+2019-12-31 13:25:55.998 [main] INFO  org.quartz.core.QuartzScheduler - Scheduler meta-data: Quartz Scheduler (v2.2.1) 'SchedulerFactory' with instanceId 'ETLScheduler'
+  Scheduler class: 'org.quartz.core.QuartzScheduler' - running locally.
+  NOT STARTED.
+  Currently in standby mode.
+  Number of jobs executed: 0
+  Using thread pool 'org.quartz.simpl.SimpleThreadPool' - with 5 threads.
+  Using job-store 'org.quartz.impl.jdbcjobstore.JobStoreTX' - which supports persistence. and is not clustered.
+
+2019-12-31 13:25:55.998 [main] INFO  org.quartz.impl.StdSchedulerFactory - Quartz scheduler 'SchedulerFactory' initialized from an externally provided properties instance.
+2019-12-31 13:25:55.999 [main] INFO  org.quartz.impl.StdSchedulerFactory - Quartz scheduler version: 2.2.1
+2019-12-31 13:25:55.999 [main] INFO  org.quartz.core.QuartzScheduler - JobFactory set to: top.ruandb.config.MyJobFactory@6d6039df
+2019-12-31 13:25:56.639 [main] INFO  org.springframework.scheduling.concurrent.ThreadPoolTaskExecutor - Initializing ExecutorService 'applicationTaskExecutor'
+2019-12-31 13:25:57.364 [main] INFO  org.springframework.scheduling.quartz.SchedulerFactoryBean - Starting Quartz Scheduler now
+2019-12-31 13:25:57.366 [main] INFO  com.alibaba.druid.pool.DruidDataSource - {dataSource-2} inited
+2019-12-31 13:25:57.424 [main] INFO  org.quartz.impl.jdbcjobstore.JobStoreTX - Freed 0 triggers from 'acquired' / 'blocked' state.
+2019-12-31 13:25:57.429 [main] INFO  org.quartz.impl.jdbcjobstore.JobStoreTX - Handling 3 trigger(s) that missed their scheduled fire-time.
+2019-12-31 13:25:57.522 [main] INFO  org.quartz.impl.jdbcjobstore.JobStoreTX - Recovering 0 jobs that were in-progress at the time of the last shut-down.
+2019-12-31 13:25:57.522 [main] INFO  org.quartz.impl.jdbcjobstore.JobStoreTX - Recovery complete.
+2019-12-31 13:25:57.523 [main] INFO  org.quartz.impl.jdbcjobstore.JobStoreTX - Removed 0 'complete' triggers.
+2019-12-31 13:25:57.525 [main] INFO  org.quartz.impl.jdbcjobstore.JobStoreTX - Removed 0 stale fired job entries.
+2019-12-31 13:25:57.534 [main] INFO  org.quartz.core.QuartzScheduler - Scheduler SchedulerFactory_$_ETLScheduler started.
+2019-12-31 13:25:57.548 [main] INFO  org.apache.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
+2019-12-31 13:25:57.570 [main] INFO  org.apache.tomcat.util.net.NioSelectorPool - Using a shared selector for servlet write/read
+2019-12-31 13:25:57.608 [main] INFO  org.springframework.boot.web.embedded.tomcat.TomcatWebServer - Tomcat started on port(s): 8080 (http) with context path ''
+2019-12-31 13:25:57.612 [main] INFO  top.ruandb.EtlSchedulerApplication - Started EtlSchedulerApplication in 16.461 seconds (JVM running for 18.34)
+2019-12-31 13:25:57.615 [main] INFO  top.ruandb.init.TaskInit - kettle初始化开始-------------------------------------------------------->
+2019-12-31 13:26:01.904 [main] INFO  top.ruandb.init.TaskInit - kettle初始化结束-------------------------------------------------------->
+2019-12-31 13:26:01.904 [main] INFO  top.ruandb.init.TaskInit - 重新启动清空scheduler
+2019-12-31 13:26:02.121 [main] INFO  top.ruandb.init.TaskInit - 初始化job到调度器-------------------------------->jobname:JB_YY
+2019-12-31 13:26:02.139 [main] INFO  top.ruandb.init.TaskInit - 初始化job到调度器-------------------------------->jobname:JB_YF
+2019-12-31 13:26:02.370 [main] INFO  top.ruandb.init.TaskInit -  ----------------------->依赖初始化开始
+2019-12-31 13:26:02.380 [main] INFO  top.ruandb.init.TaskInit - jobMap--->{1=PENDDING, 2=PENDDING}
+2019-12-31 13:26:02.381 [main] INFO  top.ruandb.init.TaskInit - groupMap--->{A=[], B=[], C=[], D=[]}
+2019-12-31 13:26:02.381 [main] INFO  top.ruandb.init.TaskInit -  ----------------------->依赖初始化成功
+2019-12-31 13:26:02.381 [main] INFO  top.ruandb.init.TaskInit -  ----------------------->定时依赖初始化开始
+2019-12-31 13:26:02.404 [main] INFO  top.ruandb.init.TaskInit -  ----------------------->定时依赖初始化结束
+2019-12-31 13:26:48.408 [http-nio-8080-exec-1] INFO  org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2019-12-31 13:26:48.408 [http-nio-8080-exec-1] INFO  org.springframework.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2019-12-31 13:26:48.423 [http-nio-8080-exec-1] INFO  org.springframework.web.servlet.DispatcherServlet - Completed initialization in 15 ms
+2019-12-31 13:35:22.853 [RMI TCP Connection(2)-127.0.0.1] INFO  org.springframework.boot.admin.SpringApplicationAdminMXBeanRegistrar$SpringApplicationAdmin - Application shutdown requested.
+2019-12-31 13:35:22.859 [RMI TCP Connection(2)-127.0.0.1] INFO  org.quartz.core.QuartzScheduler - Scheduler SchedulerFactory_$_ETLScheduler paused.
+2019-12-31 13:35:22.861 [RMI TCP Connection(2)-127.0.0.1] INFO  org.springframework.scheduling.concurrent.ThreadPoolTaskExecutor - Shutting down ExecutorService 'applicationTaskExecutor'
+2019-12-31 13:35:22.868 [RMI TCP Connection(2)-127.0.0.1] INFO  org.quartz.core.QuartzScheduler - Scheduler SchedulerFactory_$_ETLScheduler shutting down.
+2019-12-31 13:35:22.868 [RMI TCP Connection(2)-127.0.0.1] INFO  org.quartz.core.QuartzScheduler - Scheduler SchedulerFactory_$_ETLScheduler paused.
+2019-12-31 13:35:22.881 [RMI TCP Connection(2)-127.0.0.1] INFO  com.alibaba.druid.pool.DruidDataSource - {dataSource-2} closed
+2019-12-31 13:35:22.882 [RMI TCP Connection(2)-127.0.0.1] INFO  org.quartz.core.QuartzScheduler - Scheduler SchedulerFactory_$_ETLScheduler shutdown complete.
+2019-12-31 13:35:22.882 [RMI TCP Connection(2)-127.0.0.1] INFO  org.springframework.scheduling.quartz.SchedulerFactoryBean - Shutting down Quartz Scheduler
+2019-12-31 13:35:22.883 [RMI TCP Connection(2)-127.0.0.1] INFO  org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+2019-12-31 13:35:22.892 [RMI TCP Connection(2)-127.0.0.1] INFO  com.alibaba.druid.pool.DruidDataSource - {dataSource-1} closed

@@ -43,6 +43,11 @@ public interface JobLogRespository extends JpaRepository<JobLog,Long>,JpaSpecifi
 	@Query(value = "SELECT id,jobname,status,errors,startdate,enddate,is_deal,'' as logtext FROM(SELECT id,enddate,errors,is_deal,jobname,startdate,status, ROWNUM RN FROM (SELECT id,enddate,errors,is_deal,jobname,startdate,status FROM job_log  where (jobname like ?3 OR ?3 is null) and  (status like ?4 OR ?4 is null ) order by id desc) A WHERE ROWNUM <= ?1)WHERE RN > ?2", nativeQuery = true)
 	public List<JobLog> getLogList(Integer rowNum, Integer rn, String jobName, String status);
 	
-	
-
+	/**
+	 * 	查询最新一次的日志
+	 * @param jobName
+	 * @return
+	 */
+	@Query(value = "SELECT id,enddate,errors,is_deal,jobname,logtext,nick_name,startdate,status FROM JOB_LOG where id in(select max(id) from JOB_LOG where jobname = ?1)", nativeQuery = true)
+	public JobLog getLastedLog(String jobName) ;
 }

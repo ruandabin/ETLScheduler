@@ -110,5 +110,10 @@ public interface TaskCronJobService {
 	 */
 	public void batchST(String ids,String param ) throws ClassNotFoundException, SchedulerException;
 	
+	
+	public List<TaskCronJob> findGroupPro(Long id);
+	
+	public List<TaskCronJob> findGroupProAll(String  jobGroup);
+	
 
 }

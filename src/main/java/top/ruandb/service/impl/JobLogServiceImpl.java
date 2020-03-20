@@ -114,5 +114,10 @@ public class JobLogServiceImpl implements JobLogService{
 	public void updateIsDeal(Long id,String isDeal) {
 		jobLogRespository.updateIsDeal(id, isDeal);
 	};
+	
+	@Override
+	public JobLog getLastedLog(String jobName) {
+		return jobLogRespository.getLastedLog(jobName);
+	}
 
 }

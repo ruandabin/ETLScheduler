@@ -9,6 +9,11 @@
 	table tr td{
 		padding: 1px;
 	}
+	
+	/* .layui-form-selectup dl {
+    top: 42px;
+    bottom: unset;
+} */
 
 </style>
 </head>
@@ -50,6 +55,7 @@
 		        <option value="top.ruandb.Job.KettleJob">KettleJob</option>
 		        <option value="top.ruandb.Job.OracleProcedureJob">Oracle</option>
 		        <option value="top.ruandb.Job.SqlServerProcedureJob">SqlServer</option>
+		        <option value="top.ruandb.Job.GreenplumFunJob">GreenPlum</option>
 		        <!-- <option value="top.ruandb.Job.SqlServerProcedureJob">SqlServer</option> -->
 		        <!-- <option value="top.ruandb.Job.OracleProcedureJob">Oracle</option> -->
 		        <!-- <option value="top.ruandb.Job.KettleJob">JavaJob</option>
@@ -65,10 +71,9 @@
       		
 		</tr>
 		<tr>
-			<td><label class="layui-form-label">作业依赖</label></td>
-      		<td><input type="text" name="proJob" id="pro_job"  placeholder="请输入"  autocomplete="off" class="layui-input"></td>
+      		
 		      <td><label class="layui-form-label"  >作业属组</label></td>
-	      	  <td><select name="jobGroup" id="job_group" lay-verify="required">
+	      	  <td><select name="jobGroup" id="job_group"  lay-filter="job_group_filter"> lay-verify="required">
 			        <option value=""></option>
 			        <option value="A">A</option>
 			        <option value="B">B</option>
@@ -76,6 +81,11 @@
 			        <option value="D">D</option>
 			        <option value="S">S</option>
 			      </select></td>
+			  <td><label class="layui-form-label">作业依赖</label></td>
+			  <!-- <td><input type="text" name="proJob" id="pro_job"  placeholder="请输入"  autocomplete="off" class="layui-input"></td> -->
+			  <!-- <td><select name="proJob" id="pro_job" lay-filter="pro_job_filter"><option value=""></option></select></td> -->
+			  <td><div id="pro_job" name="proJob" class="xm-select-demo"></div></td>
+			  
 		</tr>
 		
 		<tr><td><label class="layui-form-label">是否启用</label></td>
@@ -97,6 +107,7 @@
 	</form>
 </div>
 <script src="/static/layui/layui.js"></script>
+<script type="text/javascript" src="/static/js/xm-select.js"></script>
 <!-- <script src="/static/js/jquery.js"></script> -->
 <script type="text/javascript">
 layui.use(['element','form','table','layer','jquery','laydate'], function(){
@@ -111,6 +122,60 @@ layui.use(['element','form','table','layer','jquery','laydate'], function(){
 	  	    elem: '#increase_time' //指定元素
 	  	    ,type: 'time'
 	  	  });
+	  	
+	  	
+	  	form.on('select(job_group_filter)', function(data){
+	  		var id=$("#job_id").val();
+	  		console.log(id);
+	  		if(id==null){
+	  			//获取同组别依赖
+	  		     $.post("/taskCronJob/findGroupPro",{id:id},function(result){
+	  		    	 //console.log(result.data);
+	  		    	/*  $("#pro_job").empty();
+	  		    	 $('#pro_job').append(new Option());
+	  		    	 var obj=result.data[0];
+	  		    	 $.each(obj,function(key,value){  //遍历键值对
+	  		    	           // console.log(key+'````'+value);
+	  		    	            $('#pro_job').append(new Option(value,key));
+	  		    	  })
+	  		    	  layui.form.render("select"); */
+	  		    	  
+	  		    	  var demo1 = xmSelect.render({
+			    			el: '#pro_job', 
+			    			name: 'proJob',
+			    			direction: 'down',
+			    			data: result.data
+			    		})
+			    		
+	  			  },"json");  
+	  		}else{
+	  			//获取同组别依赖
+	  		     $.post("/taskCronJob/findGroupProAll",{jobGroup:data.value},function(result){
+	  		    	/*  $("#pro_job").empty();
+	  		    	 $('#pro_job').append(new Option());
+	  		    	 var obj=result.data[0];
+	  		    	 $.each(obj,function(key,value){  //遍历键值对
+	  		    	           // console.log(key+'````'+value);
+	  		    	            $('#pro_job').append(new Option(value,key));
+	  		    	  })
+	  		    	  layui.form.render("select"); */
+	  		    	  
+	  		    	  var demo1 = xmSelect.render({
+			    			el: '#pro_job', 
+			    			name: 'proJob',
+			    			direction: 'down',
+			    			data: result.data
+			    		})
+			    		
+	  			  },"json"); 
+	  			
+	  		}
+	  	  //console.log(data.value); //得到被选中的值
+	  	  
+  		
+	  	  
+	  	});   
+	  	
 	  //监听提交
 	  form.on('submit(formDemo)', function(data){
 		  
@@ -158,6 +223,9 @@ layui.use(['element','form','table','layer','jquery','laydate'], function(){
 	  $(function(){
 			var id=getQueryVariable("id");
 			if(id){
+				
+				
+				 
 				 $.post("/taskCronJob/listOne",{id:id},function(result){
 					  if(result.success){
 						  var job=result.taskCronJob;
@@ -169,7 +237,7 @@ layui.use(['element','form','table','layer','jquery','laydate'], function(){
 						 /*  $("#job_extract_style").val(job.extractStyle); */
 						  $("#job_group").val(job.jobGroup);
 						  $("#nick_name").val(job.nickName);
-						  form.render('select');//更新下拉框
+						  
 						  //job.enabled == true? $("#enabled").check : '';
 						  if(job.enabled == true){
 							  $('#enabled').attr('checked', true);
@@ -181,8 +249,40 @@ layui.use(['element','form','table','layer','jquery','laydate'], function(){
 						  $("#job_description").val(job.jobDescription); 
 						 // $("#increase_time").val(job.increaseTime); 
 						  $("#job_params").val(job.jobParams); 
-						  $("#pro_job").val(job.proJob);
+						  //$("#pro_job").val(job.proJob);
+
 						  $("#last_date").val(job.lastDate);
+						  
+						  var v_strs = new Array();
+						  if(job.proJob != null){
+							  v_strs = job.proJob.split(",");
+						  }
+						  
+						  //获取同组别依赖
+					     $.post("/taskCronJob/findGroupPro",{id:id},function(result){
+					    	 //console.log(result.data);
+					    	 var obj=result.data[0];
+					    	/*  $.each(obj,function(key,value){  //遍历键值对
+					    	           // console.log(key+'````'+value);
+					    	            $('#pro_job').append(new Option(value,key));
+					    	  })
+					    	  layui.form.render("select"); */
+					    	  
+					    	  var demo1 = xmSelect.render({
+					    			el: '#pro_job', 
+					    			name: 'proJob',
+					    			direction: 'down',
+					    			initValue: v_strs,
+					    			data: result.data
+					    		})
+					    	  
+						  },"json");  
+						  
+						  
+						  
+						  form.render('select');//更新下拉框
+						  
+						  
 						  
 						 
 						  /* form.val("formTest", {
@@ -200,7 +300,19 @@ layui.use(['element','form','table','layer','jquery','laydate'], function(){
 							  ,closeBtn: 0});
 					  }
 				  },"json");  
+				 
+				
+			}else{
+				 var demo1 = xmSelect.render({
+		    			el: '#pro_job', 
+		    			name: 'proJob',
+		    			direction: 'down',
+		    			data: []
+		    			})
 			}
+			
+			  
+			
 		});
 	  
 	});
@@ -236,6 +348,10 @@ function addOneJob(){
 
 function loadJobName(str){
 	 $("#job_name").val(str);
+}
+
+function alertsss(){
+	alert('sssssss');
 }
 
 </script>

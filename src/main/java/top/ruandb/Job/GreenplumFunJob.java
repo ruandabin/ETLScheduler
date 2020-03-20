@@ -11,35 +11,37 @@ import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 
-import top.ruandb.config.ProcedureConfig;
+import top.ruandb.config.GreenPlumConfig;
 import top.ruandb.entity.JobLog;
 import top.ruandb.entity.JobMonitor;
-import top.ruandb.entity.OdrProLog;
+import top.ruandb.secondaryEntity.OdrProLog;
 import top.ruandb.entity.TaskCronJob;
-import top.ruandb.repository.ProcedureJobRepository;
-import top.ruandb.service.JobLogService;
+import top.ruandb.secondaryRepository.ProcedureJobSecondRepository;
 import top.ruandb.service.JobMonitorService;
 import top.ruandb.service.OdrProLogService;
-import top.ruandb.utils.TaskUtils;
 
-public class OracleProcedureJob extends BaseJob {
-
+/**
+ * 	调用GreenPlum 中的函数(存储)的Job
+ * @author rdb
+ *
+ */
+public class GreenplumFunJob extends BaseJob{
+	
 	private final Logger logger = LoggerFactory.getLogger(getClass());
-
+	
 	@Autowired
-	private ProcedureJobRepository procedureJobRepository;
+	private ProcedureJobSecondRepository procedureJobSecondRepository;
 
 	@Resource
 	private JobMonitorService jobMonitorService;
-
+	
 	@Resource
 	private OdrProLogService odrProLogService;
-
-	@Value("${oracleProcedurePro}")
-	public String oracleProcedurePro;
-
+	
+	
 	@Override
 	public void execute(JobExecutionContext context) throws JobExecutionException {
+		
 		JobDetail detail = context.getJobDetail();
 		Trigger trigger = context.getTrigger();
 		TaskCronJob taskCronJob = (TaskCronJob) detail.getJobDataMap().get("taskCronJob"); // 获得JobDataMap
@@ -62,11 +64,12 @@ public class OracleProcedureJob extends BaseJob {
 					} finally {
 						afterExecute(taskCronJob);// 报备自己的状态
 					}
+					
 					return;
 				}
 			}
-
 		}
+		
 		try {
 			jobMonitor.setPrviousDate(new Date());
 			jobMonitor.setStatus(BaseJob.JOB_RUN);
@@ -82,11 +85,9 @@ public class OracleProcedureJob extends BaseJob {
 			if (trigger.getJobDataMap().get("manualExecution") == null) {
 				afterExecute(taskCronJob);// 报备自己的状态
 			}
-
-		}
-		
+		}	
 	}
-
+	
 	/**
 	 * 调度存储过程 作业
 	 * 
@@ -94,7 +95,6 @@ public class OracleProcedureJob extends BaseJob {
 	 * @return
 	 */
 	private Boolean runJob(TaskCronJob taskCronJob) {
-
 		Boolean result = true;
 		JobLog jobLog = new JobLog(taskCronJob.getNickName(),taskCronJob.getJobName(), null, new Date(), null, null);
 		StringBuilder stringBuilder=new StringBuilder("******程序作业日志******"+ "\n");
@@ -110,17 +110,18 @@ public class OracleProcedureJob extends BaseJob {
 			} catch (Exception e) {
 				rt = false ;
 				rmsg = jobNames[i]+" 存储过程运行异常:"+"\n"+e.getMessage()+"\n";
-				logger.error("{}----------------->运行失败，请查阅日志", jobNames[i]);
+				logger.error("{}----------------->运行失败，请查阅日志" +"\n" , jobNames[i]) ;
 				stringBuilder.append(rmsg);
 				result = result & rt;
 				continue;
 			}
-			OdrProLog odrProLog = null;
+			OdrProLog odrProLog=null;
 			try {
-				odrProLog = odrProLogService.getLastedOracleOdrProLog(jobNames[i]);
+				odrProLog = procedureJobSecondRepository.getOneOdrProLog(jobNames[i]);//odrProLogService.getLastedGreenplumLog(jobNames[i]);
 			} catch (Exception e) {
 				odrProLog = null;
 			}
+			//OdrProLog odrProLog = odrProLogService.getLastedGreenplumLog(jobNames[i]);
 			if(odrProLog==null ||(odrProLog != null && odrProLog.getProStatus() != null &&  !odrProLog.getProStatus().equals("0") )) {
 				
 				if(odrProLog == null) {
@@ -133,7 +134,6 @@ public class OracleProcedureJob extends BaseJob {
 			}else {
 				logger.info("{}----------------->运行成功", jobNames[i]);
 			}
-			
 			stringBuilder.append(rmsg);
 			result = result & rt;
 		}
@@ -158,13 +158,14 @@ public class OracleProcedureJob extends BaseJob {
 		
 		String sql = "";
 		if (taskCronJob.getJobParams() != null && !taskCronJob.getJobParams().equals("")) {
-			sql = "{call " + oracleProcedurePro + name + "(?)}";
+			sql = "select " + GreenPlumConfig.GP_SCHEMA + name + "("+taskCronJob.getJobParams()+")";
 		} else {
-			sql = "{call " + oracleProcedurePro + name + "()}";
+			sql = "select " + GreenPlumConfig.GP_SCHEMA + name + "()";//--{call " + oracleProcedurePro + name + "()}";
 		}
 		logger.info(sql);
-	    procedureJobRepository.runOraclePro(sql, taskCronJob.getJobParams());
+		procedureJobSecondRepository.runSql(sql);
 		
 
 	}
+
 }

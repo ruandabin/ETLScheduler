@@ -1,0 +1,681 @@
+2020-02-29 20:43:40.162 [main] INFO  top.ruandb.EtlSchedulerApplication - Starting EtlSchedulerApplication on LAPTOP-MK6P63H0 with PID 14148 (C:\Java\eclipse-workspace5\ETLScheduler\target\classes started by rdb in C:\Java\eclipse-workspace5\ETLScheduler)
+2020-02-29 20:43:40.167 [main] INFO  top.ruandb.EtlSchedulerApplication - No active profile set, falling back to default profiles: default
+2020-02-29 20:43:41.703 [main] INFO  org.springframework.data.repository.config.RepositoryConfigurationDelegate - Bootstrapping Spring Data repositories in DEFAULT mode.
+2020-02-29 20:43:41.879 [main] INFO  org.springframework.data.repository.config.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 153ms. Found 4 repository interfaces.
+2020-02-29 20:43:41.880 [main] INFO  org.springframework.data.repository.config.RepositoryConfigurationDelegate - Bootstrapping Spring Data repositories in DEFAULT mode.
+2020-02-29 20:43:41.900 [main] INFO  org.springframework.data.repository.config.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 20ms. Found 1 repository interfaces.
+2020-02-29 20:43:42.383 [main] WARN  org.mybatis.spring.mapper.ClassPathMapperScanner - No MyBatis mapper was found in '[top.ruandb]' package. Please check your configuration.
+2020-02-29 20:43:43.084 [main] INFO  org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$97a6f84c] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-02-29 20:43:43.122 [main] INFO  org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'shiroConfig' of type [top.ruandb.config.ShiroConfig$$EnhancerBySpringCGLIB$$c3042b9f] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-02-29 20:43:44.488 [main] INFO  org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'myRealm' of type [top.ruandb.config.MyRealm] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-02-29 20:43:44.502 [main] INFO  org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'securityManager' of type [org.apache.shiro.web.mgt.DefaultWebSecurityManager] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-02-29 20:43:45.309 [main] INFO  org.springframework.boot.web.embedded.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8088 (http)
+2020-02-29 20:43:45.341 [main] INFO  org.apache.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8088"]
+2020-02-29 20:43:45.363 [main] INFO  org.apache.catalina.core.StandardService - Starting service [Tomcat]
+2020-02-29 20:43:45.364 [main] INFO  org.apache.catalina.core.StandardEngine - Starting Servlet Engine: Apache Tomcat/9.0.13
+2020-02-29 20:43:45.377 [main] INFO  org.apache.catalina.core.AprLifecycleListener - Loaded APR based Apache Tomcat Native library [1.2.19] using APR version [1.6.5].
+2020-02-29 20:43:45.377 [main] INFO  org.apache.catalina.core.AprLifecycleListener - APR capabilities: IPv6 [true], sendfile [true], accept filters [false], random [true].
+2020-02-29 20:43:45.378 [main] INFO  org.apache.catalina.core.AprLifecycleListener - APR/OpenSSL configuration: useAprConnector [false], useOpenSSL [true]
+2020-02-29 20:43:46.481 [main] INFO  org.apache.catalina.core.AprLifecycleListener - OpenSSL successfully initialized [OpenSSL 1.0.2q  20 Nov 2018]
+2020-02-29 20:43:46.863 [main] INFO  org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2020-02-29 20:43:46.863 [main] INFO  org.springframework.web.context.ContextLoader - Root WebApplicationContext: initialization completed in 6617 ms
+2020-02-29 20:43:47.500 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2020-02-29 20:43:47.802 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2020-02-29 20:43:47.893 [main] INFO  org.hibernate.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [
+	name: primaryPersistenceUnit
+	...]
+2020-02-29 20:43:48.174 [main] INFO  org.hibernate.Version - HHH000412: Hibernate Core {5.3.7.Final}
+2020-02-29 20:43:48.178 [main] INFO  org.hibernate.cfg.Environment - HHH000206: hibernate.properties not found
+2020-02-29 20:43:48.594 [main] INFO  org.hibernate.annotations.common.Version - HCANN000001: Hibernate Commons Annotations {5.0.4.Final}
+2020-02-29 20:43:49.687 [main] INFO  org.hibernate.dialect.Dialect - HHH000400: Using dialect: org.hibernate.dialect.SQLServer2012Dialect
+2020-02-29 20:43:51.901 [main] INFO  org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'primaryPersistenceUnit'
+2020-02-29 20:43:51.932 [main] INFO  org.hibernate.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [
+	name: primaryPersistenceUnit
+	...]
+2020-02-29 20:43:52.572 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-2 - Starting...
+2020-02-29 20:43:54.439 [main] INFO  com.zaxxer.hikari.pool.PoolBase - HikariPool-2 - Driver does not support get/set network timeout for connections. ([Pivotal][Greenplum JDBC Driver]This driver does not support the 'getNetworkTimeout' and 'setNetworkTimeout' methods.)
+2020-02-29 20:43:54.440 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-2 - Start completed.
+2020-02-29 20:43:54.448 [main] INFO  org.hibernate.dialect.Dialect - HHH000400: Using dialect: org.hibernate.dialect.SQLServer2012Dialect
+2020-02-29 20:43:54.554 [main] INFO  org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'primaryPersistenceUnit'
+2020-02-29 20:43:54.569 [main] INFO  org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor - Autowired annotation is not supported on static methods: public static void top.ruandb.config.ProcedureConfig.setORACLE_PROCEDURE_PRO(java.lang.String)
+2020-02-29 20:43:54.570 [main] INFO  org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor - Autowired annotation is not supported on static methods: public static void top.ruandb.config.ProcedureConfig.setSQLSERVER_PROCEDURE_PRO(java.lang.String)
+2020-02-29 20:43:55.377 [main] INFO  org.hibernate.hql.internal.QueryTranslatorFactoryInitiator - HHH000397: Using ASTQueryTranslatorFactory
+2020-02-29 20:43:55.771 [main] INFO  org.quartz.impl.StdSchedulerFactory - Using default implementation for ThreadExecutor
+2020-02-29 20:43:55.794 [main] INFO  org.quartz.core.SchedulerSignalerImpl - Initialized Scheduler Signaller of type: class org.quartz.core.SchedulerSignalerImpl
+2020-02-29 20:43:55.795 [main] INFO  org.quartz.core.QuartzScheduler - Quartz Scheduler v.2.2.1 created.
+2020-02-29 20:43:55.796 [main] INFO  org.quartz.core.QuartzScheduler - JobFactory set to: org.quartz.simpl.SimpleJobFactory@2b35c7aa
+2020-02-29 20:43:55.796 [main] INFO  org.quartz.impl.jdbcjobstore.JobStoreTX - Using thread monitor-based data access locking (synchronization).
+2020-02-29 20:43:55.797 [main] INFO  org.quartz.impl.jdbcjobstore.JobStoreTX - JobStoreTX initialized.
+2020-02-29 20:43:55.798 [main] INFO  org.quartz.core.QuartzScheduler - Scheduler meta-data: Quartz Scheduler (v2.2.1) 'SchedulerFactory' with instanceId 'ETLScheduler'
+  Scheduler class: 'org.quartz.core.QuartzScheduler' - running locally.
+  NOT STARTED.
+  Currently in standby mode.
+  Number of jobs executed: 0
+  Using thread pool 'org.quartz.simpl.SimpleThreadPool' - with 50 threads.
+  Using job-store 'org.quartz.impl.jdbcjobstore.JobStoreTX' - which supports persistence. and is not clustered.
+
+2020-02-29 20:43:55.798 [main] INFO  org.quartz.impl.StdSchedulerFactory - Quartz scheduler 'SchedulerFactory' initialized from an externally provided properties instance.
+2020-02-29 20:43:55.798 [main] INFO  org.quartz.impl.StdSchedulerFactory - Quartz scheduler version: 2.2.1
+2020-02-29 20:43:55.799 [main] INFO  org.quartz.core.QuartzScheduler - JobFactory set to: top.ruandb.config.MyJobFactory@76e6c070
+2020-02-29 20:43:56.650 [main] INFO  org.springframework.scheduling.concurrent.ThreadPoolTaskExecutor - Initializing ExecutorService 'applicationTaskExecutor'
+2020-02-29 20:43:57.607 [main] INFO  org.springframework.scheduling.quartz.SchedulerFactoryBean - Starting Quartz Scheduler now
+2020-02-29 20:43:57.619 [main] INFO  com.alibaba.druid.pool.DruidDataSource - {dataSource-1} inited
+2020-02-29 20:43:57.975 [main] INFO  org.quartz.impl.jdbcjobstore.JobStoreTX - Freed 0 triggers from 'acquired' / 'blocked' state.
+2020-02-29 20:43:58.107 [main] INFO  org.quartz.impl.jdbcjobstore.JobStoreTX - Recovering 0 jobs that were in-progress at the time of the last shut-down.
+2020-02-29 20:43:58.108 [main] INFO  org.quartz.impl.jdbcjobstore.JobStoreTX - Recovery complete.
+2020-02-29 20:43:58.131 [main] INFO  org.quartz.impl.jdbcjobstore.JobStoreTX - Removed 0 'complete' triggers.
+2020-02-29 20:43:58.220 [main] INFO  org.quartz.impl.jdbcjobstore.JobStoreTX - Removed 0 stale fired job entries.
+2020-02-29 20:43:58.279 [main] INFO  org.quartz.core.QuartzScheduler - Scheduler SchedulerFactory_$_ETLScheduler started.
+2020-02-29 20:43:58.290 [main] INFO  org.apache.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8088"]
+2020-02-29 20:43:58.317 [main] INFO  org.apache.tomcat.util.net.NioSelectorPool - Using a shared selector for servlet write/read
+2020-02-29 20:43:58.421 [main] INFO  org.springframework.boot.web.embedded.tomcat.TomcatWebServer - Tomcat started on port(s): 8088 (http) with context path ''
+2020-02-29 20:43:58.425 [main] INFO  top.ruandb.EtlSchedulerApplication - Started EtlSchedulerApplication in 19.406 seconds (JVM running for 22.565)
+2020-02-29 20:43:58.443 [main] INFO  top.ruandb.init.TaskInit - kettle初始化开始-------------------------------------------------------->
+2020-02-29 20:44:03.111 [main] INFO  top.ruandb.init.TaskInit - kettle初始化结束-------------------------------------------------------->
+2020-02-29 20:44:03.111 [main] INFO  top.ruandb.init.TaskInit - 重新启动清空scheduler
+2020-02-29 20:44:03.796 [main] INFO  top.ruandb.init.TaskInit - 初始化job到调度器-------------------------------->jobname:usp_dim_yyxx,usp_dim_ksxx,usp_dim_ksxx_ba,usp_dim_ysxx,usp_dim_ysxx_ba,usp_dim_czryk,usp_dim_bqdmk,usp_dim_bqdmk_ba,usp_dim_ybflxx,usp_dim_yb_yblx,usp_dim_ghlb,usp_dim_ghtj,usp_dim_yyfg_hxlx,usp_dim_yyfs,usp_dim_yylb,usp_dim_yysjd,usp_dim_ghyysjc,usp_dim_zddmk,usp_dim_zddmk_ba,usp_dim_sfdxmk,usp_dim_sfxxmk,usp_dim_lcsfxmk,usp_dim_mzzy,usp_dim_cfz,usp_dim_mjzbz,usp_dim_nld,usp_dim_sex,usp_dim_hour,usp_dim_time,usp_dim_cyfs,usp_dim_lyfs,usp_dim_zljg,usp_dim_qzts,usp_dim_zyts,usp_dim_lclj,usp_dim_ypxx,usp_dim_kssjb,usp_dim_tsypbz,usp_dim_ypdl,usp_dim_ypfl,usp_dim_ypjx
+2020-02-29 20:44:04.114 [main] INFO  top.ruandb.init.TaskInit - 初始化job到调度器-------------------------------->jobname:usp_dim_zy_ypyfk,usp_dim_sf_ypyfk,usp_dim_yymd,usp_dim_fyck,usp_dim_gysxx,usp_dim_yf_czdmk,usp_dim_yfdmk,usp_dim_yk_czdmk,usp_dim_ykdmk,usp_dim_sf_cfsfjg,usp_dim_sf_cfwt,usp_dim_sf_cfwtfl,usp_dim_sf_cfwtjb,usp_dim_jclb,usp_dim_ris_instrument,usp_dim_jylb,usp_dim_lis_instrument,usp_dim_ssxx,usp_dim_ssbw,usp_dim_sxytxx,usp_dim_sxlyxx,usp_dim_sxfsxx,usp_dim_sxblfylx,usp_dim_xxxx,usp_dim_ssflxx,usp_dim_xyzlxx,usp_dim_xydl,usp_dim_wzsb_wzpmggxx,usp_dim_wzsb_kfxx,usp_dim_wzsb_cblx,usp_dim_wzsb_wzkpxx,usp_dim_wzsb_wz_djlb,usp_dim_wzsb_wz_ghdwxx
+2020-02-29 20:44:04.295 [main] INFO  top.ruandb.init.TaskInit - 初始化job到调度器-------------------------------->jobname:usp_dim_wzsb_wz_rkfs,usp_dim_mzfs,usp_dim_qkdj,usp_dim_rjssbz,usp_dim_rjssxx,usp_dim_ssmz_asamzfj,usp_dim_ssmz_mzfsfl,usp_dim_ssmz_sssjlx,usp_dim_aers_eventtype,usp_dim_aers_drugseventtype,usp_dim_aers_bloodeventtype,usp_dim_aers_medicalevent_ss_cwlx,usp_dim_aers_medicaleventtype,usp_dim_aers_nursingevent_gl_bfzlx,usp_dim_aers_nursingeventtype,usp_dim_aers_warningeventtype,usp_dim_aers_eventclfs,usp_dim_aers_eventdj,usp_dim_aers_eventyzcd,usp_dim_aers_eventconsequence,usp_dim_aers_ryzc,usp_dim_jsk_txfs,usp_dim_jsk_xgtllb,usp_dim_jsk_xtzlfs,usp_dim_jsk_ysfs
+2020-02-29 20:44:04.308 [main] INFO  top.ruandb.init.TaskInit - 初始化job到调度器-------------------------------->jobname:usp_dim_jsk_ysgj,usp_dim_jsk_ysyy,usp_dim_jsk_ztsxfs,usp_dim_jzzy_bqfj,usp_dim_jzzy_brqx,usp_dim_jzzy_cyfs,usp_dim_ddshcdjb,usp_dim_ddyy,usp_dim_ycbw,usp_dim_ycfj,usp_dim_ycly,usp_dim_drgs_fxpgdj,usp_dim_kfyxk_bfzlx,usp_dim_kfyxk_kflx,usp_dim_yg_ssfxdj,usp_dim_yg_ssgrbw,usp_dim_yygr_dcnyjxx,usp_dim_yygr_xgdgbw,usp_dim_zdjb,usp_dim_zdss,usp_dim_zlzb_bfzlx,usp_dim_zlzb_fmfs,usp_dim_zlzb_jbbz_dbz,usp_dim_zlzb_jbbz_dq,usp_dim_zlzb_jbbz_xzljs,usp_dim_zlzb_jbbz_zkks,usp_dim_zlzb_zlgl_lcjyzk,usp_dim_zlzb_zlgl_lcjybb,usp_dim_cflx,usp_dim_zy_zlzxx,usp_dim_wzjb
+2020-02-29 20:44:04.317 [main] INFO  top.ruandb.init.TaskInit - 初始化job到调度器-------------------------------->jobname:usp_fat_bacwsyqk,usp_fat_basyjb,usp_fat_basyss,usp_fat_basyzd,usp_fat_bq_brcwxxk
+2020-02-29 20:44:04.327 [main] INFO  top.ruandb.init.TaskInit - 初始化job到调度器-------------------------------->jobname:usp_fat_jcbgmx,usp_fat_jybgmx,usp_fat_mz_yffymx,usp_fat_sxxx,usp_fat_wzsb_sb_byxx,usp_fat_wzsb_sb_jlxx
+2020-02-29 20:44:04.336 [main] INFO  top.ruandb.init.TaskInit - 初始化job到调度器-------------------------------->jobname:usp_fat_wzsb_sb_srxx,usp_fat_wzsb_sb_wxxx,usp_fat_wzsb_sb_zjxx,usp_fat_wzsb_wz_bsxx,usp_fat_wzsb_wz_ckxx
+2020-02-29 20:44:04.355 [main] INFO  top.ruandb.init.TaskInit - 初始化job到调度器-------------------------------->jobname:usp_fat_wzsb_wz_qlxx,usp_fat_wzsb_wz_rkxx,usp_fat_wzsb_wz_wtdxxx,usp_fat_wzsb_wz_xhxx,usp_fat_wzsb_wz_ykxx
+2020-02-29 20:44:04.370 [main] INFO  top.ruandb.init.TaskInit - 初始化job到调度器-------------------------------->jobname:usp_fat_wzsb_wz_zgxx,usp_fat_yf_ypczmx,usp_fat_yk_ypczmx,usp_fat_yygh_pbxx,usp_fat_yy_mz_yyrc
+2020-02-29 20:44:04.420 [main] INFO  top.ruandb.init.TaskInit - 初始化job到调度器-------------------------------->jobname:usp_fat_zlzb_zlgl_lcjybb,usp_fat_zlzb_zlgl_lcjyzk,usp_fat_zy_cwsyqk,usp_fat_zy_rjssbrfy_fat
+2020-02-29 20:44:04.434 [main] INFO  top.ruandb.init.TaskInit - 初始化job到调度器-------------------------------->jobname:usp_fat_zy_rjsshzxx,usp_fat_zy_rjssxx,usp_fat_zy_ryywl,usp_fat_zy_yffymx,usp_fat_zy_zyfy_zy
+2020-02-29 20:44:04.447 [main] INFO  top.ruandb.init.TaskInit - 初始化job到调度器-------------------------------->jobname:usp_fat_mz_ybjsxx,usp_fat_mz_mzfy,usp_fat_mz_mzywl
+2020-02-29 20:44:04.458 [main] INFO  top.ruandb.init.TaskInit - 初始化job到调度器-------------------------------->jobname:usp_fat_zy_ybjsxx,usp_fat_zy_zyfy,usp_fat_zy_zyywl
+2020-02-29 20:44:04.472 [main] INFO  top.ruandb.init.TaskInit - 初始化job到调度器-------------------------------->jobname:usp_fat_zy_zyfy_zy
+2020-02-29 20:44:04.482 [main] INFO  top.ruandb.init.TaskInit - 初始化job到调度器-------------------------------->jobname:usp_fact_yy_mz_jzrc_fat,usp_fact_yy_mz_patid_fat,usp_fact_yy_mz_yyrc_fat,usp_fact_yygh_pbxx_fat,usp_fact_yy_mz_tjrc_fat,usp_fact_fy_mz_fyfx_fat,usp_fact_fy_zy_fyfx_fat,usp_fact_fy_zy_fyfx_zxrq_fat,usp_fact_yy_zy_cyywlfx_fat,usp_fact_yy_zy_ryywlfx_fat
+2020-02-29 20:44:04.503 [main] INFO  top.ruandb.init.TaskInit - 初始化job到调度器-------------------------------->jobname:usp_fact_yy_zy_lcljfx_fat,usp_fact_yy_zy_zrzcfx_fat,usp_fact_yb_mz_fyfx_fat,usp_fact_yb_zy_fyfx_fat,usp_fact_yb_ybzkfx_fat,usp_fact_yy_zybrzyl_fat,usp_fact_zy_zycwxl,usp_fact_yy_zy_cwsyqk_fat,usp_fact_yp_mz_fyfx_fat
+2020-02-29 20:44:04.512 [main] INFO  top.ruandb.init.TaskInit - 初始化job到调度器-------------------------------->jobname:usp_fact_yp_cflfx_fat,usp_fact_yp_zy_fyfx_fat,usp_fact_yp_zy_fyfx_zxrq_fat,usp_fact_yp_mz_yffygzl_fat,usp_fact_yp_zy_yffygzl_fat,usp_fact_yp_jxcfx_yf_fat,usp_fact_yp_jxcfx_yk_fat,usp_fact_ba_ss_zyssywlfx_fat,usp_fact_yy_ss_mzssywlfx_fat,usp_fact_yy_ss_rjssywlfx_fat
+2020-02-29 20:44:04.523 [main] INFO  top.ruandb.init.TaskInit - 初始化job到调度器-------------------------------->jobname:usp_fact_ba_zy_back15_30_fat,usp_fact_ba_zy_cwsyqk_fat,usp_fact_ba_zy_cyywlfx_fat,usp_fact_lis_list_fat,usp_fact_lis_list_mx_fat,usp_fact_ris_list_fat,usp_fact_ris_list_mx_fat,usp_fact_xk_sxfx_fat,usp_fact_zqhy_jzrc_fat,usp_fact_zqhy_mzpatid_fat
+2020-02-29 20:44:04.533 [main] INFO  top.ruandb.init.TaskInit - 初始化job到调度器-------------------------------->jobname:usp_fact_wzsb_sb_sbgzl_fat,usp_fact_wzsb_wz_bsxx_fat,usp_fact_wzsb_wz_ckxx_fat,usp_fact_wzsb_wz_qlxx_fat,usp_fact_wzsb_wz_rkxx_fat,usp_fact_wzsb_wz_wtdxxx_fat,usp_fact_wzsb_wz_xhxx_fat,usp_fact_wzsb_wz_ykxx_fat,usp_fact_wzsb_wz_zgxx_fat
+2020-02-29 20:44:04.547 [main] INFO  top.ruandb.init.TaskInit - 初始化job到调度器-------------------------------->jobname:usp_fact_dim_yp_dim
+2020-02-29 20:44:04.560 [main] INFO  top.ruandb.init.TaskInit - 初始化job到调度器-------------------------------->jobname:usp_hd_zbmx_hz,usp_hd_zbmx_hz_ys
+2020-02-29 20:44:04.569 [main] INFO  top.ruandb.init.TaskInit - 初始化job到调度器-------------------------------->jobname:usp_producure_log
+2020-02-29 20:44:05.072 [main] INFO  top.ruandb.init.TaskInit -  ----------------------->依赖初始化开始
+2020-02-29 20:44:05.080 [main] INFO  top.ruandb.init.TaskInit - jobMap--->{11=PENDDING, 22=PENDDING, 12=PENDDING, 23=PENDDING, 13=PENDDING, 14=PENDDING, 15=PENDDING, 16=PENDDING, 17=PENDDING, 18=PENDDING, 19=PENDDING, 1=PENDDING, 3=PENDDING, 4=PENDDING, 5=PENDDING, 6=PENDDING, 7=PENDDING, 8=PENDDING, 9=PENDDING, 20=PENDDING, 10=PENDDING, 21=PENDDING}
+2020-02-29 20:44:05.080 [main] INFO  top.ruandb.init.TaskInit - groupMap--->{A=[1, 3, 4, 5], B=[6, 7, 8, 9, 10, 11, 12, 13, 14, 15], C=[16, 17, 18, 19, 20, 21], D=[22, 23]}
+2020-02-29 20:44:05.080 [main] INFO  top.ruandb.init.TaskInit -  ----------------------->依赖初始化成功
+2020-02-29 20:44:05.080 [main] INFO  top.ruandb.init.TaskInit -  ----------------------->定时依赖初始化开始
+2020-02-29 20:44:05.088 [main] INFO  top.ruandb.init.TaskInit -  ----------------------->定时依赖初始化结束
+2020-02-29 20:44:31.858 [http-nio-8088-exec-1] INFO  org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2020-02-29 20:44:31.858 [http-nio-8088-exec-1] INFO  org.springframework.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2020-02-29 20:44:31.871 [http-nio-8088-exec-1] INFO  org.springframework.web.servlet.DispatcherServlet - Completed initialization in 13 ms
+2020-02-29 20:49:58.961 [RMI TCP Connection(2)-127.0.0.1] INFO  org.springframework.boot.admin.SpringApplicationAdminMXBeanRegistrar$SpringApplicationAdmin - Application shutdown requested.
+2020-02-29 20:49:58.965 [RMI TCP Connection(2)-127.0.0.1] INFO  org.quartz.core.QuartzScheduler - Scheduler SchedulerFactory_$_ETLScheduler paused.
+2020-02-29 20:49:58.967 [RMI TCP Connection(2)-127.0.0.1] INFO  org.springframework.scheduling.concurrent.ThreadPoolTaskExecutor - Shutting down ExecutorService 'applicationTaskExecutor'
+2020-02-29 20:49:58.969 [RMI TCP Connection(2)-127.0.0.1] INFO  org.quartz.core.QuartzScheduler - Scheduler SchedulerFactory_$_ETLScheduler shutting down.
+2020-02-29 20:49:58.969 [RMI TCP Connection(2)-127.0.0.1] INFO  org.quartz.core.QuartzScheduler - Scheduler SchedulerFactory_$_ETLScheduler paused.
+2020-02-29 20:49:59.102 [RMI TCP Connection(2)-127.0.0.1] INFO  com.alibaba.druid.pool.DruidDataSource - {dataSource-1} closed
+2020-02-29 20:49:59.103 [RMI TCP Connection(2)-127.0.0.1] INFO  org.quartz.core.QuartzScheduler - Scheduler SchedulerFactory_$_ETLScheduler shutdown complete.
+2020-02-29 20:49:59.103 [RMI TCP Connection(2)-127.0.0.1] INFO  org.springframework.scheduling.quartz.SchedulerFactoryBean - Shutting down Quartz Scheduler
+2020-02-29 20:49:59.109 [RMI TCP Connection(2)-127.0.0.1] INFO  org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'primaryPersistenceUnit'
+2020-02-29 20:49:59.112 [RMI TCP Connection(2)-127.0.0.1] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-2 - Shutdown initiated...
+2020-02-29 20:49:59.136 [RMI TCP Connection(2)-127.0.0.1] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-2 - Shutdown completed.
+2020-02-29 20:49:59.137 [RMI TCP Connection(2)-127.0.0.1] INFO  org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'primaryPersistenceUnit'
+2020-02-29 20:49:59.141 [RMI TCP Connection(2)-127.0.0.1] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2020-02-29 20:49:59.175 [RMI TCP Connection(2)-127.0.0.1] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2020-02-29 20:50:08.999 [main] INFO  top.ruandb.EtlSchedulerApplication - Starting EtlSchedulerApplication on LAPTOP-MK6P63H0 with PID 13752 (C:\Java\eclipse-workspace5\ETLScheduler\target\classes started by rdb in C:\Java\eclipse-workspace5\ETLScheduler)
+2020-02-29 20:50:09.005 [main] INFO  top.ruandb.EtlSchedulerApplication - No active profile set, falling back to default profiles: default
+2020-02-29 20:50:10.293 [main] INFO  org.springframework.data.repository.config.RepositoryConfigurationDelegate - Bootstrapping Spring Data repositories in DEFAULT mode.
+2020-02-29 20:50:10.440 [main] INFO  org.springframework.data.repository.config.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 135ms. Found 4 repository interfaces.
+2020-02-29 20:50:10.441 [main] INFO  org.springframework.data.repository.config.RepositoryConfigurationDelegate - Bootstrapping Spring Data repositories in DEFAULT mode.
+2020-02-29 20:50:10.464 [main] INFO  org.springframework.data.repository.config.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 23ms. Found 1 repository interfaces.
+2020-02-29 20:50:10.875 [main] WARN  org.mybatis.spring.mapper.ClassPathMapperScanner - No MyBatis mapper was found in '[top.ruandb]' package. Please check your configuration.
+2020-02-29 20:50:11.450 [main] INFO  org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$8ec953] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-02-29 20:50:11.484 [main] INFO  org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'shiroConfig' of type [top.ruandb.config.ShiroConfig$$EnhancerBySpringCGLIB$$2bebfca6] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-02-29 20:50:12.867 [main] INFO  org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'myRealm' of type [top.ruandb.config.MyRealm] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-02-29 20:50:12.878 [main] INFO  org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'securityManager' of type [org.apache.shiro.web.mgt.DefaultWebSecurityManager] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-02-29 20:50:13.369 [main] INFO  org.springframework.boot.web.embedded.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8088 (http)
+2020-02-29 20:50:13.394 [main] INFO  org.apache.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8088"]
+2020-02-29 20:50:13.406 [main] INFO  org.apache.catalina.core.StandardService - Starting service [Tomcat]
+2020-02-29 20:50:13.407 [main] INFO  org.apache.catalina.core.StandardEngine - Starting Servlet Engine: Apache Tomcat/9.0.13
+2020-02-29 20:50:13.415 [main] INFO  org.apache.catalina.core.AprLifecycleListener - Loaded APR based Apache Tomcat Native library [1.2.19] using APR version [1.6.5].
+2020-02-29 20:50:13.415 [main] INFO  org.apache.catalina.core.AprLifecycleListener - APR capabilities: IPv6 [true], sendfile [true], accept filters [false], random [true].
+2020-02-29 20:50:13.416 [main] INFO  org.apache.catalina.core.AprLifecycleListener - APR/OpenSSL configuration: useAprConnector [false], useOpenSSL [true]
+2020-02-29 20:50:14.506 [main] INFO  org.apache.catalina.core.AprLifecycleListener - OpenSSL successfully initialized [OpenSSL 1.0.2q  20 Nov 2018]
+2020-02-29 20:50:14.928 [main] INFO  org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2020-02-29 20:50:14.929 [main] INFO  org.springframework.web.context.ContextLoader - Root WebApplicationContext: initialization completed in 5854 ms
+2020-02-29 20:50:15.378 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2020-02-29 20:50:15.659 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2020-02-29 20:50:15.755 [main] INFO  org.hibernate.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [
+	name: primaryPersistenceUnit
+	...]
+2020-02-29 20:50:15.906 [main] INFO  org.hibernate.Version - HHH000412: Hibernate Core {5.3.7.Final}
+2020-02-29 20:50:15.911 [main] INFO  org.hibernate.cfg.Environment - HHH000206: hibernate.properties not found
+2020-02-29 20:50:16.180 [main] INFO  org.hibernate.annotations.common.Version - HCANN000001: Hibernate Commons Annotations {5.0.4.Final}
+2020-02-29 20:50:17.302 [main] INFO  org.hibernate.dialect.Dialect - HHH000400: Using dialect: org.hibernate.dialect.SQLServer2012Dialect
+2020-02-29 20:50:18.960 [main] INFO  org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'primaryPersistenceUnit'
+2020-02-29 20:50:19.000 [main] INFO  org.hibernate.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [
+	name: primaryPersistenceUnit
+	...]
+2020-02-29 20:50:19.780 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-2 - Starting...
+2020-02-29 20:50:19.933 [main] INFO  com.zaxxer.hikari.pool.PoolBase - HikariPool-2 - Driver does not support get/set network timeout for connections. ([Pivotal][Greenplum JDBC Driver]This driver does not support the 'getNetworkTimeout' and 'setNetworkTimeout' methods.)
+2020-02-29 20:50:19.934 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-2 - Start completed.
+2020-02-29 20:50:19.941 [main] INFO  org.hibernate.dialect.Dialect - HHH000400: Using dialect: org.hibernate.dialect.SQLServer2012Dialect
+2020-02-29 20:50:20.068 [main] INFO  org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'primaryPersistenceUnit'
+2020-02-29 20:50:20.088 [main] INFO  org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor - Autowired annotation is not supported on static methods: public static void top.ruandb.config.ProcedureConfig.setORACLE_PROCEDURE_PRO(java.lang.String)
+2020-02-29 20:50:20.088 [main] INFO  org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor - Autowired annotation is not supported on static methods: public static void top.ruandb.config.ProcedureConfig.setSQLSERVER_PROCEDURE_PRO(java.lang.String)
+2020-02-29 20:50:20.621 [main] INFO  org.hibernate.hql.internal.QueryTranslatorFactoryInitiator - HHH000397: Using ASTQueryTranslatorFactory
+2020-02-29 20:50:20.896 [main] INFO  org.quartz.impl.StdSchedulerFactory - Using default implementation for ThreadExecutor
+2020-02-29 20:50:20.916 [main] INFO  org.quartz.core.SchedulerSignalerImpl - Initialized Scheduler Signaller of type: class org.quartz.core.SchedulerSignalerImpl
+2020-02-29 20:50:20.916 [main] INFO  org.quartz.core.QuartzScheduler - Quartz Scheduler v.2.2.1 created.
+2020-02-29 20:50:20.918 [main] INFO  org.quartz.core.QuartzScheduler - JobFactory set to: org.quartz.simpl.SimpleJobFactory@7d088813
+2020-02-29 20:50:20.918 [main] INFO  org.quartz.impl.jdbcjobstore.JobStoreTX - Using thread monitor-based data access locking (synchronization).
+2020-02-29 20:50:20.919 [main] INFO  org.quartz.impl.jdbcjobstore.JobStoreTX - JobStoreTX initialized.
+2020-02-29 20:50:20.921 [main] INFO  org.quartz.core.QuartzScheduler - Scheduler meta-data: Quartz Scheduler (v2.2.1) 'SchedulerFactory' with instanceId 'ETLScheduler'
+  Scheduler class: 'org.quartz.core.QuartzScheduler' - running locally.
+  NOT STARTED.
+  Currently in standby mode.
+  Number of jobs executed: 0
+  Using thread pool 'org.quartz.simpl.SimpleThreadPool' - with 50 threads.
+  Using job-store 'org.quartz.impl.jdbcjobstore.JobStoreTX' - which supports persistence. and is not clustered.
+
+2020-02-29 20:50:20.921 [main] INFO  org.quartz.impl.StdSchedulerFactory - Quartz scheduler 'SchedulerFactory' initialized from an externally provided properties instance.
+2020-02-29 20:50:20.921 [main] INFO  org.quartz.impl.StdSchedulerFactory - Quartz scheduler version: 2.2.1
+2020-02-29 20:50:20.922 [main] INFO  org.quartz.core.QuartzScheduler - JobFactory set to: top.ruandb.config.MyJobFactory@5773d271
+2020-02-29 20:50:21.570 [main] INFO  org.springframework.scheduling.concurrent.ThreadPoolTaskExecutor - Initializing ExecutorService 'applicationTaskExecutor'
+2020-02-29 20:50:22.415 [main] INFO  org.springframework.scheduling.quartz.SchedulerFactoryBean - Starting Quartz Scheduler now
+2020-02-29 20:50:22.426 [main] INFO  com.alibaba.druid.pool.DruidDataSource - {dataSource-1} inited
+2020-02-29 20:50:22.520 [main] INFO  org.quartz.impl.jdbcjobstore.JobStoreTX - Freed 0 triggers from 'acquired' / 'blocked' state.
+2020-02-29 20:50:22.528 [main] INFO  org.quartz.impl.jdbcjobstore.JobStoreTX - Recovering 0 jobs that were in-progress at the time of the last shut-down.
+2020-02-29 20:50:22.529 [main] INFO  org.quartz.impl.jdbcjobstore.JobStoreTX - Recovery complete.
+2020-02-29 20:50:22.529 [main] INFO  org.quartz.impl.jdbcjobstore.JobStoreTX - Removed 0 'complete' triggers.
+2020-02-29 20:50:22.530 [main] INFO  org.quartz.impl.jdbcjobstore.JobStoreTX - Removed 0 stale fired job entries.
+2020-02-29 20:50:22.532 [main] INFO  org.quartz.core.QuartzScheduler - Scheduler SchedulerFactory_$_ETLScheduler started.
+2020-02-29 20:50:22.548 [main] INFO  org.apache.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8088"]
+2020-02-29 20:50:22.561 [main] INFO  org.apache.tomcat.util.net.NioSelectorPool - Using a shared selector for servlet write/read
+2020-02-29 20:50:22.591 [main] INFO  org.springframework.boot.web.embedded.tomcat.TomcatWebServer - Tomcat started on port(s): 8088 (http) with context path ''
+2020-02-29 20:50:22.595 [main] INFO  top.ruandb.EtlSchedulerApplication - Started EtlSchedulerApplication in 14.841 seconds (JVM running for 18.328)
+2020-02-29 20:50:22.599 [main] INFO  top.ruandb.init.TaskInit - kettle初始化开始-------------------------------------------------------->
+2020-02-29 20:50:25.491 [main] INFO  top.ruandb.init.TaskInit - kettle初始化结束-------------------------------------------------------->
+2020-02-29 20:50:25.491 [main] INFO  top.ruandb.init.TaskInit - 重新启动清空scheduler
+2020-02-29 20:50:25.992 [main] INFO  top.ruandb.init.TaskInit - 初始化job到调度器-------------------------------->jobname:usp_dim_yyxx,usp_dim_ksxx,usp_dim_ksxx_ba,usp_dim_ysxx,usp_dim_ysxx_ba,usp_dim_czryk,usp_dim_bqdmk,usp_dim_bqdmk_ba,usp_dim_ybflxx,usp_dim_yb_yblx,usp_dim_ghlb,usp_dim_ghtj,usp_dim_yyfg_hxlx,usp_dim_yyfs,usp_dim_yylb,usp_dim_yysjd,usp_dim_ghyysjc,usp_dim_zddmk,usp_dim_zddmk_ba,usp_dim_sfdxmk,usp_dim_sfxxmk,usp_dim_lcsfxmk,usp_dim_mzzy,usp_dim_cfz,usp_dim_mjzbz,usp_dim_nld,usp_dim_sex,usp_dim_hour,usp_dim_time,usp_dim_cyfs,usp_dim_lyfs,usp_dim_zljg,usp_dim_qzts,usp_dim_zyts,usp_dim_lclj,usp_dim_ypxx,usp_dim_kssjb,usp_dim_tsypbz,usp_dim_ypdl,usp_dim_ypfl,usp_dim_ypjx
+2020-02-29 20:50:26.038 [main] INFO  top.ruandb.init.TaskInit - 初始化job到调度器-------------------------------->jobname:usp_dim_zy_ypyfk,usp_dim_sf_ypyfk,usp_dim_yymd,usp_dim_fyck,usp_dim_gysxx,usp_dim_yf_czdmk,usp_dim_yfdmk,usp_dim_yk_czdmk,usp_dim_ykdmk,usp_dim_sf_cfsfjg,usp_dim_sf_cfwt,usp_dim_sf_cfwtfl,usp_dim_sf_cfwtjb,usp_dim_jclb,usp_dim_ris_instrument,usp_dim_jylb,usp_dim_lis_instrument,usp_dim_ssxx,usp_dim_ssbw,usp_dim_sxytxx,usp_dim_sxlyxx,usp_dim_sxfsxx,usp_dim_sxblfylx,usp_dim_xxxx,usp_dim_ssflxx,usp_dim_xyzlxx,usp_dim_xydl,usp_dim_wzsb_wzpmggxx,usp_dim_wzsb_kfxx,usp_dim_wzsb_cblx,usp_dim_wzsb_wzkpxx,usp_dim_wzsb_wz_djlb,usp_dim_wzsb_wz_ghdwxx
+2020-02-29 20:50:26.056 [main] INFO  top.ruandb.init.TaskInit - 初始化job到调度器-------------------------------->jobname:usp_dim_wzsb_wz_rkfs,usp_dim_mzfs,usp_dim_qkdj,usp_dim_rjssbz,usp_dim_rjssxx,usp_dim_ssmz_asamzfj,usp_dim_ssmz_mzfsfl,usp_dim_ssmz_sssjlx,usp_dim_aers_eventtype,usp_dim_aers_drugseventtype,usp_dim_aers_bloodeventtype,usp_dim_aers_medicalevent_ss_cwlx,usp_dim_aers_medicaleventtype,usp_dim_aers_nursingevent_gl_bfzlx,usp_dim_aers_nursingeventtype,usp_dim_aers_warningeventtype,usp_dim_aers_eventclfs,usp_dim_aers_eventdj,usp_dim_aers_eventyzcd,usp_dim_aers_eventconsequence,usp_dim_aers_ryzc,usp_dim_jsk_txfs,usp_dim_jsk_xgtllb,usp_dim_jsk_xtzlfs,usp_dim_jsk_ysfs
+2020-02-29 20:50:26.066 [main] INFO  top.ruandb.init.TaskInit - 初始化job到调度器-------------------------------->jobname:usp_dim_jsk_ysgj,usp_dim_jsk_ysyy,usp_dim_jsk_ztsxfs,usp_dim_jzzy_bqfj,usp_dim_jzzy_brqx,usp_dim_jzzy_cyfs,usp_dim_ddshcdjb,usp_dim_ddyy,usp_dim_ycbw,usp_dim_ycfj,usp_dim_ycly,usp_dim_drgs_fxpgdj,usp_dim_kfyxk_bfzlx,usp_dim_kfyxk_kflx,usp_dim_yg_ssfxdj,usp_dim_yg_ssgrbw,usp_dim_yygr_dcnyjxx,usp_dim_yygr_xgdgbw,usp_dim_zdjb,usp_dim_zdss,usp_dim_zlzb_bfzlx,usp_dim_zlzb_fmfs,usp_dim_zlzb_jbbz_dbz,usp_dim_zlzb_jbbz_dq,usp_dim_zlzb_jbbz_xzljs,usp_dim_zlzb_jbbz_zkks,usp_dim_zlzb_zlgl_lcjyzk,usp_dim_zlzb_zlgl_lcjybb,usp_dim_cflx,usp_dim_zy_zlzxx,usp_dim_wzjb
+2020-02-29 20:50:26.076 [main] INFO  top.ruandb.init.TaskInit - 初始化job到调度器-------------------------------->jobname:usp_fat_bacwsyqk,usp_fat_basyjb,usp_fat_basyss,usp_fat_basyzd,usp_fat_bq_brcwxxk
+2020-02-29 20:50:26.085 [main] INFO  top.ruandb.init.TaskInit - 初始化job到调度器-------------------------------->jobname:usp_fat_jcbgmx,usp_fat_jybgmx,usp_fat_mz_yffymx,usp_fat_sxxx,usp_fat_wzsb_sb_byxx,usp_fat_wzsb_sb_jlxx
+2020-02-29 20:50:26.115 [main] INFO  top.ruandb.init.TaskInit - 初始化job到调度器-------------------------------->jobname:usp_fat_wzsb_sb_srxx,usp_fat_wzsb_sb_wxxx,usp_fat_wzsb_sb_zjxx,usp_fat_wzsb_wz_bsxx,usp_fat_wzsb_wz_ckxx
+2020-02-29 20:50:26.124 [main] INFO  top.ruandb.init.TaskInit - 初始化job到调度器-------------------------------->jobname:usp_fat_wzsb_wz_qlxx,usp_fat_wzsb_wz_rkxx,usp_fat_wzsb_wz_wtdxxx,usp_fat_wzsb_wz_xhxx,usp_fat_wzsb_wz_ykxx
+2020-02-29 20:50:26.135 [main] INFO  top.ruandb.init.TaskInit - 初始化job到调度器-------------------------------->jobname:usp_fat_wzsb_wz_zgxx,usp_fat_yf_ypczmx,usp_fat_yk_ypczmx,usp_fat_yygh_pbxx,usp_fat_yy_mz_yyrc
+2020-02-29 20:50:26.144 [main] INFO  top.ruandb.init.TaskInit - 初始化job到调度器-------------------------------->jobname:usp_fat_zlzb_zlgl_lcjybb,usp_fat_zlzb_zlgl_lcjyzk,usp_fat_zy_cwsyqk,usp_fat_zy_rjssbrfy_fat
+2020-02-29 20:50:26.153 [main] INFO  top.ruandb.init.TaskInit - 初始化job到调度器-------------------------------->jobname:usp_fat_zy_rjsshzxx,usp_fat_zy_rjssxx,usp_fat_zy_ryywl,usp_fat_zy_yffymx,usp_fat_zy_zyfy_zy
+2020-02-29 20:50:26.162 [main] INFO  top.ruandb.init.TaskInit - 初始化job到调度器-------------------------------->jobname:usp_fat_mz_ybjsxx,usp_fat_mz_mzfy,usp_fat_mz_mzywl
+2020-02-29 20:50:26.173 [main] INFO  top.ruandb.init.TaskInit - 初始化job到调度器-------------------------------->jobname:usp_fat_zy_ybjsxx,usp_fat_zy_zyfy,usp_fat_zy_zyywl
+2020-02-29 20:50:26.182 [main] INFO  top.ruandb.init.TaskInit - 初始化job到调度器-------------------------------->jobname:usp_fat_zy_zyfy_zy
+2020-02-29 20:50:26.191 [main] INFO  top.ruandb.init.TaskInit - 初始化job到调度器-------------------------------->jobname:usp_fact_yy_mz_jzrc_fat,usp_fact_yy_mz_patid_fat,usp_fact_yy_mz_yyrc_fat,usp_fact_yygh_pbxx_fat,usp_fact_yy_mz_tjrc_fat,usp_fact_fy_mz_fyfx_fat,usp_fact_fy_zy_fyfx_fat,usp_fact_fy_zy_fyfx_zxrq_fat,usp_fact_yy_zy_cyywlfx_fat,usp_fact_yy_zy_ryywlfx_fat
+2020-02-29 20:50:26.199 [main] INFO  top.ruandb.init.TaskInit - 初始化job到调度器-------------------------------->jobname:usp_fact_yy_zy_lcljfx_fat,usp_fact_yy_zy_zrzcfx_fat,usp_fact_yb_mz_fyfx_fat,usp_fact_yb_zy_fyfx_fat,usp_fact_yb_ybzkfx_fat,usp_fact_yy_zybrzyl_fat,usp_fact_zy_zycwxl,usp_fact_yy_zy_cwsyqk_fat,usp_fact_yp_mz_fyfx_fat
+2020-02-29 20:50:26.208 [main] INFO  top.ruandb.init.TaskInit - 初始化job到调度器-------------------------------->jobname:usp_fact_yp_cflfx_fat,usp_fact_yp_zy_fyfx_fat,usp_fact_yp_zy_fyfx_zxrq_fat,usp_fact_yp_mz_yffygzl_fat,usp_fact_yp_zy_yffygzl_fat,usp_fact_yp_jxcfx_yf_fat,usp_fact_yp_jxcfx_yk_fat,usp_fact_ba_ss_zyssywlfx_fat,usp_fact_yy_ss_mzssywlfx_fat,usp_fact_yy_ss_rjssywlfx_fat
+2020-02-29 20:50:26.217 [main] INFO  top.ruandb.init.TaskInit - 初始化job到调度器-------------------------------->jobname:usp_fact_ba_zy_back15_30_fat,usp_fact_ba_zy_cwsyqk_fat,usp_fact_ba_zy_cyywlfx_fat,usp_fact_lis_list_fat,usp_fact_lis_list_mx_fat,usp_fact_ris_list_fat,usp_fact_ris_list_mx_fat,usp_fact_xk_sxfx_fat,usp_fact_zqhy_jzrc_fat,usp_fact_zqhy_mzpatid_fat
+2020-02-29 20:50:26.229 [main] INFO  top.ruandb.init.TaskInit - 初始化job到调度器-------------------------------->jobname:usp_fact_wzsb_sb_sbgzl_fat,usp_fact_wzsb_wz_bsxx_fat,usp_fact_wzsb_wz_ckxx_fat,usp_fact_wzsb_wz_qlxx_fat,usp_fact_wzsb_wz_rkxx_fat,usp_fact_wzsb_wz_wtdxxx_fat,usp_fact_wzsb_wz_xhxx_fat,usp_fact_wzsb_wz_ykxx_fat,usp_fact_wzsb_wz_zgxx_fat
+2020-02-29 20:50:26.239 [main] INFO  top.ruandb.init.TaskInit - 初始化job到调度器-------------------------------->jobname:usp_fact_dim_yp_dim
+2020-02-29 20:50:26.253 [main] INFO  top.ruandb.init.TaskInit - 初始化job到调度器-------------------------------->jobname:usp_hd_zbmx_hz,usp_hd_zbmx_hz_ys
+2020-02-29 20:50:26.261 [main] INFO  top.ruandb.init.TaskInit - 初始化job到调度器-------------------------------->jobname:usp_producure_log
+2020-02-29 20:50:26.788 [main] INFO  top.ruandb.init.TaskInit -  ----------------------->依赖初始化开始
+2020-02-29 20:50:26.797 [main] INFO  top.ruandb.init.TaskInit - jobMap--->{11=PENDDING, 22=PENDDING, 12=PENDDING, 23=PENDDING, 13=PENDDING, 14=PENDDING, 15=PENDDING, 16=PENDDING, 17=PENDDING, 18=PENDDING, 19=PENDDING, 1=PENDDING, 3=PENDDING, 4=PENDDING, 5=PENDDING, 6=PENDDING, 7=PENDDING, 8=PENDDING, 9=PENDDING, 20=PENDDING, 10=PENDDING, 21=PENDDING}
+2020-02-29 20:50:26.798 [main] INFO  top.ruandb.init.TaskInit - groupMap--->{A=[1, 3, 4, 5], B=[6, 7, 8, 9, 10, 11, 12, 13, 14, 15], C=[16, 17, 18, 19, 20, 21], D=[22, 23]}
+2020-02-29 20:50:26.798 [main] INFO  top.ruandb.init.TaskInit -  ----------------------->依赖初始化成功
+2020-02-29 20:50:26.798 [main] INFO  top.ruandb.init.TaskInit -  ----------------------->定时依赖初始化开始
+2020-02-29 20:50:26.807 [main] INFO  top.ruandb.init.TaskInit -  ----------------------->定时依赖初始化结束
+2020-02-29 20:51:30.968 [http-nio-8088-exec-1] INFO  org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2020-02-29 20:51:30.968 [http-nio-8088-exec-1] INFO  org.springframework.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2020-02-29 20:51:30.982 [http-nio-8088-exec-1] INFO  org.springframework.web.servlet.DispatcherServlet - Completed initialization in 14 ms
+2020-02-29 20:52:06.551 [http-nio-8088-exec-5] INFO  top.ruandb.service.impl.JobMonitorServiceImpl - jobMap--->{11=PENDDING, 22=PENDDING, 12=PENDDING, 23=PENDDING, 13=PENDDING, 14=PENDDING, 15=PENDDING, 16=PENDDING, 17=PENDDING, 18=PENDDING, 19=PENDDING, 3=PENDDING, 5=PENDDING, 6=PENDDING, 8=PENDDING, 9=PENDDING, 20=PENDDING, 10=PENDDING, 21=PENDDING}
+2020-02-29 20:52:06.551 [http-nio-8088-exec-5] INFO  top.ruandb.service.impl.JobMonitorServiceImpl - groupMap--->{A=[3, 5], B=[6, 8, 9, 10, 11, 12, 13, 14, 15], C=[16, 17, 18, 19, 20, 21], D=[22, 23]}
+2020-02-29 20:52:06.551 [http-nio-8088-exec-5] INFO  top.ruandb.service.impl.JobMonitorServiceImpl - jobMap,groupMap----------------------->初始化成功
+2020-02-29 20:52:06.556 [http-nio-8088-exec-2] INFO  top.ruandb.service.impl.JobMonitorServiceImpl - jobMap--->{11=PENDDING, 22=PENDDING, 12=PENDDING, 23=PENDDING, 13=PENDDING, 14=PENDDING, 15=PENDDING, 16=PENDDING, 17=PENDDING, 18=PENDDING, 19=PENDDING, 3=PENDDING, 5=PENDDING, 6=PENDDING, 8=PENDDING, 9=PENDDING, 20=PENDDING, 10=PENDDING, 21=PENDDING}
+2020-02-29 20:52:06.556 [http-nio-8088-exec-2] INFO  top.ruandb.service.impl.JobMonitorServiceImpl - groupMap--->{A=[3, 5], B=[6, 8, 9, 10, 11, 12, 13, 14, 15], C=[16, 17, 18, 19, 20, 21], D=[22, 23]}
+2020-02-29 20:52:06.556 [http-nio-8088-exec-2] INFO  top.ruandb.service.impl.JobMonitorServiceImpl - jobMap,groupMap----------------------->初始化成功
+2020-02-29 20:52:06.574 [http-nio-8088-exec-4] INFO  top.ruandb.service.impl.JobMonitorServiceImpl - jobMap--->{11=PENDDING, 22=PENDDING, 12=PENDDING, 23=PENDDING, 13=PENDDING, 14=PENDDING, 15=PENDDING, 16=PENDDING, 17=PENDDING, 18=PENDDING, 19=PENDDING, 3=PENDDING, 5=PENDDING, 6=PENDDING, 8=PENDDING, 9=PENDDING, 20=PENDDING, 10=PENDDING, 21=PENDDING}
+2020-02-29 20:52:06.574 [http-nio-8088-exec-4] INFO  top.ruandb.service.impl.JobMonitorServiceImpl - groupMap--->{A=[3, 5], B=[6, 8, 9, 10, 11, 12, 13, 14, 15], C=[16, 17, 18, 19, 20, 21], D=[22, 23]}
+2020-02-29 20:52:06.574 [http-nio-8088-exec-4] INFO  top.ruandb.service.impl.JobMonitorServiceImpl - jobMap,groupMap----------------------->初始化成功
+2020-02-29 20:52:06.655 [http-nio-8088-exec-3] INFO  top.ruandb.service.impl.JobMonitorServiceImpl - jobMap--->{11=PENDDING, 22=PENDDING, 12=PENDDING, 23=PENDDING, 13=PENDDING, 14=PENDDING, 15=PENDDING, 16=PENDDING, 17=PENDDING, 18=PENDDING, 19=PENDDING, 5=PENDDING, 6=PENDDING, 8=PENDDING, 9=PENDDING, 20=PENDDING, 10=PENDDING, 21=PENDDING}
+2020-02-29 20:52:06.655 [http-nio-8088-exec-3] INFO  top.ruandb.service.impl.JobMonitorServiceImpl - groupMap--->{A=[5], B=[6, 8, 9, 10, 11, 12, 13, 14, 15], C=[16, 17, 18, 19, 20, 21], D=[22, 23]}
+2020-02-29 20:52:06.656 [http-nio-8088-exec-3] INFO  top.ruandb.service.impl.JobMonitorServiceImpl - jobMap,groupMap----------------------->初始化成功
+2020-02-29 20:52:06.704 [http-nio-8088-exec-4] INFO  top.ruandb.service.impl.JobMonitorServiceImpl - jobMap--->{11=PENDDING, 22=PENDDING, 12=PENDDING, 23=PENDDING, 13=PENDDING, 14=PENDDING, 15=PENDDING, 16=PENDDING, 17=PENDDING, 18=PENDDING, 19=PENDDING, 6=PENDDING, 8=PENDDING, 9=PENDDING, 20=PENDDING, 21=PENDDING}
+2020-02-29 20:52:06.704 [http-nio-8088-exec-4] INFO  top.ruandb.service.impl.JobMonitorServiceImpl - groupMap--->{A=[], B=[6, 8, 9, 11, 12, 13, 14, 15], C=[16, 17, 18, 19, 20, 21], D=[22, 23]}
+2020-02-29 20:52:06.704 [http-nio-8088-exec-4] INFO  top.ruandb.service.impl.JobMonitorServiceImpl - jobMap,groupMap----------------------->初始化成功
+2020-02-29 20:52:06.721 [http-nio-8088-exec-6] INFO  top.ruandb.service.impl.JobMonitorServiceImpl - jobMap--->{11=PENDDING, 22=PENDDING, 12=PENDDING, 23=PENDDING, 13=PENDDING, 14=PENDDING, 15=PENDDING, 16=PENDDING, 17=PENDDING, 18=PENDDING, 19=PENDDING, 6=PENDDING, 8=PENDDING, 9=PENDDING, 20=PENDDING, 21=PENDDING}
+2020-02-29 20:52:06.722 [http-nio-8088-exec-6] INFO  top.ruandb.service.impl.JobMonitorServiceImpl - groupMap--->{A=[], B=[6, 8, 9, 11, 12, 13, 14, 15], C=[16, 17, 18, 19, 20, 21], D=[22, 23]}
+2020-02-29 20:52:06.722 [http-nio-8088-exec-6] INFO  top.ruandb.service.impl.JobMonitorServiceImpl - jobMap,groupMap----------------------->初始化成功
+2020-02-29 20:52:06.777 [http-nio-8088-exec-1] INFO  top.ruandb.service.impl.JobMonitorServiceImpl - jobMap--->{11=PENDDING, 22=PENDDING, 12=PENDDING, 23=PENDDING, 13=PENDDING, 14=PENDDING, 15=PENDDING, 16=PENDDING, 17=PENDDING, 18=PENDDING, 19=PENDDING, 9=PENDDING, 20=PENDDING, 21=PENDDING}
+2020-02-29 20:52:06.777 [http-nio-8088-exec-1] INFO  top.ruandb.service.impl.JobMonitorServiceImpl - groupMap--->{A=[], B=[9, 11, 12, 13, 14, 15], C=[16, 17, 18, 19, 20, 21], D=[22, 23]}
+2020-02-29 20:52:06.777 [http-nio-8088-exec-1] INFO  top.ruandb.service.impl.JobMonitorServiceImpl - jobMap,groupMap----------------------->初始化成功
+2020-02-29 20:52:06.788 [http-nio-8088-exec-5] INFO  top.ruandb.service.impl.JobMonitorServiceImpl - jobMap--->{11=PENDDING, 22=PENDDING, 12=PENDDING, 23=PENDDING, 13=PENDDING, 14=PENDDING, 15=PENDDING, 16=PENDDING, 17=PENDDING, 18=PENDDING, 19=PENDDING, 9=PENDDING, 20=PENDDING, 21=PENDDING}
+2020-02-29 20:52:06.788 [http-nio-8088-exec-5] INFO  top.ruandb.service.impl.JobMonitorServiceImpl - groupMap--->{A=[], B=[9, 11, 12, 13, 14, 15], C=[16, 17, 18, 19, 20, 21], D=[22, 23]}
+2020-02-29 20:52:06.788 [http-nio-8088-exec-5] INFO  top.ruandb.service.impl.JobMonitorServiceImpl - jobMap,groupMap----------------------->初始化成功
+2020-02-29 20:52:06.825 [http-nio-8088-exec-2] INFO  top.ruandb.service.impl.JobMonitorServiceImpl - jobMap--->{11=PENDDING, 22=PENDDING, 12=PENDDING, 23=PENDDING, 13=PENDDING, 14=PENDDING, 15=PENDDING, 16=PENDDING, 17=PENDDING, 18=PENDDING, 19=PENDDING, 20=PENDDING, 21=PENDDING}
+2020-02-29 20:52:06.825 [http-nio-8088-exec-2] INFO  top.ruandb.service.impl.JobMonitorServiceImpl - groupMap--->{A=[], B=[11, 12, 13, 14, 15], C=[16, 17, 18, 19, 20, 21], D=[22, 23]}
+2020-02-29 20:52:06.825 [http-nio-8088-exec-2] INFO  top.ruandb.service.impl.JobMonitorServiceImpl - jobMap,groupMap----------------------->初始化成功
+2020-02-29 20:52:11.519 [http-nio-8088-exec-1] INFO  top.ruandb.service.impl.JobMonitorServiceImpl - jobMap--->{11=PENDDING, 22=PENDDING, 23=PENDDING, 13=PENDDING, 14=PENDDING, 15=PENDDING, 17=PENDDING, 18=PENDDING, 19=PENDDING, 20=PENDDING, 21=PENDDING}
+2020-02-29 20:52:11.519 [http-nio-8088-exec-1] INFO  top.ruandb.service.impl.JobMonitorServiceImpl - groupMap--->{A=[], B=[11, 13, 14, 15], C=[17, 18, 19, 20, 21], D=[22, 23]}
+2020-02-29 20:52:11.519 [http-nio-8088-exec-1] INFO  top.ruandb.service.impl.JobMonitorServiceImpl - jobMap,groupMap----------------------->初始化成功
+2020-02-29 20:52:11.527 [http-nio-8088-exec-2] INFO  top.ruandb.service.impl.JobMonitorServiceImpl - jobMap--->{11=PENDDING, 22=PENDDING, 23=PENDDING, 13=PENDDING, 14=PENDDING, 15=PENDDING, 17=PENDDING, 18=PENDDING, 19=PENDDING, 20=PENDDING, 21=PENDDING}
+2020-02-29 20:52:11.527 [http-nio-8088-exec-2] INFO  top.ruandb.service.impl.JobMonitorServiceImpl - groupMap--->{A=[], B=[11, 13, 14, 15], C=[17, 18, 19, 20, 21], D=[22, 23]}
+2020-02-29 20:52:11.527 [http-nio-8088-exec-2] INFO  top.ruandb.service.impl.JobMonitorServiceImpl - jobMap,groupMap----------------------->初始化成功
+2020-02-29 20:52:11.586 [http-nio-8088-exec-3] INFO  top.ruandb.service.impl.JobMonitorServiceImpl - jobMap--->{22=PENDDING, 23=PENDDING, 13=PENDDING, 14=PENDDING, 17=PENDDING, 18=PENDDING, 19=PENDDING, 20=PENDDING, 21=PENDDING}
+2020-02-29 20:52:11.586 [http-nio-8088-exec-3] INFO  top.ruandb.service.impl.JobMonitorServiceImpl - groupMap--->{A=[], B=[13, 14], C=[17, 18, 19, 20, 21], D=[22, 23]}
+2020-02-29 20:52:11.586 [http-nio-8088-exec-3] INFO  top.ruandb.service.impl.JobMonitorServiceImpl - jobMap,groupMap----------------------->初始化成功
+2020-02-29 20:52:11.594 [http-nio-8088-exec-6] INFO  top.ruandb.service.impl.JobMonitorServiceImpl - jobMap--->{22=PENDDING, 23=PENDDING, 13=PENDDING, 14=PENDDING, 17=PENDDING, 18=PENDDING, 19=PENDDING, 20=PENDDING, 21=PENDDING}
+2020-02-29 20:52:11.595 [http-nio-8088-exec-6] INFO  top.ruandb.service.impl.JobMonitorServiceImpl - groupMap--->{A=[], B=[13, 14], C=[17, 18, 19, 20, 21], D=[22, 23]}
+2020-02-29 20:52:11.595 [http-nio-8088-exec-6] INFO  top.ruandb.service.impl.JobMonitorServiceImpl - jobMap,groupMap----------------------->初始化成功
+2020-02-29 20:52:11.691 [http-nio-8088-exec-2] INFO  top.ruandb.service.impl.JobMonitorServiceImpl - jobMap--->{22=PENDDING, 23=PENDDING, 13=PENDDING, 17=PENDDING, 19=PENDDING, 20=PENDDING, 21=PENDDING}
+2020-02-29 20:52:11.692 [http-nio-8088-exec-2] INFO  top.ruandb.service.impl.JobMonitorServiceImpl - groupMap--->{A=[], B=[13], C=[17, 19, 20, 21], D=[22, 23]}
+2020-02-29 20:52:11.692 [http-nio-8088-exec-2] INFO  top.ruandb.service.impl.JobMonitorServiceImpl - jobMap,groupMap----------------------->初始化成功
+2020-02-29 20:52:11.700 [http-nio-8088-exec-5] INFO  top.ruandb.service.impl.JobMonitorServiceImpl - jobMap--->{22=PENDDING, 23=PENDDING, 13=PENDDING, 17=PENDDING, 19=PENDDING, 20=PENDDING, 21=PENDDING}
+2020-02-29 20:52:11.700 [http-nio-8088-exec-5] INFO  top.ruandb.service.impl.JobMonitorServiceImpl - groupMap--->{A=[], B=[13], C=[17, 19, 20, 21], D=[22, 23]}
+2020-02-29 20:52:11.700 [http-nio-8088-exec-5] INFO  top.ruandb.service.impl.JobMonitorServiceImpl - jobMap,groupMap----------------------->初始化成功
+2020-02-29 20:52:11.743 [http-nio-8088-exec-6] INFO  top.ruandb.service.impl.JobMonitorServiceImpl - jobMap--->{22=PENDDING, 23=PENDDING, 17=PENDDING, 19=PENDDING, 21=PENDDING}
+2020-02-29 20:52:11.744 [http-nio-8088-exec-6] INFO  top.ruandb.service.impl.JobMonitorServiceImpl - groupMap--->{A=[], B=[], C=[17, 19, 21], D=[22, 23]}
+2020-02-29 20:52:11.744 [http-nio-8088-exec-6] INFO  top.ruandb.service.impl.JobMonitorServiceImpl - jobMap,groupMap----------------------->初始化成功
+2020-02-29 20:52:11.759 [http-nio-8088-exec-4] INFO  top.ruandb.service.impl.JobMonitorServiceImpl - jobMap--->{22=PENDDING, 23=PENDDING, 17=PENDDING, 19=PENDDING, 21=PENDDING}
+2020-02-29 20:52:11.760 [http-nio-8088-exec-4] INFO  top.ruandb.service.impl.JobMonitorServiceImpl - groupMap--->{A=[], B=[], C=[17, 19, 21], D=[22, 23]}
+2020-02-29 20:52:11.760 [http-nio-8088-exec-4] INFO  top.ruandb.service.impl.JobMonitorServiceImpl - jobMap,groupMap----------------------->初始化成功
+2020-02-29 20:52:11.793 [http-nio-8088-exec-3] INFO  top.ruandb.service.impl.JobMonitorServiceImpl - jobMap--->{22=PENDDING, 23=PENDDING, 21=PENDDING}
+2020-02-29 20:52:11.793 [http-nio-8088-exec-3] INFO  top.ruandb.service.impl.JobMonitorServiceImpl - groupMap--->{A=[], B=[], C=[21], D=[22, 23]}
+2020-02-29 20:52:11.793 [http-nio-8088-exec-3] INFO  top.ruandb.service.impl.JobMonitorServiceImpl - jobMap,groupMap----------------------->初始化成功
+2020-02-29 20:52:11.803 [http-nio-8088-exec-1] INFO  top.ruandb.service.impl.JobMonitorServiceImpl - jobMap--->{22=PENDDING, 23=PENDDING, 21=PENDDING}
+2020-02-29 20:52:11.803 [http-nio-8088-exec-1] INFO  top.ruandb.service.impl.JobMonitorServiceImpl - groupMap--->{A=[], B=[], C=[21], D=[22, 23]}
+2020-02-29 20:52:11.803 [http-nio-8088-exec-1] INFO  top.ruandb.service.impl.JobMonitorServiceImpl - jobMap,groupMap----------------------->初始化成功
+2020-02-29 20:52:25.435 [http-nio-8088-exec-2] INFO  top.ruandb.service.impl.JobMonitorServiceImpl - jobMap--->{22=PENDDING, 23=PENDDING, 21=PENDDING}
+2020-02-29 20:52:25.435 [http-nio-8088-exec-2] INFO  top.ruandb.service.impl.JobMonitorServiceImpl - groupMap--->{A=[], B=[], C=[21], D=[22, 23]}
+2020-02-29 20:52:25.435 [http-nio-8088-exec-2] INFO  top.ruandb.service.impl.JobMonitorServiceImpl - jobMap,groupMap----------------------->初始化成功
+2020-02-29 20:52:32.202 [SchedulerFactory_Worker-1] ERROR top.ruandb.Job.KettleJob - 运行异常
+org.pentaho.di.core.exception.KettleXMLException: 
+Unable to load the job from XML file [D://Soft/Kettle//SK_HDW_Repository/usp_fact_dim_yp_dim.kjb]
+
+Unable to read file [file:///D:/Soft/Kettle/SK_HDW_Repository/usp_fact_dim_yp_dim.kjb]
+Could not read from "file:///D:/Soft/Kettle/SK_HDW_Repository/usp_fact_dim_yp_dim.kjb" because it is not a file.
+
+
+	at org.pentaho.di.job.JobMeta.<init>(JobMeta.java:742)
+	at org.pentaho.di.job.JobMeta.<init>(JobMeta.java:714)
+	at org.pentaho.di.job.JobMeta.<init>(JobMeta.java:689)
+	at org.pentaho.di.repository.filerep.KettleFileRepository.loadJob(KettleFileRepository.java:949)
+	at top.ruandb.Job.KettleJob.runJob(KettleJob.java:115)
+	at top.ruandb.Job.KettleJob.execute(KettleJob.java:79)
+	at org.quartz.core.JobRunShell.run(JobRunShell.java:202)
+	at org.quartz.simpl.SimpleThreadPool$WorkerThread.run(SimpleThreadPool.java:573)
+Caused by: org.pentaho.di.core.exception.KettleXMLException: 
+Unable to read file [file:///D:/Soft/Kettle/SK_HDW_Repository/usp_fact_dim_yp_dim.kjb]
+Could not read from "file:///D:/Soft/Kettle/SK_HDW_Repository/usp_fact_dim_yp_dim.kjb" because it is not a file.
+
+	at org.pentaho.di.core.xml.XMLHandler.loadXMLFile(XMLHandler.java:582)
+	at org.pentaho.di.core.xml.XMLHandler.loadXMLFile(XMLHandler.java:561)
+	at org.pentaho.di.job.JobMeta.<init>(JobMeta.java:730)
+	... 7 common frames omitted
+Caused by: org.apache.commons.vfs2.FileNotFoundException: Could not read from "file:///D:/Soft/Kettle/SK_HDW_Repository/usp_fact_dim_yp_dim.kjb" because it is not a file.
+	at org.apache.commons.vfs2.provider.AbstractFileObject.getInputStream(AbstractFileObject.java:1123)
+	at org.apache.commons.vfs2.provider.DefaultFileContent.getInputStream(DefaultFileContent.java:349)
+	at org.pentaho.di.core.vfs.KettleVFS.getInputStream(KettleVFS.java:263)
+	at org.pentaho.di.core.xml.XMLHandler.loadXMLFile(XMLHandler.java:580)
+	... 9 common frames omitted
+Caused by: java.io.FileNotFoundException: D:\Soft\Kettle\SK_HDW_Repository\usp_fact_dim_yp_dim.kjb (系统找不到指定的文件。)
+	at java.io.FileInputStream.open0(Native Method)
+	at java.io.FileInputStream.open(FileInputStream.java:195)
+	at java.io.FileInputStream.<init>(FileInputStream.java:138)
+	at org.apache.commons.vfs2.provider.local.LocalFile.doGetInputStream(LocalFile.java:215)
+	at org.apache.commons.vfs2.provider.AbstractFileObject.getInputStream(AbstractFileObject.java:1119)
+	... 12 common frames omitted
+2020-02-29 20:53:07.618 [RMI TCP Connection(2)-127.0.0.1] INFO  org.springframework.boot.admin.SpringApplicationAdminMXBeanRegistrar$SpringApplicationAdmin - Application shutdown requested.
+2020-02-29 20:53:07.621 [RMI TCP Connection(2)-127.0.0.1] INFO  org.quartz.core.QuartzScheduler - Scheduler SchedulerFactory_$_ETLScheduler paused.
+2020-02-29 20:53:07.622 [RMI TCP Connection(2)-127.0.0.1] INFO  org.springframework.scheduling.concurrent.ThreadPoolTaskExecutor - Shutting down ExecutorService 'applicationTaskExecutor'
+2020-02-29 20:53:07.623 [RMI TCP Connection(2)-127.0.0.1] INFO  org.quartz.core.QuartzScheduler - Scheduler SchedulerFactory_$_ETLScheduler shutting down.
+2020-02-29 20:53:07.623 [RMI TCP Connection(2)-127.0.0.1] INFO  org.quartz.core.QuartzScheduler - Scheduler SchedulerFactory_$_ETLScheduler paused.
+2020-02-29 20:53:07.628 [RMI TCP Connection(2)-127.0.0.1] INFO  com.alibaba.druid.pool.DruidDataSource - {dataSource-1} closed
+2020-02-29 20:53:07.629 [RMI TCP Connection(2)-127.0.0.1] INFO  org.quartz.core.QuartzScheduler - Scheduler SchedulerFactory_$_ETLScheduler shutdown complete.
+2020-02-29 20:53:07.629 [RMI TCP Connection(2)-127.0.0.1] INFO  org.springframework.scheduling.quartz.SchedulerFactoryBean - Shutting down Quartz Scheduler
+2020-02-29 20:53:07.629 [RMI TCP Connection(2)-127.0.0.1] INFO  org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'primaryPersistenceUnit'
+2020-02-29 20:53:07.630 [RMI TCP Connection(2)-127.0.0.1] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-2 - Shutdown initiated...
+2020-02-29 20:53:07.633 [RMI TCP Connection(2)-127.0.0.1] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-2 - Shutdown completed.
+2020-02-29 20:53:07.636 [RMI TCP Connection(2)-127.0.0.1] INFO  org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'primaryPersistenceUnit'
+2020-02-29 20:53:07.637 [RMI TCP Connection(2)-127.0.0.1] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2020-02-29 20:53:07.640 [RMI TCP Connection(2)-127.0.0.1] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2020-02-29 20:53:43.461 [main] INFO  top.ruandb.EtlSchedulerApplication - Starting EtlSchedulerApplication on LAPTOP-MK6P63H0 with PID 10360 (C:\Java\eclipse-workspace5\ETLScheduler\target\classes started by rdb in C:\Java\eclipse-workspace5\ETLScheduler)
+2020-02-29 20:53:43.466 [main] INFO  top.ruandb.EtlSchedulerApplication - No active profile set, falling back to default profiles: default
+2020-02-29 20:53:44.620 [main] INFO  org.springframework.data.repository.config.RepositoryConfigurationDelegate - Bootstrapping Spring Data repositories in DEFAULT mode.
+2020-02-29 20:53:44.762 [main] INFO  org.springframework.data.repository.config.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 131ms. Found 4 repository interfaces.
+2020-02-29 20:53:44.763 [main] INFO  org.springframework.data.repository.config.RepositoryConfigurationDelegate - Bootstrapping Spring Data repositories in DEFAULT mode.
+2020-02-29 20:53:44.784 [main] INFO  org.springframework.data.repository.config.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 21ms. Found 1 repository interfaces.
+2020-02-29 20:53:45.188 [main] WARN  org.mybatis.spring.mapper.ClassPathMapperScanner - No MyBatis mapper was found in '[top.ruandb]' package. Please check your configuration.
+2020-02-29 20:53:45.812 [main] INFO  org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$da252e8e] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-02-29 20:53:45.847 [main] INFO  org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'shiroConfig' of type [top.ruandb.config.ShiroConfig$$EnhancerBySpringCGLIB$$58261e1] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-02-29 20:53:47.174 [main] INFO  org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'myRealm' of type [top.ruandb.config.MyRealm] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-02-29 20:53:47.188 [main] INFO  org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'securityManager' of type [org.apache.shiro.web.mgt.DefaultWebSecurityManager] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-02-29 20:53:47.754 [main] INFO  org.springframework.boot.web.embedded.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8088 (http)
+2020-02-29 20:53:47.778 [main] INFO  org.apache.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8088"]
+2020-02-29 20:53:47.796 [main] INFO  org.apache.catalina.core.StandardService - Starting service [Tomcat]
+2020-02-29 20:53:47.796 [main] INFO  org.apache.catalina.core.StandardEngine - Starting Servlet Engine: Apache Tomcat/9.0.13
+2020-02-29 20:53:47.811 [main] INFO  org.apache.catalina.core.AprLifecycleListener - Loaded APR based Apache Tomcat Native library [1.2.19] using APR version [1.6.5].
+2020-02-29 20:53:47.811 [main] INFO  org.apache.catalina.core.AprLifecycleListener - APR capabilities: IPv6 [true], sendfile [true], accept filters [false], random [true].
+2020-02-29 20:53:47.812 [main] INFO  org.apache.catalina.core.AprLifecycleListener - APR/OpenSSL configuration: useAprConnector [false], useOpenSSL [true]
+2020-02-29 20:53:48.916 [main] INFO  org.apache.catalina.core.AprLifecycleListener - OpenSSL successfully initialized [OpenSSL 1.0.2q  20 Nov 2018]
+2020-02-29 20:53:49.286 [main] INFO  org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2020-02-29 20:53:49.286 [main] INFO  org.springframework.web.context.ContextLoader - Root WebApplicationContext: initialization completed in 5743 ms
+2020-02-29 20:53:49.673 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2020-02-29 20:53:50.022 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2020-02-29 20:53:50.103 [main] INFO  org.hibernate.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [
+	name: primaryPersistenceUnit
+	...]
+2020-02-29 20:53:50.245 [main] INFO  org.hibernate.Version - HHH000412: Hibernate Core {5.3.7.Final}
+2020-02-29 20:53:50.250 [main] INFO  org.hibernate.cfg.Environment - HHH000206: hibernate.properties not found
+2020-02-29 20:53:50.534 [main] INFO  org.hibernate.annotations.common.Version - HCANN000001: Hibernate Commons Annotations {5.0.4.Final}
+2020-02-29 20:53:51.412 [main] INFO  org.hibernate.dialect.Dialect - HHH000400: Using dialect: org.hibernate.dialect.SQLServer2012Dialect
+2020-02-29 20:53:52.555 [main] INFO  org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'primaryPersistenceUnit'
+2020-02-29 20:53:52.624 [main] INFO  org.hibernate.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [
+	name: primaryPersistenceUnit
+	...]
+2020-02-29 20:53:53.258 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-2 - Starting...
+2020-02-29 20:53:53.480 [main] INFO  com.zaxxer.hikari.pool.PoolBase - HikariPool-2 - Driver does not support get/set network timeout for connections. ([Pivotal][Greenplum JDBC Driver]This driver does not support the 'getNetworkTimeout' and 'setNetworkTimeout' methods.)
+2020-02-29 20:53:53.480 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-2 - Start completed.
+2020-02-29 20:53:53.487 [main] INFO  org.hibernate.dialect.Dialect - HHH000400: Using dialect: org.hibernate.dialect.SQLServer2012Dialect
+2020-02-29 20:53:53.593 [main] INFO  org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'primaryPersistenceUnit'
+2020-02-29 20:53:53.613 [main] INFO  org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor - Autowired annotation is not supported on static methods: public static void top.ruandb.config.ProcedureConfig.setSQLSERVER_PROCEDURE_PRO(java.lang.String)
+2020-02-29 20:53:53.613 [main] INFO  org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor - Autowired annotation is not supported on static methods: public static void top.ruandb.config.ProcedureConfig.setORACLE_PROCEDURE_PRO(java.lang.String)
+2020-02-29 20:53:54.041 [main] INFO  org.hibernate.hql.internal.QueryTranslatorFactoryInitiator - HHH000397: Using ASTQueryTranslatorFactory
+2020-02-29 20:53:54.313 [main] INFO  org.quartz.impl.StdSchedulerFactory - Using default implementation for ThreadExecutor
+2020-02-29 20:53:54.333 [main] INFO  org.quartz.core.SchedulerSignalerImpl - Initialized Scheduler Signaller of type: class org.quartz.core.SchedulerSignalerImpl
+2020-02-29 20:53:54.333 [main] INFO  org.quartz.core.QuartzScheduler - Quartz Scheduler v.2.2.1 created.
+2020-02-29 20:53:54.334 [main] INFO  org.quartz.core.QuartzScheduler - JobFactory set to: org.quartz.simpl.SimpleJobFactory@7de6549d
+2020-02-29 20:53:54.335 [main] INFO  org.quartz.impl.jdbcjobstore.JobStoreTX - Using thread monitor-based data access locking (synchronization).
+2020-02-29 20:53:54.337 [main] INFO  org.quartz.impl.jdbcjobstore.JobStoreTX - JobStoreTX initialized.
+2020-02-29 20:53:54.338 [main] INFO  org.quartz.core.QuartzScheduler - Scheduler meta-data: Quartz Scheduler (v2.2.1) 'SchedulerFactory' with instanceId 'ETLScheduler'
+  Scheduler class: 'org.quartz.core.QuartzScheduler' - running locally.
+  NOT STARTED.
+  Currently in standby mode.
+  Number of jobs executed: 0
+  Using thread pool 'org.quartz.simpl.SimpleThreadPool' - with 50 threads.
+  Using job-store 'org.quartz.impl.jdbcjobstore.JobStoreTX' - which supports persistence. and is not clustered.
+
+2020-02-29 20:53:54.339 [main] INFO  org.quartz.impl.StdSchedulerFactory - Quartz scheduler 'SchedulerFactory' initialized from an externally provided properties instance.
+2020-02-29 20:53:54.339 [main] INFO  org.quartz.impl.StdSchedulerFactory - Quartz scheduler version: 2.2.1
+2020-02-29 20:53:54.339 [main] INFO  org.quartz.core.QuartzScheduler - JobFactory set to: top.ruandb.config.MyJobFactory@4cb00fa5
+2020-02-29 20:53:54.984 [main] INFO  org.springframework.scheduling.concurrent.ThreadPoolTaskExecutor - Initializing ExecutorService 'applicationTaskExecutor'
+2020-02-29 20:53:55.857 [main] INFO  org.springframework.scheduling.quartz.SchedulerFactoryBean - Starting Quartz Scheduler now
+2020-02-29 20:53:55.868 [main] INFO  com.alibaba.druid.pool.DruidDataSource - {dataSource-1} inited
+2020-02-29 20:53:55.927 [main] INFO  org.quartz.impl.jdbcjobstore.JobStoreTX - Freed 0 triggers from 'acquired' / 'blocked' state.
+2020-02-29 20:53:55.933 [main] INFO  org.quartz.impl.jdbcjobstore.JobStoreTX - Recovering 0 jobs that were in-progress at the time of the last shut-down.
+2020-02-29 20:53:55.933 [main] INFO  org.quartz.impl.jdbcjobstore.JobStoreTX - Recovery complete.
+2020-02-29 20:53:55.934 [main] INFO  org.quartz.impl.jdbcjobstore.JobStoreTX - Removed 0 'complete' triggers.
+2020-02-29 20:53:55.935 [main] INFO  org.quartz.impl.jdbcjobstore.JobStoreTX - Removed 0 stale fired job entries.
+2020-02-29 20:53:55.937 [main] INFO  org.quartz.core.QuartzScheduler - Scheduler SchedulerFactory_$_ETLScheduler started.
+2020-02-29 20:53:55.949 [main] INFO  org.apache.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8088"]
+2020-02-29 20:53:55.965 [main] INFO  org.apache.tomcat.util.net.NioSelectorPool - Using a shared selector for servlet write/read
+2020-02-29 20:53:55.997 [main] INFO  org.springframework.boot.web.embedded.tomcat.TomcatWebServer - Tomcat started on port(s): 8088 (http) with context path ''
+2020-02-29 20:53:56.000 [main] INFO  top.ruandb.EtlSchedulerApplication - Started EtlSchedulerApplication in 13.699 seconds (JVM running for 16.143)
+2020-02-29 20:53:56.003 [main] INFO  top.ruandb.init.TaskInit - kettle初始化开始-------------------------------------------------------->
+2020-02-29 20:53:58.429 [main] INFO  top.ruandb.init.TaskInit - kettle初始化结束-------------------------------------------------------->
+2020-02-29 20:53:58.430 [main] INFO  top.ruandb.init.TaskInit - 重新启动清空scheduler
+2020-02-29 20:53:58.605 [main] INFO  top.ruandb.init.TaskInit - 初始化job到调度器-------------------------------->jobname:usp_fact_dim_yp_dim
+2020-02-29 20:53:58.647 [main] INFO  top.ruandb.init.TaskInit - 初始化job到调度器-------------------------------->jobname:usp_hd_zbmx_hz,usp_hd_zbmx_hz_ys
+2020-02-29 20:53:58.662 [main] INFO  top.ruandb.init.TaskInit - 初始化job到调度器-------------------------------->jobname:usp_producure_log
+2020-02-29 20:53:58.840 [main] INFO  top.ruandb.init.TaskInit -  ----------------------->依赖初始化开始
+2020-02-29 20:53:58.844 [main] INFO  top.ruandb.init.TaskInit - jobMap--->{22=PENDDING, 23=PENDDING, 21=PENDDING}
+2020-02-29 20:53:58.845 [main] INFO  top.ruandb.init.TaskInit - groupMap--->{A=[], B=[], C=[21], D=[22, 23]}
+2020-02-29 20:53:58.845 [main] INFO  top.ruandb.init.TaskInit -  ----------------------->依赖初始化成功
+2020-02-29 20:53:58.845 [main] INFO  top.ruandb.init.TaskInit -  ----------------------->定时依赖初始化开始
+2020-02-29 20:53:58.856 [main] INFO  top.ruandb.init.TaskInit -  ----------------------->定时依赖初始化结束
+2020-02-29 20:54:08.353 [http-nio-8088-exec-1] INFO  org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2020-02-29 20:54:08.354 [http-nio-8088-exec-1] INFO  org.springframework.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2020-02-29 20:54:08.376 [http-nio-8088-exec-1] INFO  org.springframework.web.servlet.DispatcherServlet - Completed initialization in 22 ms
+2020-02-29 20:54:26.581 [SchedulerFactory_Worker-1] ERROR top.ruandb.Job.KettleJob - 运行异常
+org.pentaho.di.core.exception.KettleXMLException: 
+Unable to load the job from XML file [D://Soft/Kettle//SK_HDW_Repository/usp_fact_dim_yp_dim.kjb]
+
+Unable to read file [file:///D:/Soft/Kettle/SK_HDW_Repository/usp_fact_dim_yp_dim.kjb]
+Could not read from "file:///D:/Soft/Kettle/SK_HDW_Repository/usp_fact_dim_yp_dim.kjb" because it is not a file.
+
+
+	at org.pentaho.di.job.JobMeta.<init>(JobMeta.java:742)
+	at org.pentaho.di.job.JobMeta.<init>(JobMeta.java:714)
+	at org.pentaho.di.job.JobMeta.<init>(JobMeta.java:689)
+	at org.pentaho.di.repository.filerep.KettleFileRepository.loadJob(KettleFileRepository.java:949)
+	at top.ruandb.Job.KettleJob.runJob(KettleJob.java:115)
+	at top.ruandb.Job.KettleJob.execute(KettleJob.java:79)
+	at org.quartz.core.JobRunShell.run(JobRunShell.java:202)
+	at org.quartz.simpl.SimpleThreadPool$WorkerThread.run(SimpleThreadPool.java:573)
+Caused by: org.pentaho.di.core.exception.KettleXMLException: 
+Unable to read file [file:///D:/Soft/Kettle/SK_HDW_Repository/usp_fact_dim_yp_dim.kjb]
+Could not read from "file:///D:/Soft/Kettle/SK_HDW_Repository/usp_fact_dim_yp_dim.kjb" because it is not a file.
+
+	at org.pentaho.di.core.xml.XMLHandler.loadXMLFile(XMLHandler.java:582)
+	at org.pentaho.di.core.xml.XMLHandler.loadXMLFile(XMLHandler.java:561)
+	at org.pentaho.di.job.JobMeta.<init>(JobMeta.java:730)
+	... 7 common frames omitted
+Caused by: org.apache.commons.vfs2.FileNotFoundException: Could not read from "file:///D:/Soft/Kettle/SK_HDW_Repository/usp_fact_dim_yp_dim.kjb" because it is not a file.
+	at org.apache.commons.vfs2.provider.AbstractFileObject.getInputStream(AbstractFileObject.java:1123)
+	at org.apache.commons.vfs2.provider.DefaultFileContent.getInputStream(DefaultFileContent.java:349)
+	at org.pentaho.di.core.vfs.KettleVFS.getInputStream(KettleVFS.java:263)
+	at org.pentaho.di.core.xml.XMLHandler.loadXMLFile(XMLHandler.java:580)
+	... 9 common frames omitted
+Caused by: java.io.FileNotFoundException: D:\Soft\Kettle\SK_HDW_Repository\usp_fact_dim_yp_dim.kjb (系统找不到指定的文件。)
+	at java.io.FileInputStream.open0(Native Method)
+	at java.io.FileInputStream.open(FileInputStream.java:195)
+	at java.io.FileInputStream.<init>(FileInputStream.java:138)
+	at org.apache.commons.vfs2.provider.local.LocalFile.doGetInputStream(LocalFile.java:215)
+	at org.apache.commons.vfs2.provider.AbstractFileObject.getInputStream(AbstractFileObject.java:1119)
+	... 12 common frames omitted
+2020-02-29 20:56:28.076 [http-nio-8088-exec-5] INFO  top.ruandb.service.impl.JobMonitorServiceImpl - jobMap--->{22=PENDDING, 23=PENDDING, 21=PENDDING}
+2020-02-29 20:56:28.076 [http-nio-8088-exec-5] INFO  top.ruandb.service.impl.JobMonitorServiceImpl - groupMap--->{A=[], B=[], C=[21], D=[22, 23]}
+2020-02-29 20:56:28.076 [http-nio-8088-exec-5] INFO  top.ruandb.service.impl.JobMonitorServiceImpl - jobMap,groupMap----------------------->初始化成功
+2020-02-29 20:56:41.073 [SchedulerFactory_Worker-2] INFO  top.ruandb.Job.KettleJob - 调度方式(全量/增量):1
+2020-02-29 20:56:41.075 [SchedulerFactory_Worker-2] INFO  top.ruandb.Job.KettleJob - D:\\Soft\Kettle\\SK_HDW_Repository\BLBGD\JB_BLBGD.kjb----------------->开始运行
+2020-02-29 20:56:41.097 [Thread-12] WARN  org.pentaho.di.job.Job - [/BLBGD/null]  开始执行任务
+2020-02-29 20:56:55.051 [init of 表输入.0 (Thread-15)] ERROR org.postgresql.Driver - Connection error: 
+org.postgresql.util.PSQLException: 尝试连线已失败。
+	at org.postgresql.core.v3.ConnectionFactoryImpl.openConnectionImpl(ConnectionFactoryImpl.java:275)
+	at org.postgresql.core.ConnectionFactory.openConnection(ConnectionFactory.java:49)
+	at org.postgresql.jdbc.PgConnection.<init>(PgConnection.java:194)
+	at org.postgresql.Driver.makeConnection(Driver.java:450)
+	at org.postgresql.Driver.connect(Driver.java:252)
+	at java.sql.DriverManager.getConnection(DriverManager.java:664)
+	at java.sql.DriverManager.getConnection(DriverManager.java:208)
+	at org.pentaho.di.core.database.Database.connectUsingClass(Database.java:567)
+	at org.pentaho.di.core.database.Database.normalConnect(Database.java:456)
+	at org.pentaho.di.core.database.Database.connect(Database.java:370)
+	at org.pentaho.di.core.database.Database.connect(Database.java:341)
+	at org.pentaho.di.trans.steps.tableinput.TableInput.init(TableInput.java:342)
+	at org.pentaho.di.trans.step.StepInitThread.run(StepInitThread.java:69)
+	at java.lang.Thread.run(Thread.java:748)
+Caused by: java.net.SocketTimeoutException: connect timed out
+	at java.net.DualStackPlainSocketImpl.waitForConnect(Native Method)
+	at java.net.DualStackPlainSocketImpl.socketConnect(DualStackPlainSocketImpl.java:85)
+	at java.net.AbstractPlainSocketImpl.doConnect(AbstractPlainSocketImpl.java:350)
+	at java.net.AbstractPlainSocketImpl.connectToAddress(AbstractPlainSocketImpl.java:206)
+	at java.net.AbstractPlainSocketImpl.connect(AbstractPlainSocketImpl.java:188)
+	at java.net.PlainSocketImpl.connect(PlainSocketImpl.java:172)
+	at java.net.SocksSocketImpl.connect(SocksSocketImpl.java:392)
+	at java.net.Socket.connect(Socket.java:589)
+	at org.postgresql.core.PGStream.<init>(PGStream.java:68)
+	at org.postgresql.core.v3.ConnectionFactoryImpl.openConnectionImpl(ConnectionFactoryImpl.java:144)
+	... 13 common frames omitted
+2020-02-29 20:56:55.054 [init of 表输入.0 (Thread-15)] ERROR org.pentaho.di.trans.Trans - [/BLBGD/null  /BLBGD/null  /BLBGD/null]  An error occurred, processing will be stopped: 
+Error occurred while trying to connect to the database
+
+Error connecting to database: (using class org.postgresql.Driver)
+尝试连线已失败。
+
+
+2020-02-29 20:56:55.056 [init of 表输入.0 (Thread-15)] ERROR org.pentaho.di.trans.Trans - [/BLBGD/null  /BLBGD/null  /BLBGD/null]  错误初始化步骤[表输入]
+2020-02-29 20:56:55.056 [JB_HLHT_BLBGD UUID: 556a76c4-2c02-4d1a-84cd-2bf63b9658ca] ERROR org.pentaho.di.trans.Trans - [/BLBGD/null  /BLBGD/null  /BLBGD/null]  步骤 [表输入.0] 初始化失败!
+2020-02-29 20:56:55.059 [JB_HLHT_BLBGD UUID: 556a76c4-2c02-4d1a-84cd-2bf63b9658ca] ERROR org.pentaho.di.job.Job - [/BLBGD/null  /BLBGD/null]  Unable to prepare for execution of the transformation
+2020-02-29 20:56:55.060 [JB_HLHT_BLBGD UUID: 556a76c4-2c02-4d1a-84cd-2bf63b9658ca] ERROR org.pentaho.di.job.Job - [/BLBGD/null  /BLBGD/null]  org.pentaho.di.core.exception.KettleException: 
+无法初始化至少一个步骤.  执行无法开始!
+
+
+	at org.pentaho.di.trans.Trans.prepareExecution(Trans.java:1272)
+	at org.pentaho.di.trans.Trans.execute(Trans.java:738)
+	at org.pentaho.di.job.entries.trans.JobEntryTrans.execute(JobEntryTrans.java:1180)
+	at org.pentaho.di.job.Job.execute(Job.java:680)
+	at org.pentaho.di.job.Job.execute(Job.java:821)
+	at org.pentaho.di.job.Job.execute(Job.java:821)
+	at org.pentaho.di.job.Job.execute(Job.java:821)
+	at org.pentaho.di.job.Job.execute(Job.java:559)
+	at org.pentaho.di.job.entries.job.JobEntryJobRunner.run(JobEntryJobRunner.java:69)
+	at java.lang.Thread.run(Thread.java:748)
+
+2020-02-29 20:56:55.065 [Thread-12] WARN  org.pentaho.di.job.Job - [/BLBGD/null]  任务执行完毕
+2020-02-29 20:56:55.067 [SchedulerFactory_Worker-2] ERROR top.ruandb.Job.KettleJob - D:\\Soft\Kettle\\SK_HDW_Repository\BLBGD\JB_BLBGD.kjb----------------->运行失败，请查阅日志
+2020-02-29 20:57:18.374 [http-nio-8088-exec-4] INFO  top.ruandb.service.impl.JobMonitorServiceImpl - jobMap--->{22=PENDDING, 23=PENDDING, 21=PENDDING}
+2020-02-29 20:57:18.375 [http-nio-8088-exec-4] INFO  top.ruandb.service.impl.JobMonitorServiceImpl - groupMap--->{A=[], B=[], C=[21], D=[22, 23]}
+2020-02-29 20:57:18.375 [http-nio-8088-exec-4] INFO  top.ruandb.service.impl.JobMonitorServiceImpl - jobMap,groupMap----------------------->初始化成功
+2020-02-29 20:57:29.235 [SchedulerFactory_Worker-3] INFO  top.ruandb.Job.KettleJob - 调度方式(全量/增量):0
+2020-02-29 20:57:29.235 [SchedulerFactory_Worker-3] INFO  top.ruandb.Job.KettleJob - D:\\Soft\Kettle\\SK_HDW_Repository\BLBGD\JB_BLBGD.kjb----------------->开始运行
+2020-02-29 20:57:29.237 [Thread-17] WARN  org.pentaho.di.job.Job - [/BLBGD/null]  开始执行任务
+2020-02-29 20:57:40.470 [init of 表输入.0 (Thread-20)] ERROR org.postgresql.Driver - Connection error: 
+org.postgresql.util.PSQLException: 尝试连线已失败。
+	at org.postgresql.core.v3.ConnectionFactoryImpl.openConnectionImpl(ConnectionFactoryImpl.java:275)
+	at org.postgresql.core.ConnectionFactory.openConnection(ConnectionFactory.java:49)
+	at org.postgresql.jdbc.PgConnection.<init>(PgConnection.java:194)
+	at org.postgresql.Driver.makeConnection(Driver.java:450)
+	at org.postgresql.Driver.connect(Driver.java:252)
+	at java.sql.DriverManager.getConnection(DriverManager.java:664)
+	at java.sql.DriverManager.getConnection(DriverManager.java:208)
+	at org.pentaho.di.core.database.Database.connectUsingClass(Database.java:567)
+	at org.pentaho.di.core.database.Database.normalConnect(Database.java:456)
+	at org.pentaho.di.core.database.Database.connect(Database.java:370)
+	at org.pentaho.di.core.database.Database.connect(Database.java:341)
+	at org.pentaho.di.trans.steps.tableinput.TableInput.init(TableInput.java:342)
+	at org.pentaho.di.trans.step.StepInitThread.run(StepInitThread.java:69)
+	at java.lang.Thread.run(Thread.java:748)
+Caused by: java.net.SocketTimeoutException: connect timed out
+	at java.net.DualStackPlainSocketImpl.waitForConnect(Native Method)
+	at java.net.DualStackPlainSocketImpl.socketConnect(DualStackPlainSocketImpl.java:85)
+	at java.net.AbstractPlainSocketImpl.doConnect(AbstractPlainSocketImpl.java:350)
+	at java.net.AbstractPlainSocketImpl.connectToAddress(AbstractPlainSocketImpl.java:206)
+	at java.net.AbstractPlainSocketImpl.connect(AbstractPlainSocketImpl.java:188)
+	at java.net.PlainSocketImpl.connect(PlainSocketImpl.java:172)
+	at java.net.SocksSocketImpl.connect(SocksSocketImpl.java:392)
+	at java.net.Socket.connect(Socket.java:589)
+	at org.postgresql.core.PGStream.<init>(PGStream.java:68)
+	at org.postgresql.core.v3.ConnectionFactoryImpl.openConnectionImpl(ConnectionFactoryImpl.java:144)
+	... 13 common frames omitted
+2020-02-29 20:57:40.472 [init of 表输入.0 (Thread-20)] ERROR org.pentaho.di.trans.Trans - [/BLBGD/null  /BLBGD/null  /BLBGD/null]  An error occurred, processing will be stopped: 
+Error occurred while trying to connect to the database
+
+Error connecting to database: (using class org.postgresql.Driver)
+尝试连线已失败。
+
+
+2020-02-29 20:57:40.472 [init of 表输入.0 (Thread-20)] ERROR org.pentaho.di.trans.Trans - [/BLBGD/null  /BLBGD/null  /BLBGD/null]  错误初始化步骤[表输入]
+2020-02-29 20:57:40.473 [JB_HLHT_BLBGD UUID: 2f3fd04f-5611-4614-ab45-896c3a97afa8] ERROR org.pentaho.di.trans.Trans - [/BLBGD/null  /BLBGD/null  /BLBGD/null]  步骤 [表输入.0] 初始化失败!
+2020-02-29 20:57:40.475 [JB_HLHT_BLBGD UUID: 2f3fd04f-5611-4614-ab45-896c3a97afa8] ERROR org.pentaho.di.job.Job - [/BLBGD/null  /BLBGD/null]  Unable to prepare for execution of the transformation
+2020-02-29 20:57:40.475 [JB_HLHT_BLBGD UUID: 2f3fd04f-5611-4614-ab45-896c3a97afa8] ERROR org.pentaho.di.job.Job - [/BLBGD/null  /BLBGD/null]  org.pentaho.di.core.exception.KettleException: 
+无法初始化至少一个步骤.  执行无法开始!
+
+
+	at org.pentaho.di.trans.Trans.prepareExecution(Trans.java:1272)
+	at org.pentaho.di.trans.Trans.execute(Trans.java:738)
+	at org.pentaho.di.job.entries.trans.JobEntryTrans.execute(JobEntryTrans.java:1180)
+	at org.pentaho.di.job.Job.execute(Job.java:680)
+	at org.pentaho.di.job.Job.execute(Job.java:821)
+	at org.pentaho.di.job.Job.execute(Job.java:821)
+	at org.pentaho.di.job.Job.execute(Job.java:821)
+	at org.pentaho.di.job.Job.execute(Job.java:559)
+	at org.pentaho.di.job.entries.job.JobEntryJobRunner.run(JobEntryJobRunner.java:69)
+	at java.lang.Thread.run(Thread.java:748)
+
+2020-02-29 20:57:40.478 [Thread-17] WARN  org.pentaho.di.job.Job - [/BLBGD/null]  任务执行完毕
+2020-02-29 20:57:40.480 [SchedulerFactory_Worker-3] ERROR top.ruandb.Job.KettleJob - D:\\Soft\Kettle\\SK_HDW_Repository\BLBGD\JB_BLBGD.kjb----------------->运行失败，请查阅日志
+2020-02-29 20:57:52.997 [RMI TCP Connection(2)-127.0.0.1] INFO  org.springframework.boot.admin.SpringApplicationAdminMXBeanRegistrar$SpringApplicationAdmin - Application shutdown requested.
+2020-02-29 20:57:52.999 [RMI TCP Connection(2)-127.0.0.1] INFO  org.quartz.core.QuartzScheduler - Scheduler SchedulerFactory_$_ETLScheduler paused.
+2020-02-29 20:57:53.000 [RMI TCP Connection(2)-127.0.0.1] INFO  org.springframework.scheduling.concurrent.ThreadPoolTaskExecutor - Shutting down ExecutorService 'applicationTaskExecutor'
+2020-02-29 20:57:53.001 [RMI TCP Connection(2)-127.0.0.1] INFO  org.quartz.core.QuartzScheduler - Scheduler SchedulerFactory_$_ETLScheduler shutting down.
+2020-02-29 20:57:53.001 [RMI TCP Connection(2)-127.0.0.1] INFO  org.quartz.core.QuartzScheduler - Scheduler SchedulerFactory_$_ETLScheduler paused.
+2020-02-29 20:57:53.010 [RMI TCP Connection(2)-127.0.0.1] INFO  com.alibaba.druid.pool.DruidDataSource - {dataSource-1} closed
+2020-02-29 20:57:53.011 [RMI TCP Connection(2)-127.0.0.1] INFO  org.quartz.core.QuartzScheduler - Scheduler SchedulerFactory_$_ETLScheduler shutdown complete.
+2020-02-29 20:57:53.011 [RMI TCP Connection(2)-127.0.0.1] INFO  org.springframework.scheduling.quartz.SchedulerFactoryBean - Shutting down Quartz Scheduler
+2020-02-29 20:57:53.013 [RMI TCP Connection(2)-127.0.0.1] INFO  org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'primaryPersistenceUnit'
+2020-02-29 20:57:53.014 [RMI TCP Connection(2)-127.0.0.1] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-2 - Shutdown initiated...
+2020-02-29 20:57:53.017 [RMI TCP Connection(2)-127.0.0.1] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-2 - Shutdown completed.
+2020-02-29 20:57:53.017 [RMI TCP Connection(2)-127.0.0.1] INFO  org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'primaryPersistenceUnit'
+2020-02-29 20:57:53.020 [RMI TCP Connection(2)-127.0.0.1] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2020-02-29 20:57:53.025 [RMI TCP Connection(2)-127.0.0.1] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2020-02-29 20:58:25.684 [main] INFO  top.ruandb.EtlSchedulerApplicationTests - Starting EtlSchedulerApplicationTests on LAPTOP-MK6P63H0 with PID 16224 (started by rdb in C:\Java\eclipse-workspace5\ETLScheduler)
+2020-02-29 20:58:25.687 [main] INFO  top.ruandb.EtlSchedulerApplicationTests - No active profile set, falling back to default profiles: default
+2020-02-29 20:58:28.054 [main] INFO  org.springframework.data.repository.config.RepositoryConfigurationDelegate - Bootstrapping Spring Data repositories in DEFAULT mode.
+2020-02-29 20:58:28.301 [main] INFO  org.springframework.data.repository.config.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 223ms. Found 4 repository interfaces.
+2020-02-29 20:58:28.303 [main] INFO  org.springframework.data.repository.config.RepositoryConfigurationDelegate - Bootstrapping Spring Data repositories in DEFAULT mode.
+2020-02-29 20:58:28.336 [main] INFO  org.springframework.data.repository.config.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 32ms. Found 1 repository interfaces.
+2020-02-29 20:58:28.996 [main] WARN  org.mybatis.spring.mapper.ClassPathMapperScanner - No MyBatis mapper was found in '[top.ruandb]' package. Please check your configuration.
+2020-02-29 20:58:30.311 [main] INFO  org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$bb4b7b27] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-02-29 20:58:30.512 [main] INFO  org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'shiroConfig' of type [top.ruandb.config.ShiroConfig$$EnhancerBySpringCGLIB$$e6a8ae7a] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-02-29 20:58:33.360 [main] INFO  org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'myRealm' of type [top.ruandb.config.MyRealm] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-02-29 20:58:33.423 [main] INFO  org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'securityManager' of type [org.apache.shiro.web.mgt.DefaultWebSecurityManager] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-02-29 20:58:34.547 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2020-02-29 20:58:34.893 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2020-02-29 20:58:35.209 [main] INFO  org.hibernate.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [
+	name: primaryPersistenceUnit
+	...]
+2020-02-29 20:58:35.589 [main] INFO  org.hibernate.Version - HHH000412: Hibernate Core {5.3.7.Final}
+2020-02-29 20:58:35.598 [main] INFO  org.hibernate.cfg.Environment - HHH000206: hibernate.properties not found
+2020-02-29 20:58:36.208 [main] INFO  org.hibernate.annotations.common.Version - HCANN000001: Hibernate Commons Annotations {5.0.4.Final}
+2020-02-29 20:58:37.034 [main] INFO  org.hibernate.dialect.Dialect - HHH000400: Using dialect: org.hibernate.dialect.SQLServer2012Dialect
+2020-02-29 20:58:39.242 [main] INFO  org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'primaryPersistenceUnit'
+2020-02-29 20:58:39.303 [main] INFO  org.hibernate.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [
+	name: primaryPersistenceUnit
+	...]
+2020-02-29 20:58:39.341 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-2 - Starting...
+2020-02-29 20:58:39.926 [main] INFO  com.zaxxer.hikari.pool.PoolBase - HikariPool-2 - Driver does not support get/set network timeout for connections. ([Pivotal][Greenplum JDBC Driver]This driver does not support the 'getNetworkTimeout' and 'setNetworkTimeout' methods.)
+2020-02-29 20:58:39.929 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-2 - Start completed.
+2020-02-29 20:58:39.956 [main] INFO  org.hibernate.dialect.Dialect - HHH000400: Using dialect: org.hibernate.dialect.SQLServer2012Dialect
+2020-02-29 20:58:40.267 [main] INFO  org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'primaryPersistenceUnit'
+2020-02-29 20:58:40.322 [main] INFO  org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor - Autowired annotation is not supported on static methods: public static void top.ruandb.config.ProcedureConfig.setORACLE_PROCEDURE_PRO(java.lang.String)
+2020-02-29 20:58:40.323 [main] INFO  org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor - Autowired annotation is not supported on static methods: public static void top.ruandb.config.ProcedureConfig.setSQLSERVER_PROCEDURE_PRO(java.lang.String)
+2020-02-29 20:58:42.078 [main] INFO  org.hibernate.hql.internal.QueryTranslatorFactoryInitiator - HHH000397: Using ASTQueryTranslatorFactory
+2020-02-29 20:58:42.928 [main] INFO  org.quartz.impl.StdSchedulerFactory - Using default implementation for ThreadExecutor
+2020-02-29 20:58:43.004 [main] INFO  org.quartz.core.SchedulerSignalerImpl - Initialized Scheduler Signaller of type: class org.quartz.core.SchedulerSignalerImpl
+2020-02-29 20:58:43.005 [main] INFO  org.quartz.core.QuartzScheduler - Quartz Scheduler v.2.2.1 created.
+2020-02-29 20:58:43.009 [main] INFO  org.quartz.core.QuartzScheduler - JobFactory set to: org.quartz.simpl.SimpleJobFactory@70f98f7a
+2020-02-29 20:58:43.009 [main] INFO  org.quartz.impl.jdbcjobstore.JobStoreTX - Using thread monitor-based data access locking (synchronization).
+2020-02-29 20:58:43.012 [main] INFO  org.quartz.impl.jdbcjobstore.JobStoreTX - JobStoreTX initialized.
+2020-02-29 20:58:43.014 [main] INFO  org.quartz.core.QuartzScheduler - Scheduler meta-data: Quartz Scheduler (v2.2.1) 'SchedulerFactory' with instanceId 'ETLScheduler'
+  Scheduler class: 'org.quartz.core.QuartzScheduler' - running locally.
+  NOT STARTED.
+  Currently in standby mode.
+  Number of jobs executed: 0
+  Using thread pool 'org.quartz.simpl.SimpleThreadPool' - with 50 threads.
+  Using job-store 'org.quartz.impl.jdbcjobstore.JobStoreTX' - which supports persistence. and is not clustered.
+
+2020-02-29 20:58:43.015 [main] INFO  org.quartz.impl.StdSchedulerFactory - Quartz scheduler 'SchedulerFactory' initialized from an externally provided properties instance.
+2020-02-29 20:58:43.016 [main] INFO  org.quartz.impl.StdSchedulerFactory - Quartz scheduler version: 2.2.1
+2020-02-29 20:58:43.018 [main] INFO  org.quartz.core.QuartzScheduler - JobFactory set to: top.ruandb.config.MyJobFactory@30798137
+2020-02-29 20:58:46.539 [main] INFO  org.springframework.scheduling.concurrent.ThreadPoolTaskExecutor - Initializing ExecutorService 'applicationTaskExecutor'
+2020-02-29 20:58:49.845 [main] INFO  org.springframework.scheduling.quartz.SchedulerFactoryBean - Starting Quartz Scheduler now
+2020-02-29 20:58:49.877 [main] INFO  com.alibaba.druid.pool.DruidDataSource - {dataSource-1} inited
+2020-02-29 20:58:50.021 [main] INFO  org.quartz.impl.jdbcjobstore.JobStoreTX - Freed 0 triggers from 'acquired' / 'blocked' state.
+2020-02-29 20:58:50.034 [main] INFO  org.quartz.impl.jdbcjobstore.JobStoreTX - Recovering 0 jobs that were in-progress at the time of the last shut-down.
+2020-02-29 20:58:50.034 [main] INFO  org.quartz.impl.jdbcjobstore.JobStoreTX - Recovery complete.
+2020-02-29 20:58:50.036 [main] INFO  org.quartz.impl.jdbcjobstore.JobStoreTX - Removed 0 'complete' triggers.
+2020-02-29 20:58:50.037 [main] INFO  org.quartz.impl.jdbcjobstore.JobStoreTX - Removed 0 stale fired job entries.
+2020-02-29 20:58:50.041 [main] INFO  org.quartz.core.QuartzScheduler - Scheduler SchedulerFactory_$_ETLScheduler started.
+2020-02-29 20:58:50.076 [main] INFO  top.ruandb.EtlSchedulerApplicationTests - Started EtlSchedulerApplicationTests in 25.943 seconds (JVM running for 28.31)
+2020-02-29 20:58:50.080 [main] INFO  top.ruandb.init.TaskInit - kettle��ʼ����ʼ-------------------------------------------------------->
+2020-02-29 20:58:54.898 [main] INFO  top.ruandb.init.TaskInit - kettle��ʼ������-------------------------------------------------------->
+2020-02-29 20:58:54.901 [main] INFO  top.ruandb.init.TaskInit - �����������scheduler
+2020-02-29 20:58:55.215 [main] INFO  top.ruandb.init.TaskInit - ��ʼ��job��������-------------------------------->jobname:JB_BLBGD
+2020-02-29 20:58:55.283 [main] INFO  top.ruandb.init.TaskInit - ��ʼ��job��������-------------------------------->jobname:usp_hd_zbmx_hz,usp_hd_zbmx_hz_ys
+2020-02-29 20:58:55.302 [main] INFO  top.ruandb.init.TaskInit - ��ʼ��job��������-------------------------------->jobname:usp_producure_log
+2020-02-29 20:58:55.639 [main] INFO  top.ruandb.init.TaskInit -  ----------------------->������ʼ����ʼ
+2020-02-29 20:58:55.644 [main] INFO  top.ruandb.init.TaskInit - jobMap--->{22=PENDDING, 23=PENDDING, 21=PENDDING}
+2020-02-29 20:58:55.644 [main] INFO  top.ruandb.init.TaskInit - groupMap--->{A=[], B=[], C=[21], D=[22, 23]}
+2020-02-29 20:58:55.644 [main] INFO  top.ruandb.init.TaskInit -  ----------------------->������ʼ���ɹ�
+2020-02-29 20:58:55.644 [main] INFO  top.ruandb.init.TaskInit -  ----------------------->��ʱ������ʼ����ʼ
+2020-02-29 20:58:55.658 [main] INFO  top.ruandb.init.TaskInit -  ----------------------->��ʱ������ʼ������
+2020-02-29 20:58:56.042 [Thread-6] INFO  org.quartz.core.QuartzScheduler - Scheduler SchedulerFactory_$_ETLScheduler paused.
+2020-02-29 20:58:56.043 [Thread-6] INFO  org.springframework.scheduling.concurrent.ThreadPoolTaskExecutor - Shutting down ExecutorService 'applicationTaskExecutor'
+2020-02-29 20:58:56.045 [Thread-6] INFO  org.quartz.core.QuartzScheduler - Scheduler SchedulerFactory_$_ETLScheduler shutting down.
+2020-02-29 20:58:56.045 [Thread-6] INFO  org.quartz.core.QuartzScheduler - Scheduler SchedulerFactory_$_ETLScheduler paused.
+2020-02-29 20:58:56.055 [Thread-6] INFO  com.alibaba.druid.pool.DruidDataSource - {dataSource-1} closed
+2020-02-29 20:58:56.056 [Thread-6] INFO  org.quartz.core.QuartzScheduler - Scheduler SchedulerFactory_$_ETLScheduler shutdown complete.
+2020-02-29 20:58:56.056 [Thread-6] INFO  org.springframework.scheduling.quartz.SchedulerFactoryBean - Shutting down Quartz Scheduler
+2020-02-29 20:58:56.060 [Thread-6] INFO  org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'primaryPersistenceUnit'
+2020-02-29 20:58:56.063 [Thread-6] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-2 - Shutdown initiated...
+2020-02-29 20:58:56.070 [Thread-6] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-2 - Shutdown completed.
+2020-02-29 20:58:56.071 [Thread-6] INFO  org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'primaryPersistenceUnit'
+2020-02-29 20:58:56.074 [Thread-6] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2020-02-29 20:58:56.099 [Thread-6] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.

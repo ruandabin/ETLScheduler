@@ -336,5 +336,23 @@ public class TaskCronJobServiceImpl implements TaskCronJobService {
 
 
 
+	/**
+	 * 	查找相同组别的依赖作业,剔除自己
+	 */
+	@Override
+	public List<TaskCronJob> findGroupPro(Long id) {
+		return taskCronJobRepository.findGroupPro(id);
+	}
+	
+	/**
+	 * 	查找相同组别的依赖作业，包括自己
+	 */
+	@Override
+	public List<TaskCronJob> findGroupProAll(String  jobGroup) {
+		return taskCronJobRepository.findGroupProAll(jobGroup);
+	}
+
+
+
 	
 }

@@ -1,0 +1,258 @@
+2020-01-06 17:26:15.354 [main] INFO  top.ruandb.EtlSchedulerApplicationTests - Starting EtlSchedulerApplicationTests on LAPTOP-MK6P63H0 with PID 8348 (started by rdb in C:\Java\eclipse-workspace5\ETLScheduler)
+2020-01-06 17:26:15.360 [main] INFO  top.ruandb.EtlSchedulerApplicationTests - No active profile set, falling back to default profiles: default
+2020-01-06 17:26:17.896 [main] INFO  org.springframework.data.repository.config.RepositoryConfigurationDelegate - Bootstrapping Spring Data repositories in DEFAULT mode.
+2020-01-06 17:26:18.180 [main] INFO  org.springframework.data.repository.config.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 257ms. Found 4 repository interfaces.
+2020-01-06 17:26:18.181 [main] INFO  org.springframework.data.repository.config.RepositoryConfigurationDelegate - Bootstrapping Spring Data repositories in DEFAULT mode.
+2020-01-06 17:26:18.216 [main] INFO  org.springframework.data.repository.config.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 35ms. Found 1 repository interfaces.
+2020-01-06 17:26:18.967 [main] WARN  org.mybatis.spring.mapper.ClassPathMapperScanner - No MyBatis mapper was found in '[top.ruandb]' package. Please check your configuration.
+2020-01-06 17:26:20.393 [main] INFO  org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$c8cdbf2e] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-01-06 17:26:20.534 [main] INFO  org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'shiroConfig' of type [top.ruandb.config.ShiroConfig$$EnhancerBySpringCGLIB$$f42af281] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-01-06 17:26:23.029 [main] INFO  org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'myRealm' of type [top.ruandb.config.MyRealm] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-01-06 17:26:23.097 [main] INFO  org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'securityManager' of type [org.apache.shiro.web.mgt.DefaultWebSecurityManager] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-01-06 17:26:24.193 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2020-01-06 17:26:24.658 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2020-01-06 17:26:25.057 [main] INFO  org.hibernate.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [
+	name: primaryPersistenceUnit
+	...]
+2020-01-06 17:26:25.400 [main] INFO  org.hibernate.Version - HHH000412: Hibernate Core {5.3.7.Final}
+2020-01-06 17:26:25.409 [main] INFO  org.hibernate.cfg.Environment - HHH000206: hibernate.properties not found
+2020-01-06 17:26:26.232 [main] INFO  org.hibernate.annotations.common.Version - HCANN000001: Hibernate Commons Annotations {5.0.4.Final}
+2020-01-06 17:26:27.085 [main] INFO  org.hibernate.dialect.Dialect - HHH000400: Using dialect: org.hibernate.dialect.SQLServer2012Dialect
+2020-01-06 17:26:30.249 [main] INFO  org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'primaryPersistenceUnit'
+2020-01-06 17:26:30.320 [main] INFO  org.hibernate.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [
+	name: primaryPersistenceUnit
+	...]
+2020-01-06 17:26:30.395 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-2 - Starting...
+2020-01-06 17:27:02.251 [main] ERROR com.zaxxer.hikari.pool.HikariPool - HikariPool-2 - Exception during pool initialization.
+java.sql.SQLException: [Pivotal][Greenplum JDBC Driver]Login has timed out.
+	at com.pivotal.jdbc.greenplumbase.ddcd.b(Unknown Source)
+	at com.pivotal.jdbc.greenplumbase.ddcd.a(Unknown Source)
+	at com.pivotal.jdbc.greenplumbase.ddcc.b(Unknown Source)
+	at com.pivotal.jdbc.greenplumbase.ddcc.a(Unknown Source)
+	at com.pivotal.jdbc.greenplumbase.ddw.a(Unknown Source)
+	at com.pivotal.jdbc.greenplumbase.BaseConnection$1.run(Unknown Source)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at com.pivotal.jdbc.greenplumbase.BaseConnection.b(Unknown Source)
+	at com.pivotal.jdbc.greenplumbase.BaseConnection.a(Unknown Source)
+	at com.pivotal.jdbc.greenplumbase.BaseDriver.connect(Unknown Source)
+	at com.zaxxer.hikari.util.DriverDataSource.getConnection(DriverDataSource.java:136)
+	at com.zaxxer.hikari.pool.PoolBase.newConnection(PoolBase.java:369)
+	at com.zaxxer.hikari.pool.PoolBase.newPoolEntry(PoolBase.java:198)
+	at com.zaxxer.hikari.pool.HikariPool.createPoolEntry(HikariPool.java:467)
+	at com.zaxxer.hikari.pool.HikariPool.checkFailFast(HikariPool.java:541)
+	at com.zaxxer.hikari.pool.HikariPool.<init>(HikariPool.java:115)
+	at com.zaxxer.hikari.HikariDataSource.getConnection(HikariDataSource.java:112)
+	at org.hibernate.engine.jdbc.connections.internal.DatasourceConnectionProviderImpl.getConnection(DatasourceConnectionProviderImpl.java:122)
+	at org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator$ConnectionProviderJdbcConnectionAccess.obtainConnection(JdbcEnvironmentInitiator.java:180)
+	at org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator.initiateService(JdbcEnvironmentInitiator.java:68)
+	at org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator.initiateService(JdbcEnvironmentInitiator.java:35)
+	at org.hibernate.boot.registry.internal.StandardServiceRegistryImpl.initiateService(StandardServiceRegistryImpl.java:94)
+	at org.hibernate.service.internal.AbstractServiceRegistryImpl.createService(AbstractServiceRegistryImpl.java:263)
+	at org.hibernate.service.internal.AbstractServiceRegistryImpl.initializeService(AbstractServiceRegistryImpl.java:237)
+	at org.hibernate.service.internal.AbstractServiceRegistryImpl.getService(AbstractServiceRegistryImpl.java:214)
+	at org.hibernate.id.factory.internal.DefaultIdentifierGeneratorFactory.injectServices(DefaultIdentifierGeneratorFactory.java:152)
+	at org.hibernate.service.internal.AbstractServiceRegistryImpl.injectDependencies(AbstractServiceRegistryImpl.java:286)
+	at org.hibernate.service.internal.AbstractServiceRegistryImpl.initializeService(AbstractServiceRegistryImpl.java:243)
+	at org.hibernate.service.internal.AbstractServiceRegistryImpl.getService(AbstractServiceRegistryImpl.java:214)
+	at org.hibernate.boot.internal.InFlightMetadataCollectorImpl.<init>(InFlightMetadataCollectorImpl.java:179)
+	at org.hibernate.boot.model.process.spi.MetadataBuildingProcess.complete(MetadataBuildingProcess.java:119)
+	at org.hibernate.jpa.boot.internal.EntityManagerFactoryBuilderImpl.metadata(EntityManagerFactoryBuilderImpl.java:904)
+	at org.hibernate.jpa.boot.internal.EntityManagerFactoryBuilderImpl.build(EntityManagerFactoryBuilderImpl.java:935)
+	at org.springframework.orm.jpa.vendor.SpringHibernateJpaPersistenceProvider.createContainerEntityManagerFactory(SpringHibernateJpaPersistenceProvider.java:57)
+	at org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.createNativeEntityManagerFactory(LocalContainerEntityManagerFactoryBean.java:365)
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.buildNativeEntityManagerFactory(AbstractEntityManagerFactoryBean.java:390)
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.afterPropertiesSet(AbstractEntityManagerFactoryBean.java:377)
+	at org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.afterPropertiesSet(LocalContainerEntityManagerFactoryBean.java:341)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1804)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1741)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:576)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:498)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:320)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:222)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:318)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:199)
+	at org.springframework.context.support.AbstractApplicationContext.getBean(AbstractApplicationContext.java:1083)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:853)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:546)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:775)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:397)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:316)
+	at org.springframework.boot.test.context.SpringBootContextLoader.loadContext(SpringBootContextLoader.java:127)
+	at org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate.loadContextInternal(DefaultCacheAwareContextLoaderDelegate.java:99)
+	at org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate.loadContext(DefaultCacheAwareContextLoaderDelegate.java:117)
+	at org.springframework.test.context.support.DefaultTestContext.getApplicationContext(DefaultTestContext.java:108)
+	at org.springframework.test.context.web.ServletTestExecutionListener.setUpRequestContextIfNecessary(ServletTestExecutionListener.java:190)
+	at org.springframework.test.context.web.ServletTestExecutionListener.prepareTestInstance(ServletTestExecutionListener.java:132)
+	at org.springframework.test.context.TestContextManager.prepareTestInstance(TestContextManager.java:246)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.createTest(SpringJUnit4ClassRunner.java:227)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner$1.runReflectiveCall(SpringJUnit4ClassRunner.java:289)
+	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.methodBlock(SpringJUnit4ClassRunner.java:291)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.runChild(SpringJUnit4ClassRunner.java:246)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.runChild(SpringJUnit4ClassRunner.java:97)
+	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:290)
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:71)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:288)
+	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:58)
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:268)
+	at org.springframework.test.context.junit4.statements.RunBeforeTestClassCallbacks.evaluate(RunBeforeTestClassCallbacks.java:61)
+	at org.springframework.test.context.junit4.statements.RunAfterTestClassCallbacks.evaluate(RunAfterTestClassCallbacks.java:70)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:363)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.run(SpringJUnit4ClassRunner.java:190)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.execute(JUnit4Provider.java:365)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.executeWithRerun(JUnit4Provider.java:273)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.executeTestSet(JUnit4Provider.java:238)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.invoke(JUnit4Provider.java:159)
+	at org.apache.maven.surefire.booter.ForkedBooter.invokeProviderInSameClassLoader(ForkedBooter.java:384)
+	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:345)
+	at org.apache.maven.surefire.booter.ForkedBooter.execute(ForkedBooter.java:126)
+	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:418)
+2020-01-06 17:27:02.253 [main] WARN  org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator - HHH000342: Could not obtain connection to query metadata : [Pivotal][Greenplum JDBC Driver]Login has timed out.
+2020-01-06 17:27:02.254 [main] INFO  org.hibernate.dialect.Dialect - HHH000400: Using dialect: org.hibernate.dialect.SQLServer2012Dialect
+2020-01-06 17:27:02.255 [main] INFO  org.hibernate.engine.jdbc.env.internal.LobCreatorBuilderImpl - HHH000422: Disabling contextual LOB creation as connection was null
+2020-01-06 17:27:02.430 [main] INFO  org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'primaryPersistenceUnit'
+2020-01-06 17:27:02.500 [main] INFO  org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor - Autowired annotation is not supported on static methods: public static void top.ruandb.config.ProcedureConfig.setORACLE_PROCEDURE_PRO(java.lang.String)
+2020-01-06 17:27:02.500 [main] INFO  org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor - Autowired annotation is not supported on static methods: public static void top.ruandb.config.ProcedureConfig.setSQLSERVER_PROCEDURE_PRO(java.lang.String)
+2020-01-06 17:27:04.281 [main] INFO  org.hibernate.hql.internal.QueryTranslatorFactoryInitiator - HHH000397: Using ASTQueryTranslatorFactory
+2020-01-06 17:27:05.392 [main] INFO  org.quartz.impl.StdSchedulerFactory - Using default implementation for ThreadExecutor
+2020-01-06 17:27:05.835 [main] INFO  org.quartz.core.SchedulerSignalerImpl - Initialized Scheduler Signaller of type: class org.quartz.core.SchedulerSignalerImpl
+2020-01-06 17:27:05.835 [main] INFO  org.quartz.core.QuartzScheduler - Quartz Scheduler v.2.2.1 created.
+2020-01-06 17:27:05.838 [main] INFO  org.quartz.core.QuartzScheduler - JobFactory set to: org.quartz.simpl.SimpleJobFactory@65d90b7f
+2020-01-06 17:27:05.839 [main] INFO  org.quartz.impl.jdbcjobstore.JobStoreTX - Using thread monitor-based data access locking (synchronization).
+2020-01-06 17:27:05.841 [main] INFO  org.quartz.impl.jdbcjobstore.JobStoreTX - JobStoreTX initialized.
+2020-01-06 17:27:05.845 [main] INFO  org.quartz.core.QuartzScheduler - Scheduler meta-data: Quartz Scheduler (v2.2.1) 'SchedulerFactory' with instanceId 'ETLScheduler'
+  Scheduler class: 'org.quartz.core.QuartzScheduler' - running locally.
+  NOT STARTED.
+  Currently in standby mode.
+  Number of jobs executed: 0
+  Using thread pool 'org.quartz.simpl.SimpleThreadPool' - with 50 threads.
+  Using job-store 'org.quartz.impl.jdbcjobstore.JobStoreTX' - which supports persistence. and is not clustered.
+
+2020-01-06 17:27:05.845 [main] INFO  org.quartz.impl.StdSchedulerFactory - Quartz scheduler 'SchedulerFactory' initialized from an externally provided properties instance.
+2020-01-06 17:27:05.846 [main] INFO  org.quartz.impl.StdSchedulerFactory - Quartz scheduler version: 2.2.1
+2020-01-06 17:27:05.847 [main] INFO  org.quartz.core.QuartzScheduler - JobFactory set to: top.ruandb.config.MyJobFactory@e881e46
+2020-01-06 17:27:09.494 [main] INFO  org.springframework.scheduling.concurrent.ThreadPoolTaskExecutor - Initializing ExecutorService 'applicationTaskExecutor'
+2020-01-06 17:27:21.585 [main] INFO  org.springframework.scheduling.quartz.SchedulerFactoryBean - Starting Quartz Scheduler now
+2020-01-06 17:27:21.683 [main] INFO  com.alibaba.druid.pool.DruidDataSource - {dataSource-1} inited
+2020-01-06 17:27:21.948 [main] INFO  org.quartz.impl.jdbcjobstore.JobStoreTX - Freed 0 triggers from 'acquired' / 'blocked' state.
+2020-01-06 17:27:21.961 [main] INFO  org.quartz.impl.jdbcjobstore.JobStoreTX - Handling 23 trigger(s) that missed their scheduled fire-time.
+2020-01-06 17:27:22.408 [main] INFO  org.quartz.impl.jdbcjobstore.JobStoreTX - Recovering 0 jobs that were in-progress at the time of the last shut-down.
+2020-01-06 17:27:22.408 [main] INFO  org.quartz.impl.jdbcjobstore.JobStoreTX - Recovery complete.
+2020-01-06 17:27:22.413 [main] INFO  org.quartz.impl.jdbcjobstore.JobStoreTX - Removed 0 'complete' triggers.
+2020-01-06 17:27:22.422 [main] INFO  org.quartz.impl.jdbcjobstore.JobStoreTX - Removed 0 stale fired job entries.
+2020-01-06 17:27:22.426 [main] INFO  org.quartz.core.QuartzScheduler - Scheduler SchedulerFactory_$_ETLScheduler started.
+2020-01-06 17:27:22.448 [main] INFO  top.ruandb.EtlSchedulerApplicationTests - Started EtlSchedulerApplicationTests in 68.79 seconds (JVM running for 71.408)
+2020-01-06 17:27:22.455 [main] INFO  top.ruandb.init.TaskInit - kettle初始化开始-------------------------------------------------------->
+2020-01-06 17:27:32.526 [main] INFO  top.ruandb.init.TaskInit - kettle初始化结束-------------------------------------------------------->
+2020-01-06 17:27:32.527 [main] INFO  top.ruandb.init.TaskInit - 重新启动清空scheduler
+2020-01-06 17:27:33.230 [main] INFO  top.ruandb.init.TaskInit - 初始化job到调度器-------------------------------->jobname:usp_dim_yyxx,usp_dim_ksxx,usp_dim_ksxx_ba,usp_dim_ysxx,usp_dim_ysxx_ba,usp_dim_czryk,usp_dim_bqdmk,usp_dim_bqdmk_ba,usp_dim_ybflxx,usp_dim_yb_yblx,usp_dim_ghlb,usp_dim_ghtj,usp_dim_yyfg_hxlx,usp_dim_yyfs,usp_dim_yylb,usp_dim_yysjd,usp_dim_ghyysjc,usp_dim_zddmk,usp_dim_zddmk_ba,usp_dim_sfdxmk,usp_dim_sfxxmk,usp_dim_lcsfxmk,usp_dim_mzzy,usp_dim_cfz,usp_dim_mjzbz,usp_dim_nld,usp_dim_sex,usp_dim_hour,usp_dim_time,usp_dim_cyfs,usp_dim_lyfs,usp_dim_zljg,usp_dim_qzts,usp_dim_zyts,usp_dim_lclj,usp_dim_ypxx,usp_dim_kssjb,usp_dim_tsypbz,usp_dim_ypdl,usp_dim_ypfl,usp_dim_ypjx
+2020-01-06 17:27:33.289 [main] INFO  top.ruandb.init.TaskInit - 初始化job到调度器-------------------------------->jobname:usp_dim_zy_ypyfk,usp_dim_sf_ypyfk,usp_dim_yymd,usp_dim_fyck,usp_dim_gysxx,usp_dim_yf_czdmk,usp_dim_yfdmk,usp_dim_yk_czdmk,usp_dim_ykdmk,usp_dim_sf_cfsfjg,usp_dim_sf_cfwt,usp_dim_sf_cfwtfl,usp_dim_sf_cfwtjb,usp_dim_jclb,usp_dim_ris_instrument,usp_dim_jylb,usp_dim_lis_instrument,usp_dim_ssxx,usp_dim_ssbw,usp_dim_sxytxx,usp_dim_sxlyxx,usp_dim_sxfsxx,usp_dim_sxblfylx,usp_dim_xxxx,usp_dim_ssflxx,usp_dim_xyzlxx,usp_dim_xydl,usp_dim_wzsb_wzpmggxx,usp_dim_wzsb_kfxx,usp_dim_wzsb_cblx,usp_dim_wzsb_wzkpxx,usp_dim_wzsb_wz_djlb,usp_dim_wzsb_wz_ghdwxx
+2020-01-06 17:27:33.317 [main] INFO  top.ruandb.init.TaskInit - 初始化job到调度器-------------------------------->jobname:usp_dim_wzsb_wz_rkfs,usp_dim_mzfs,usp_dim_qkdj,usp_dim_rjssbz,usp_dim_rjssxx,usp_dim_ssmz_asamzfj,usp_dim_ssmz_mzfsfl,usp_dim_ssmz_sssjlx,usp_dim_aers_eventtype,usp_dim_aers_drugseventtype,usp_dim_aers_bloodeventtype,usp_dim_aers_medicalevent_ss_cwlx,usp_dim_aers_medicaleventtype,usp_dim_aers_nursingevent_gl_bfzlx,usp_dim_aers_nursingeventtype,usp_dim_aers_warningeventtype,usp_dim_aers_eventclfs,usp_dim_aers_eventdj,usp_dim_aers_eventyzcd,usp_dim_aers_eventconsequence,usp_dim_aers_ryzc,usp_dim_jsk_txfs,usp_dim_jsk_xgtllb,usp_dim_jsk_xtzlfs,usp_dim_jsk_ysfs
+2020-01-06 17:27:33.338 [main] INFO  top.ruandb.init.TaskInit - 初始化job到调度器-------------------------------->jobname:usp_dim_jsk_ysgj,usp_dim_jsk_ysyy,usp_dim_jsk_ztsxfs,usp_dim_jzzy_bqfj,usp_dim_jzzy_brqx,usp_dim_jzzy_cyfs,usp_dim_ddshcdjb,usp_dim_ddyy,usp_dim_ycbw,usp_dim_ycfj,usp_dim_ycly,usp_dim_drgs_fxpgdj,usp_dim_kfyxk_bfzlx,usp_dim_kfyxk_kflx,usp_dim_yg_ssfxdj,usp_dim_yg_ssgrbw,usp_dim_yygr_dcnyjxx,usp_dim_yygr_xgdgbw,usp_dim_zdjb,usp_dim_zdss,usp_dim_zlzb_bfzlx,usp_dim_zlzb_fmfs,usp_dim_zlzb_jbbz_dbz,usp_dim_zlzb_jbbz_dq,usp_dim_zlzb_jbbz_xzljs,usp_dim_zlzb_jbbz_zkks,usp_dim_zlzb_zlgl_lcjyzk,usp_dim_zlzb_zlgl_lcjybb,usp_dim_cflx,usp_dim_zy_zlzxx,usp_dim_wzjb
+2020-01-06 17:27:33.353 [main] INFO  top.ruandb.init.TaskInit - 初始化job到调度器-------------------------------->jobname:usp_fat_bacwsyqk,usp_fat_basyjb,usp_fat_basyss,usp_fat_basyzd,usp_fat_bq_brcwxxk
+2020-01-06 17:27:33.370 [main] INFO  top.ruandb.init.TaskInit - 初始化job到调度器-------------------------------->jobname:usp_fat_jcbgmx,usp_fat_jybgmx,usp_fat_mz_yffymx,usp_fat_sxxx,usp_fat_wzsb_sb_byxx,usp_fat_wzsb_sb_jlxx
+2020-01-06 17:27:33.383 [main] INFO  top.ruandb.init.TaskInit - 初始化job到调度器-------------------------------->jobname:usp_fat_wzsb_sb_srxx,usp_fat_wzsb_sb_wxxx,usp_fat_wzsb_sb_zjxx,usp_fat_wzsb_wz_bsxx,usp_fat_wzsb_wz_ckxx
+2020-01-06 17:27:33.397 [main] INFO  top.ruandb.init.TaskInit - 初始化job到调度器-------------------------------->jobname:usp_fat_wzsb_wz_qlxx,usp_fat_wzsb_wz_rkxx,usp_fat_wzsb_wz_wtdxxx,usp_fat_wzsb_wz_xhxx,usp_fat_wzsb_wz_ykxx
+2020-01-06 17:27:33.414 [main] INFO  top.ruandb.init.TaskInit - 初始化job到调度器-------------------------------->jobname:usp_fat_wzsb_wz_zgxx,usp_fat_yf_ypczmx,usp_fat_yk_ypczmx,usp_fat_yygh_pbxx,usp_fat_yy_mz_yyrc
+2020-01-06 17:27:33.427 [main] INFO  top.ruandb.init.TaskInit - 初始化job到调度器-------------------------------->jobname:usp_fat_zlzb_zlgl_lcjybb,usp_fat_zlzb_zlgl_lcjyzk,usp_fat_zy_cwsyqk,usp_fat_zy_rjssbrfy_fat
+2020-01-06 17:27:33.440 [main] INFO  top.ruandb.init.TaskInit - 初始化job到调度器-------------------------------->jobname:usp_fat_zy_rjsshzxx,usp_fat_zy_rjssxx,usp_fat_zy_ryywl,usp_fat_zy_yffymx,usp_fat_zy_zyfy_zy
+2020-01-06 17:27:33.459 [main] INFO  top.ruandb.init.TaskInit - 初始化job到调度器-------------------------------->jobname:usp_fat_mz_ybjsxx,usp_fat_mz_mzfy,usp_fat_mz_mzywl
+2020-01-06 17:27:33.474 [main] INFO  top.ruandb.init.TaskInit - 初始化job到调度器-------------------------------->jobname:usp_fat_zy_ybjsxx,usp_fat_zy_zyfy,usp_fat_zy_zyywl
+2020-01-06 17:27:33.490 [main] INFO  top.ruandb.init.TaskInit - 初始化job到调度器-------------------------------->jobname:usp_fat_zy_zyfy_zy
+2020-01-06 17:27:33.502 [main] INFO  top.ruandb.init.TaskInit - 初始化job到调度器-------------------------------->jobname:usp_fact_yy_mz_jzrc_fat,usp_fact_yy_mz_patid_fat,usp_fact_yy_mz_yyrc_fat,usp_fact_yygh_pbxx_fat,usp_fact_yy_mz_tjrc_fat,usp_fact_fy_mz_fyfx_fat,usp_fact_fy_zy_fyfx_fat,usp_fact_fy_zy_fyfx_zxrq_fat,usp_fact_yy_zy_cyywlfx_fat,usp_fact_yy_zy_ryywlfx_fat
+2020-01-06 17:27:33.516 [main] INFO  top.ruandb.init.TaskInit - 初始化job到调度器-------------------------------->jobname:usp_fact_yy_zy_lcljfx_fat,usp_fact_yy_zy_zrzcfx_fat,usp_fact_yb_mz_fyfx_fat,usp_fact_yb_zy_fyfx_fat,usp_fact_yb_ybzkfx_fat,usp_fact_yy_zybrzyl_fat,usp_fact_zy_zycwxl,usp_fact_yy_zy_cwsyqk_fat,usp_fact_yp_mz_fyfx_fat
+2020-01-06 17:27:33.528 [main] INFO  top.ruandb.init.TaskInit - 初始化job到调度器-------------------------------->jobname:usp_fact_yp_cflfx_fat,usp_fact_yp_zy_fyfx_fat,usp_fact_yp_zy_fyfx_zxrq_fat,usp_fact_yp_mz_yffygzl_fat,usp_fact_yp_zy_yffygzl_fat,usp_fact_yp_jxcfx_yf_fat,usp_fact_yp_jxcfx_yk_fat,usp_fact_ba_ss_zyssywlfx_fat,usp_fact_yy_ss_mzssywlfx_fat,usp_fact_yy_ss_rjssywlfx_fat
+2020-01-06 17:27:33.541 [main] INFO  top.ruandb.init.TaskInit - 初始化job到调度器-------------------------------->jobname:usp_fact_ba_zy_back15_30_fat,usp_fact_ba_zy_cwsyqk_fat,usp_fact_ba_zy_cyywlfx_fat,usp_fact_lis_list_fat,usp_fact_lis_list_mx_fat,usp_fact_ris_list_fat,usp_fact_ris_list_mx_fat,usp_fact_xk_sxfx_fat,usp_fact_zqhy_jzrc_fat,usp_fact_zqhy_mzpatid_fat
+2020-01-06 17:27:33.551 [main] INFO  top.ruandb.init.TaskInit - 初始化job到调度器-------------------------------->jobname:usp_fact_wzsb_sb_sbgzl_fat,usp_fact_wzsb_wz_bsxx_fat,usp_fact_wzsb_wz_ckxx_fat,usp_fact_wzsb_wz_qlxx_fat,usp_fact_wzsb_wz_rkxx_fat,usp_fact_wzsb_wz_wtdxxx_fat,usp_fact_wzsb_wz_xhxx_fat,usp_fact_wzsb_wz_ykxx_fat,usp_fact_wzsb_wz_zgxx_fat
+2020-01-06 17:27:33.563 [main] INFO  top.ruandb.init.TaskInit - 初始化job到调度器-------------------------------->jobname:usp_fact_dim_yp_dim
+2020-01-06 17:27:33.576 [main] INFO  top.ruandb.init.TaskInit - 初始化job到调度器-------------------------------->jobname:usp_hd_zbmx_hz,usp_hd_zbmx_hz_ys
+2020-01-06 17:27:33.587 [main] INFO  top.ruandb.init.TaskInit - 初始化job到调度器-------------------------------->jobname:usp_producure_log
+2020-01-06 17:27:33.598 [main] INFO  top.ruandb.init.TaskInit - 初始化job到调度器-------------------------------->jobname:usp_fact_log_test
+2020-01-06 17:27:34.364 [main] INFO  top.ruandb.init.TaskInit -  ----------------------->依赖初始化开始
+2020-01-06 17:27:34.378 [main] INFO  top.ruandb.init.TaskInit - jobMap--->{11=PENDDING, 22=PENDDING, 12=PENDDING, 23=PENDDING, 13=PENDDING, 14=PENDDING, 25=PENDDING, 15=PENDDING, 16=PENDDING, 17=PENDDING, 18=PENDDING, 19=PENDDING, 1=PENDDING, 3=PENDDING, 4=PENDDING, 5=PENDDING, 6=PENDDING, 7=PENDDING, 8=PENDDING, 9=PENDDING, 20=PENDDING, 10=PENDDING, 21=PENDDING}
+2020-01-06 17:27:34.380 [main] INFO  top.ruandb.init.TaskInit - groupMap--->{A=[1, 3, 4, 5], B=[6, 7, 8, 9, 10, 11, 12, 13, 14, 15], C=[16, 17, 18, 19, 20, 21], D=[22, 23]}
+2020-01-06 17:27:34.383 [main] INFO  top.ruandb.init.TaskInit -  ----------------------->依赖初始化成功
+2020-01-06 17:27:34.385 [main] INFO  top.ruandb.init.TaskInit -  ----------------------->定时依赖初始化开始
+2020-01-06 17:27:34.395 [main] INFO  top.ruandb.init.TaskInit -  ----------------------->定时依赖初始化结束
+2020-01-06 17:27:57.908 [main] INFO  top.ruandb.EtlSchedulerApplicationTests - Starting EtlSchedulerApplicationTests on LAPTOP-MK6P63H0 with PID 6648 (started by rdb in C:\Java\eclipse-workspace5\ETLScheduler)
+2020-01-06 17:27:57.911 [main] INFO  top.ruandb.EtlSchedulerApplicationTests - No active profile set, falling back to default profiles: default
+2020-01-06 17:28:00.546 [main] INFO  org.springframework.data.repository.config.RepositoryConfigurationDelegate - Bootstrapping Spring Data repositories in DEFAULT mode.
+2020-01-06 17:28:00.794 [main] INFO  org.springframework.data.repository.config.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 222ms. Found 4 repository interfaces.
+2020-01-06 17:28:00.795 [main] INFO  org.springframework.data.repository.config.RepositoryConfigurationDelegate - Bootstrapping Spring Data repositories in DEFAULT mode.
+2020-01-06 17:28:00.837 [main] INFO  org.springframework.data.repository.config.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 41ms. Found 1 repository interfaces.
+2020-01-06 17:28:01.522 [main] WARN  org.mybatis.spring.mapper.ClassPathMapperScanner - No MyBatis mapper was found in '[top.ruandb]' package. Please check your configuration.
+2020-01-06 17:28:02.963 [main] INFO  org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$3669c218] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-01-06 17:28:03.099 [main] INFO  org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'shiroConfig' of type [top.ruandb.config.ShiroConfig$$EnhancerBySpringCGLIB$$61c6f56b] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-01-06 17:28:05.096 [main] INFO  org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'myRealm' of type [top.ruandb.config.MyRealm] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-01-06 17:28:05.170 [main] INFO  org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'securityManager' of type [org.apache.shiro.web.mgt.DefaultWebSecurityManager] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-01-06 17:28:06.151 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2020-01-06 17:28:06.555 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2020-01-06 17:28:06.933 [main] INFO  org.hibernate.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [
+	name: primaryPersistenceUnit
+	...]
+2020-01-06 17:28:07.351 [main] INFO  org.hibernate.Version - HHH000412: Hibernate Core {5.3.7.Final}
+2020-01-06 17:28:07.360 [main] INFO  org.hibernate.cfg.Environment - HHH000206: hibernate.properties not found
+2020-01-06 17:28:08.061 [main] INFO  org.hibernate.annotations.common.Version - HCANN000001: Hibernate Commons Annotations {5.0.4.Final}
+2020-01-06 17:28:08.832 [main] INFO  org.hibernate.dialect.Dialect - HHH000400: Using dialect: org.hibernate.dialect.SQLServer2012Dialect
+2020-01-06 17:28:11.538 [main] INFO  org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'primaryPersistenceUnit'
+2020-01-06 17:28:11.597 [main] INFO  org.hibernate.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [
+	name: primaryPersistenceUnit
+	...]
+2020-01-06 17:28:11.633 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-2 - Starting...
+2020-01-06 17:28:12.219 [main] INFO  com.zaxxer.hikari.pool.PoolBase - HikariPool-2 - Driver does not support get/set network timeout for connections. ([Pivotal][Greenplum JDBC Driver]This driver does not support the 'getNetworkTimeout' and 'setNetworkTimeout' methods.)
+2020-01-06 17:28:12.220 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-2 - Start completed.
+2020-01-06 17:28:12.240 [main] INFO  org.hibernate.dialect.Dialect - HHH000400: Using dialect: org.hibernate.dialect.SQLServer2012Dialect
+2020-01-06 17:28:12.494 [main] INFO  org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'primaryPersistenceUnit'
+2020-01-06 17:28:12.544 [main] INFO  org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor - Autowired annotation is not supported on static methods: public static void top.ruandb.config.ProcedureConfig.setSQLSERVER_PROCEDURE_PRO(java.lang.String)
+2020-01-06 17:28:12.545 [main] INFO  org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor - Autowired annotation is not supported on static methods: public static void top.ruandb.config.ProcedureConfig.setORACLE_PROCEDURE_PRO(java.lang.String)
+2020-01-06 17:28:14.698 [main] INFO  org.hibernate.hql.internal.QueryTranslatorFactoryInitiator - HHH000397: Using ASTQueryTranslatorFactory
+2020-01-06 17:28:15.566 [main] INFO  org.quartz.impl.StdSchedulerFactory - Using default implementation for ThreadExecutor
+2020-01-06 17:28:15.633 [main] INFO  org.quartz.core.SchedulerSignalerImpl - Initialized Scheduler Signaller of type: class org.quartz.core.SchedulerSignalerImpl
+2020-01-06 17:28:15.635 [main] INFO  org.quartz.core.QuartzScheduler - Quartz Scheduler v.2.2.1 created.
+2020-01-06 17:28:15.638 [main] INFO  org.quartz.core.QuartzScheduler - JobFactory set to: org.quartz.simpl.SimpleJobFactory@718f3088
+2020-01-06 17:28:15.639 [main] INFO  org.quartz.impl.jdbcjobstore.JobStoreTX - Using thread monitor-based data access locking (synchronization).
+2020-01-06 17:28:15.644 [main] INFO  org.quartz.impl.jdbcjobstore.JobStoreTX - JobStoreTX initialized.
+2020-01-06 17:28:15.647 [main] INFO  org.quartz.core.QuartzScheduler - Scheduler meta-data: Quartz Scheduler (v2.2.1) 'SchedulerFactory' with instanceId 'ETLScheduler'
+  Scheduler class: 'org.quartz.core.QuartzScheduler' - running locally.
+  NOT STARTED.
+  Currently in standby mode.
+  Number of jobs executed: 0
+  Using thread pool 'org.quartz.simpl.SimpleThreadPool' - with 50 threads.
+  Using job-store 'org.quartz.impl.jdbcjobstore.JobStoreTX' - which supports persistence. and is not clustered.
+
+2020-01-06 17:28:15.664 [main] INFO  org.quartz.impl.StdSchedulerFactory - Quartz scheduler 'SchedulerFactory' initialized from an externally provided properties instance.
+2020-01-06 17:28:15.665 [main] INFO  org.quartz.impl.StdSchedulerFactory - Quartz scheduler version: 2.2.1
+2020-01-06 17:28:15.667 [main] INFO  org.quartz.core.QuartzScheduler - JobFactory set to: top.ruandb.config.MyJobFactory@45297e7
+2020-01-06 17:28:19.137 [main] INFO  org.springframework.scheduling.concurrent.ThreadPoolTaskExecutor - Initializing ExecutorService 'applicationTaskExecutor'
+2020-01-06 17:28:23.459 [main] INFO  org.springframework.scheduling.quartz.SchedulerFactoryBean - Starting Quartz Scheduler now
+2020-01-06 17:28:23.489 [main] INFO  com.alibaba.druid.pool.DruidDataSource - {dataSource-1} inited
+2020-01-06 17:28:23.655 [main] INFO  org.quartz.impl.jdbcjobstore.JobStoreTX - Freed 0 triggers from 'acquired' / 'blocked' state.
+2020-01-06 17:28:23.669 [main] INFO  org.quartz.impl.jdbcjobstore.JobStoreTX - Recovering 0 jobs that were in-progress at the time of the last shut-down.
+2020-01-06 17:28:23.669 [main] INFO  org.quartz.impl.jdbcjobstore.JobStoreTX - Recovery complete.
+2020-01-06 17:28:23.672 [main] INFO  org.quartz.impl.jdbcjobstore.JobStoreTX - Removed 0 'complete' triggers.
+2020-01-06 17:28:23.674 [main] INFO  org.quartz.impl.jdbcjobstore.JobStoreTX - Removed 0 stale fired job entries.
+2020-01-06 17:28:23.677 [main] INFO  org.quartz.core.QuartzScheduler - Scheduler SchedulerFactory_$_ETLScheduler started.
+2020-01-06 17:28:23.698 [main] INFO  top.ruandb.EtlSchedulerApplicationTests - Started EtlSchedulerApplicationTests in 27.356 seconds (JVM running for 29.911)
+2020-01-06 17:28:23.704 [main] INFO  top.ruandb.init.TaskInit - 重新启动清空scheduler
+2020-01-06 17:28:24.031 [main] INFO  top.ruandb.init.TaskInit - 初始化job到调度器-------------------------------->jobname:usp_fact_log_test,usp_dim_mjzbz
+2020-01-06 17:28:24.126 [main] INFO  top.ruandb.init.TaskInit - 初始化job到调度器-------------------------------->jobname:usp_dim_mjzbz
+2020-01-06 17:28:24.140 [main] INFO  top.ruandb.init.TaskInit - 初始化job到调度器-------------------------------->jobname:JB_FAT_ZY_CWSYQK
+2020-01-06 17:28:24.421 [main] INFO  top.ruandb.init.TaskInit -  ----------------------->依赖初始化开始
+2020-01-06 17:28:24.425 [main] INFO  top.ruandb.init.TaskInit - jobMap--->{1=PENDDING, 2=PENDDING, 3=PENDDING}
+2020-01-06 17:28:24.426 [main] INFO  top.ruandb.init.TaskInit - groupMap--->{A=[2], B=[3], C=[], D=[]}
+2020-01-06 17:28:24.426 [main] INFO  top.ruandb.init.TaskInit -  ----------------------->依赖初始化成功
+2020-01-06 17:28:24.426 [main] INFO  top.ruandb.init.TaskInit -  ----------------------->定时依赖初始化开始
+2020-01-06 17:28:24.444 [main] INFO  top.ruandb.init.TaskInit -  ----------------------->定时依赖初始化结束
+2020-01-06 17:28:25.128 [Thread-13] INFO  org.quartz.core.QuartzScheduler - Scheduler SchedulerFactory_$_ETLScheduler paused.
+2020-01-06 17:28:25.130 [Thread-13] INFO  org.springframework.scheduling.concurrent.ThreadPoolTaskExecutor - Shutting down ExecutorService 'applicationTaskExecutor'
+2020-01-06 17:28:25.132 [Thread-13] INFO  org.quartz.core.QuartzScheduler - Scheduler SchedulerFactory_$_ETLScheduler shutting down.
+2020-01-06 17:28:25.132 [Thread-13] INFO  org.quartz.core.QuartzScheduler - Scheduler SchedulerFactory_$_ETLScheduler paused.
+2020-01-06 17:28:25.142 [Thread-13] INFO  com.alibaba.druid.pool.DruidDataSource - {dataSource-1} closed
+2020-01-06 17:28:25.144 [Thread-13] INFO  org.quartz.core.QuartzScheduler - Scheduler SchedulerFactory_$_ETLScheduler shutdown complete.
+2020-01-06 17:28:25.144 [Thread-13] INFO  org.springframework.scheduling.quartz.SchedulerFactoryBean - Shutting down Quartz Scheduler
+2020-01-06 17:28:25.148 [Thread-13] INFO  org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'primaryPersistenceUnit'
+2020-01-06 17:28:25.150 [Thread-13] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-2 - Shutdown initiated...
+2020-01-06 17:28:25.166 [Thread-13] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-2 - Shutdown completed.
+2020-01-06 17:28:25.166 [Thread-13] INFO  org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'primaryPersistenceUnit'
+2020-01-06 17:28:25.171 [Thread-13] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2020-01-06 17:28:25.191 [Thread-13] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.

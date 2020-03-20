@@ -63,5 +63,9 @@ public class ProcedureJobRepository {
 		});
 
 	}
+	
+	public void runGreenPlumPro(String sql,String param) {
+		
+	}
 
 }

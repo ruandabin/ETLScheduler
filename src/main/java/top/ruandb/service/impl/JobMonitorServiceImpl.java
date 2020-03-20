@@ -30,9 +30,11 @@ import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 import top.ruandb.Job.BaseJob;
 import top.ruandb.Job.DailyInitJobStatusJob;
+import top.ruandb.entity.JobLog;
 import top.ruandb.entity.JobMonitor;
 import top.ruandb.entity.TaskCronJob;
 import top.ruandb.repository.JobMonitorRepository;
+import top.ruandb.service.JobLogService;
 import top.ruandb.service.JobMonitorService;
 import top.ruandb.service.TaskCronJobService;
 import top.ruandb.utils.StringUtils;
@@ -48,6 +50,9 @@ public class JobMonitorServiceImpl implements JobMonitorService{
 	
 	@Resource
 	private TaskCronJobService  taskCronJobService;
+	
+	@Resource
+	private JobLogService jobLogService;
 	
 	
 	
@@ -80,6 +85,7 @@ public class JobMonitorServiceImpl implements JobMonitorService{
 			jobMonitor.setStatus(BaseJob.JOB_DONE);
 			jobMonitor.setErrors(BaseJob.SUCCESS);
 			
+			
 			jobKey = TaskUtils.getCronJobKey(job);
 			triggerKey = TaskUtils.getCronTriggerKey(job);
 			Trigger tigger = scheduler.getTrigger(triggerKey);
@@ -106,10 +112,16 @@ public class JobMonitorServiceImpl implements JobMonitorService{
 		if(taskCronJob.isEnable()) {
 			JobMonitor jobMonitor;
 			Date nextDate = null ;
+			Date preDate  = null ;
 			TriggerKey triggerKey = TaskUtils.getCronTriggerKey(taskCronJob);
 			Trigger tigger = scheduler.getTrigger(triggerKey);
 			if(tigger != null ) {
 				nextDate = scheduler.getTrigger(triggerKey).getNextFireTime();
+				JobLog log = jobLogService.getLastedLog(taskCronJob.getJobName());
+				if(log != null) {
+					preDate = log.getStartdate();
+				}
+				
 			}
 			if(!jobMonitorRepository.existsById(taskCronJob.getId())) {
 			    jobMonitor = new JobMonitor();
@@ -119,6 +131,7 @@ public class JobMonitorServiceImpl implements JobMonitorService{
 				jobMonitor.setStatus(BaseJob.JOB_DONE);
 				jobMonitor.setErrors(BaseJob.SUCCESS);
 				jobMonitor.setNextDate(nextDate);
+				jobMonitor.setPrviousDate(preDate);
 			}else {
 				jobMonitor = jobMonitorRepository.findById(taskCronJob.getId()).get();
 				jobMonitor.setJobName(taskCronJob.getJobName());

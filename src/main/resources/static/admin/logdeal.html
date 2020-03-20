@@ -67,7 +67,7 @@ layui.use(['element','form','table','layer','jquery'], function(){
 						  var index = parent.layer.getFrameIndex(window.name); 
 						  parent.layer.close(index);//关闭弹出层 
 						  //layer.closeAll('iframe');
-						  parent.reloadData();
+						  parent.table.reload("id_job",{});
 					  }else{
 						  parent.layer.alert("服务器加载有问题，请联系管理员",{skin: 'layui-layer-molv' //样式类名
 							  ,closeBtn: 0});

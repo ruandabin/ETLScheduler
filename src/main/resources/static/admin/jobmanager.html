@@ -110,16 +110,21 @@
 		    ,cols: [[
 			  {type:'checkbox'}
 		       ,{field:'id', title: '序号',width:60,hide:true} 
-		       ,{field:'nickName', title: '作业名称',width:110} 
-		      ,{field:'jobName',width:140, title: '作业步骤',templet:function(d){
+		       ,{field:'nickName', title: '作业名称',width:150} 
+		      ,{field:'jobName',width:220, title: '作业步骤',templet:function(d){
 		    	  str = d.jobName;
 		    	  str = str.split(',');
-		    	  return str[0].substr(0, 8)+'...'+'<span id=\''+d.id+'\' class="layui-badge layui-bg-gray"  onClick="showJobDetail(\''+d.jobName+'\',\''+d.id+'\') " >详情</span>';
-		    	  //return str[0]+' \n '+ str[0]
+		    	  if(str.length == 1){
+		    		  return str
+		    	  }else{
+		    		  
+			    	  return str[0].substr(0, 15)+'...'+'<span id=\''+d.id+'\' class="layui-badge layui-bg-gray"  onClick="showJobDetail(\''+d.jobName+'\',\''+d.id+'\') " >详情</span>';
+			    	  //return str[0]+' \n '+ str[0] 
+		    	  }
 		      }}
 		      ,{field:'dir',width:60, title: '路径'}
 		      ,{field:'jobParams',width:60, title: '参数'}
-		      ,{field:'jobClassName',width:90,  title: '任务类型',templet: function(d){
+		      ,{field:'jobClassName',width:110,  title: '任务类型',templet: function(d){
 		         if(d.jobClassName == 'top.ruandb.Job.KettleJob'){
 		        	 return "KettleJob"
 		         }
@@ -128,6 +133,9 @@
 		         }
 		         if(d.jobClassName == 'top.ruandb.Job.OracleProcedureJob'){
 		        	 return "Oracle"
+		         }
+		         if(d.jobClassName == 'top.ruandb.Job.GreenplumFunJob'){
+		        	 return "GreenPlum"
 		         }
 		         
 		      }}
@@ -138,7 +146,7 @@
 		      ,{field:'proJob', width:60,title: '依赖'}
 		      ,{field:'jobGroup', width:60,title: '属组'}
 		    //  ,{field:'lastDate', width:100,title: '增量点',align:'center'}
-		      ,{field:'jobDescription', width:110,title: '说明'}
+		      ,{field:'jobDescription', width:220,title: '说明'}
 		      //,{field:'', title: '操作',width:80,align:'center',templet:operateTpl}
 		    ]]
 		    ,page: true

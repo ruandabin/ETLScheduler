@@ -1,5 +1,6 @@
 package top.ruandb.controller;
 
+import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
@@ -15,6 +16,7 @@ import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.ResponseBody;
 
 import top.ruandb.entity.TaskCronJob;
+import top.ruandb.entity.XmSelect;
 import top.ruandb.service.TaskCronJobService;
 
 @Controller
@@ -198,4 +200,52 @@ public class TaskCronJobController {
 		}
 		return resultMap;
 	}
+	
+	/**
+	 * 查询同组别依赖列表
+	 * @param id
+	 * @return
+	 */
+	@RequestMapping("findGroupPro")
+	@ResponseBody
+	public Map<String,Object> findGroupPro(String id){
+		Map<String, Object> resultMap = new HashMap<>();
+		List<TaskCronJob> taskCronJobList = taskCronJobService.findGroupPro(Long.parseLong(id));
+		List<XmSelect> list = new ArrayList<>();
+		//TaskCronJob tempTask = new TaskCronJob();
+		
+
+		for( TaskCronJob t : taskCronJobList) {
+			XmSelect xmSelect = new XmSelect();
+			xmSelect.setName(t.getNickName());
+			xmSelect.setValue(t.getId().toString());
+			list.add(xmSelect);
+		}
+		resultMap.put("data", list);
+		return resultMap;
+	}
+	
+	/**
+	 * 查询同组别依赖列表
+	 * @param id
+	 * @return
+	 */
+	@RequestMapping("findGroupProAll")
+	@ResponseBody
+	public Map<String,Object> findGroupProAll(String jobGroup){
+		Map<String, Object> resultMap = new HashMap<>();
+		List<TaskCronJob> taskCronJobList = taskCronJobService.findGroupProAll(jobGroup);
+		List<XmSelect> list = new ArrayList<>();
+
+		for( TaskCronJob t : taskCronJobList) {
+			XmSelect xmSelect = new XmSelect();
+			xmSelect.setName(t.getNickName());
+			xmSelect.setValue(t.getId().toString());
+			list.add(xmSelect);
+		}
+		resultMap.put("data", list);
+		return resultMap;
+	}
+	
+	
 }

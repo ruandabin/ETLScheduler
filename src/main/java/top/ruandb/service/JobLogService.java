@@ -57,6 +57,6 @@ public interface JobLogService {
 	public List<JobLog> findAll(JobLog jobLog, Integer page, Integer pageSize);
 	
 	
-	
+	public JobLog getLastedLog(String jobName);
 	
 }

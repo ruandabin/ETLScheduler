@@ -59,31 +59,36 @@ public class KettleJob extends BaseJob {
 				if(!b) {
 					jobMonitor.setStatus(BaseJob.JOB_DONE);
 					jobMonitor.setErrors(BaseJob.ERROR);
-					jobMonitorService.updateMonitor(jobMonitor);//更新监控
-					JobLog jobLog = new JobLog(taskCronJob.getNickName(),taskCronJob.getJobName(), "Finished(with errors)", new Date(), new Date(), "等待依赖程序超时");
-					insertLog(jobLog);
-					afterExecute(taskCronJob);//报备自己的状态
+					try {
+						jobMonitorService.updateMonitor(jobMonitor);//更新监控
+						JobLog jobLog = new JobLog(taskCronJob.getNickName(), taskCronJob.getJobName(),
+								"Finished(with errors)", new Date(), new Date(), "等待依赖程序超时");
+						insertLog(jobLog);
+					} finally {
+						afterExecute(taskCronJob);//报备自己的状态
+					}
 					return ;
 				}
 			}
 			
 		}
-		jobMonitor.setPrviousDate(new Date());
-		jobMonitor.setStatus(BaseJob.JOB_RUN);
-		jobMonitorService.updateMonitor(jobMonitor);//更新监控
-		
-		Boolean runResult = runJob(taskCronJob);//真正执行
-		
-		jobMonitor.setStatus(BaseJob.JOB_DONE);
-		jobMonitor.setNextDate(trigger.getNextFireTime());
-		//jobMonitor.setPrviousDate(trigger.getPreviousFireTime());
-		jobMonitor.setErrors(runResult? BaseJob.SUCCESS:BaseJob.ERROR);//根据runJob结果更新
-		jobMonitorService.updateMonitor(jobMonitor);//更新监控
-		
-		//检测是否是临时调度，临时调度不检查依赖项
-		if(trigger.getJobDataMap().get("manualExecution") == null) {
-			afterExecute(taskCronJob);//报备自己的状态
+		try {
+			jobMonitor.setPrviousDate(new Date());
+			jobMonitor.setStatus(BaseJob.JOB_RUN);
+			jobMonitorService.updateMonitor(jobMonitor);//更新监控
+			Boolean runResult = runJob(taskCronJob);//真正执行
+			jobMonitor.setStatus(BaseJob.JOB_DONE);
+			jobMonitor.setNextDate(trigger.getNextFireTime());
+			//jobMonitor.setPrviousDate(trigger.getPreviousFireTime());
+			jobMonitor.setErrors(runResult ? BaseJob.SUCCESS : BaseJob.ERROR);//根据runJob结果更新
+			jobMonitorService.updateMonitor(jobMonitor);//更新监控
+		} finally {
+			//检测是否是临时调度，临时调度不检查依赖项
+			if(trigger.getJobDataMap().get("manualExecution") == null) {
+				afterExecute(taskCronJob);//报备自己的状态
+			}
 		}
+		
 	}
 	
 	/**
@@ -111,7 +116,11 @@ public class KettleJob extends BaseJob {
 			//直接获取jobMeta
 			//jobMeta = new JobMeta(jobDirName, null);
 			//传入参数
-			//jobMeta.setParameterValue("extract_style", taskCronJob.getExtractStyle()+"");//调度方式：0全量和1增量
+			if (taskCronJob.getJobParams() != null && !taskCronJob.getJobParams().equals("")) {
+				logger.info("调度方式(全量/增量):{}", taskCronJob.getJobParams()+"");
+				jobMeta.setParameterValue("extract_style", taskCronJob.getJobParams()+"");//调度方式：0全量和1增量
+			} 
+			
 			//jobMeta.setParameterValue("start_time",startTime);//增量抽取开始时间
 			//jobMeta.setParameterValue("end_time", endTime);//增量抽取结束时间
 			// 创建job

@@ -8,6 +8,7 @@ import javax.annotation.Resource;
 import org.quartz.Scheduler;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.scheduling.quartz.SchedulerFactoryBean;
@@ -32,7 +33,7 @@ public class SchedulerConfig {
 		return factory;
 	}
 
-	@Bean
+
 	public Properties getQuartzProperties() {
 		Properties prop = new Properties();
 		prop.put("quartz.scheduler.instanceName", quartzConfig.getQuartzSchedulerInstanceName());

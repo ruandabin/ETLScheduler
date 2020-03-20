@@ -81,12 +81,17 @@
 		    ,cols: [[
 			  {type:'checkbox'}
 		      /* ,{field:'id', title: '序号',width:60} */
-		      ,{field:'nickName', title: '作业名称',width:110} 
+		      ,{field:'nickName', title: '作业名称',width:140} 
 		      ,{field:'jobName',width:150,align:'left', title: '作业步骤',templet:function(d){
 		    	  str = d.jobName;
 		    	  str = str.split(',');
-		    	  return str[0].substr(0, 8)+'...'+'<span id=\''+d.id+'\' class="layui-badge layui-bg-gray"  onClick="showJobDetail(\''+d.jobName+'\',\''+d.id+'\') " >详情</span>';
-		    	  //return str[0]+' \n '+ str[0]
+		    	  if(str.length == 1){
+		    		  return str
+		    	  }else{
+		    		  
+			    	  return str[0].substr(0, 15)+'...'+'<span id=\''+d.id+'\' class="layui-badge layui-bg-gray"  onClick="showJobDetail(\''+d.jobName+'\',\''+d.id+'\') " >详情</span>';
+			    	  //return str[0]+' \n '+ str[0] 
+		    	  }
 		      }}
 		      ,{field:'status',width:160, title: '状态',templet:statusTpl}
 		      ,{field:'errors',width:60, title: '错误'}
@@ -179,7 +184,7 @@
 			layer.open({
 				  type: 2,
 				  title: '处理情况',
-				  area: ['430px', '195px'],
+				  area: ['430px', '200px'],
 			  	  content:'/admin/logdeal.html?id='+checkStatus.data[0].id 
 			  });
 		}

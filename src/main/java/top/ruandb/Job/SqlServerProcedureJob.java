@@ -54,31 +54,36 @@ public class SqlServerProcedureJob extends BaseJob{
 				if (!b) {
 					jobMonitor.setStatus(BaseJob.JOB_DONE);
 					jobMonitor.setErrors(BaseJob.ERROR);
-					jobMonitorService.updateMonitor(jobMonitor);// 更新监控
-					JobLog jobLog = new JobLog(taskCronJob.getNickName(),taskCronJob.getJobName(), "Finished(with errors)", new Date(),
-							new Date(), "等待依赖程序超时");
-					insertLog(jobLog);
-					afterExecute(taskCronJob);// 报备自己的状态
+					try {
+						jobMonitorService.updateMonitor(jobMonitor);// 更新监控
+						JobLog jobLog = new JobLog(taskCronJob.getNickName(), taskCronJob.getJobName(),
+								"Finished(with errors)", new Date(), new Date(), "等待依赖程序超时");
+						insertLog(jobLog);
+					} finally {
+						afterExecute(taskCronJob);// 报备自己的状态
+					}
 					return;
 				}
 			}
 
 		}
-		jobMonitor.setPrviousDate(new Date());
-		jobMonitor.setStatus(BaseJob.JOB_RUN);
-		jobMonitorService.updateMonitor(jobMonitor);// 更新监控
-		Boolean runResult = runJob(taskCronJob);// 真正执行
-
-		jobMonitor.setStatus(BaseJob.JOB_DONE);
-		jobMonitor.setNextDate(trigger.getNextFireTime());
-		// jobMonitor.setPrviousDate(trigger.getPreviousFireTime());
-		jobMonitor.setErrors(runResult ? BaseJob.SUCCESS : BaseJob.ERROR);// 根据runJob结果更新
-		jobMonitorService.updateMonitor(jobMonitor);// 更新监控
-
-		// 检测是否是临时调度,临时调度不检查依赖项
-		if (trigger.getJobDataMap().get("manualExecution") == null) {
-			afterExecute(taskCronJob);// 报备自己的状态
+		try {
+			jobMonitor.setPrviousDate(new Date());
+			jobMonitor.setStatus(BaseJob.JOB_RUN);
+			jobMonitorService.updateMonitor(jobMonitor);// 更新监控
+			Boolean runResult = runJob(taskCronJob);// 真正执行
+			jobMonitor.setStatus(BaseJob.JOB_DONE);
+			jobMonitor.setNextDate(trigger.getNextFireTime());
+			// jobMonitor.setPrviousDate(trigger.getPreviousFireTime());
+			jobMonitor.setErrors(runResult ? BaseJob.SUCCESS : BaseJob.ERROR);// 根据runJob结果更新
+			jobMonitorService.updateMonitor(jobMonitor);// 更新监控
+		} finally {
+			// 检测是否是临时调度,临时调度不检查依赖项
+			if (trigger.getJobDataMap().get("manualExecution") == null) {
+				afterExecute(taskCronJob);// 报备自己的状态
+			}
 		}
+		
 		
 	}
 
@@ -102,24 +107,31 @@ public class SqlServerProcedureJob extends BaseJob{
 				rmsg = jobNames[i]+":运行成功"+ "\n";
 			} catch (Exception e) {
 				rt = false ;
-				rmsg = jobNames[i]+" 存储过程运行异常:"+"\n"+e.getMessage();
+				rmsg = jobNames[i]+" 存储过程运行异常:"+"\n"+e.getMessage()+"\n";
 				logger.error("{}----------------->运行失败，请查阅日志", jobNames[i]);
 				stringBuilder.append(rmsg);
 				result = result & rt;
 				continue;
 			}
-			OdrProLog odrProLog = odrProLogService.getLastedSqlserverOdrProLog(jobNames[i]);
+			OdrProLog odrProLog=null;
+			try {
+				odrProLog = odrProLogService.getLastedSqlserverOdrProLog(jobNames[i]);
+			} catch (Exception e) {
+				odrProLog = null;
+			}
 			
 			if(odrProLog==null || (odrProLog != null && odrProLog.getProStatus() != null &&  !odrProLog.getProStatus().equals("0") )) {
 				if(odrProLog == null) {
-					rmsg = jobNames[i]+" 存储过程运行异常:"+"存储过程未打印日志，默认异常"+ "\n";
+					rmsg = jobNames[i]+" 存储过程运行异常:"+"存储过程未打印日志或打印日志出错，默认异常"+ "\n";
 				}else {
 					rmsg = jobNames[i]+" 存储过程运行异常:"+odrProLog.getErrorMessage()+ "\n";
 				}
 				rt = false ;
 				logger.error("{}----------------->运行失败，请查阅日志", jobNames[i]);
+			}else {
+				logger.info("{}----------------->运行成功", jobNames[i]);
 			}
-			logger.info("{}----------------->运行成功", jobNames[i]);
+			
 			stringBuilder.append(rmsg);
 			result = result & rt;
 		}

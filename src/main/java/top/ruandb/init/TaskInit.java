@@ -60,6 +60,9 @@ public class TaskInit implements CommandLineRunner {
 	
 	@Value("${dailyInitJobStatusCron}")
 	public String dailyInitJobStatusCron;
+	
+	@Value("${exitFile}")
+	private String exitFile;
 
 	
 	//初始化
@@ -70,6 +73,7 @@ public class TaskInit implements CommandLineRunner {
 		this.dailyInitScheduler();//调度依依赖初始化归为
 		this.dailyInitJobStatus();//每天初始化内存中的job状态的定时job
 		this.pkinit();//初始化主键配置
+		//this.exitSystem();//优雅退出
 		
 		
 	}
@@ -213,6 +217,23 @@ public class TaskInit implements CommandLineRunner {
 	
 	private void pkinit() {
 		jobMonitorService.initPk();
+	}
+	
+	private void exitSystem() {
+		logger.info("程序启动***********************************");
+		while(1==1){
+			checkExitProgram();
+		}
+	}
+	//优雅的退出程序
+	//根据退出标识文件，检测到文件就退出整个程序
+	private void checkExitProgram() {
+		File exit = new File(exitFile);
+		if(exit.exists()) {
+			logger.info("程序停止***********************************");
+			System.exit(0);
+		}
+		
 	}
 	
 }

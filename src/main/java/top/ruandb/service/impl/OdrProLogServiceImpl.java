@@ -5,6 +5,7 @@ import org.springframework.stereotype.Service;
 
 import top.ruandb.entity.OdrProLog;
 import top.ruandb.repository.OdrProLogRepository;
+import top.ruandb.secondaryRepository.OdrProLogSecondRepository;
 import top.ruandb.service.OdrProLogService;
 /**
  * 判断Odr存储日志service
@@ -16,6 +17,9 @@ public class OdrProLogServiceImpl implements OdrProLogService{
 	
 	@Autowired
 	private OdrProLogRepository odrProLogRepository;
+	
+	@Autowired
+	private OdrProLogSecondRepository  odrProLogSecondRepository;
 
 	@Override
 	public OdrProLog getLastedOdrProLog(String proName) {
@@ -30,6 +34,12 @@ public class OdrProLogServiceImpl implements OdrProLogService{
 	@Override
 	public OdrProLog getLastedSqlserverOdrProLog(String proName) {
 		return odrProLogRepository.getLatestSqlserverOdrProLog(proName);
+	}
+
+	@Override
+	public top.ruandb.secondaryEntity.OdrProLog getLastedGreenplumLog(String proName) {
+		
+		return odrProLogSecondRepository.getLatestOdrProLog(proName);
 	}
 
 	
